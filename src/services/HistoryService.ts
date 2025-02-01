@@ -52,18 +52,74 @@ export class HistoryService {
     }
   }
 
-  private convertToCSV(items: chrome.history.HistoryItem[]): string {
-    const headers = ['Title', 'URL', 'Visit Time', 'Visit Count'];
-    const rows = items.map((item) => [
-      item.title || '',
-      item.url || '',
-      new Date(item.lastVisitTime || 0).toISOString(),
-      item.visitCount || 0,
-    ]);
+  public async getVisits(url: string): Promise<chrome.history.VisitItem[]> {
+    return new Promise((resolve) => {
+      chrome.history.getVisits({ url }, resolve);
+    });
+  }
+
+  private async convertToCSV(
+    items: chrome.history.HistoryItem[]
+  ): Promise<string> {
+    const headers = [
+      'order',
+      'id',
+      'date',
+      'time',
+      'title',
+      'url',
+      'visitCount',
+      'typedCount',
+      'transition type',
+    ];
+
+    let order = 0;
+
+    const rows = await Promise.all(
+      items.map(async (item) => {
+        const visits = await this.getVisits(item.url!);
+        const transitionType =
+          visits.length > 0 ? visits[0].transition : 'link';
+
+        const visitDate = new Date(item.lastVisitTime || 0);
+        const dateStr = visitDate.toLocaleDateString('en-US', {
+          month: 'numeric',
+          day: 'numeric',
+          year: 'numeric',
+        });
+        const timeStr = visitDate.toLocaleTimeString('en-US', {
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+          hour12: false,
+        });
+
+        return [
+          order++,
+          item.id || '0',
+          dateStr,
+          timeStr,
+          item.title || '',
+          item.url || '',
+          item.visitCount || 0,
+          item.typedCount || 0,
+          transitionType,
+        ];
+      })
+    );
 
     return [
       headers.join(','),
-      ...rows.map((row) => row.map((cell) => `"${cell}"`).join(',')),
+      ...rows.map((row) =>
+        row
+          .map((cell) =>
+            typeof cell === 'string' &&
+            (cell.includes(',') || cell.includes('"'))
+              ? `"${cell.replace(/"/g, '""')}"`
+              : cell
+          )
+          .join(',')
+      ),
     ].join('\n');
   }
 

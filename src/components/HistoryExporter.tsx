@@ -99,8 +99,8 @@ export const HistoryExporter: React.FC = () => {
           label="Export Format"
           onChange={(e) => setFormat(e.target.value as ExportFormat)}
         >
-          <MenuItem value="json">JSON</MenuItem>
           <MenuItem value="csv">CSV</MenuItem>
+          <MenuItem value="json">JSON</MenuItem>
           <MenuItem value="html">HTML</MenuItem>
         </Select>
       </FormControl>
