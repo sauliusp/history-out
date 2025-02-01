@@ -1,6 +1,6 @@
 import React from 'react';
 import { Stack, TextField } from '@mui/material';
-import { DateRange } from '../services/HistoryService';
+import { DateRange } from '../types/dateRange';
 
 interface DateRangePickerProps {
   value: DateRange | null;

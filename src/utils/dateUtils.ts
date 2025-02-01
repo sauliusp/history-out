@@ -1,4 +1,4 @@
-import { DateRange } from '../services/HistoryService';
+import { DateRange } from '../types/dateRange';
 
 export const getRangeFromType = (type: string): DateRange => {
   const now = Date.now();
