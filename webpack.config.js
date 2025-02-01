@@ -5,12 +5,20 @@ module.exports = {
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'extension-unpacked'),
+    devtoolModuleFilenameTemplate: 'webpack:///[absolute-resource-path]',
   },
   module: {
     rules: [
       {
         test: /\.tsx?$/,
-        use: 'ts-loader',
+        use: {
+          loader: 'ts-loader',
+          options: {
+            compilerOptions: {
+              sourceMap: true,
+            },
+          },
+        },
         exclude: /node_modules/,
       },
       {
