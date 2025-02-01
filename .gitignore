@@ -2,8 +2,8 @@
 node_modules/
 
 # Build output
-extension-unpacked/*.js.map
-extension-unpacked/*.js
+bundle.js.map
+bundle.js
 
 
 # IDE
