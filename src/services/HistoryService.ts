@@ -41,10 +41,32 @@ export class HistoryService {
     format: ExportFormat
   ): Promise<string> {
     switch (format) {
-      case 'json':
-        return JSON.stringify(items, null, 2);
+      case 'json': {
+        const enrichedItems = await Promise.all(
+          items.map(async (item) => {
+            const visits = await this.getVisits(item.url!);
+            const lastVisit = visits[0] || {};
+            const isWebUrl = /^https?:\/\//.test(item.url || '');
+
+            return {
+              id: item.id || '0',
+              isWebUrl,
+              referringVisitId: lastVisit.referringVisitId || '0',
+              transition: lastVisit.transition || 'link',
+              visitId: lastVisit.id?.toString() || '0',
+              visitTime: lastVisit.visitTime || item.lastVisitTime,
+              title: item.title || '',
+              lastVisitTime: item.lastVisitTime || 0,
+              typedCount: item.typedCount || 0,
+              url: item.url || '',
+              visitCount: item.visitCount || 0,
+            };
+          })
+        );
+        return JSON.stringify(enrichedItems, null, 2);
+      }
       case 'csv':
-        return this.convertToCSV(items);
+        return await this.convertToCSV(items);
       case 'html':
         return this.convertToHTML(items);
       default:

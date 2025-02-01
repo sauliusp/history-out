@@ -21,7 +21,7 @@ import { getRangeFromType } from '../utils/dateUtils';
 
 export const HistoryExporter: React.FC = () => {
   const [range, setRange] = useState<HistoryRange>('week');
-  const [format, setFormat] = useState<ExportFormat>('json');
+  const [format, setFormat] = useState<ExportFormat>('csv');
   const [customRange, setCustomRange] = useState<DateRange | null>(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
