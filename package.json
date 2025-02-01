@@ -2,7 +2,7 @@
   "name": "historify",
   "version": "1.0.0",
   "scripts": {
-    "dev": "webpack --watch --mode development",
+    "dev": "webpack --mode development --watch",
     "build": "webpack --mode production",
     "test": "jest"
   },
