@@ -1,0 +1,59 @@
+{
+  "typescript": {
+    "formatter": "prettier",
+    "formatOptions": {
+      "printWidth": 80,
+      "tabWidth": 2,
+      "useTabs": false,
+      "semi": true,
+      "singleQuote": true,
+      "trailingComma": "es5",
+      "bracketSpacing": true,
+      "arrowParens": "always"
+    },
+    "compilerOptions": {
+      "target": "es5",
+      "module": "commonjs",
+      "strict": true,
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "forceConsistentCasingInFileNames": true,
+      "lib": ["dom", "es5", "es6", "es2015.promise"],
+      "noImplicitAny": true,
+      "noImplicitThis": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true
+    },
+    "lintOptions": {
+      "rules": {
+        "no-any": true,
+        "no-inferrable-types": true,
+        "no-internal-module": true,
+        "no-namespace": true,
+        "no-reference": true,
+        "no-var-requires": true,
+        "prefer-for-of": true,
+        "typedef": [
+          true,
+          "call-signature",
+          "parameter",
+          "property-declaration"
+        ],
+        "typedef-whitespace": [
+          true,
+          {
+            "call-signature": "nospace",
+            "index-signature": "nospace",
+            "parameter": "nospace",
+            "property-declaration": "nospace",
+            "variable-declaration": "nospace"
+          }
+        ]
+      }
+    }
+  }
+} 
