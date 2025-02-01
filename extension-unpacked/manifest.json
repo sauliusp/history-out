@@ -4,11 +4,14 @@
   "version": "1.0.0",
   "description": "Export Chrome browsing history in various formats",
   "permissions": ["history", "storage", "sidePanel"],
+  "background": {
+    "service_worker": "background.js"
+  },
   "side_panel": {
     "default_path": "side-panel.html"
   },
   "action": {
-    "default_title": "Historify",
+    "default_title": "Click to open Historify",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
