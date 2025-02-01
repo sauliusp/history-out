@@ -11,12 +11,9 @@ import {
   Stack,
 } from '@mui/material';
 import { DateRangePicker } from './DateRangePicker';
-import {
-  HistoryService,
-  HistoryRange,
-  ExportFormat,
-  DateRange,
-} from '../services/HistoryService';
+import { HistoryRange, DateRange } from '../types/dateRange';
+import { ExportFormat } from '../types/exportFormat';
+import { HistoryService } from '../services/HistoryService';
 import { getRangeFromType } from '../utils/dateUtils';
 
 export const HistoryExporter: React.FC = () => {

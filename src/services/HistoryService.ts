@@ -1,10 +1,7 @@
-export type HistoryRange = 'day' | 'week' | 'month' | 'all' | 'custom';
-export type ExportFormat = 'csv' | 'json' | 'html';
+import { ExportFormat } from '../types/exportFormat';
+import { DateRange } from '../types/dateRange';
 
-export interface DateRange {
-  startTime: number;
-  endTime: number;
-}
+export type HistoryRange = 'day' | 'week' | 'month' | 'all' | 'custom';
 
 export class HistoryService {
   private static instance: HistoryService;
@@ -21,19 +18,41 @@ export class HistoryService {
   public async getHistory(
     range: DateRange
   ): Promise<chrome.history.HistoryItem[]> {
-    return new Promise((resolve) => {
-      chrome.history.search(
-        {
-          text: '',
-          startTime: range.startTime,
-          endTime: range.endTime,
-          maxResults: 0,
-        },
-        (items) => {
-          resolve(items);
-        }
-      );
+    const items = await chrome.history.search({
+      text: '',
+      startTime: range.startTime,
+      endTime: range.endTime,
+      maxResults: 0,
     });
+
+    return items;
+  }
+
+  private async convertToJSON(
+    items: chrome.history.HistoryItem[]
+  ): Promise<string> {
+    const enrichedItems = await Promise.all(
+      items.map(async (item) => {
+        const visits = await this.getVisits(item.url!);
+        const lastVisit = visits[0] || {};
+        const isWebUrl = /^https?:\/\//.test(item.url || '');
+
+        return {
+          id: item.id || '0',
+          isWebUrl,
+          referringVisitId: lastVisit.referringVisitId || '0',
+          transition: lastVisit.transition || 'link',
+          visitId: lastVisit.id?.toString() || '0',
+          visitTime: lastVisit.visitTime || item.lastVisitTime,
+          title: item.title || '',
+          lastVisitTime: item.lastVisitTime || 0,
+          typedCount: item.typedCount || 0,
+          url: item.url || '',
+          visitCount: item.visitCount || 0,
+        };
+      })
+    );
+    return JSON.stringify(enrichedItems, null, 2);
   }
 
   public async exportHistory(
@@ -41,30 +60,8 @@ export class HistoryService {
     format: ExportFormat
   ): Promise<string> {
     switch (format) {
-      case 'json': {
-        const enrichedItems = await Promise.all(
-          items.map(async (item) => {
-            const visits = await this.getVisits(item.url!);
-            const lastVisit = visits[0] || {};
-            const isWebUrl = /^https?:\/\//.test(item.url || '');
-
-            return {
-              id: item.id || '0',
-              isWebUrl,
-              referringVisitId: lastVisit.referringVisitId || '0',
-              transition: lastVisit.transition || 'link',
-              visitId: lastVisit.id?.toString() || '0',
-              visitTime: lastVisit.visitTime || item.lastVisitTime,
-              title: item.title || '',
-              lastVisitTime: item.lastVisitTime || 0,
-              typedCount: item.typedCount || 0,
-              url: item.url || '',
-              visitCount: item.visitCount || 0,
-            };
-          })
-        );
-        return JSON.stringify(enrichedItems, null, 2);
-      }
+      case 'json':
+        return await this.convertToJSON(items);
       case 'csv':
         return await this.convertToCSV(items);
       case 'html':
