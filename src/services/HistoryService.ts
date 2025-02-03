@@ -19,6 +19,24 @@ export class HistoryService {
     [TransitionType.KEYWORD_GENERATED]: 'Generated from Search',
   };
 
+  private columnLabelMap: Record<string, string> = {
+    id: 'ID',
+    title: 'Title',
+    url: 'URL',
+    visitTime: 'Visit Time',
+    visitTimeFormatted: 'Visit Time Formatted',
+    lastVisitTime: 'Last Visit Time',
+    lastVisitTimeFormatted: 'Last Visit Time Formatted',
+    visitCount: 'Times visited',
+    typedCount: 'Times URL manually entered',
+    transition: 'Accessed via',
+    transitionLabel: 'Transition Title',
+    isWebUrl: 'Web URL',
+    referringVisitId: 'Referring Visit ID',
+    visitId: 'Visit ID',
+    order: 'Order',
+  };
+
   private constructor() {}
 
   public static getInstance(): HistoryService {
@@ -41,34 +59,47 @@ export class HistoryService {
     return items;
   }
 
-  private async convertToJSON(
+  private async prepareHistoryItems(
     items: chrome.history.HistoryItem[]
-  ): Promise<string> {
-    const enrichedItems = await Promise.all(
+  ): Promise<Record<string, any>[]> {
+    let order = 0;
+    return await Promise.all(
       items.map(async (item) => {
         const visits = await this.getVisits(item.url!);
         const lastVisit = visits[0] || {};
         const isWebUrl = /^https?:\/\//.test(item.url || '');
         const transition =
           (lastVisit.transition as TransitionType) || TransitionType.LINK;
+        const visitTime = lastVisit.visitTime || item.lastVisitTime || 0;
 
         return {
+          order: order++,
           id: item.id || '0',
           isWebUrl,
           referringVisitId: lastVisit.referringVisitId || '0',
           transition,
           transitionLabel: this.transitionTypeLabelMap[transition],
           visitId: lastVisit.id?.toString() || '0',
-          visitTime: lastVisit.visitTime || item.lastVisitTime,
+          visitTime,
+          visitTimeFormatted: new Date(visitTime).toLocaleString(),
           title: item.title || '',
           lastVisitTime: item.lastVisitTime || 0,
+          lastVisitTimeFormatted: new Date(
+            item.lastVisitTime || 0
+          ).toLocaleString(),
           typedCount: item.typedCount || 0,
           url: item.url || '',
           visitCount: item.visitCount || 0,
         };
       })
     );
-    return JSON.stringify(enrichedItems, null, 2);
+  }
+
+  private async convertToJSON(
+    items: chrome.history.HistoryItem[]
+  ): Promise<string> {
+    const preparedItems = await this.prepareHistoryItems(items);
+    return JSON.stringify(preparedItems, null, 2);
   }
 
   public async exportHistory(
@@ -96,67 +127,19 @@ export class HistoryService {
   private async convertToCSV(
     items: chrome.history.HistoryItem[]
   ): Promise<string> {
-    const headers = [
-      'order',
-      'id',
-      'date',
-      'time',
-      'title',
-      'url',
-      'visitCount',
-      'typedCount',
-      'transition type',
-      'transition label',
-    ];
-
-    let order = 0;
-
-    const rows = await Promise.all(
-      items.map(async (item) => {
-        const visits = await this.getVisits(item.url!);
-        const transition = (
-          visits.length > 0 ? visits[0].transition : TransitionType.LINK
-        ) as TransitionType;
-        const transitionLabel = this.transitionTypeLabelMap[transition];
-
-        const visitDate = new Date(item.lastVisitTime || 0);
-        const dateStr = visitDate.toLocaleDateString('en-US', {
-          month: 'numeric',
-          day: 'numeric',
-          year: 'numeric',
-        });
-        const timeStr = visitDate.toLocaleTimeString('en-US', {
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-          hour12: false,
-        });
-
-        return [
-          order++,
-          item.id || '0',
-          dateStr,
-          timeStr,
-          item.title || '',
-          item.url || '',
-          item.visitCount || 0,
-          item.typedCount || 0,
-          transition,
-          transitionLabel,
-        ];
-      })
-    );
+    const preparedItems = await this.prepareHistoryItems(items);
+    const headers = Object.keys(this.columnLabelMap);
 
     return [
-      headers.join(','),
-      ...rows.map((row) =>
-        row
-          .map((cell) =>
-            typeof cell === 'string' &&
-            (cell.includes(',') || cell.includes('"'))
+      headers.map((key) => this.columnLabelMap[key]).join(','),
+      ...preparedItems.map((item) =>
+        headers
+          .map((key) => {
+            const cell = item[key]?.toString() || '';
+            return cell.includes(',') || cell.includes('"')
               ? `"${cell.replace(/"/g, '""')}"`
-              : cell
-          )
+              : cell;
+          })
           .join(',')
       ),
     ].join('\n');
@@ -165,22 +148,31 @@ export class HistoryService {
   private async convertToHTML(
     items: chrome.history.HistoryItem[]
   ): Promise<string> {
-    const rows = await Promise.all(
-      items.map(async (item) => {
-        const visits = await this.getVisits(item.url!);
-        const transition = (
-          visits.length > 0 ? visits[0].transition : TransitionType.LINK
-        ) as TransitionType;
-        return `
-        <tr>
-          <td>${item.title || ''}</td>
-          <td><a href="${item.url}">${item.url}</a></td>
-          <td>${new Date(item.lastVisitTime || 0).toLocaleString()}</td>
-          <td>${item.visitCount || 0}</td>
-          <td>${transition}</td>
-        </tr>
-      `;
-      })
+    const preparedItems = await this.prepareHistoryItems(items);
+    const headers = Object.keys(this.columnLabelMap);
+
+    const headerRow = headers
+      .map(
+        (key) =>
+          `<th style="width: ${100 / headers.length}%">${
+            this.columnLabelMap[key]
+          }</th>`
+      )
+      .join('');
+
+    const rows = preparedItems.map(
+      (item) => `
+      <tr>
+        ${headers
+          .map((key) => {
+            const value = item[key];
+            return key === 'url'
+              ? `<td><a href="${value}">${value}</a></td>`
+              : `<td>${value}</td>`;
+          })
+          .join('')}
+      </tr>
+    `
     );
 
     return `
@@ -220,13 +212,7 @@ export class HistoryService {
         <body>
           <table>
             <thead>
-              <tr>
-                <th style="width: 20%">Title</th>
-                <th style="width: 40%">URL</th>
-                <th style="width: 15%">Visit Time</th>
-                <th style="width: 10%">Visit Count</th>
-                <th style="width: 15%">Transition Type</th>
-              </tr>
+              <tr>${headerRow}</tr>
             </thead>
             <tbody>
               ${rows.join('')}
