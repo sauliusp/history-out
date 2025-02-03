@@ -14,6 +14,7 @@ import { DateRangePicker } from './DateRangePicker';
 import { HistoryRange, DateRange } from '../types/DateRange';
 import { ExportFormat } from '../types/ExportFormat';
 import { HistoryService } from '../services/HistoryService';
+import { ExportService } from '../services/ExportService';
 import { getRangeFromType } from '../utils/dateUtils';
 
 export const HistoryExporter: React.FC = () => {
@@ -32,8 +33,10 @@ export const HistoryExporter: React.FC = () => {
         range === 'custom' ? customRange! : getRangeFromType(range);
 
       const historyService = HistoryService.getInstance();
+      const exportService = ExportService.getInstance();
+
       const items = await historyService.getHistory(dateRange);
-      const exportData = await historyService.exportHistory(items, format);
+      const exportData = await exportService.exportHistory(items, format);
 
       // Create and trigger download
       const blob = new Blob([exportData], {
