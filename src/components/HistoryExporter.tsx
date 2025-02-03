@@ -11,8 +11,8 @@ import {
   Stack,
 } from '@mui/material';
 import { DateRangePicker } from './DateRangePicker';
-import { HistoryRange, DateRange } from '../types/dateRange';
-import { ExportFormat } from '../types/exportFormat';
+import { HistoryRange, DateRange } from '../types/DateRange';
+import { ExportFormat } from '../types/ExportFormat';
 import { HistoryService } from '../services/HistoryService';
 import { getRangeFromType } from '../utils/dateUtils';
 

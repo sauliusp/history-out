@@ -1,4 +1,4 @@
-import { DateRange } from '../types/dateRange';
+import { DateRange } from '../types/DateRange';
 
 export const getRangeFromType = (type: string): DateRange => {
   const now = Date.now();
