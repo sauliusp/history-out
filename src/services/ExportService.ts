@@ -1,26 +1,10 @@
 import { ExportFormat } from '../types/ExportFormat';
-import { TransitionType } from '../types/TransitionType';
-import { HistoryService } from './HistoryService';
 
 export class ExportService {
   private static instance: ExportService;
-  private historyService: HistoryService;
-
-  private transitionTypeLabelMap: Record<TransitionType, string> = {
-    [TransitionType.LINK]: 'Clicked Link',
-    [TransitionType.TYPED]: 'Manually Typed URL',
-    [TransitionType.AUTO_BOOKMARK]: 'Opened from Bookmarks',
-    [TransitionType.AUTO_SUBFRAME]: 'Automatically Loaded Frame',
-    [TransitionType.MANUAL_SUBFRAME]: 'Manually Loaded Frame',
-    [TransitionType.GENERATED]: 'Automatically Generated',
-    [TransitionType.AUTO_TOPLEVEL]: 'Automatic Navigation',
-    [TransitionType.FORM_SUBMIT]: 'Form Submission',
-    [TransitionType.RELOAD]: 'Page Reload',
-    [TransitionType.KEYWORD]: 'Search Keyword',
-    [TransitionType.KEYWORD_GENERATED]: 'Generated from Search',
-  };
 
   private columnLabelMap: Record<string, string> = {
+    order: 'Order',
     id: 'ID',
     title: 'Title',
     url: 'URL',
@@ -35,12 +19,9 @@ export class ExportService {
     isWebUrl: 'Web URL',
     referringVisitId: 'Referring Visit ID',
     visitId: 'Visit ID',
-    order: 'Order',
   };
 
-  private constructor() {
-    this.historyService = HistoryService.getInstance();
-  }
+  private constructor() {}
 
   public static getInstance(): ExportService {
     if (!ExportService.instance) {
@@ -49,49 +30,32 @@ export class ExportService {
     return ExportService.instance;
   }
 
-  public async exportHistory(
-    items: chrome.history.HistoryItem[],
+  public async exportData(
+    items: Record<string, any>[],
     format: ExportFormat
   ): Promise<string> {
     switch (format) {
       case 'json':
-        return await this.convertToJSON(items);
+        return this.convertToJSON(items);
       case 'csv':
-        return await this.convertToCSV(items);
+        return this.convertToCSV(items);
       case 'html':
-        return await this.convertToHTML(items);
+        return this.convertToHTML(items);
       default:
         throw new Error('Unsupported format');
     }
   }
 
-  private async prepareItemsForExport(
-    items: chrome.history.HistoryItem[]
-  ): Promise<Record<string, any>[]> {
-    const preparedItems = await this.historyService.prepareHistoryItems(items);
-    return preparedItems.map((item) => ({
-      ...item,
-      transitionLabel:
-        this.transitionTypeLabelMap[item.transition as TransitionType],
-    }));
+  private convertToJSON(items: Record<string, any>[]): string {
+    return JSON.stringify(items, null, 2);
   }
 
-  private async convertToJSON(
-    items: chrome.history.HistoryItem[]
-  ): Promise<string> {
-    const preparedItems = await this.prepareItemsForExport(items);
-    return JSON.stringify(preparedItems, null, 2);
-  }
-
-  private async convertToCSV(
-    items: chrome.history.HistoryItem[]
-  ): Promise<string> {
-    const preparedItems = await this.prepareItemsForExport(items);
+  private convertToCSV(items: Record<string, any>[]): string {
     const headers = Object.keys(this.columnLabelMap);
 
     return [
       headers.map((key) => this.columnLabelMap[key]).join(','),
-      ...preparedItems.map((item) =>
+      ...items.map((item) =>
         headers
           .map((key) => {
             const cell = item[key]?.toString() || '';
@@ -104,10 +68,7 @@ export class ExportService {
     ].join('\n');
   }
 
-  private async convertToHTML(
-    items: chrome.history.HistoryItem[]
-  ): Promise<string> {
-    const preparedItems = await this.prepareItemsForExport(items);
+  private convertToHTML(items: Record<string, any>[]): string {
     const headers = Object.keys(this.columnLabelMap);
 
     const headerRow = headers
@@ -119,7 +80,7 @@ export class ExportService {
       )
       .join('');
 
-    const rows = preparedItems.map(
+    const rows = items.map(
       (item) => `
       <tr>
         ${headers

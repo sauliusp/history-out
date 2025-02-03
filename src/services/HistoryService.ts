@@ -4,6 +4,20 @@ import { TransitionType } from '../types/TransitionType';
 export class HistoryService {
   private static instance: HistoryService;
 
+  private transitionTypeLabelMap: Record<TransitionType, string> = {
+    [TransitionType.LINK]: 'Clicked Link',
+    [TransitionType.TYPED]: 'Manually Typed URL',
+    [TransitionType.AUTO_BOOKMARK]: 'Opened from Bookmarks',
+    [TransitionType.AUTO_SUBFRAME]: 'Automatically Loaded Frame',
+    [TransitionType.MANUAL_SUBFRAME]: 'Manually Loaded Frame',
+    [TransitionType.GENERATED]: 'Automatically Generated',
+    [TransitionType.AUTO_TOPLEVEL]: 'Automatic Navigation',
+    [TransitionType.FORM_SUBMIT]: 'Form Submission',
+    [TransitionType.RELOAD]: 'Page Reload',
+    [TransitionType.KEYWORD]: 'Search Keyword',
+    [TransitionType.KEYWORD_GENERATED]: 'Generated from Search',
+  };
+
   private constructor() {}
 
   public static getInstance(): HistoryService {
@@ -50,6 +64,7 @@ export class HistoryService {
           isWebUrl,
           referringVisitId: lastVisit.referringVisitId || '0',
           transition,
+          transitionLabel: this.transitionTypeLabelMap[transition],
           visitId: lastVisit.id?.toString() || '0',
           visitTime,
           visitTimeFormatted: new Date(visitTime).toLocaleString(),

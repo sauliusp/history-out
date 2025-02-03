@@ -36,7 +36,8 @@ export const HistoryExporter: React.FC = () => {
       const exportService = ExportService.getInstance();
 
       const items = await historyService.getHistory(dateRange);
-      const exportData = await exportService.exportHistory(items, format);
+      const preparedItems = await historyService.prepareHistoryItems(items);
+      const exportData = await exportService.exportData(preparedItems, format);
 
       // Create and trigger download
       const blob = new Blob([exportData], {
