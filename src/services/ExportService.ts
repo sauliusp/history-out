@@ -1,9 +1,10 @@
 import { ExportFormat } from '../types/ExportFormat';
+import { OutputHistoryItem } from '../types/OutputHistoryItem';
 
 export class ExportService {
   private static instance: ExportService;
 
-  private columnLabelMap: Record<string, string> = {
+  private columnLabelMap: Record<keyof OutputHistoryItem, string> = {
     order: 'Order',
     id: 'ID',
     title: 'Title',
@@ -54,7 +55,9 @@ export class ExportService {
     const headers = Object.keys(this.columnLabelMap);
 
     return [
-      headers.map((key) => this.columnLabelMap[key]).join(','),
+      headers
+        .map((key) => this.columnLabelMap[key as keyof OutputHistoryItem])
+        .join(','),
       ...items.map((item) =>
         headers
           .map((key) => {
@@ -75,7 +78,7 @@ export class ExportService {
       .map(
         (key) =>
           `<th style="width: ${100 / headers.length}%">${
-            this.columnLabelMap[key]
+            this.columnLabelMap[key as keyof OutputHistoryItem]
           }</th>`
       )
       .join('');

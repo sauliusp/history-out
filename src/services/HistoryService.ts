@@ -1,5 +1,6 @@
 import { DateRange } from '../types/DateRange';
 import { TransitionType } from '../types/TransitionType';
+import { OutputHistoryItem } from '../types/OutputHistoryItem';
 
 export class HistoryService {
   private static instance: HistoryService;
@@ -47,7 +48,7 @@ export class HistoryService {
 
   public async prepareHistoryItems(
     items: chrome.history.HistoryItem[]
-  ): Promise<Record<string, any>[]> {
+  ): Promise<OutputHistoryItem[]> {
     let order = 0;
     return await Promise.all(
       items.map(async (item) => {
