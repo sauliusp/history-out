@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import {
-  Box,
   Button,
   FormControl,
   InputLabel,
@@ -11,18 +10,55 @@ import {
   Stack,
 } from '@mui/material';
 import { DateRangePicker } from './DateRangePicker';
-import { HistoryRange, DateRange } from '../types/DateRange';
-import { ExportFormat } from '../types/ExportFormat';
+import { HistoryRange } from '../types/HistoryRange';
 import { HistoryService } from '../services/HistoryService';
 import { ExportService } from '../services/ExportService';
 import { getRangeFromType } from '../utils/dateUtils';
+import { OutputSettings } from './OutputSettings';
+import { OutputConfig } from '../types/OutputConfig';
+
+const INITIAL_OUTPUT_CONFIG: OutputConfig = {
+  format: 'csv',
+  historyRange: 'week',
+  dateRange: null,
+  fields: {
+    order: true,
+    id: true,
+    isWebUrl: true,
+    referringVisitId: true,
+    transition: true,
+    transitionLabel: true,
+    visitId: true,
+    visitTime: true,
+    visitTimeFormatted: true,
+    title: true,
+    lastVisitTime: true,
+    lastVisitTimeFormatted: true,
+    typedCount: true,
+    url: true,
+    visitCount: true,
+  },
+};
+
+const historyService = HistoryService.getInstance();
+const exportService = ExportService.getInstance();
 
 export const HistoryExporter: React.FC = () => {
-  const [range, setRange] = useState<HistoryRange>('week');
-  const [format, setFormat] = useState<ExportFormat>('csv');
-  const [customRange, setCustomRange] = useState<DateRange | null>(null);
+  const [config, setConfig] = useState<OutputConfig>(INITIAL_OUTPUT_CONFIG);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  const dateRangeSelected =
+    Boolean(config.dateRange?.startTime) && Boolean(config.dateRange?.endTime);
+
+  const historyRangeSelected =
+    (config.historyRange === 'custom' && dateRangeSelected) ||
+    Boolean(config.historyRange);
+
+  const submitEnabled =
+    !loading &&
+    historyRangeSelected &&
+    Object.values(config.fields).includes(true);
 
   const handleExport = async () => {
     try {
@@ -30,37 +66,26 @@ export const HistoryExporter: React.FC = () => {
       setError(null);
 
       const dateRange =
-        range === 'custom' ? customRange! : getRangeFromType(range);
-
-      const historyService = HistoryService.getInstance();
-      const exportService = ExportService.getInstance();
+        config.historyRange === 'custom'
+          ? config.dateRange!
+          : getRangeFromType(config.historyRange);
 
       const items = await historyService.getHistory(dateRange);
       const preparedItems = await historyService.prepareHistoryItems(items);
-      const exportData = await exportService.exportData(preparedItems, format);
 
-      // Create and trigger download
-      const blob = new Blob([exportData], {
-        type:
-          format === 'json'
-            ? 'application/json'
-            : format === 'csv'
-            ? 'text/csv'
-            : 'text/html',
-      });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url;
-      a.download = `history-export.${format}`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-      URL.revokeObjectURL(url);
+      exportService.exportData(preparedItems, config.format, config.fields);
     } catch (err) {
       setError((err as Error).message);
     } finally {
       setLoading(false);
     }
+  };
+
+  const handleConfigChange = (updates: Partial<OutputConfig>) => {
+    setConfig((prev) => ({
+      ...prev,
+      ...updates,
+    }));
   };
 
   return (
@@ -74,12 +99,18 @@ export const HistoryExporter: React.FC = () => {
         this in Chrome settings.
       </Alert>
 
+      <OutputSettings config={config} onConfigChange={handleConfigChange} />
+
       <FormControl fullWidth>
         <InputLabel>Time Range</InputLabel>
         <Select
-          value={range}
+          value={config.historyRange}
           label="Time Range"
-          onChange={(e) => setRange(e.target.value as HistoryRange)}
+          onChange={(e) =>
+            handleConfigChange({
+              historyRange: e.target.value as HistoryRange,
+            })
+          }
         >
           <MenuItem value="day">Last 24 Hours</MenuItem>
           <MenuItem value="week">Last Week</MenuItem>
@@ -89,29 +120,19 @@ export const HistoryExporter: React.FC = () => {
         </Select>
       </FormControl>
 
-      {range === 'custom' && (
-        <DateRangePicker value={customRange} onChange={setCustomRange} />
+      {config.historyRange === 'custom' && (
+        <DateRangePicker
+          value={config.dateRange}
+          onChange={(dateRange) => handleConfigChange({ dateRange })}
+        />
       )}
-
-      <FormControl fullWidth>
-        <InputLabel>Export Format</InputLabel>
-        <Select
-          value={format}
-          label="Export Format"
-          onChange={(e) => setFormat(e.target.value as ExportFormat)}
-        >
-          <MenuItem value="csv">CSV</MenuItem>
-          <MenuItem value="json">JSON</MenuItem>
-          <MenuItem value="html">HTML</MenuItem>
-        </Select>
-      </FormControl>
 
       {error && <Alert severity="error">{error}</Alert>}
 
       <Button
         variant="contained"
         onClick={handleExport}
-        disabled={loading || (range === 'custom' && !customRange)}
+        disabled={!submitEnabled}
       >
         {loading ? 'Exporting...' : 'Export History'}
       </Button>
