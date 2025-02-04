@@ -1,5 +1,6 @@
 import { ExportFormat } from '../types/ExportFormat';
 import { OutputHistoryItem } from '../types/OutputHistoryItem';
+import { OutputConfig } from '../types/OutputConfig';
 
 export class ExportService {
   private static instance: ExportService;
@@ -31,20 +32,56 @@ export class ExportService {
     return ExportService.instance;
   }
 
-  public async exportData(
+  public exportData(
     items: Record<string, any>[],
-    format: ExportFormat
-  ): Promise<string> {
+    format: ExportFormat,
+    fields: OutputConfig['fields']
+  ): void {
+    // Filter items based on selected fields
+    const filteredItems = items.map((item) => {
+      const filtered: Record<string, any> = {};
+      Object.entries(fields).forEach(([key, include]) => {
+        if (include) {
+          filtered[key] = item[key];
+        }
+      });
+      return filtered;
+    });
+
+    let dataToExport: string;
+
     switch (format) {
       case 'json':
-        return this.convertToJSON(items);
+        dataToExport = this.convertToJSON(filteredItems);
+        break;
       case 'csv':
-        return this.convertToCSV(items);
+        dataToExport = this.convertToCSV(filteredItems);
+        break;
       case 'html':
-        return this.convertToHTML(items);
+        dataToExport = this.convertToHTML(filteredItems);
+        break;
       default:
         throw new Error('Unsupported format');
     }
+
+    const dataFormatMap: Record<ExportFormat, string> = {
+      json: 'application/json',
+      csv: 'text/csv',
+      html: 'text/html',
+    };
+
+    // Create and trigger download
+    const blob = new Blob([dataToExport], {
+      type: dataFormatMap[format],
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `history-export.${format}`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   }
 
   private convertToJSON(items: Record<string, any>[]): string {
@@ -52,14 +89,14 @@ export class ExportService {
   }
 
   private convertToCSV(items: Record<string, any>[]): string {
-    const headers = Object.keys(this.columnLabelMap);
+    const keys = Object.keys(items[0] || {});
 
     return [
-      headers
+      keys
         .map((key) => this.columnLabelMap[key as keyof OutputHistoryItem])
         .join(','),
       ...items.map((item) =>
-        headers
+        keys
           .map((key) => {
             const cell = item[key]?.toString() || '';
             return cell.includes(',') || cell.includes('"')
@@ -72,12 +109,12 @@ export class ExportService {
   }
 
   private convertToHTML(items: Record<string, any>[]): string {
-    const headers = Object.keys(this.columnLabelMap);
+    const keys = Object.keys(items[0] || {});
 
-    const headerRow = headers
+    const headerRow = keys
       .map(
         (key) =>
-          `<th style="width: ${100 / headers.length}%">${
+          `<th style="width: ${100 / keys.length}%">${
             this.columnLabelMap[key as keyof OutputHistoryItem]
           }</th>`
       )
@@ -86,7 +123,7 @@ export class ExportService {
     const rows = items.map(
       (item) => `
       <tr>
-        ${headers
+        ${keys
           .map((key) => {
             const value = item[key];
             return key === 'url'
