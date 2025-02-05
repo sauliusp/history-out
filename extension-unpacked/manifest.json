@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "Historify",
+  "name": "HistoryOut - Export Browser History",
   "version": "1.0.0",
   "description": "Export Chrome browsing history in various formats",
   "permissions": ["history", "storage", "sidePanel"],
@@ -8,7 +8,8 @@
     "service_worker": "background.js"
   },
   "side_panel": {
-    "default_path": "side-panel.html"
+    "default_path": "side-panel.html",
+    "default_width": 600
   },
   "action": {
     "default_title": "Click to open Historify",

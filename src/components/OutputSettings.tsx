@@ -5,40 +5,17 @@ import {
   InputLabel,
   MenuItem,
   Select,
-  FormGroup,
-  FormControlLabel,
   Checkbox,
-  Typography,
-  Paper,
-  Divider,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
+  ListItemText,
+  Chip,
+  Stack,
 } from '@mui/material';
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { ExportFormat } from '../types/ExportFormat';
 import { OutputConfig } from '../types/OutputConfig';
-
-// Field groups configuration for better organization and maintainability
-export const FIELD_GROUPS = {
-  'Basic Information': ['order', 'title', 'url'],
-  'Visit Details': [
-    'visitTime',
-    'visitTimeFormatted',
-    'lastVisitTime',
-    'lastVisitTimeFormatted',
-    'visitCount',
-    'typedCount',
-  ],
-  'Technical Details': [
-    'id',
-    'isWebUrl',
-    'referringVisitId',
-    'transition',
-    'transitionLabel',
-    'visitId',
-  ],
-} as const;
+import { ExportService } from '../services/ExportService';
+import { OutputHistoryItem } from '../types/OutputHistoryItem';
+import { DateRangePicker } from '../components/DateRangePicker';
+import { HistoryRange } from '../types/HistoryRange';
 
 interface OutputSettingsProps {
   config: OutputConfig;
@@ -62,58 +39,94 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
     });
   };
 
+  // Get the column labels from ExportService
+  const columnLabels = ExportService.getInstance().columnLabelMap;
+
   return (
-    <Paper sx={{ p: 2 }}>
-      <Typography variant="h6" gutterBottom>
-        Export Settings
-      </Typography>
+    <Stack spacing={3}>
+      <Stack direction="row" spacing={2}>
+        <FormControl fullWidth>
+          <InputLabel>Export Format</InputLabel>
+          <Select
+            value={config.format}
+            label="Export Format"
+            onChange={(e) => handleFormatChange(e.target.value as ExportFormat)}
+          >
+            <MenuItem value="csv">CSV</MenuItem>
+            <MenuItem value="json">JSON</MenuItem>
+            <MenuItem value="html">HTML</MenuItem>
+          </Select>
+        </FormControl>
 
-      <FormControl fullWidth sx={{ mb: 2 }}>
-        <InputLabel>Export Format</InputLabel>
+        <FormControl fullWidth>
+          <InputLabel>Time Range</InputLabel>
+          <Select
+            value={config.historyRange}
+            label="Time Range"
+            onChange={(e) =>
+              onConfigChange({
+                historyRange: e.target.value as HistoryRange,
+              })
+            }
+          >
+            <MenuItem value="day">Last 24 Hours</MenuItem>
+            <MenuItem value="week">Last Week</MenuItem>
+            <MenuItem value="month">Last Month</MenuItem>
+            <MenuItem value="all">All Time</MenuItem>
+            <MenuItem value="custom">Custom Range</MenuItem>
+          </Select>
+        </FormControl>
+      </Stack>
+
+      {config.historyRange === 'custom' && (
+        <DateRangePicker
+          value={config.dateRange}
+          onChange={(dateRange) => onConfigChange({ dateRange })}
+        />
+      )}
+
+      <FormControl fullWidth>
+        <InputLabel>Include Fields</InputLabel>
         <Select
-          value={config.format}
-          label="Export Format"
-          onChange={(e) => handleFormatChange(e.target.value as ExportFormat)}
-        >
-          <MenuItem value="csv">CSV</MenuItem>
-          <MenuItem value="json">JSON</MenuItem>
-          <MenuItem value="html">HTML</MenuItem>
-        </Select>
-      </FormControl>
-
-      <Divider sx={{ my: 2 }} />
-
-      <Typography variant="subtitle1" gutterBottom>
-        Include Fields
-      </Typography>
-
-      {Object.entries(FIELD_GROUPS).map(([group, fields]) => (
-        <Accordion key={group} defaultExpanded>
-          <AccordionSummary expandIcon={<ExpandMoreIcon />}>
-            <Typography>{group}</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <FormGroup>
-              {fields.map((field) => (
-                <FormControlLabel
+          multiple
+          value={Object.entries(config.fields)
+            .filter(([_, included]) => included)
+            .map(([field]) => field)}
+          label="Include Fields"
+          onChange={(e) => {
+            const selectedFields = e.target.value as string[];
+            const updates = Object.keys(config.fields).reduce(
+              (acc, field) => ({
+                ...acc,
+                [field]: selectedFields.includes(field),
+              }),
+              {}
+            );
+            onConfigChange({ fields: updates });
+          }}
+          renderValue={(selected) => (
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+              {(selected as string[]).map((field) => (
+                <Chip
                   key={field}
-                  control={
-                    <Checkbox
-                      checked={
-                        config.fields[field as keyof typeof config.fields]
-                      }
-                      onChange={() =>
-                        handleFieldToggle(field as keyof typeof config.fields)
-                      }
-                    />
-                  }
-                  label={field.replace(/([A-Z])/g, ' $1').toLowerCase()}
+                  label={columnLabels[field as keyof OutputHistoryItem]}
+                  size="small"
+                  sx={{ m: 0.25 }}
                 />
               ))}
-            </FormGroup>
-          </AccordionDetails>
-        </Accordion>
-      ))}
-    </Paper>
+            </Box>
+          )}
+        >
+          {(Object.keys(config.fields) as Array<keyof OutputHistoryItem>).map(
+            (field) => (
+              <MenuItem key={field} value={field}>
+                <Checkbox checked={config.fields[field]} />
+                <ListItemText primary={columnLabels[field]} />
+              </MenuItem>
+            )
+          )}
+        </Select>
+      </FormControl>
+    </Stack>
   );
 };
