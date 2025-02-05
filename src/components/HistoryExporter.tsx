@@ -1,16 +1,5 @@
 import React, { useState } from 'react';
-import {
-  Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Typography,
-  Alert,
-  Stack,
-} from '@mui/material';
-import { DateRangePicker } from './DateRangePicker';
-import { HistoryRange } from '../types/HistoryRange';
+import { Button, Alert, Stack, Typography } from '@mui/material';
 import { HistoryService } from '../services/HistoryService';
 import { ExportService } from '../services/ExportService';
 import { getRangeFromType } from '../utils/dateUtils';
@@ -90,42 +79,16 @@ export const HistoryExporter: React.FC = () => {
 
   return (
     <Stack spacing={3}>
-      <Typography variant="h5" component="h1">
-        Export Browser History
-      </Typography>
-
       <Alert severity="info">
         Note: Chrome by default only keeps 90 days of history. You can change
         this in Chrome settings.
       </Alert>
 
+      <Typography variant="h6" component="h1" gutterBottom>
+        Export Browser History
+      </Typography>
+
       <OutputSettings config={config} onConfigChange={handleConfigChange} />
-
-      <FormControl fullWidth>
-        <InputLabel>Time Range</InputLabel>
-        <Select
-          value={config.historyRange}
-          label="Time Range"
-          onChange={(e) =>
-            handleConfigChange({
-              historyRange: e.target.value as HistoryRange,
-            })
-          }
-        >
-          <MenuItem value="day">Last 24 Hours</MenuItem>
-          <MenuItem value="week">Last Week</MenuItem>
-          <MenuItem value="month">Last Month</MenuItem>
-          <MenuItem value="all">All Time</MenuItem>
-          <MenuItem value="custom">Custom Range</MenuItem>
-        </Select>
-      </FormControl>
-
-      {config.historyRange === 'custom' && (
-        <DateRangePicker
-          value={config.dateRange}
-          onChange={(dateRange) => handleConfigChange({ dateRange })}
-        />
-      )}
 
       {error && <Alert severity="error">{error}</Alert>}
 

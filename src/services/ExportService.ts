@@ -5,7 +5,7 @@ import { OutputConfig } from '../types/OutputConfig';
 export class ExportService {
   private static instance: ExportService;
 
-  private columnLabelMap: Record<keyof OutputHistoryItem, string> = {
+  columnLabelMap: Record<keyof OutputHistoryItem, string> = {
     order: 'Order',
     id: 'ID',
     title: 'Title',
