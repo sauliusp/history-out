@@ -49,26 +49,31 @@ export class HistoryService {
   public async prepareHistoryItems(
     items: chrome.history.HistoryItem[]
   ): Promise<OutputHistoryItem[]> {
-    let order = 0;
-    return await Promise.all(
-      items.map(async (item) => {
-        const visits = await this.getVisits(item.url!);
-        const lastVisit = visits[0] || {};
-        const isWebUrl = /^https?:\/\//.test(item.url || '');
-        const transition =
-          (lastVisit.transition as TransitionType) || TransitionType.LINK;
-        const visitTime = lastVisit.visitTime || item.lastVisitTime || 0;
+    // Fetch all visits in parallel
+    const visitsPromises = items.map((item) =>
+      this.getVisits(item.url!).then((visits) => ({ item, visits }))
+    );
 
-        return {
-          order: order++,
+    // Wait for all visits to resolve
+    const itemsWithVisits = await Promise.all(visitsPromises);
+
+    const expandedItems: OutputHistoryItem[] = [];
+
+    // Process results
+    itemsWithVisits.forEach(({ item, visits }) => {
+      visits.forEach((visit) => {
+        const transition =
+          (visit.transition as TransitionType) || TransitionType.LINK;
+
+        expandedItems.push({
+          order: expandedItems.length, // Maintain overall order
           id: item.id || '0',
-          isWebUrl,
-          referringVisitId: lastVisit.referringVisitId || '0',
+          referringVisitId: visit.referringVisitId || '0',
           transition,
           transitionLabel: this.transitionTypeLabelMap[transition],
-          visitId: lastVisit.id?.toString() || '0',
-          visitTime,
-          visitTimeFormatted: new Date(visitTime).toLocaleString(),
+          visitId: visit.id?.toString() || '0',
+          visitTime: visit.visitTime || 0,
+          visitTimeFormatted: new Date(visit.visitTime || 0).toLocaleString(),
           title: item.title || '',
           lastVisitTime: item.lastVisitTime || 0,
           lastVisitTimeFormatted: new Date(
@@ -77,8 +82,15 @@ export class HistoryService {
           typedCount: item.typedCount || 0,
           url: item.url || '',
           visitCount: item.visitCount || 0,
-        };
-      })
-    );
+        });
+      });
+    });
+
+    const sortedItems = expandedItems.sort((a, b) => b.visitTime - a.visitTime);
+
+    return sortedItems.map((item, index) => ({
+      ...item,
+      order: index + 1,
+    }));
   }
 }

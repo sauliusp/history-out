@@ -13,16 +13,15 @@ const INITIAL_OUTPUT_CONFIG: OutputConfig = {
   fields: {
     order: true,
     id: true,
-    isWebUrl: true,
-    referringVisitId: true,
+    referringVisitId: false,
     transition: true,
     transitionLabel: true,
     visitId: true,
-    visitTime: true,
+    visitTime: false,
     visitTimeFormatted: true,
     title: true,
-    lastVisitTime: true,
-    lastVisitTimeFormatted: true,
+    lastVisitTime: false,
+    lastVisitTimeFormatted: false,
     typedCount: true,
     url: true,
     visitCount: true,
@@ -83,10 +82,6 @@ export const HistoryExporter: React.FC = () => {
         Note: Chrome by default only keeps 90 days of history. You can change
         this in Chrome settings.
       </Alert>
-
-      <Typography variant="h6" component="h1" gutterBottom>
-        Export Browser History
-      </Typography>
 
       <OutputSettings config={config} onConfigChange={handleConfigChange} />
 

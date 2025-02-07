@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack --mode development --watch",
-    "build": "webpack --mode production",
+    "build": "rm -f extension-unpacked/bundle.js.map && webpack --mode production",
+    "pack": "npm run build && zip -r extension-packed.zip extension-unpacked",
     "test": "jest"
   },
   "dependencies": {

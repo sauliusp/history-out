@@ -17,6 +17,10 @@ import { OutputHistoryItem } from '../types/OutputHistoryItem';
 import { DateRangePicker } from '../components/DateRangePicker';
 import { HistoryRange } from '../types/HistoryRange';
 
+const exportService = ExportService.getInstance();
+const columnLabels = exportService.columnLabelMap;
+const columnOrder = exportService.columnOrder;
+
 interface OutputSettingsProps {
   config: OutputConfig;
   onConfigChange: (updates: Partial<OutputConfig>) => void;
@@ -38,9 +42,6 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
       },
     });
   };
-
-  // Get the column labels from ExportService
-  const columnLabels = ExportService.getInstance().columnLabelMap;
 
   return (
     <Stack spacing={3}>
@@ -102,29 +103,31 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
               }),
               {}
             );
-            onConfigChange({ fields: updates });
+            onConfigChange({
+              fields: updates as Record<keyof OutputHistoryItem, boolean>,
+            });
           }}
           renderValue={(selected) => (
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
-              {(selected as string[]).map((field) => (
-                <Chip
-                  key={field}
-                  label={columnLabels[field as keyof OutputHistoryItem]}
-                  size="small"
-                  sx={{ m: 0.25 }}
-                />
-              ))}
+              {columnOrder
+                .filter((field) => (selected as string[]).includes(field))
+                .map((field) => (
+                  <Chip
+                    key={field}
+                    label={columnLabels[field]}
+                    size="small"
+                    sx={{ m: 0.25 }}
+                  />
+                ))}
             </Box>
           )}
         >
-          {(Object.keys(config.fields) as Array<keyof OutputHistoryItem>).map(
-            (field) => (
-              <MenuItem key={field} value={field}>
-                <Checkbox checked={config.fields[field]} />
-                <ListItemText primary={columnLabels[field]} />
-              </MenuItem>
-            )
-          )}
+          {columnOrder.map((field) => (
+            <MenuItem key={field} value={field}>
+              <Checkbox checked={config.fields[field]} />
+              <ListItemText primary={columnLabels[field]} />
+            </MenuItem>
+          ))}
         </Select>
       </FormControl>
     </Stack>

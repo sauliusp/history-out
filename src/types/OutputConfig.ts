@@ -7,7 +7,5 @@ export interface OutputConfig {
   format: ExportFormat;
   historyRange: HistoryRange;
   dateRange: DateRange | null;
-  fields: {
-    [K in keyof OutputHistoryItem]: boolean;
-  };
+  fields: Record<keyof OutputHistoryItem, boolean>;
 }
