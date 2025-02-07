@@ -10,18 +10,35 @@ export class ExportService {
     id: 'ID',
     title: 'Title',
     url: 'URL',
-    visitTime: 'Visit Time',
-    visitTimeFormatted: 'Visit Time Formatted',
-    lastVisitTime: 'Last Visit Time',
-    lastVisitTimeFormatted: 'Last Visit Time Formatted',
+    visitTime: 'Visit Timestamp',
+    visitTimeFormatted: 'Visit Time',
+    lastVisitTime: 'Last Visit Timestamp',
+    lastVisitTimeFormatted: 'Last Visit Time',
     visitCount: 'Times visited',
-    typedCount: 'Times URL manually entered',
+    typedCount: 'Times manually entered',
     transition: 'Accessed via',
     transitionLabel: 'Transition Title',
-    isWebUrl: 'Web URL',
     referringVisitId: 'Referring Visit ID',
     visitId: 'Visit ID',
   };
+
+  // Define a fixed order for columns
+  readonly columnOrder: (keyof OutputHistoryItem)[] = [
+    'order',
+    'id',
+    'visitTimeFormatted',
+    'visitTime',
+    'title',
+    'url',
+    'visitCount',
+    'typedCount',
+    'lastVisitTimeFormatted',
+    'lastVisitTime',
+    'transition',
+    'transitionLabel',
+    'referringVisitId',
+    'visitId',
+  ];
 
   private constructor() {}
 
@@ -89,12 +106,11 @@ export class ExportService {
   }
 
   private convertToCSV(items: Record<string, any>[]): string {
-    const keys = Object.keys(items[0] || {});
+    // Use columnOrder instead of Object.keys()
+    const keys = this.columnOrder.filter((key) => key in items[0]);
 
     return [
-      keys
-        .map((key) => this.columnLabelMap[key as keyof OutputHistoryItem])
-        .join(','),
+      keys.map((key) => this.columnLabelMap[key]).join(','),
       ...items.map((item) =>
         keys
           .map((key) => {
@@ -109,13 +125,14 @@ export class ExportService {
   }
 
   private convertToHTML(items: Record<string, any>[]): string {
-    const keys = Object.keys(items[0] || {});
+    // Use columnOrder instead of Object.keys()
+    const keys = this.columnOrder.filter((key) => key in items[0]);
 
     const headerRow = keys
       .map(
         (key) =>
           `<th style="width: ${100 / keys.length}%">${
-            this.columnLabelMap[key as keyof OutputHistoryItem]
+            this.columnLabelMap[key]
           }</th>`
       )
       .join('');
