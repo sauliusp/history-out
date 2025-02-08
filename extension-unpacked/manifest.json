@@ -8,11 +8,10 @@
     "service_worker": "background.js"
   },
   "side_panel": {
-    "default_path": "side-panel.html",
-    "default_width": 600
+    "default_path": "side-panel.html"
   },
   "action": {
-    "default_title": "Click to open Historify",
+    "default_title": "Click to open HistoryOut",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
