@@ -19,6 +19,24 @@ export class HistoryService {
     [TransitionType.KEYWORD_GENERATED]: 'Generated from Search',
   };
 
+  private dateFormatter = (() => {
+    try {
+      if (typeof Intl !== 'undefined' && Intl.DateTimeFormat) {
+        return new Intl.DateTimeFormat(navigator.language || 'en-US', {
+          year: 'numeric',
+          month: '2-digit',
+          day: '2-digit',
+          hour: '2-digit',
+          minute: '2-digit',
+          second: '2-digit',
+        });
+      }
+      return null;
+    } catch {
+      return null;
+    }
+  })();
+
   private constructor() {}
 
   public static getInstance(): HistoryService {
@@ -44,6 +62,19 @@ export class HistoryService {
   public async getVisits(url: string): Promise<chrome.history.VisitItem[]> {
     const visits = await chrome.history.getVisits({ url });
     return visits;
+  }
+
+  private formatDate(timestamp: number): string {
+    try {
+      if (this.dateFormatter) {
+        return this.dateFormatter.format(new Date(timestamp));
+      }
+      // Fallback for older browsers
+      return new Date(timestamp).toLocaleString();
+    } catch {
+      // Ultimate fallback if something goes wrong
+      return new Date(timestamp).toString();
+    }
   }
 
   public async prepareHistoryItems(
@@ -73,12 +104,10 @@ export class HistoryService {
           transitionLabel: this.transitionTypeLabelMap[transition],
           visitId: visit.id?.toString() || '0',
           visitTime: visit.visitTime || 0,
-          visitTimeFormatted: new Date(visit.visitTime || 0).toLocaleString(),
+          visitTimeFormatted: this.formatDate(visit.visitTime || 0),
           title: item.title || '',
           lastVisitTime: item.lastVisitTime || 0,
-          lastVisitTimeFormatted: new Date(
-            item.lastVisitTime || 0
-          ).toLocaleString(),
+          lastVisitTimeFormatted: this.formatDate(item.lastVisitTime || 0),
           typedCount: item.typedCount || 0,
           url: item.url || '',
           visitCount: item.visitCount || 0,
