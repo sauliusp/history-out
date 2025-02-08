@@ -32,7 +32,12 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
   };
 
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack
+      direction="row"
+      spacing={2}
+      role="group"
+      aria-label="Date range selection"
+    >
       <TextField
         label="Start Date"
         type="date"
@@ -44,6 +49,10 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
           },
         }}
         fullWidth
+        inputProps={{
+          'aria-label': 'Start date',
+          'aria-describedby': 'start-date-description',
+        }}
       />
       <TextField
         label="End Date"
@@ -56,6 +65,10 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
           },
         }}
         fullWidth
+        inputProps={{
+          'aria-label': 'End date',
+          'aria-describedby': 'end-date-description',
+        }}
       />
     </Stack>
   );

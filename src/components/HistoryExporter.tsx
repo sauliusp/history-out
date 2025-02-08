@@ -76,20 +76,26 @@ export const HistoryExporter: React.FC = () => {
   };
 
   return (
-    <Stack spacing={3}>
-      <Alert severity="info">
+    <Stack spacing={3} role="main" aria-label="History export section">
+      <Alert severity="info" role="alert">
         Note: Chrome by default only keeps 90 days of history. You can change
         this in Chrome settings.
       </Alert>
 
       <OutputSettings config={config} onConfigChange={handleConfigChange} />
 
-      {error && <Alert severity="error">{error}</Alert>}
+      {error && (
+        <Alert severity="error" role="alert">
+          {error}
+        </Alert>
+      )}
 
       <Button
         variant="contained"
         onClick={handleExport}
         disabled={!submitEnabled}
+        aria-busy={loading}
+        aria-disabled={!submitEnabled}
       >
         {loading ? 'Exporting...' : 'Export History'}
       </Button>
