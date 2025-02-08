@@ -71,8 +71,8 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
             }
           >
             <MenuItem value="day">Last 24 Hours</MenuItem>
-            <MenuItem value="week">Last Week</MenuItem>
-            <MenuItem value="month">Last Month</MenuItem>
+            <MenuItem value="week">Last 7 days</MenuItem>
+            <MenuItem value="month">Last 30 days</MenuItem>
             <MenuItem value="all">All Time</MenuItem>
             <MenuItem value="custom">Custom Range</MenuItem>
           </Select>

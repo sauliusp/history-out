@@ -39,14 +39,13 @@ export const HistoryExporter: React.FC = () => {
   const dateRangeSelected =
     Boolean(config.dateRange?.startTime) && Boolean(config.dateRange?.endTime);
 
-  const historyRangeSelected =
-    (config.historyRange === 'custom' && dateRangeSelected) ||
-    Boolean(config.historyRange);
+  const hasSelectedFields = Object.values(config.fields).some((field) => field);
 
-  const submitEnabled =
-    !loading &&
-    historyRangeSelected &&
-    Object.values(config.fields).includes(true);
+  const hasValidDateRange =
+    config.historyRange !== 'custom' ||
+    (config.dateRange?.startTime != null && config.dateRange?.endTime != null);
+
+  const submitEnabled = !loading && hasSelectedFields && hasValidDateRange;
 
   const handleExport = async () => {
     try {
