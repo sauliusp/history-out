@@ -16,7 +16,7 @@ export class ExportService {
     lastVisitTimeFormatted: 'Last Visit Time',
     visitCount: 'Times visited',
     typedCount: 'Times manually entered',
-    transition: 'Accessed via',
+    transition: 'Transition',
     transitionLabel: 'Transition Title',
     referringVisitId: 'Referring Visit ID',
     visitId: 'Visit ID',
@@ -144,7 +144,7 @@ export class ExportService {
           .map((key) => {
             const value = item[key];
             return key === 'url'
-              ? `<td><a href="${value}">${value}</a></td>`
+              ? `<td><a target="_blank" href="${value}">${value}</a></td>`
               : `<td>${value}</td>`;
           })
           .join('')}
