@@ -35,24 +35,35 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
   };
 
   return (
-    <Stack spacing={3}>
+    <Stack spacing={3} role="form" aria-label="Export settings form">
       <Stack direction="row" spacing={2}>
         <FormControl fullWidth>
-          <InputLabel>Export Format</InputLabel>
+          <InputLabel id="export-format-label">Export Format</InputLabel>
           <Select
+            labelId="export-format-label"
+            id="export-format-select"
             value={config.format}
             label="Export Format"
             onChange={(e) => handleFormatChange(e.target.value as ExportFormat)}
+            aria-describedby="export-format-description"
           >
-            <MenuItem value="csv">CSV</MenuItem>
-            <MenuItem value="json">JSON</MenuItem>
-            <MenuItem value="html">HTML</MenuItem>
+            <MenuItem value="csv" role="option">
+              CSV
+            </MenuItem>
+            <MenuItem value="json" role="option">
+              JSON
+            </MenuItem>
+            <MenuItem value="html" role="option">
+              HTML
+            </MenuItem>
           </Select>
         </FormControl>
 
         <FormControl fullWidth>
-          <InputLabel>Time Range</InputLabel>
+          <InputLabel id="time-range-label">Time Range</InputLabel>
           <Select
+            labelId="time-range-label"
+            id="time-range-select"
             value={config.historyRange}
             label="Time Range"
             onChange={(e) =>
@@ -60,12 +71,23 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
                 historyRange: e.target.value as HistoryRange,
               })
             }
+            aria-describedby="time-range-description"
           >
-            <MenuItem value="day">Last 24 Hours</MenuItem>
-            <MenuItem value="week">Last 7 days</MenuItem>
-            <MenuItem value="month">Last 30 days</MenuItem>
-            <MenuItem value="all">All Time</MenuItem>
-            <MenuItem value="custom">Custom Range</MenuItem>
+            <MenuItem value="day" role="option">
+              Last 24 Hours
+            </MenuItem>
+            <MenuItem value="week" role="option">
+              Last 7 days
+            </MenuItem>
+            <MenuItem value="month" role="option">
+              Last 30 days
+            </MenuItem>
+            <MenuItem value="all" role="option">
+              All Time
+            </MenuItem>
+            <MenuItem value="custom" role="option">
+              Custom Range
+            </MenuItem>
           </Select>
         </FormControl>
       </Stack>
@@ -78,8 +100,10 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
       )}
 
       <FormControl fullWidth>
-        <InputLabel>Include Fields</InputLabel>
+        <InputLabel id="include-fields-label">Include Fields</InputLabel>
         <Select
+          labelId="include-fields-label"
+          id="include-fields-select"
           multiple
           value={Object.entries(config.fields)
             .filter(([_, included]) => included)
@@ -99,7 +123,10 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
             });
           }}
           renderValue={(selected) => (
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}>
+            <Box
+              sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}
+              role="list"
+            >
               {columnOrder
                 .filter((field) => (selected as string[]).includes(field))
                 .map((field) => (
@@ -108,14 +135,19 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
                     label={columnLabels[field]}
                     size="small"
                     sx={{ m: 0.25 }}
+                    role="listitem"
                   />
                 ))}
             </Box>
           )}
+          aria-describedby="include-fields-description"
         >
           {columnOrder.map((field) => (
-            <MenuItem key={field} value={field}>
-              <Checkbox checked={config.fields[field]} />
+            <MenuItem key={field} value={field} role="option">
+              <Checkbox
+                checked={config.fields[field]}
+                aria-label={`Include ${columnLabels[field]}`}
+              />
               <ListItemText primary={columnLabels[field]} />
             </MenuItem>
           ))}
