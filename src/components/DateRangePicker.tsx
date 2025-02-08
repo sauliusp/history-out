@@ -38,7 +38,11 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
         type="date"
         value={value ? formatDate(value.startTime) : ''}
         onChange={handleStartChange}
-        InputLabelProps={{ shrink: true }}
+        slotProps={{
+          inputLabel: {
+            shrink: true,
+          },
+        }}
         fullWidth
       />
       <TextField
@@ -46,7 +50,11 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
         type="date"
         value={value ? formatDate(value.endTime) : ''}
         onChange={handleEndChange}
-        InputLabelProps={{ shrink: true }}
+        slotProps={{
+          inputLabel: {
+            shrink: true,
+          },
+        }}
         fullWidth
       />
     </Stack>
