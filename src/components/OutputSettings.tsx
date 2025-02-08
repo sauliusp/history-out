@@ -34,15 +34,6 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
     onConfigChange({ format });
   };
 
-  const handleFieldToggle = (field: keyof typeof config.fields) => {
-    onConfigChange({
-      fields: {
-        ...config.fields,
-        [field]: !config.fields[field],
-      },
-    });
-  };
-
   return (
     <Stack spacing={3}>
       <Stack direction="row" spacing={2}>
