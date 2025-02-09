@@ -1,7 +1,9 @@
-import React, { useState } from 'react';
-import { Button, Alert, Stack, Typography } from '@mui/material';
+import React, { useState, useEffect } from 'react';
+import { Button, Alert, Stack } from '@mui/material';
 import { HistoryService } from '../services/HistoryService';
 import { ExportService } from '../services/ExportService';
+import { StorageService } from '../services/StorageService';
+import { StorageKey } from '../types/StorageKeys';
 import { getRangeFromType } from '../utils/dateUtils';
 import { OutputSettings } from './OutputSettings';
 import { OutputConfig } from '../types/OutputConfig';
@@ -30,11 +32,25 @@ const INITIAL_OUTPUT_CONFIG: OutputConfig = {
 
 const historyService = HistoryService.getInstance();
 const exportService = ExportService.getInstance();
+const storageService = StorageService.getInstance();
 
 export const HistoryExporter: React.FC = () => {
   const [config, setConfig] = useState<OutputConfig>(INITIAL_OUTPUT_CONFIG);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadSavedConfig = async () => {
+      const savedConfig = await storageService.get<OutputConfig>(
+        StorageKey.OutputConfig
+      );
+
+      if (savedConfig && exportService.isConfigValid(savedConfig)) {
+        setConfig(savedConfig);
+      }
+    };
+    loadSavedConfig();
+  }, []);
 
   const hasSelectedFields = Object.values(config.fields).some((field) => field);
 
@@ -58,6 +74,7 @@ export const HistoryExporter: React.FC = () => {
       const preparedItems = await historyService.prepareHistoryItems(items);
 
       exportService.exportData(preparedItems, config.format, config.fields);
+      await storageService.set(StorageKey.OutputConfig, config);
     } catch (err) {
       setError((err as Error).message);
     } finally {
