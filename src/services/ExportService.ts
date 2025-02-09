@@ -199,4 +199,15 @@ export class ExportService {
       </html>
     `;
   }
+
+  isConfigValid(config: unknown): config is OutputConfig {
+    const candidate = config as OutputConfig;
+    return !!(
+      candidate &&
+      typeof candidate.format === 'string' &&
+      typeof candidate.historyRange === 'string' &&
+      candidate.fields &&
+      typeof candidate.fields === 'object'
+    );
+  }
 }
