@@ -15,7 +15,7 @@ export class ExportService {
     lastVisitTime: 'Last Visit Timestamp',
     lastVisitTimeFormatted: 'Last Visit Time',
     visitCount: 'Times visited',
-    typedCount: 'Times manually entered',
+    typedCount: 'Times entered',
     transition: 'Transition',
     transitionLabel: 'Transition Title',
     referringVisitId: 'Referring Visit ID',
