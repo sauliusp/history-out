@@ -106,7 +106,6 @@ export class ExportService {
   }
 
   private convertToCSV(items: Record<string, any>[]): string {
-    // Use columnOrder instead of Object.keys()
     const keys = this.columnOrder.filter((key) => key in items[0]);
 
     return [
@@ -159,8 +158,9 @@ export class ExportService {
           <title>Browsing History</title>
           <style>
             body {
+              font-size: 13px;
               margin: 0;
-              padding: 16px;
+              padding: 10px;
               max-width: 100%;
               font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
             }
