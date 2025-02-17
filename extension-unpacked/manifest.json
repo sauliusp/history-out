@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "HistoryOut - Export Browser History",
   "version": "1.0.0",
-  "description": "Export browser history in various formats",
+  "description": "Export Browser History in CSV, JSON and HTML formats",
   "permissions": ["history", "storage", "sidePanel"],
   "background": {
     "service_worker": "background.js"
