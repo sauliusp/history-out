@@ -59,48 +59,74 @@ export class HistoryService {
     items: chrome.history.HistoryItem[],
     dateRange: DateRange
   ): Promise<OutputHistoryItem[]> {
-    // Fetch all visits in parallel
-    const visitsPromises = items.map((item) =>
-      this.getVisits(item.url!, dateRange).then((visits) => ({ item, visits }))
-    );
+    // Helper function to format timestamps efficiently
+    const formatTimestamp = (timestamp: number): string => {
+      // Reuse date object to avoid creating new instances
+      return new Intl.DateTimeFormat(undefined, {
+        year: 'numeric',
+        month: 'numeric',
+        day: 'numeric',
+        hour: 'numeric',
+        minute: 'numeric',
+        second: 'numeric',
+      }).format(timestamp);
+    };
 
-    // Wait for all visits to resolve
-    const itemsWithVisits = await Promise.all(visitsPromises);
+    // Process items in chunks to avoid overwhelming the browser
+    const chunkSize = 50;
+    const chunks = [];
+    for (let i = 0; i < items.length; i += chunkSize) {
+      chunks.push(items.slice(i, i + chunkSize));
+    }
 
     const expandedItems: OutputHistoryItem[] = [];
 
-    // Process results
-    itemsWithVisits.forEach(({ item, visits }) => {
-      visits.forEach((visit) => {
-        const transition =
-          (visit.transition as TransitionType) || TransitionType.LINK;
+    // Process chunks sequentially
+    for (const chunk of chunks) {
+      const chunkVisitsPromises = chunk.map((item) =>
+        this.getVisits(item.url!, dateRange).then((visits) => ({
+          item,
+          visits,
+        }))
+      );
 
-        expandedItems.push({
-          order: expandedItems.length, // Maintain overall order
-          id: item.id || '0',
-          referringVisitId: visit.referringVisitId || '0',
-          transition,
-          transitionLabel: this.transitionTypeLabelMap[transition],
-          visitId: visit.id?.toString() || '0',
-          visitTime: visit.visitTime || 0,
-          visitTimeFormatted: new Date(visit.visitTime || 0).toLocaleString(),
-          title: item.title || '',
-          lastVisitTime: item.lastVisitTime || 0,
-          lastVisitTimeFormatted: new Date(
-            item.lastVisitTime || 0
-          ).toLocaleString(),
-          typedCount: item.typedCount || 0,
-          url: item.url || '',
-          visitCount: item.visitCount || 0,
-        });
+      const chunkItemsWithVisits = await Promise.all(chunkVisitsPromises);
+
+      // Process results for this chunk
+      chunkItemsWithVisits.forEach(({ item, visits }) => {
+        const itemLastVisitFormatted = formatTimestamp(item.lastVisitTime || 0);
+
+        expandedItems.push(
+          ...visits.map((visit) => {
+            const transition =
+              (visit.transition as TransitionType) || TransitionType.LINK;
+
+            return {
+              order: 0, // Will be updated after sorting
+              id: item.id || '0',
+              referringVisitId: visit.referringVisitId || '0',
+              transition,
+              transitionLabel: this.transitionTypeLabelMap[transition],
+              visitId: visit.id?.toString() || '0',
+              visitTime: visit.visitTime || 0,
+              visitTimeFormatted: formatTimestamp(visit.visitTime || 0),
+              title: item.title || '',
+              lastVisitTime: item.lastVisitTime || 0,
+              lastVisitTimeFormatted: itemLastVisitFormatted,
+              typedCount: item.typedCount || 0,
+              url: item.url || '',
+              visitCount: item.visitCount || 0,
+            };
+          })
+        );
       });
-    });
+    }
 
-    const sortedItems = expandedItems.sort((a, b) => b.visitTime - a.visitTime);
-
-    return sortedItems.map((item, index) => ({
-      ...item,
-      order: index + 1,
-    }));
+    return expandedItems
+      .sort((a, b) => b.visitTime - a.visitTime)
+      .map((item, index) => ({
+        ...item,
+        order: index + 1,
+      }));
   }
 }
