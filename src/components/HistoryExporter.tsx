@@ -39,6 +39,13 @@ export const HistoryExporter: React.FC = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
+  const sanitizeHistoryRangeConfig = (config: OutputConfig): OutputConfig => {
+    return {
+      ...config,
+      dateRange: config.historyRange === 'custom' ? config.dateRange : null,
+    };
+  };
+
   useEffect(() => {
     const loadSavedConfig = async () => {
       const savedConfig = await storageService.get<OutputConfig>(
@@ -46,7 +53,7 @@ export const HistoryExporter: React.FC = () => {
       );
 
       if (savedConfig && exportService.isConfigValid(savedConfig)) {
-        setConfig(savedConfig);
+        setConfig(sanitizeHistoryRangeConfig(savedConfig));
       }
     };
     loadSavedConfig();
@@ -65,13 +72,16 @@ export const HistoryExporter: React.FC = () => {
       setLoading(true);
       setError(null);
 
-      const dateRange =
+      const effectiveDateRange =
         config.historyRange === 'custom'
           ? config.dateRange!
           : getRangeFromType(config.historyRange);
 
-      const items = await historyService.getHistory(dateRange);
-      const preparedItems = await historyService.prepareHistoryItems(items);
+      const items = await historyService.getHistory(effectiveDateRange);
+      const preparedItems = await historyService.prepareHistoryItems(
+        items,
+        effectiveDateRange
+      );
 
       exportService.exportData(preparedItems, config.format, config.fields);
       await storageService.set(StorageKey.OutputConfig, config);
@@ -83,10 +93,12 @@ export const HistoryExporter: React.FC = () => {
   };
 
   const handleConfigChange = (updates: Partial<OutputConfig>) => {
-    setConfig((prev) => ({
-      ...prev,
-      ...updates,
-    }));
+    setConfig((prev) =>
+      sanitizeHistoryRangeConfig({
+        ...prev,
+        ...updates,
+      })
+    );
   };
 
   return (

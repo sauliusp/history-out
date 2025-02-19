@@ -1,6 +1,7 @@
 import { DateRange } from '../types/DateRange';
 import { TransitionType } from '../types/TransitionType';
 import { OutputHistoryItem } from '../types/OutputHistoryItem';
+import { OutputConfig } from '../types/OutputConfig';
 
 export class HistoryService {
   private static instance: HistoryService;
@@ -18,24 +19,6 @@ export class HistoryService {
     [TransitionType.KEYWORD]: 'Search Keyword',
     [TransitionType.KEYWORD_GENERATED]: 'Generated from Search',
   };
-
-  private dateFormatter = (() => {
-    try {
-      if (typeof Intl !== 'undefined' && Intl.DateTimeFormat) {
-        return new Intl.DateTimeFormat(navigator.language || 'en-US', {
-          year: 'numeric',
-          month: '2-digit',
-          day: '2-digit',
-          hour: '2-digit',
-          minute: '2-digit',
-          second: '2-digit',
-        });
-      }
-      return null;
-    } catch {
-      return null;
-    }
-  })();
 
   private constructor() {}
 
@@ -59,30 +42,26 @@ export class HistoryService {
     return items;
   }
 
-  public async getVisits(url: string): Promise<chrome.history.VisitItem[]> {
+  public async getVisits(
+    url: string,
+    dateRange: DateRange
+  ): Promise<chrome.history.VisitItem[]> {
     const visits = await chrome.history.getVisits({ url });
-    return visits;
-  }
 
-  private formatDate(timestamp: number): string {
-    try {
-      if (this.dateFormatter) {
-        return this.dateFormatter.format(new Date(timestamp));
-      }
-      // Fallback for older browsers
-      return new Date(timestamp).toLocaleString();
-    } catch {
-      // Ultimate fallback if something goes wrong
-      return new Date(timestamp).toString();
-    }
+    return visits.filter((visit) => {
+      const vTime = visit.visitTime || 0;
+
+      return vTime >= dateRange.startTime && vTime <= dateRange.endTime;
+    });
   }
 
   public async prepareHistoryItems(
-    items: chrome.history.HistoryItem[]
+    items: chrome.history.HistoryItem[],
+    dateRange: DateRange
   ): Promise<OutputHistoryItem[]> {
     // Fetch all visits in parallel
     const visitsPromises = items.map((item) =>
-      this.getVisits(item.url!).then((visits) => ({ item, visits }))
+      this.getVisits(item.url!, dateRange).then((visits) => ({ item, visits }))
     );
 
     // Wait for all visits to resolve
@@ -104,10 +83,12 @@ export class HistoryService {
           transitionLabel: this.transitionTypeLabelMap[transition],
           visitId: visit.id?.toString() || '0',
           visitTime: visit.visitTime || 0,
-          visitTimeFormatted: this.formatDate(visit.visitTime || 0),
+          visitTimeFormatted: new Date(visit.visitTime || 0).toLocaleString(),
           title: item.title || '',
           lastVisitTime: item.lastVisitTime || 0,
-          lastVisitTimeFormatted: this.formatDate(item.lastVisitTime || 0),
+          lastVisitTimeFormatted: new Date(
+            item.lastVisitTime || 0
+          ).toLocaleString(),
           typedCount: item.typedCount || 0,
           url: item.url || '',
           visitCount: item.visitCount || 0,
