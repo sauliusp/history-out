@@ -8,11 +8,11 @@ export class ExportService {
 
   columnLabelMap: Record<keyof OutputHistoryItem, ColumnLabel> = {
     order: { label: 'Order' },
-    id: { label: 'ID' },
+    id: { label: 'Id' },
     date: { label: 'Date' },
     time: { label: 'Time' },
     title: { label: 'Title' },
-    url: { label: 'URL' },
+    url: { label: 'Url' },
     visitCount: {
       label: 'Visit Count',
       secondaryLabel: 'Number of times this page was visited',
