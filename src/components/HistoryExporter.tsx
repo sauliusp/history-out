@@ -15,18 +15,13 @@ const INITIAL_OUTPUT_CONFIG: OutputConfig = {
   fields: {
     order: true,
     id: true,
-    referringVisitId: false,
-    transition: true,
-    transitionLabel: true,
-    visitId: true,
-    visitTime: false,
-    visitTimeFormatted: true,
+    date: true,
+    time: true,
     title: true,
-    lastVisitTime: false,
-    lastVisitTimeFormatted: false,
-    typedCount: true,
     url: true,
     visitCount: true,
+    typedCount: true,
+    transition: true,
   },
 };
 

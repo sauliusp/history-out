@@ -3,16 +3,11 @@ import { TransitionType } from './TransitionType';
 export interface OutputHistoryItem {
   order: number;
   id: string;
-  referringVisitId: string;
-  transition: TransitionType;
-  transitionLabel: string;
-  visitId: string;
-  visitTime: number;
-  visitTimeFormatted: string;
+  date: string;
+  time: string;
   title: string;
-  lastVisitTime: number;
-  lastVisitTimeFormatted: string;
-  typedCount: number;
   url: string;
   visitCount: number;
+  typedCount: number;
+  transition: TransitionType;
 }

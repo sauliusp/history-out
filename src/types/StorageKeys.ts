@@ -1,3 +1,3 @@
 export enum StorageKey {
-  OutputConfig = 'browserHistoryOutputConfig',
+  OutputConfig = 'HISTORY_OUTPUT_CONFIG',
 }

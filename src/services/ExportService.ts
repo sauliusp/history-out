@@ -1,43 +1,43 @@
 import { ExportFormat } from '../types/ExportFormat';
 import { OutputHistoryItem } from '../types/OutputHistoryItem';
 import { OutputConfig } from '../types/OutputConfig';
+import { ColumnLabel } from '../types/ColumnLabel';
 
 export class ExportService {
   private static instance: ExportService;
 
-  columnLabelMap: Record<keyof OutputHistoryItem, string> = {
-    order: 'Order',
-    id: 'ID',
-    title: 'Title',
-    url: 'URL',
-    visitTime: 'Visit Timestamp',
-    visitTimeFormatted: 'Visit Time',
-    lastVisitTime: 'Last Visit Timestamp',
-    lastVisitTimeFormatted: 'Last Visit Time',
-    visitCount: 'Times visited',
-    typedCount: 'Times entered',
-    transition: 'Transition',
-    transitionLabel: 'Transition Title',
-    referringVisitId: 'Referring Visit ID',
-    visitId: 'Visit ID',
+  columnLabelMap: Record<keyof OutputHistoryItem, ColumnLabel> = {
+    order: { label: 'Order' },
+    id: { label: 'ID' },
+    date: { label: 'Date' },
+    time: { label: 'Time' },
+    title: { label: 'Title' },
+    url: { label: 'URL' },
+    visitCount: {
+      label: 'Visit Count',
+      secondaryLabel: 'Number of times this page was visited',
+    },
+    typedCount: {
+      label: 'Typed Count',
+      secondaryLabel: 'Number of times this URL was manually typed',
+    },
+    transition: {
+      label: 'Transition',
+      secondaryLabel: 'How this page visit was initiated',
+    },
   };
 
   // Define a fixed order for columns
   readonly columnOrder: (keyof OutputHistoryItem)[] = [
     'order',
     'id',
-    'visitTimeFormatted',
-    'visitTime',
+    'date',
+    'time',
     'title',
     'url',
     'visitCount',
     'typedCount',
-    'lastVisitTimeFormatted',
-    'lastVisitTime',
     'transition',
-    'transitionLabel',
-    'referringVisitId',
-    'visitId',
   ];
 
   private constructor() {}
@@ -109,7 +109,7 @@ export class ExportService {
     const keys = this.columnOrder.filter((key) => key in items[0]);
 
     return [
-      keys.map((key) => this.columnLabelMap[key]).join(','),
+      keys,
       ...items.map((item) =>
         keys
           .map((key) => {
@@ -124,16 +124,15 @@ export class ExportService {
   }
 
   private convertToHTML(items: Record<string, any>[]): string {
-    // Use columnOrder instead of Object.keys()
     const keys = this.columnOrder.filter((key) => key in items[0]);
 
     const headerRow = keys
-      .map(
-        (key) =>
-          `<th style="width: ${100 / keys.length}%">${
-            this.columnLabelMap[key]
-          }</th>`
-      )
+      .map((key) => {
+        const { label, secondaryLabel } = this.columnLabelMap[key];
+        return `<th style="width: ${100 / keys.length}%" ${
+          secondaryLabel ? `title="${secondaryLabel}"` : ''
+        }>${label}</th>`;
+      })
       .join('');
 
     const rows = items.map(

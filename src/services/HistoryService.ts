@@ -6,20 +6,6 @@ import { OutputConfig } from '../types/OutputConfig';
 export class HistoryService {
   private static instance: HistoryService;
 
-  private transitionTypeLabelMap: Record<TransitionType, string> = {
-    [TransitionType.LINK]: 'Clicked Link',
-    [TransitionType.TYPED]: 'Manually Typed URL',
-    [TransitionType.AUTO_BOOKMARK]: 'Opened from Bookmarks',
-    [TransitionType.AUTO_SUBFRAME]: 'Automatically Loaded Frame',
-    [TransitionType.MANUAL_SUBFRAME]: 'Manually Loaded Frame',
-    [TransitionType.GENERATED]: 'Automatically Generated',
-    [TransitionType.AUTO_TOPLEVEL]: 'Automatic Navigation',
-    [TransitionType.FORM_SUBMIT]: 'Form Submission',
-    [TransitionType.RELOAD]: 'Page Reload',
-    [TransitionType.KEYWORD]: 'Search Keyword',
-    [TransitionType.KEYWORD_GENERATED]: 'Generated from Search',
-  };
-
   private constructor() {}
 
   public static getInstance(): HistoryService {
@@ -59,18 +45,17 @@ export class HistoryService {
     items: chrome.history.HistoryItem[],
     dateRange: DateRange
   ): Promise<OutputHistoryItem[]> {
-    // Helper function to format timestamps efficiently
-    const formatTimestamp = (timestamp: number): string => {
-      // Reuse date object to avoid creating new instances
-      return new Intl.DateTimeFormat(undefined, {
-        year: 'numeric',
-        month: 'numeric',
-        day: 'numeric',
-        hour: 'numeric',
-        minute: 'numeric',
-        second: 'numeric',
-      }).format(timestamp);
-    };
+    // Helper functions to format dates and times efficiently
+    const dateFormatter = new Intl.DateTimeFormat(undefined, {
+      year: 'numeric',
+      month: 'numeric',
+      day: 'numeric',
+    });
+    const timeFormatter = new Intl.DateTimeFormat(undefined, {
+      hour: 'numeric',
+      minute: 'numeric',
+      second: 'numeric',
+    });
 
     // Process items in chunks to avoid overwhelming the browser
     const chunkSize = 50;
@@ -79,7 +64,7 @@ export class HistoryService {
       chunks.push(items.slice(i, i + chunkSize));
     }
 
-    const expandedItems: OutputHistoryItem[] = [];
+    const expandedItems: (OutputHistoryItem & { timestamp: number })[] = [];
 
     // Process chunks sequentially
     for (const chunk of chunks) {
@@ -94,28 +79,21 @@ export class HistoryService {
 
       // Process results for this chunk
       chunkItemsWithVisits.forEach(({ item, visits }) => {
-        const itemLastVisitFormatted = formatTimestamp(item.lastVisitTime || 0);
-
         expandedItems.push(
           ...visits.map((visit) => {
-            const transition =
-              (visit.transition as TransitionType) || TransitionType.LINK;
-
+            const visitTime = visit.visitTime || 0;
             return {
               order: 0, // Will be updated after sorting
               id: item.id || '0',
-              referringVisitId: visit.referringVisitId || '0',
-              transition,
-              transitionLabel: this.transitionTypeLabelMap[transition],
-              visitId: visit.id?.toString() || '0',
-              visitTime: visit.visitTime || 0,
-              visitTimeFormatted: formatTimestamp(visit.visitTime || 0),
+              timestamp: visitTime,
+              date: dateFormatter.format(visitTime),
+              time: timeFormatter.format(visitTime),
               title: item.title || '',
-              lastVisitTime: item.lastVisitTime || 0,
-              lastVisitTimeFormatted: itemLastVisitFormatted,
-              typedCount: item.typedCount || 0,
               url: item.url || '',
               visitCount: item.visitCount || 0,
+              typedCount: item.typedCount || 0,
+              transition:
+                (visit.transition as TransitionType) || TransitionType.LINK,
             };
           })
         );
@@ -123,10 +101,13 @@ export class HistoryService {
     }
 
     return expandedItems
-      .sort((a, b) => b.visitTime - a.visitTime)
-      .map((item, index) => ({
-        ...item,
-        order: index + 1,
-      }));
+      .sort((a, b) => b.timestamp - a.timestamp) // Need to keep timestamp for sorting
+      .map((item, index) => {
+        const { timestamp, ...finalItem } = item; // Remove visitTime from final output
+        return {
+          ...finalItem,
+          order: index + 1,
+        };
+      });
   }
 }

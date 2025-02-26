@@ -132,7 +132,7 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
                 .map((field) => (
                   <Chip
                     key={field}
-                    label={columnLabels[field]}
+                    label={columnLabels[field].label}
                     size="small"
                     sx={{ m: 0.25 }}
                     role="listitem"
@@ -148,7 +148,16 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
                 checked={config.fields[field]}
                 aria-label={`Include ${columnLabels[field]}`}
               />
-              <ListItemText primary={columnLabels[field]} />
+              <ListItemText
+                primary={columnLabels[field].label}
+                secondary={columnLabels[field].secondaryLabel}
+                sx={{
+                  '& .MuiListItemText-secondary': {
+                    whiteSpace: 'normal',
+                    wordBreak: 'break-word', // Using wordBreak instead of wordWrap for better backwards compatibility
+                  },
+                }}
+              />
             </MenuItem>
           ))}
         </Select>
