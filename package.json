@@ -1,11 +1,11 @@
 {
-  "name": "historify",
+  "name": "HistoryOut",
+  "description": "Export and analyze your browsing history with custom date ranges. Download in CSV, JSON or HTML formats",
   "version": "1.0.0",
   "scripts": {
     "dev": "webpack --mode development --watch",
     "build": "rm -f extension-unpacked/bundle.js.map && webpack --mode production",
-    "pack": "npm run build && zip -r extension-packed.zip extension-unpacked",
-    "test": "jest"
+    "pack": "npm run build && zip -r extension-packed.zip extension-unpacked"
   },
   "dependencies": {},
   "devDependencies": {
