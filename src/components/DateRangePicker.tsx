@@ -31,6 +31,8 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
     return new Date(timestamp).toISOString().split('T')[0];
   };
 
+  const today = formatDate(Date.now());
+
   return (
     <Stack
       direction="row"
@@ -50,6 +52,9 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
           input: {
             'aria-label': 'Start date',
             'aria-describedby': 'start-date-description',
+            inputProps: {
+              max: value ? formatDate(value.endTime) : today,
+            },
           },
         }}
         fullWidth
@@ -59,6 +64,7 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
         type="date"
         value={value ? formatDate(value.endTime) : ''}
         onChange={handleEndChange}
+        disabled={!value?.startTime}
         slotProps={{
           inputLabel: {
             shrink: true,
@@ -66,6 +72,10 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
           input: {
             'aria-label': 'End date',
             'aria-describedby': 'end-date-description',
+            inputProps: {
+              max: today,
+              min: value ? formatDate(value.startTime) : undefined,
+            },
           },
         }}
         fullWidth
