@@ -22,7 +22,7 @@ export class HistoryService {
       text: '',
       startTime: range.startTime,
       endTime: range.endTime,
-      maxResults: 100000,
+      maxResults: 1000000,
     });
 
     return items;
