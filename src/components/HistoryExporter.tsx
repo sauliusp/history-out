@@ -7,6 +7,7 @@ import { StorageKey } from '../types/StorageKeys';
 import { getRangeFromType } from '../utils/dateUtils';
 import { OutputSettings } from './OutputSettings';
 import { OutputConfig } from '../types/OutputConfig';
+import { DateRange } from '../types/DateRange';
 
 const INITIAL_OUTPUT_CONFIG: OutputConfig = {
   format: 'csv',
@@ -67,12 +68,19 @@ export const HistoryExporter: React.FC = () => {
       setLoading(true);
       setError(null);
 
-      const effectiveDateRange =
+      const effectiveDateRange: DateRange =
         config.historyRange === 'custom'
           ? config.dateRange!
           : getRangeFromType(config.historyRange);
 
       const items = await historyService.getHistory(effectiveDateRange);
+
+      if (items.length === 0) {
+        setError('No history entries found for the selected time range.');
+        setLoading(false);
+        return;
+      }
+
       const preparedItems = await historyService.prepareHistoryItems(
         items,
         effectiveDateRange
