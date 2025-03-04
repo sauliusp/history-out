@@ -99,12 +99,13 @@ export const HistoryExporter: React.FC = () => {
   return (
     <Stack spacing={3} role="main" aria-label="History export section">
       <Alert
-        severity="info"
+        severity={config.historyRange === 'custom' ? 'warning' : 'info'}
         role="alert"
         sx={{ '& a': { color: 'inherit', textDecoration: 'underline' } }}
       >
-        Chrome typically keeps history for up to 3 months unless you've
-        adjusted&nbsp;
+        When using <b>Custom Date Range</b>, please note that Chrome's default
+        history retention is 3 months. For older history, you'll need to adjust
+        your&nbsp;
         <a
           href="https://myaccount.google.com/activitycontrols"
           target="_blank"
@@ -112,7 +113,7 @@ export const HistoryExporter: React.FC = () => {
         >
           Google Activity settings
         </a>
-        . You can extend it up to 36 months or even disable auto-deletion.
+        &nbsp;(up to 36 months or disable auto-deletion).
       </Alert>
 
       <OutputSettings config={config} onConfigChange={handleConfigChange} />

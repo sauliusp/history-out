@@ -9,6 +9,7 @@ import {
   ListItemText,
   Chip,
   Stack,
+  FormHelperText,
 } from '@mui/material';
 import { ExportFormat } from '../types/ExportFormat';
 import { OutputConfig } from '../types/OutputConfig';
@@ -30,6 +31,8 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
   config,
   onConfigChange,
 }) => {
+  const hasSelectedFields = Object.values(config.fields).some(Boolean);
+
   const handleFormatChange = (format: ExportFormat) => {
     onConfigChange({ format });
   };
@@ -99,7 +102,7 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
         />
       )}
 
-      <FormControl fullWidth>
+      <FormControl fullWidth error={!hasSelectedFields}>
         <InputLabel id="include-fields-label">Include Fields</InputLabel>
         <Select
           labelId="include-fields-label"
@@ -111,6 +114,7 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
           label="Include Fields"
           onChange={(e) => {
             const selectedFields = e.target.value as string[];
+
             const updates = Object.keys(config.fields).reduce(
               (acc, field) => ({
                 ...acc,
@@ -161,6 +165,9 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
             </MenuItem>
           ))}
         </Select>
+        {!hasSelectedFields && (
+          <FormHelperText>At least one field must be selected</FormHelperText>
+        )}
       </FormControl>
     </Stack>
   );
