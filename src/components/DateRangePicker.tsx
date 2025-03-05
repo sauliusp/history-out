@@ -11,24 +11,35 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({
   value,
   onChange,
 }) => {
+  const parseDateComponents = (
+    dateString: string
+  ): [number, number, number] => {
+    return dateString.split('-').map(Number) as [number, number, number];
+  };
+
   const handleStartChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const startDate = new Date(e.target.value);
+    const [year, month, day] = parseDateComponents(e.target.value);
+    const startTime = Date.UTC(year, month - 1, day, 0, 0, 0);
+
     onChange({
-      startTime: startDate.getTime(),
+      startTime,
       endTime: value?.endTime || Date.now(),
     });
   };
 
   const handleEndChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const endDate = new Date(e.target.value);
+    const [year, month, day] = parseDateComponents(e.target.value);
+    const endTime = Date.UTC(year, month - 1, day, 23, 59, 59, 999);
+
     onChange({
       startTime: value?.startTime || Date.now(),
-      endTime: endDate.getTime(),
+      endTime,
     });
   };
 
   const formatDate = (timestamp: number) => {
-    return new Date(timestamp).toISOString().split('T')[0];
+    const date = new Date(timestamp);
+    return date.toISOString().split('T')[0];
   };
 
   const today = formatDate(Date.now());
