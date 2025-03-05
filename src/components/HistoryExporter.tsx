@@ -107,13 +107,13 @@ export const HistoryExporter: React.FC = () => {
   return (
     <Stack spacing={3} role="main" aria-label="History export section">
       <Alert
-        severity={config.historyRange === 'custom' ? 'warning' : 'info'}
+        severity={config.historyRange === 'all' ? 'warning' : 'info'}
         role="alert"
         sx={{ '& a': { color: 'inherit', textDecoration: 'underline' } }}
       >
-        When using <b>Custom Date Range</b>, please note that Chrome's default
-        history retention is 3 months. For older history, you'll need to adjust
-        your&nbsp;
+        When using <b>All Time</b> as time range, please note that Chrome's
+        default history retention is 3 months. For older history, you'll need to
+        adjust your&nbsp;
         <a
           href="https://myaccount.google.com/activitycontrols"
           target="_blank"
