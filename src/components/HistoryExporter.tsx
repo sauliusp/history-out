@@ -1,5 +1,13 @@
 import React, { useState, useEffect } from 'react';
-import { Button, Alert, Stack } from '@mui/material';
+import {
+  Button,
+  Alert,
+  Stack,
+  Divider,
+  Link,
+  ButtonGroup,
+  Box,
+} from '@mui/material';
 import { HistoryService } from '../services/HistoryService';
 import { ExportService } from '../services/ExportService';
 import { StorageService } from '../services/StorageService';
@@ -8,6 +16,7 @@ import { getRangeFromType } from '../utils/dateUtils';
 import { OutputSettings } from './OutputSettings';
 import { OutputConfig } from '../types/OutputConfig';
 import { DateRange } from '../types/DateRange';
+import CoffeeIcon from '@mui/icons-material/Coffee';
 
 const INITIAL_OUTPUT_CONFIG: OutputConfig = {
   format: 'csv',
@@ -25,6 +34,21 @@ const INITIAL_OUTPUT_CONFIG: OutputConfig = {
     transition: true,
   },
 };
+
+const SUPPORT_BUTTONS = [
+  {
+    text: 'Get Support',
+    href: 'https://chromewebstore.google.com/detail/historyout/idohnkdgejocejlkihihonhemndpiiei/support',
+  },
+  {
+    text: 'Write a Review',
+    href: 'https://chromewebstore.google.com/detail/historyout/idohnkdgejocejlkihihonhemndpiiei/reviews',
+  },
+  {
+    text: 'Suggest a Feature',
+    href: 'https://historyout.featurebase.app',
+  },
+] as const;
 
 const historyService = HistoryService.getInstance();
 const exportService = ExportService.getInstance();
@@ -111,17 +135,22 @@ export const HistoryExporter: React.FC = () => {
         role="alert"
         sx={{ '& a': { color: 'inherit', textDecoration: 'underline' } }}
       >
-        When using <b>All Time</b> as time range, please note that Chrome's
-        default history retention is 3 months. For older history, you'll need to
-        adjust your&nbsp;
-        <a
-          href="https://myaccount.google.com/activitycontrols"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Google Activity settings
-        </a>
-        &nbsp;(up to 36 months or disable auto-deletion).
+        <div>
+          When exporting <strong>All Time</strong> history, note that Chrome
+          typically retains only 3 months of data. To preserve longer history,
+          adjust your{' '}
+          <strong>
+            <a
+              href="https://myaccount.google.com/activitycontrols"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline font-semibold hover:text-blue-600"
+            >
+              Google Activity settings
+            </a>
+          </strong>{' '}
+          to extend retention up to 36 months.
+        </div>
       </Alert>
 
       <OutputSettings config={config} onConfigChange={handleConfigChange} />
@@ -138,9 +167,55 @@ export const HistoryExporter: React.FC = () => {
         disabled={!submitEnabled}
         aria-busy={loading}
         aria-disabled={!submitEnabled}
+        loading={loading}
+        size="large"
       >
-        {loading ? 'Exporting...' : 'Export History'}
+        Export History
       </Button>
+
+      <Stack spacing={3} role="complementary" aria-label="Support options">
+        <ButtonGroup
+          size="small"
+          variant="text"
+          aria-label="Support and feedback options"
+          sx={{ justifyContent: 'center' }}
+        >
+          {SUPPORT_BUTTONS.map((button) => (
+            <Button
+              key={button.text}
+              href={button.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              sx={{ textTransform: 'none', textAlign: 'center' }}
+              aria-label={`${button.text} - opens in new tab`}
+            >
+              {button.text}
+            </Button>
+          ))}
+        </ButtonGroup>
+
+        <Box
+          sx={{ textAlign: 'center' }}
+          role="complementary"
+          aria-label="Donation option"
+        >
+          <Link
+            href="https://www.buymeacoffee.com/saulius.developer"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Buy me a coffee - opens in new tab"
+          >
+            <img
+              src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png"
+              alt="Buy Me A Coffee"
+              style={{
+                height: '60px',
+                width: '217px',
+              }}
+            />
+          </Link>
+        </Box>
+      </Stack>
     </Stack>
   );
 };
