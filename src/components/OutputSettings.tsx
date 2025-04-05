@@ -49,9 +49,10 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({
             label="Export Format"
             onChange={(e) => handleFormatChange(e.target.value as ExportFormat)}
             aria-describedby="export-format-description"
+            renderValue={(value) => value.toString().toUpperCase()}
           >
             <MenuItem value="csv" role="option">
-              CSV
+              <ListItemText primary="CSV" secondary="Excel-readable" />
             </MenuItem>
             <MenuItem value="json" role="option">
               JSON

@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
   "name": "HistoryOut - Export Chrome History",
-  "version": "1.0.0",
-  "description": "Export and analyze your browsing history with custom date ranges. Download in CSV, JSON or HTML formats.",
+  "version": "1.0.1",
+  "description": "Export Chrome History in Excel-readable CSV, JSON or HTML formats. Use custom date ranges and customize the output fields.",
   "permissions": ["history", "storage", "sidePanel"],
   "background": {
     "service_worker": "background.js"

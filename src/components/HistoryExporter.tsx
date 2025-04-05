@@ -50,6 +50,9 @@ const SUPPORT_BUTTONS = [
   },
 ] as const;
 
+const TAG_CHOOSE_URL =
+  'https://chromewebstore.google.com/detail/tagchoose-ai-bookmark-man/hlfgdfpeekcelanebbfchnnneijhophh';
+
 const historyService = HistoryService.getInstance();
 const exportService = ExportService.getInstance();
 const storageService = StorageService.getInstance();
@@ -130,28 +133,30 @@ export const HistoryExporter: React.FC = () => {
 
   return (
     <Stack spacing={3} role="main" aria-label="History export section">
-      <Alert
-        severity={config.historyRange === 'all' ? 'warning' : 'info'}
-        role="alert"
-        sx={{ '& a': { color: 'inherit', textDecoration: 'underline' } }}
-      >
-        <div>
-          When exporting <strong>All Time</strong> history, note that Chrome
-          typically retains only 3 months of data. To preserve longer history,
-          adjust your{' '}
-          <strong>
-            <a
-              href="https://myaccount.google.com/activitycontrols"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline font-semibold hover:text-blue-600"
-            >
-              Google Activity settings
-            </a>
-          </strong>{' '}
-          to extend retention up to 36 months.
-        </div>
-      </Alert>
+      {config.historyRange === 'all' && (
+        <Alert
+          severity="info"
+          role="alert"
+          sx={{ '& a': { color: 'inherit', textDecoration: 'underline' } }}
+        >
+          <div>
+            When exporting <strong>All Time</strong> history, note that Chrome
+            typically retains only 3 months of data. To preserve longer history,
+            adjust your{' '}
+            <strong>
+              <a
+                href="https://myaccount.google.com/activitycontrols"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline font-semibold hover:text-blue-600"
+              >
+                Google Activity settings
+              </a>
+            </strong>{' '}
+            to extend retention up to 36 months.
+          </div>
+        </Alert>
+      )}
 
       <OutputSettings config={config} onConfigChange={handleConfigChange} />
 
@@ -206,13 +211,35 @@ export const HistoryExporter: React.FC = () => {
             aria-label="Buy me a coffee - opens in new tab"
           >
             <img
-              src="https://cdn.buymeacoffee.com/buttons/v2/arial-yellow.png"
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png"
               alt="Buy Me A Coffee"
               style={{
                 height: '60px',
                 width: '217px',
               }}
             />
+          </Link>
+        </Box>
+
+        <Box
+          sx={{
+            textAlign: 'center',
+            fontSize: '0.85rem',
+          }}
+        >
+          You might be also interested in{' '}
+          <Link
+            href={TAG_CHOOSE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            sx={{
+              textDecoration: 'none',
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            }}
+          >
+            #TagChoose - AI Bookmark Manager with client-side Gemini Nano LLM
           </Link>
         </Box>
       </Stack>
