@@ -1,57 +1,46 @@
-# HistoryOut product video
+# HistoryOut export-first product video
 
-The finished edit is 34.5 seconds at 1920 × 1080 and 30 fps, with narration, an original ambient score, action-synchronized click effects and timed captions. It preserves the original HistoryOut wordmark and icon. It demonstrates the working extension with fictional history and opens a real downloaded HTML export.
+The current launch edit leads with the core promise: export browser history as CSV, JSON or HTML. It is 24 seconds at 1920 × 1080 and 30 fps, with one connected 63-word narration, a quiet original music bed, action-synchronized click effects and timed captions. The original HistoryOut icon and wordmark remain unchanged.
 
-## Delivered files
+## Canonical files
 
-- Canonical MP4: `launch/assets/video-v2.1/historyout-34s.mp4`
-- Web captions: `launch/assets/video-v2.1/historyout-captions.vtt`
-- Upload captions: `launch/assets/video-v2.1/historyout-captions.srt`
-- Poster: `launch/assets/video-v2.1/historyout-poster.png`
-- Authoritative duration, codecs, checksum and timed transcript: `launch/assets/video-v2.1/historyout-media.json`
-- Listening preview: `launch/assets/video-v2.1/audio/voiceover-review.wav`
-- Review gallery: `launch/assets/index.html`
+- Video: `launch/assets/video-v3/historyout-export-demo.mp4`
+- Web captions: `launch/assets/video-v3/historyout-captions.vtt`
+- Upload captions: `launch/assets/video-v3/historyout-captions.srt`
+- Poster: `launch/assets/video-v3/historyout-poster.png`
+- Authoritative measured metadata and timed transcript: `launch/assets/video-v3/historyout-media.json`
+- Isolated listening preview: `launch/assets/video-v3/audio/voiceover-review.wav`
+- Real downloaded files: `launch/assets/video-v3/historyout-demo-export.html` and `historyout-filtered-export.html`
 
-The earlier silent 50-second study remains in `launch/assets/video/` as an earlier artifact. It is not the current launch video.
+Previous 34.5-second and silent 50-second edits remain as earlier artifacts. They are not the current launch edit. Production directory numbers are internal revision identifiers, not product branding.
 
-## Actual edit and narration
+## Actual edit
 
-| Time | Real interaction | Narration |
-| --- | --- | --- |
-| 0.0-4.5 | Original brand, working workspace and clear opening hook | Lost that useful page? Find your way back with HistoryOut. |
-| 4.5-9.0 | Preview Today, inspect the recap and type a project search | Review your day, then search the pages you need. |
-| 9.0-13.1 | Enable one row per URL and show the two matching project pages | Keep the latest visit to each page. |
-| 13.1-17.6 | Name and save a research view | Save your view, and resume your research later. |
-| 17.6-22.2 | Choose custom dates, preview and select HTML | Choose your dates, your columns, and your format. |
-| 22.2-27.1 | Enable optional URL cleanup, inspect chosen columns and download the actual HTML file | Clean up URL parameters, then export a useful file. |
-| 27.1-34.5 | Show the real exported file and the website call to action | Free. Local. No account. Get HistoryOut, and keep what matters. |
+| Time | Demonstration |
+| --- | --- |
+| 0.0-4.4 | Actual CSV, JSON and HTML controls. Download HTML around three seconds into the video and show the resulting file immediately. |
+| 4.4-9.1 | Readable, real HTML export with clickable page links. |
+| 9.1-11.1 | Custom date controls and selected export columns. |
+| 11.1-17.4 | Search to keep relevant visits, choose the latest visit per URL, optionally remove query strings and fragments, and export the matching pages. |
+| 17.4-20.4 | A brief recap and saved-view extra. |
+| 20.4-24.0 | Actual filtered export and “Get HistoryOut free” call to action. |
 
-Exact speech starts and ends are recorded in the metadata JSON. Full captions are visible in the video and available in VTT and SRT. The UI preview contains an explicit fictional-data label. Three export columns are selected as demonstration preferences; these are real settings, not invented controls.
+The voice begins at 0.2 seconds and ends at approximately 23.215 seconds, leaving 0.785 seconds after the last words. Exact cut and click timings are preserved in the production sources. The measured pace is approximately 164 words per minute. Captions follow independent word alignment and keep CSV, JSON, HTML and HistoryOut correctly capitalized.
 
-## Voice and verification
+## Final narration
 
-The narration is generated locally from the creator-authorized reference in [the original HistoryOut video](https://www.youtube.com/watch?v=8k0lNtIhPWs). The original title, creator channel and 29-second duration were verified. An 8.55-second excerpt beginning at 0.58 seconds conditions the local Qwen3-TTS voice model. No voice audio was sent to a generation service.
+“Export your browser history as CSV, JSON, or HTML. With HistoryOut, turn your visits into a useful file you can open or share. Choose your own dates and columns, then search or filter to keep the pages you need. Remove repeat visits and URL parameters before exporting. Daily recaps and saved views help tomorrow, too. HistoryOut is free and local, with no account.”
 
-All seven generated segments and the complete mixed soundtrack were independently transcribed with MLX Whisper. The intended wording was verified. The final MP4 has valid H.264 video and stereo AAC audio, and the mix peak remains below clipping. Screenshots and a six-frame video contact sheet were visually inspected. The visible version badge was removed before final capture.
+## Provenance and verification
 
-The agent session cannot hear audio directly and does not claim that perceptual voice similarity has been confirmed. The complete video, isolated voice and audio stems are available for listening review. The video was published to the creator's YouTube channel as requested: https://youtu.be/GT7aEfalP1E. Studio confirms Public and all changes saved.
+All browsing data is fictional QA history. The controls are the working extension, including the final optional coffee support link. The video opens files actually downloaded by that interface. It does not invent controls or show personal browser history.
 
-## YouTube metadata draft
+Narration is synthetic and generated locally from the creator-authorized voice reference in [the original HistoryOut demonstration](https://www.youtube.com/watch?v=8k0lNtIhPWs). The source recording remains in a private local cache, outside the repository. No paid generation service, remote voice upload, borrowed music or borrowed click sample is used.
 
-**Title:** Find your way back with HistoryOut
+The isolated narration and complete mixed track are independently transcribed. Technical checks record integrated loudness, true peak, maximum voice silence and the exact final codecs and runtime. Visual review uses actual extracted frames. These checks do not substitute for human perceptual listening; voice similarity and subjective mix quality are not claimed as confirmed. No upload or publication is performed by the media agent.
 
-**Description:**
+## YouTube positioning
 
-Lost a useful page? Review your day, resume your research, and keep the links that matter with HistoryOut. Search and filter your browser history, save a reusable view, then export CSV, JSON or a readable HTML file.
+Lead the title and description with exporting browser history in CSV, JSON and HTML. Explain date, column and relevance controls next. Daily recap and saved views are supporting features. Use the current installation and website links in the description; the video intentionally contains no website hostname while the domain migration is pending. No chapters are needed for this short edit.
 
-Free. Local history processing. No account.
-
-Get HistoryOut: [exportchromehistory.app](https://exportchromehistory.app/)
-
-Install: [Chrome Web Store](https://chromewebstore.google.com/detail/historyout-export-chrome/idohnkdgejocejlkihihonhemndpiiei)
-
-This demonstration uses fictional browsing data, actual extension controls and a real downloaded file. Narration is synthetic and based on the creator's own authorized voice reference. HistoryOut cannot recover deleted history or measure time spent on pages. URL cleanup does not anonymize browsing history.
-
-## Reproduction
-
-Build the current extension, then use `launch/assets/video-v2.1/source/produce-video.cjs`. The neighboring voice and audio-mix scripts, narration JSON and interaction trace preserve the source. Tool dependencies and the private reference excerpt are kept in the local cache, not in the extension package. No music or click samples were borrowed.
+Reproduction instructions and all source scripts live in `launch/assets/video-v3/README.md` and its neighboring `source/` directory.

@@ -4,18 +4,26 @@
     "status": "public",
     "url": "https://historyout.sauliusdev.chatgpt.site/",
     "anonymousHTTPChecksPassed": 20,
-    "sourceCommit": "68a02d03cd0509fbfa491c5046456472249a3a0c"
+    "sourceCommit": "84615ae64f202204f9c4e813c9555ea19a4fd76e",
+    "currentVideoSeconds": 24,
+    "currentMediaChecksPassed": 4
   },
   "youtube": {
-    "url": "https://youtu.be/GT7aEfalP1E",
-    "studioUrl": "https://studio.youtube.com/video/GT7aEfalP1E/edit",
+    "url": "https://youtu.be/CqMeYRX0hWQ",
+    "studioUrl": "https://studio.youtube.com/video/CqMeYRX0hWQ/edit",
     "visibility": "public",
-    "title": "Find and Export Browser History to CSV, JSON or HTML | HistoryOut",
+    "title": "Export Browser History to CSV, JSON or HTML | HistoryOut",
     "englishCaptions": "uploaded and saved",
     "customThumbnail": "uploaded",
     "checks": "Copyright and Community Guidelines: no issues found",
-    "verification": "YouTube Studio shows Public and All changes saved.",
-    "voiceReviewLimit": "Transcript and timing verified automatically. Perceptual voice likeness has not been independently confirmed."
+    "verification": "YouTube Studio Video published dialog confirmed on 2026-09-05.",
+    "voiceReviewLimit": "Transcript and timing verified automatically. Perceptual voice likeness has not been independently confirmed.",
+    "durationSeconds": 24,
+    "previousVideo": {
+      "url": "https://youtu.be/GT7aEfalP1E",
+      "visibility": "unlisted",
+      "replacementLinkInDescription": true
+    }
   },
   "buyMeACoffee": {
     "url": "https://buymeacoffee.com/saulius.developer",
@@ -31,8 +39,8 @@
     "ownerWillConnectDomain": true
   },
   "releaseCandidate": {
-    "sourceCommit": "56bdd7d02c8513ccb955d6b5c7e3898003a06421",
-    "chromeArchiveSHA256": "795d56c66eae12de2c9b6e0766555559f7cb6c99b31cf631aeefcac5542783d9",
-    "submitted": false
+    "chromeArchiveSHA256": "916bf31ada39b5f2b833e23bc7b9e3eb314933d3269f4a7cafc1dd790320efb8",
+    "submitted": false,
+    "sourceRevisionNote": "Current support CTA source and package are recorded in bmc-cta.json and package-audit.json."
   }
 }

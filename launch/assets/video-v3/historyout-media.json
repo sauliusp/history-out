@@ -1,0 +1,109 @@
+{
+  "title": "Export your browser history as CSV, JSON or HTML with HistoryOut",
+  "duration_seconds": 24.0,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_channels": 2,
+  "sample_rate": 48000,
+  "bytes": 3856732,
+  "sha256": "3aab73bb70210d326e740ec8fa2b78c9f5c235c109577a0f5049c17344cdd4cb",
+  "mp4": "historyout-export-demo.mp4",
+  "poster": "historyout-poster.png",
+  "captions_srt": "historyout-captions.srt",
+  "captions_vtt": "historyout-captions.vtt",
+  "transcript_text": "Export your browser history as CSV, JSON, or HTML. With HistoryOut, turn your visits into a useful file you can open or share. Choose your own dates and columns, then search or filter to keep the pages you need. Remove repeat visits and URL parameters before exporting. Daily recaps and saved views help tomorrow, too. HistoryOut is free and local, with no account.",
+  "timed_captions": [
+    {
+      "start": 0.2,
+      "end": 1.715,
+      "text": "Export your browser history"
+    },
+    {
+      "start": 1.74,
+      "end": 4.555,
+      "text": "as CSV, JSON, or HTML."
+    },
+    {
+      "start": 4.58,
+      "end": 6.435,
+      "text": "With HistoryOut, turn your visits"
+    },
+    {
+      "start": 6.46,
+      "end": 7.655,
+      "text": "into a useful file"
+    },
+    {
+      "start": 7.68,
+      "end": 9.235,
+      "text": "you can open or share."
+    },
+    {
+      "start": 9.26,
+      "end": 11.035,
+      "text": "Choose your own dates and columns,"
+    },
+    {
+      "start": 11.06,
+      "end": 12.055,
+      "text": "then search or filter"
+    },
+    {
+      "start": 12.08,
+      "end": 13.755,
+      "text": "to keep the pages you need."
+    },
+    {
+      "start": 13.78,
+      "end": 14.815,
+      "text": "Remove repeat visits"
+    },
+    {
+      "start": 14.84,
+      "end": 17.455,
+      "text": "and URL parameters before exporting."
+    },
+    {
+      "start": 17.48,
+      "end": 19.055,
+      "text": "Daily recaps and saved views"
+    },
+    {
+      "start": 19.08,
+      "end": 20.375,
+      "text": "help tomorrow, too."
+    },
+    {
+      "start": 20.4,
+      "end": 22.435,
+      "text": "HistoryOut is free and local,"
+    },
+    {
+      "start": 22.46,
+      "end": 23.7,
+      "text": "with no account."
+    }
+  ],
+  "speech_start": 0.2,
+  "speech_end": 23.215,
+  "tail_seconds": 0.785,
+  "words_per_minute": 164.2395232129538,
+  "maximum_aligned_word_gap_seconds": 0.46,
+  "maximum_detected_voice_silence_seconds": 0.360833,
+  "loudness_integrated_lufs": -13.37,
+  "true_peak_dbtp": -1.31,
+  "loudness_range_lu": 2.8,
+  "mix_sample_peak_before_encode": 0.8097609678954438,
+  "click_count": 13,
+  "voice": "One continuous locally generated read conditioned on the creator-authorized original public voice reference; sentence gaps trimmed and cadence preserved.",
+  "reference_url": "https://www.youtube.com/watch?v=8k0lNtIhPWs",
+  "verification": "All spoken words independently verified by local ASR in isolated voice and complete mix. Visual frames inspected. Human perceptual listening is not claimed.",
+  "history": "Actual working interface, real downloaded exports, fictional QA browsing data.",
+  "music": "Original synthesized ambient bed, no borrowed samples",
+  "clicks": "Original synthesized click effects synchronized to actual UI actions",
+  "brand": "Original HistoryOut wordmark and icons; no public version suffix",
+  "production_bundle_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38"
+}

@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-05T09:26:58.866Z",
+  "generated": "2026-09-05T11:49:41.640Z",
   "extensionVersion": "2.0.0",
-  "bundleSHA256": "2be0d7e412641f683d49992751445efdc10be29350c2378a617c6faa37c82900",
+  "bundleSHA256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
   "backgroundSHA256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
   "originalIconGitRef": "0272441",
   "originalIconSHA256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
@@ -9,11 +9,11 @@
   "inputCaptures": [
     {
       "file": "launch/assets/raw/01-daily-focus.png",
-      "sha256": "f2a97437be6f942011138d5ebc2c7befc415de9f7149ff9f7b92e406511f2a82"
+      "sha256": "ac487788a4a3def55fffa30e0c334847446f97d1e3f9ca8949921f634f17eb4e"
     },
     {
       "file": "launch/assets/raw/02-project-focus.png",
-      "sha256": "2922f539ba7918dc9bd0ccd3d727faecf9ae12693f1b5cd826db74d6a3452aea"
+      "sha256": "1d75b88ba0a751257d458211d5b828b7224836f2853b2e966c9f90f7a0b7228f"
     },
     {
       "file": "launch/assets/raw/05-real-html-export.png",
@@ -21,15 +21,15 @@
     },
     {
       "file": "launch/assets/raw/03-custom-dates.png",
-      "sha256": "a837373604da906bd735fef42f3b7cae7a089c31fa862390b908a9cee0d3bb60"
+      "sha256": "bf63ad8ffcfd9c5941efe4489037a51242f5a7c3d7aef95d7e8e85e486c477e7"
     },
     {
       "file": "launch/assets/raw/04-clean-export.png",
-      "sha256": "16ae328b5270139c7679335d1658b31f263eadab6de5bf6e863d31e1519bf0d9"
+      "sha256": "f9f4523e05cdd6aefa19b4d130ac058ea669475f90219283f52047f0bfcc8283"
     },
     {
       "file": "launch/assets/raw/saved-view-strip.png",
-      "sha256": "928cd24d09eb9830c6c6878c01338a54de529ee95b6a096e2db2c40ba978fb75"
+      "sha256": "28be096236f31852bc5ad6299ed146887b0dc6382e721710291790704edb9be3"
     }
   ],
   "files": [
@@ -106,13 +106,13 @@
     },
     {
       "file": "chrome/historyout-2.0.0-chrome.zip",
-      "bytes": 152393,
-      "sha256": "795d56c66eae12de2c9b6e0766555559f7cb6c99b31cf631aeefcac5542783d9"
+      "bytes": 156877,
+      "sha256": "916bf31ada39b5f2b833e23bc7b9e3eb314933d3269f4a7cafc1dd790320efb8"
     },
     {
       "file": "chrome/listing.json",
       "bytes": 3400,
-      "sha256": "889db1405140c3ee35807fc95f70f761ffab670eb1e69194e5d76309503a1b32"
+      "sha256": "611ce4f051aa9c380fca1728e42cb9145f0ade6e1970595f67ba7a33381aaace"
     },
     {
       "file": "chrome/promotional/marquee-1400x560.png",
@@ -132,16 +132,16 @@
     },
     {
       "file": "chrome/screenshots/01-revisit-your-day.png",
-      "bytes": 144766,
-      "sha256": "9a7e4cbda134db6941e63b39e802eadacec1edd0c7685f28181defaa2eb4a323",
+      "bytes": 145328,
+      "sha256": "d4b797e46b7881e34c1c02810adc54866b3d85e0dd7f5e6f5b02813fabc72dcb",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "chrome/screenshots/02-resume-your-research.png",
-      "bytes": 156916,
-      "sha256": "38430261a42503264362af36cd922bec46d0e9426f6d24a0b6bf33f7a287109a",
+      "bytes": 157223,
+      "sha256": "997b92aa797d7972357f6e6b995bf36eaafb80f9a26a0e75db669986c21278e4",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
@@ -156,16 +156,16 @@
     },
     {
       "file": "chrome/screenshots/04-choose-your-dates.png",
-      "bytes": 139750,
-      "sha256": "418c2581c7df48d716295706216c2244a9962d416223bf7747365ceda07cc513",
+      "bytes": 145394,
+      "sha256": "e3c498dddb4f5779c1219791fb37736e25272db81568b4bb9b6484e27f1c2908",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "chrome/screenshots/05-export-what-matters.png",
-      "bytes": 166874,
-      "sha256": "dcd2cf17bd4f00c1a78238257a8984caa76ab4e0da1865f3a7da749d8f4d7977",
+      "bytes": 167006,
+      "sha256": "e31c088259a59ac9e9d309cf68a540b5ccb7d40bf47930a059290873333fb388",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
@@ -173,7 +173,7 @@
     {
       "file": "chrome/submission.md",
       "bytes": 3588,
-      "sha256": "0b97f5df7b2cb0828a0fe567ac69dfe5beb15d4727794d5d43993f7fbecac7c8"
+      "sha256": "884be9465b4bc29724fe329458c0765e2888943b9b75a58c1b7cc424aa2364b1"
     },
     {
       "file": "distribution.md",
@@ -195,13 +195,13 @@
     },
     {
       "file": "edge/historyout-2.0.0-edge.zip",
-      "bytes": 152393,
-      "sha256": "795d56c66eae12de2c9b6e0766555559f7cb6c99b31cf631aeefcac5542783d9"
+      "bytes": 156877,
+      "sha256": "916bf31ada39b5f2b833e23bc7b9e3eb314933d3269f4a7cafc1dd790320efb8"
     },
     {
       "file": "edge/listing.json",
       "bytes": 3522,
-      "sha256": "b9be655996961213a4f239e4931eba62b2dfcce15c5ad653acd9009bb4b16e9e"
+      "sha256": "32519203cd40b9290eb7f8f18d9ff394227b2aa36b6e0f1960c9f35073b67ada"
     },
     {
       "file": "edge/promotional/marquee-1400x560.png",
@@ -221,16 +221,16 @@
     },
     {
       "file": "edge/screenshots/01-revisit-your-day.png",
-      "bytes": 144766,
-      "sha256": "9a7e4cbda134db6941e63b39e802eadacec1edd0c7685f28181defaa2eb4a323",
+      "bytes": 145328,
+      "sha256": "d4b797e46b7881e34c1c02810adc54866b3d85e0dd7f5e6f5b02813fabc72dcb",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "edge/screenshots/02-resume-your-research.png",
-      "bytes": 156916,
-      "sha256": "38430261a42503264362af36cd922bec46d0e9426f6d24a0b6bf33f7a287109a",
+      "bytes": 157223,
+      "sha256": "997b92aa797d7972357f6e6b995bf36eaafb80f9a26a0e75db669986c21278e4",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
@@ -245,16 +245,16 @@
     },
     {
       "file": "edge/screenshots/04-choose-your-dates.png",
-      "bytes": 139750,
-      "sha256": "418c2581c7df48d716295706216c2244a9962d416223bf7747365ceda07cc513",
+      "bytes": 145394,
+      "sha256": "e3c498dddb4f5779c1219791fb37736e25272db81568b4bb9b6484e27f1c2908",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "edge/screenshots/05-export-what-matters.png",
-      "bytes": 166874,
-      "sha256": "dcd2cf17bd4f00c1a78238257a8984caa76ab4e0da1865f3a7da749d8f4d7977",
+      "bytes": 167006,
+      "sha256": "e31c088259a59ac9e9d309cf68a540b5ccb7d40bf47930a059290873333fb388",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
@@ -262,7 +262,7 @@
     {
       "file": "edge/submission.md",
       "bytes": 2158,
-      "sha256": "1602f46cd78153d46d145112e5fb25a0023c02d8ae0fee05a15aa71a411fe8de"
+      "sha256": "d7c43779be81a1685dbc15c554f34a6812fc06d733a888c1918d4d52b1eb84f9"
     },
     {
       "file": "promotional/marquee-1400x560.png",
@@ -282,16 +282,16 @@
     },
     {
       "file": "screenshots/01-revisit-your-day.png",
-      "bytes": 144766,
-      "sha256": "9a7e4cbda134db6941e63b39e802eadacec1edd0c7685f28181defaa2eb4a323",
+      "bytes": 145328,
+      "sha256": "d4b797e46b7881e34c1c02810adc54866b3d85e0dd7f5e6f5b02813fabc72dcb",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "screenshots/02-resume-your-research.png",
-      "bytes": 156916,
-      "sha256": "38430261a42503264362af36cd922bec46d0e9426f6d24a0b6bf33f7a287109a",
+      "bytes": 157223,
+      "sha256": "997b92aa797d7972357f6e6b995bf36eaafb80f9a26a0e75db669986c21278e4",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
@@ -306,16 +306,16 @@
     },
     {
       "file": "screenshots/04-choose-your-dates.png",
-      "bytes": 139750,
-      "sha256": "418c2581c7df48d716295706216c2244a9962d416223bf7747365ceda07cc513",
+      "bytes": 145394,
+      "sha256": "e3c498dddb4f5779c1219791fb37736e25272db81568b4bb9b6484e27f1c2908",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "screenshots/05-export-what-matters.png",
-      "bytes": 166874,
-      "sha256": "dcd2cf17bd4f00c1a78238257a8984caa76ab4e0da1865f3a7da749d8f4d7977",
+      "bytes": 167006,
+      "sha256": "e31c088259a59ac9e9d309cf68a540b5ccb7d40bf47930a059290873333fb388",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
@@ -347,22 +347,42 @@
       "sha256": "d158968a1407e53e57860ca063d4c3be36d5eea5cec94c19bbb9e15eae57c26e"
     },
     {
-      "file": "youtube/metadata.json",
+      "file": "youtube/archive/GT7aEfalP1E/README.md",
+      "bytes": 385,
+      "sha256": "f58100a12d405f31b3e00d7e4bcbaa256661314dd853fa86fc70d61cc2df6856"
+    },
+    {
+      "file": "youtube/archive/GT7aEfalP1E/metadata.json",
       "bytes": 2536,
       "sha256": "857a6520e93fe92eef6b533d8c7a0ef776a6baf6755d815104d11314b9b5e48a"
     },
     {
+      "file": "youtube/archive/GT7aEfalP1E/upload-status.json",
+      "bytes": 695,
+      "sha256": "3102e8834ef791384ef933302a41831adc2a17efbf61cc90c668cf701bbf05ae"
+    },
+    {
+      "file": "youtube/export-first-metadata.json",
+      "bytes": 2946,
+      "sha256": "d367dac4396581a7e29806da3f2c5d6c9229914a91be3ea77aeda0b84eda355a"
+    },
+    {
+      "file": "youtube/metadata.json",
+      "bytes": 2946,
+      "sha256": "d367dac4396581a7e29806da3f2c5d6c9229914a91be3ea77aeda0b84eda355a"
+    },
+    {
       "file": "youtube/thumbnail-1280x720.png",
-      "bytes": 145619,
-      "sha256": "ef70ff9f569f34a062b8056059b6a08a8320281286e1c822a17567170960f9f9",
+      "bytes": 157458,
+      "sha256": "ac68dbde75e7c91397f790946cb069992f80eeb6142cb7acdfc4c3ca46e0df77",
       "width": 1280,
       "height": 720,
       "hasAlpha": false
     },
     {
       "file": "youtube/upload-status.json",
-      "bytes": 695,
-      "sha256": "3102e8834ef791384ef933302a41831adc2a17efbf61cc90c668cf701bbf05ae"
+      "bytes": 972,
+      "sha256": "954f527815d29e4126981db5ce21eaf9289f58b345ce4a90276cff28af96ce61"
     }
   ]
 }

@@ -9,7 +9,7 @@ Use `listing.json` for field values and `description.txt` for the complete publi
 1. Replace the package on the existing item.
 2. Set the public name and description from `listing.json`. The name must match the manifest.
 3. Upload `brand/icon128.png`, the five ordered files under `screenshots/`, and both files under `promotional/`.
-4. Add the new public YouTube demo: https://youtu.be/GT7aEfalP1E. Do not use the old silent draft.
+4. Add the new public YouTube demo: https://youtu.be/CqMeYRX0hWQ. Do not use the old silent draft.
 5. Use the public website and privacy URLs from `listing.json`. Check both anonymously before submitting.
 6. Complete the privacy fields below, review the final listing preview, and submit the update for review.
 

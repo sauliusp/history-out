@@ -1,5 +1,5 @@
 {
-  "checked": "2026-09-05T09:13:04.075Z",
+  "checked": "2026-09-05T11:40:54.623Z",
   "status": "passed",
   "unitTests": {
     "tests": 37,
@@ -8,7 +8,7 @@
   "typecheck": "passed",
   "browserCases": 30,
   "nativeUpgradeCases": 3,
-  "packageChecks": 125,
+  "packageChecks": 137,
   "originalIcons": {
     "baseline": "0272441",
     "sha256": {
@@ -18,5 +18,32 @@
       "128": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111"
     }
   },
-  "bundleBytes": 475603
+  "bundleBytes": 476832,
+  "bundleSha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+  "validationStages": {
+    "earlierBroadValidation": {
+      "unitTestsChecked": "2026-09-05T09:13:04.075Z",
+      "browserScenariosChecked": "2026-09-05T09:07:05.730Z",
+      "nativeUpgradeChecked": "2026-09-05T08:57:27.888Z",
+      "note": "The 37 unit, 30 browser and 3 native update results predate the additive support CTA. They were not all rerun for this UI-only change."
+    },
+    "currentSupportDelta": {
+      "checked": "2026-09-05T11:38:08.879Z",
+      "evidence": "bmc-cta.json",
+      "viewports": [
+        320,
+        400,
+        1200
+      ],
+      "typecheck": "passed",
+      "productionBuild": "passed",
+      "originalIconBytes": "verified unchanged",
+      "nativeVisiblePreview": "passed; six fictional yesterday visits, five pages, three sites"
+    },
+    "currentPackageAudit": {
+      "checked": "2026-09-05T11:33:56.115Z",
+      "checks": 137,
+      "stressTestsRerun": 3
+    }
+  }
 }

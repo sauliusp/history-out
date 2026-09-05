@@ -243,6 +243,20 @@ export const HistoryExporter: React.FC = () => {
       </Stack>
 
       <Stack spacing={1.5}>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 1, px: 1.4, py: 1.1, border: '1px solid #eeddaa', borderRadius: '12px', bgcolor: '#fffaed' }}>
+          <Box sx={{ minWidth: 0 }}>
+            <Typography variant="body2" sx={{ fontWeight: 650, color: '#122c48', lineHeight: 1.35 }}>Free to use.</Typography>
+            <Typography id="coffee-support-note" variant="caption" sx={{ color: '#756548', display: 'block', mt: 0.15 }}>Optional support.</Typography>
+          </Box>
+          <Button
+            href="https://www.buymeacoffee.com/saulius.developer" target="_blank" rel="noopener noreferrer"
+            aria-label="Buy me a coffee (opens in a new tab)" aria-describedby="coffee-support-note"
+            startIcon={<Box component="img" src="assets/bmc-cup.svg" alt="" aria-hidden="true" sx={{ width: 17, height: 25, objectFit: 'contain' }} />}
+            sx={{ flexShrink: 0, minHeight: 38, px: 1.55, bgcolor: '#ffdd00', color: '#122c48', border: '1px solid #ebcc00', borderRadius: '9px', fontSize: '0.8125rem', fontWeight: 750, boxShadow: '0 2px 3px #7e620010', '& .MuiButton-startIcon': { mr: 0.75, ml: 0 }, '&:hover': { bgcolor: '#f5d400', borderColor: '#d8bb00', boxShadow: '0 3px 6px #7e620019' }, '&:focus-visible': { outline: '2px solid #185adb', outlineOffset: 3 } }}
+          >
+            Buy me a coffee
+          </Button>
+        </Box>
         <Box sx={card}>
           <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ mb: 1.4 }}>
             <Typography component="h2" variant="h2">Start with a time range</Typography>

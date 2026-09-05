@@ -20,7 +20,7 @@ const canonical = value => {
 const permissionFields = ['permissions', 'host_permissions', 'optional_permissions', 'optional_host_permissions'];
 const permissions = manifest => Object.fromEntries(permissionFields.map(key => [key, [...(manifest[key] || [])].sort()]));
 const files = [
-  'background.js', 'bundle.js', 'bundle.js.LICENSE.txt', 'icons/icon128.png',
+  'assets/bmc-cup.svg', 'background.js', 'bundle.js', 'bundle.js.LICENSE.txt', 'icons/icon128.png',
   'icons/icon16.png', 'icons/icon32.png', 'icons/icon48.png', 'manifest.json',
   'side-panel.html', 'styles.css',
 ];
@@ -83,7 +83,7 @@ for (const target of ['chrome', 'edge', 'brave', 'chromium']) {
     const archiveFiles = archiveEntries.filter(file => !file.endsWith('/')).sort();
     check(`${target}:exact-file-allowlist`, equal(archiveFiles, files), archiveFiles);
     check(`${target}:no-duplicate-or-unsafe-entries`, new Set(archiveEntries).size === archiveEntries.length &&
-      archiveEntries.every(file => file === 'icons/' || files.includes(file)), archiveEntries);
+      archiveEntries.every(file => ['icons/', 'assets/'].includes(file) || files.includes(file)), archiveEntries);
     check(`${target}:no-maps-fixtures-test-or-nested-archives`, !archiveEntries.some(file => /(?:\.map$|fixture|test|\.zip$|\.crx$|node_modules|__MACOSX|\.DS_Store)/i.test(file)));
     const manifestBytes = run('unzip', ['-p', relativePath, 'manifest.json']);
     const manifest = JSON.parse(manifestBytes);
@@ -114,6 +114,9 @@ for (const target of ['chrome', 'edge', 'brave', 'chromium']) {
       entry.files.push({ file, bytes: archived.length, sha256: archivedHash, source_sha256: sourceHash, staging_sha256: stagedHash, matches_source: matchesSource, source_comparison: file === 'manifest.json' ? 'semantic JSON with target-specific sidePanel removal only' : 'exact bytes' });
       check(`${target}:${file}:matches-current-unpacked`, matchesSource);
       check(`${target}:${file}:matches-staging`, archivedHash === stagedHash);
+      if (file.endsWith('.svg')) {
+        check(`${target}:${file}:no-active-or-remote-content`, !/<(?:script|foreignObject|image)\b|\b(?:href|xlink:href)\s*=/i.test(archived.toString()));
+      }
       if (/\.(?:js|html|css)$/.test(file)) {
         const text = archived.toString();
         check(`${target}:${file}:no-source-map-or-qa-fixture`, !text.includes('sourceMappingURL=') && !text.includes('window.__fixture') && !text.includes('Responsive images: a practical guide'));

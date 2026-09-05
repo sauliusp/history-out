@@ -1,0 +1,54 @@
+[
+  {
+    "time": 0.583,
+    "label": "CSV format"
+  },
+  {
+    "time": 1.382,
+    "label": "JSON format"
+  },
+  {
+    "time": 2.174,
+    "label": "HTML format"
+  },
+  {
+    "time": 2.976,
+    "label": "Download HTML history"
+  },
+  {
+    "time": 9.133,
+    "label": "Choose custom dates"
+  },
+  {
+    "time": 9.93,
+    "label": "Choose export columns"
+  },
+  {
+    "time": 10.334,
+    "label": "Exclude the time column"
+  },
+  {
+    "time": 11.183,
+    "label": "Search matching visits"
+  },
+  {
+    "time": 13.831,
+    "label": "Keep latest visit to each URL"
+  },
+  {
+    "time": 14.884,
+    "label": "Remove URL query strings and fragments"
+  },
+  {
+    "time": 16.124,
+    "label": "Export only matching pages"
+  },
+  {
+    "time": 18.275,
+    "label": "Save a reusable view"
+  },
+  {
+    "time": 18.386,
+    "label": "Save Website research"
+  }
+]

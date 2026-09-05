@@ -6,8 +6,8 @@ The [local release-readiness report](./qa/release-readiness.md) is the source fo
 
 ## Completed local extension checks
 
-- [x] TypeScript, production build and **37 core/background/stress tests** pass.
-- [x] **30 browser scenarios** pass across Google Chrome for Testing **149.0.7827.55** and installed Microsoft Edge **152.0.4191.62** on macOS **26.6.2**, Apple silicon.
+- [x] Earlier broad validation passed **37 core/background/stress tests**. TypeScript and the production build pass again after the additive support CTA; the current bundle is **476,832 bytes**.
+- [x] **30 browser scenarios** passed before the additive support CTA across Google Chrome for Testing **149.0.7827.55** and installed Microsoft Edge **152.0.4191.62** on macOS **26.6.2**, Apple silicon.
 - [x] Native custom-date tests include both daily boundaries, exclude adjacent visits and retain a page revisited after the selected range.
 - [x] Actual CSV, JSON and HTML downloads match the selected native history. Formula-looking/multiline titles and hostile HTML text remain safe.
 - [x] Saved v1 preferences persist through normalization/reload, while optional new fields remain disabled until selected.
@@ -16,6 +16,7 @@ The [local release-readiness report](./qa/release-readiness.md) is the source fo
 - [x] Empty/no-match, failure, cancellation, stale snapshot and mid-load filter controls behave correctly.
 - [x] A synthetic browser UI fixture loads **10,000 URLs / 30,000 visits**, renders 100 preview rows and exports all 30,000 rows. This is a synthetic timing observation, not a promised real-profile speed.
 - [x] Tell a friend, clipboard denial fallback, canonical store URL and optional contribution link are verified. No clipboard or other new permission was added.
+- [x] Current Buy me a coffee CTA passes focused **320/400/1200px** layout, keyboard, local-asset and Preview checks. Original footer and icons are unchanged. The exact current bundle hash is recorded in [bmc-cta.json](./qa/bmc-cta.json).
 - [x] Fresh native installs open one welcome page. **Three native installer checks** verify a rebuilt-source 1.0.1 to 2.0.0 update opens one changelog, preserves native history/preferences and does not repeat after restart.
 - [x] Browser/module updates and duplicate lifecycle events do not cause repeated welcome/changelog tabs.
 - [x] Original 16/32/48/128 PNG icons match baseline bytes. The UI has no numeric product badge.
@@ -24,7 +25,7 @@ The [local release-readiness report](./qa/release-readiness.md) is the source fo
 ## Completed package verification
 
 - [x] Chrome, Edge, Brave and generic Chromium ZIPs were rebuilt from the final extension files.
-- [x] **125 package checks** pass, including root-level manifests, exact runtime-file hashes, versions and exclusions.
+- [x] **137 package checks** pass, including root-level manifests, exact runtime-file hashes, versions, exclusions and the bundled official cup SVG. All three core stress cases pass again during this audit.
 - [x] Chrome/Edge/Brave retain `history`, `storage`, `sidePanel`. Generic Chromium contains only `history`, `storage` and no `side_panel` manifest entry.
 - [x] No host permissions, optional permissions, content scripts, fixtures, QA data or source maps appear in the packages.
 - [x] Generic fallback checks require both manifest support and a working side-panel API; otherwise the toolbar opens the extension's own app page.
