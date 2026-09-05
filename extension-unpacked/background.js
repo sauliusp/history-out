@@ -19,3 +19,25 @@ chrome.action.onClicked.addListener(async () => {
     await chrome.tabs.create({ url: chrome.runtime.getURL('side-panel.html') });
   }
 });
+
+const RELEASE_SITE = 'https://historyout.sauliusdev.chatgpt.site';
+const OPENED_VERSION_KEY = 'historyoutOpenedVersion';
+let lifecycleQueue = Promise.resolve();
+
+// A welcome or release note is shown once per extension version. Browser updates
+// and shared-module updates do not interrupt the user or alter export settings.
+chrome.runtime.onInstalled.addListener((details) => {
+  lifecycleQueue = lifecycleQueue.then(async () => {
+    if (details.reason !== 'install' && details.reason !== 'update') return;
+    const version = chrome.runtime.getManifest().version;
+    if (details.reason === 'update' && details.previousVersion === version) return;
+    const saved = await chrome.storage.local.get(OPENED_VERSION_KEY);
+    if (saved[OPENED_VERSION_KEY] === version) return;
+    const route = details.reason === 'install' ? '/welcome/' : '/changelog/';
+    await chrome.tabs.create({ url: RELEASE_SITE + route });
+    await chrome.storage.local.set({ [OPENED_VERSION_KEY]: version });
+  }).catch(() => {
+    // An unavailable tab or storage service must never prevent normal exporting.
+  });
+  return lifecycleQueue;
+});

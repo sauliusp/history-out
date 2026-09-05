@@ -1,0 +1,235 @@
+TAP version 13
+# Subtest: toolbar opens the right surface when side panel is supported
+ok 1 - toolbar opens the right surface when side panel is supported
+  ---
+  duration_ms: 0.870959
+  type: 'test'
+  ...
+# Subtest: toolbar opens the right surface when side panel is missing
+ok 2 - toolbar opens the right surface when side panel is missing
+  ---
+  duration_ms: 0.252375
+  type: 'test'
+  ...
+# Subtest: toolbar opens the right surface when side panel is partial
+ok 3 - toolbar opens the right surface when side panel is partial
+  ---
+  duration_ms: 0.607417
+  type: 'test'
+  ...
+# Subtest: toolbar opens the right surface when side panel is rejected
+ok 4 - toolbar opens the right surface when side panel is rejected
+  ---
+  duration_ms: 0.348208
+  type: 'test'
+  ...
+# Subtest: v2 retains exactly the shipped permission set and no additional access declarations
+ok 5 - v2 retains exactly the shipped permission set and no additional access declarations
+  ---
+  duration_ms: 0.857708
+  type: 'test'
+  ...
+# Subtest: generic tab fallback ignores an available sidePanel API without manifest permission
+ok 6 - generic tab fallback ignores an available sidePanel API without manifest permission
+  ---
+  duration_ms: 0.414209
+  type: 'test'
+  ...
+# Subtest: generic tab fallback ignores an available sidePanel API without manifest path
+ok 7 - generic tab fallback ignores an available sidePanel API without manifest path
+  ---
+  duration_ms: 0.360583
+  type: 'test'
+  ...
+# Subtest: a fresh install opens its welcome once and preserves existing settings
+ok 8 - a fresh install opens its welcome once and preserves existing settings
+  ---
+  duration_ms: 0.376958
+  type: 'test'
+  ...
+# Subtest: a v1 update opens changelog once and keeps v1 preferences intact
+ok 9 - a v1 update opens changelog once and keeps v1 preferences intact
+  ---
+  duration_ms: 0.4865
+  type: 'test'
+  ...
+# Subtest: browser, module, and same-version developer reloads never open a lifecycle page
+ok 10 - browser, module, and same-version developer reloads never open a lifecycle page
+  ---
+  duration_ms: 0.547625
+  type: 'test'
+  ...
+# Subtest: past ranges include a URL revisited after the range and emit only in-range visits
+ok 11 - past ranges include a URL revisited after the range and emit only in-range visits
+  ---
+  duration_ms: 9.727042
+  type: 'test'
+  ...
+# Subtest: visit boundaries are inclusive and unknown, NaN, and out-of-range visit times are excluded
+ok 12 - visit boundaries are inclusive and unknown, NaN, and out-of-range visit times are excluded
+  ---
+  duration_ms: 0.40725
+  type: 'test'
+  ...
+# Subtest: invalid ranges are rejected before calling Chrome
+ok 13 - invalid ranges are rejected before calling Chrome
+  ---
+  duration_ms: 0.294333
+  type: 'test'
+  ...
+# Subtest: a candidate result limit fails explicitly instead of silently producing a partial export
+ok 14 - a candidate result limit fails explicitly instead of silently producing a partial export
+  ---
+  duration_ms: 0.846625
+  type: 'test'
+  ...
+# Subtest: worker pool bounds Chrome calls, reports progress, and gives deterministic order
+ok 15 - worker pool bounds Chrome calls, reports progress, and gives deterministic order
+  ---
+  duration_ms: 11.128125
+  type: 'test'
+  ...
+# Subtest: duplicate or missing candidate URLs do not duplicate visits; duplicate visit IDs are skipped
+ok 16 - duplicate or missing candidate URLs do not duplicate visits; duplicate visit IDs are skipped
+  ---
+  duration_ms: 0.412708
+  type: 'test'
+  ...
+# Subtest: cancellation returns promptly, discards pending work, and starts no more API calls
+ok 17 - cancellation returns promptly, discards pending work, and starts no more API calls
+  ---
+  duration_ms: 1.989833
+  type: 'test'
+  ...
+# Subtest: candidate search is cancellable and pre-cancelled work never calls Chrome
+ok 18 - candidate search is cancellable and pre-cancelled work never calls Chrome
+  ---
+  duration_ms: 0.291
+  type: 'test'
+  ...
+# Subtest: API failure rejects the export and prevents queued calls from continuing
+ok 19 - API failure rejects the export and prevents queued calls from continuing
+  ---
+  duration_ms: 1.750042
+  type: 'test'
+  ...
+# Subtest: empty history is safe throughout preparation, summaries, and each export format
+ok 20 - empty history is safe throughout preparation, summaries, and each export format
+  ---
+  duration_ms: 2.328625
+  type: 'test'
+  ...
+# Subtest: search matches title or original URL without changing input and renumbers output
+ok 21 - search matches title or original URL without changing input and renumbers output
+  ---
+  duration_ms: 0.203667
+  type: 'test'
+  ...
+# Subtest: domain matching includes true subdomains and excludes similar names and malformed inputs
+ok 22 - domain matching includes true subdomains and excludes similar names and malformed inputs
+  ---
+  duration_ms: 0.523708
+  type: 'test'
+  ...
+# Subtest: query cleanup precedes deduplication and retains the latest matching visit
+ok 23 - query cleanup precedes deduplication and retains the latest matching visit
+  ---
+  duration_ms: 0.178
+  type: 'test'
+  ...
+# Subtest: summary counts retained visit rows, distinct URLs, and hostnames, not lifetime metadata
+ok 24 - summary counts retained visit rows, distinct URLs, and hostnames, not lifetime metadata
+  ---
+  duration_ms: 0.133667
+  type: 'test'
+  ...
+# Subtest: CSV roundtrips commas, quotes, newlines and Unicode in exactly one cell
+ok 25 - CSV roundtrips commas, quotes, newlines and Unicode in exactly one cell
+  ---
+  duration_ms: 0.32825
+  type: 'test'
+  ...
+# Subtest: CSV neutralizes formulas including whitespace prefixes without converting numeric values
+ok 26 - CSV neutralizes formulas including whitespace prefixes without converting numeric values
+  ---
+  duration_ms: 0.164166
+  type: 'test'
+  ...
+# Subtest: HTML escapes hostile text and attributes and never links executable URL schemes
+ok 27 - HTML escapes hostile text and attributes and never links executable URL schemes
+  ---
+  duration_ms: 0.197834
+  type: 'test'
+  ...
+# Subtest: default exports preserve v1 columns, and selected new fields have stable ordering
+ok 28 - default exports preserve v1 columns, and selected new fields have stable ordering
+  ---
+  duration_ms: 0.291916
+  type: 'test'
+  ...
+# Subtest: v1 settings migrate selected fields without silently opting into new columns
+ok 29 - v1 settings migrate selected fields without silently opting into new columns
+  ---
+  duration_ms: 0.194
+  type: 'test'
+  ...
+# Subtest: corrupt preferences and unexpected properties are normalized to safe known values
+ok 30 - corrupt preferences and unexpected properties are normalized to safe known values
+  ---
+  duration_ms: 0.081458
+  type: 'test'
+  ...
+# Subtest: storage preserves false and zero preference values
+ok 31 - storage preserves false and zero preference values
+  ---
+  duration_ms: 0.091292
+  type: 'test'
+  ...
+# Subtest: today and yesterday are local calendar days across daylight-saving transitions
+ok 32 - today and yesterday are local calendar days across daylight-saving transitions
+  ---
+  duration_ms: 4.489334
+  type: 'test'
+  ...
+# Subtest: cancellation is honored while expanding a heavily visited single URL
+ok 33 - cancellation is honored while expanding a heavily visited single URL
+  ---
+  duration_ms: 2.4245
+  type: 'test'
+  ...
+# Subtest: a fresh install starts at Today and a saved v1 rolling week remains a rolling week
+ok 34 - a fresh install starts at Today and a saved v1 rolling week remains a rolling week
+  ---
+  duration_ms: 0.061917
+  type: 'test'
+  ...
+# Subtest: 10,000 URLs and 30,000 visits preserve complete deterministic exports and filtered latest pages
+ok 35 - 10,000 URLs and 30,000 visits preserve complete deterministic exports and filtered latest pages
+  ---
+  duration_ms: 627.361334
+  type: 'test'
+  ...
+# {"dataset":{"candidate_urls":10000,"output_visits":30000,"unique_clean_pages":5000,"combined_filter_pages":84},"first_load_ms":115.06,"reordered_load_ms":85.25,"filter_validation_ms":24.99,"peak_api_concurrency":8,"serialization":{"json":{"elapsed_ms":20.71,"bytes":6415598,"sha256":"6fad890d7af72c5cf4517150e04b9e9660c3edb53c87e6bc7a8ccc1a331e7858"},"csv":{"elapsed_ms":29.41,"bytes":3865628,"sha256":"239174e21117210d95fc2be49510eea7a025c9b77730adda3231dbe8fb6f0496"},"html":{"elapsed_ms":42.35,"bytes":8756786,"sha256":"32fb531b3c5f5a3fac8b2d9e3ef184cfa49b2e6b2eece2a644bada83e3bc9308"}},"total_test_ms":626.7,"note":"Synthetic API-boundary timing on this machine, not a Chrome UI latency guarantee."}
+# Subtest: canceling a 10,000-URL load discards late API work while a new load succeeds
+ok 36 - canceling a 10,000-URL load discards late API work while a new load succeeds
+  ---
+  duration_ms: 4.924458
+  type: 'test'
+  ...
+# {"candidate_urls":10000,"api_calls_before_cancel":12,"late_api_responses_discarded":8,"recovery_visits":256,"abort_ms":0.45}
+# Subtest: one failed 10,000-URL load cannot leak partial progress or fail an overlapping successful load
+ok 37 - one failed 10,000-URL load cannot leak partial progress or fail an overlapping successful load
+  ---
+  duration_ms: 4.233125
+  type: 'test'
+  ...
+# {"failed_candidate_urls":10000,"failed_load_api_calls":8,"overlapping_success_visits":768,"rejection_ms":0.16}
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 820.545042

@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-09-05T09:13:01.723Z",
+  "status": "passed",
+  "method": "Native CUA app inspection and button click, not an HTTP fixture",
+  "bundleSha256": "2be0d7e412641f683d49992751445efdc10be29350c2378a617c6faa37c82900",
+  "app": "Google Chrome for Testing",
+  "version": "149.0.7827.55",
+  "pid": 14406,
+  "profile": "/var/folders/fd/xbpmmdn54b7fk6gy1tb0_4vr0000gq/T/historyout-chromium-isolated-E4FA47",
+  "url": "chrome-extension://nicccgchpkdffjihnglmkmdajmichgbf/side-panel.html",
+  "checked": [
+    "Latest built app visibly open in its isolated profile",
+    "Original icon present and numeric version badge absent",
+    "Preview clicked through native app controls",
+    "Six fictional native visits, five pages and three sites displayed",
+    "Tell a friend and optional Support HistoryOut present in native accessibility tree"
+  ],
+  "note": "The first app-mode startup needed a refresh while its extension initialized. After final packaging the app was refreshed again and left showing its native fictional preview."
+}

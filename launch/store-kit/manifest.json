@@ -1,0 +1,368 @@
+{
+  "generated": "2026-09-05T09:22:52.884Z",
+  "extensionVersion": "2.0.0",
+  "bundleSHA256": "2be0d7e412641f683d49992751445efdc10be29350c2378a617c6faa37c82900",
+  "backgroundSHA256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+  "originalIconGitRef": "0272441",
+  "originalIconSHA256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+  "screenshots": "Actual extension UI with fictional QA history. Original icon and wordmark preserved; all compositions are new.",
+  "inputCaptures": [
+    {
+      "file": "launch/assets/raw/01-daily-focus.png",
+      "sha256": "f2a97437be6f942011138d5ebc2c7befc415de9f7149ff9f7b92e406511f2a82"
+    },
+    {
+      "file": "launch/assets/raw/02-project-focus.png",
+      "sha256": "2922f539ba7918dc9bd0ccd3d727faecf9ae12693f1b5cd826db74d6a3452aea"
+    },
+    {
+      "file": "launch/assets/raw/05-real-html-export.png",
+      "sha256": "7d958456c1c1b3c3e07eef14a114fe73c223dde4906e6d3a6271f208f8d026de"
+    },
+    {
+      "file": "launch/assets/raw/03-custom-dates.png",
+      "sha256": "a837373604da906bd735fef42f3b7cae7a089c31fa862390b908a9cee0d3bb60"
+    },
+    {
+      "file": "launch/assets/raw/04-clean-export.png",
+      "sha256": "16ae328b5270139c7679335d1658b31f263eadab6de5bf6e863d31e1519bf0d9"
+    },
+    {
+      "file": "launch/assets/raw/saved-view-strip.png",
+      "sha256": "928cd24d09eb9830c6c6878c01338a54de529ee95b6a096e2db2c40ba978fb75"
+    }
+  ],
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 2157,
+      "sha256": "0c575f04bfeb6388b41c72f9c05caf4cdb75656c7ba7b3185466a60605f96650"
+    },
+    {
+      "file": "brand/favicon.ico",
+      "bytes": 101477,
+      "sha256": "db4b5357e9e93ad1cc88acffeae60ca47c58349e4c87b678a9d88db976d4ac14"
+    },
+    {
+      "file": "brand/icon128.png",
+      "bytes": 2908,
+      "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true
+    },
+    {
+      "file": "brand/icon16.png",
+      "bytes": 364,
+      "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+      "width": 16,
+      "height": 16,
+      "hasAlpha": true
+    },
+    {
+      "file": "brand/icon32.png",
+      "bytes": 654,
+      "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+      "width": 32,
+      "height": 32,
+      "hasAlpha": true
+    },
+    {
+      "file": "brand/icon48.png",
+      "bytes": 1116,
+      "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+      "width": 48,
+      "height": 48,
+      "hasAlpha": true
+    },
+    {
+      "file": "brand/logo.svg",
+      "bytes": 7525,
+      "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+      "width": 144,
+      "height": 58,
+      "hasAlpha": true
+    },
+    {
+      "file": "brand/wordmark-861.png",
+      "bytes": 45525,
+      "sha256": "cbbf8e42e4dcb085c5339b9a601d5de073aaedeee3c6585e0744e7827301044e",
+      "width": 861,
+      "height": 348,
+      "hasAlpha": true
+    },
+    {
+      "file": "chrome/brand/icon128.png",
+      "bytes": 2908,
+      "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true
+    },
+    {
+      "file": "chrome/description.txt",
+      "bytes": 2576,
+      "sha256": "d87839f09decceb5592b04a12c0ea1635cc2eb6cf452caf9790f8f2413b7d9ea"
+    },
+    {
+      "file": "chrome/historyout-2.0.0-chrome.zip",
+      "bytes": 152393,
+      "sha256": "795d56c66eae12de2c9b6e0766555559f7cb6c99b31cf631aeefcac5542783d9"
+    },
+    {
+      "file": "chrome/listing.json",
+      "bytes": 3350,
+      "sha256": "ce005e4c95d931b34d58fbacc6857488164994d2d809b6e554b27a1675bd4823"
+    },
+    {
+      "file": "chrome/promotional/marquee-1400x560.png",
+      "bytes": 205199,
+      "sha256": "9d3f0085a7407dcce160249b2afb39aa82c5fc092d86c7d319affa6f2c4dd8c2",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/promotional/small-promo-440x280.png",
+      "bytes": 47101,
+      "sha256": "7a4bf022d3a09296abb1afcc997275464b1907493d78e3af5b514c44c8a19737",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/screenshots/01-revisit-your-day.png",
+      "bytes": 144766,
+      "sha256": "9a7e4cbda134db6941e63b39e802eadacec1edd0c7685f28181defaa2eb4a323",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/screenshots/02-resume-your-research.png",
+      "bytes": 156916,
+      "sha256": "38430261a42503264362af36cd922bec46d0e9426f6d24a0b6bf33f7a287109a",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/screenshots/03-export-clickable-html.png",
+      "bytes": 158951,
+      "sha256": "908e61c509b7e6a5b7f71e9a362db7e4c1b04b5713f06bf89c9d91cd87c68f55",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/screenshots/04-choose-your-dates.png",
+      "bytes": 139750,
+      "sha256": "418c2581c7df48d716295706216c2244a9962d416223bf7747365ceda07cc513",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/screenshots/05-export-what-matters.png",
+      "bytes": 166874,
+      "sha256": "dcd2cf17bd4f00c1a78238257a8984caa76ab4e0da1865f3a7da749d8f4d7977",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/submission.md",
+      "bytes": 3603,
+      "sha256": "7ff718ac7156d7fa8274c02178a1936a28aaa6057f1ffe5bbadfb533ea9b3fbf"
+    },
+    {
+      "file": "distribution.md",
+      "bytes": 1858,
+      "sha256": "85530dbe07abe176076fa56cc8ede8ffb5a7d7071703d0a5af1bbb1008dd13eb"
+    },
+    {
+      "file": "edge/brand/icon128.png",
+      "bytes": 2908,
+      "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+      "width": 128,
+      "height": 128,
+      "hasAlpha": true
+    },
+    {
+      "file": "edge/description.txt",
+      "bytes": 2576,
+      "sha256": "d87839f09decceb5592b04a12c0ea1635cc2eb6cf452caf9790f8f2413b7d9ea"
+    },
+    {
+      "file": "edge/historyout-2.0.0-edge.zip",
+      "bytes": 152393,
+      "sha256": "795d56c66eae12de2c9b6e0766555559f7cb6c99b31cf631aeefcac5542783d9"
+    },
+    {
+      "file": "edge/listing.json",
+      "bytes": 3472,
+      "sha256": "7725d75b371fb24c958bf7c142221b96fe85cb29f06d5d0a7fd3f3a892c11b7f"
+    },
+    {
+      "file": "edge/promotional/marquee-1400x560.png",
+      "bytes": 205199,
+      "sha256": "9d3f0085a7407dcce160249b2afb39aa82c5fc092d86c7d319affa6f2c4dd8c2",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/promotional/small-promo-440x280.png",
+      "bytes": 47101,
+      "sha256": "7a4bf022d3a09296abb1afcc997275464b1907493d78e3af5b514c44c8a19737",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/screenshots/01-revisit-your-day.png",
+      "bytes": 144766,
+      "sha256": "9a7e4cbda134db6941e63b39e802eadacec1edd0c7685f28181defaa2eb4a323",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/screenshots/02-resume-your-research.png",
+      "bytes": 156916,
+      "sha256": "38430261a42503264362af36cd922bec46d0e9426f6d24a0b6bf33f7a287109a",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/screenshots/03-export-clickable-html.png",
+      "bytes": 158951,
+      "sha256": "908e61c509b7e6a5b7f71e9a362db7e4c1b04b5713f06bf89c9d91cd87c68f55",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/screenshots/04-choose-your-dates.png",
+      "bytes": 139750,
+      "sha256": "418c2581c7df48d716295706216c2244a9962d416223bf7747365ceda07cc513",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/screenshots/05-export-what-matters.png",
+      "bytes": 166874,
+      "sha256": "dcd2cf17bd4f00c1a78238257a8984caa76ab4e0da1865f3a7da749d8f4d7977",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/submission.md",
+      "bytes": 2139,
+      "sha256": "419dca707eb79c6e1d199c44d6258c944e02484d325cc2ef8a6384ae2aa8fd83"
+    },
+    {
+      "file": "promotional/marquee-1400x560.png",
+      "bytes": 205199,
+      "sha256": "9d3f0085a7407dcce160249b2afb39aa82c5fc092d86c7d319affa6f2c4dd8c2",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "promotional/small-promo-440x280.png",
+      "bytes": 47101,
+      "sha256": "7a4bf022d3a09296abb1afcc997275464b1907493d78e3af5b514c44c8a19737",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "screenshots/01-revisit-your-day.png",
+      "bytes": 144766,
+      "sha256": "9a7e4cbda134db6941e63b39e802eadacec1edd0c7685f28181defaa2eb4a323",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "screenshots/02-resume-your-research.png",
+      "bytes": 156916,
+      "sha256": "38430261a42503264362af36cd922bec46d0e9426f6d24a0b6bf33f7a287109a",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "screenshots/03-export-clickable-html.png",
+      "bytes": 158951,
+      "sha256": "908e61c509b7e6a5b7f71e9a362db7e4c1b04b5713f06bf89c9d91cd87c68f55",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "screenshots/04-choose-your-dates.png",
+      "bytes": 139750,
+      "sha256": "418c2581c7df48d716295706216c2244a9962d416223bf7747365ceda07cc513",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "screenshots/05-export-what-matters.png",
+      "bytes": 166874,
+      "sha256": "dcd2cf17bd4f00c1a78238257a8984caa76ab4e0da1865f3a7da749d8f4d7977",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "specifications.json",
+      "bytes": 1426,
+      "sha256": "c6ba0e636fe492c7a1f7197591e3d2bb78f3e0ba62a0096f4ba07ba13f6e16f7"
+    },
+    {
+      "file": "support/background.png",
+      "bytes": 1493963,
+      "sha256": "5d3191284bc450e00f5588aa3d0259bdfc93af4b0304b2853c3602a66adc79f2",
+      "width": 1774,
+      "height": 887,
+      "hasAlpha": false
+    },
+    {
+      "file": "support/buy-me-a-coffee-cover-1600x400.png",
+      "bytes": 573611,
+      "sha256": "be0bc04730dd64d50619dddfea3871405bcf3cb9ec61ec5093f0af6525291acf",
+      "width": 1600,
+      "height": 400,
+      "hasAlpha": false
+    },
+    {
+      "file": "support/publication-status.json",
+      "bytes": 333,
+      "sha256": "d158968a1407e53e57860ca063d4c3be36d5eea5cec94c19bbb9e15eae57c26e"
+    },
+    {
+      "file": "youtube/metadata.json",
+      "bytes": 2634,
+      "sha256": "8328e4b7a28c8e096c696b0f7c9488290de9b94cb50f9c677893ae7362c20f6d"
+    },
+    {
+      "file": "youtube/thumbnail-1280x720.png",
+      "bytes": 145619,
+      "sha256": "ef70ff9f569f34a062b8056059b6a08a8320281286e1c822a17567170960f9f9",
+      "width": 1280,
+      "height": 720,
+      "hasAlpha": false
+    },
+    {
+      "file": "youtube/upload-status.json",
+      "bytes": 533,
+      "sha256": "7bd38ee1bae396ded7cc581141097f9d6c4e00c18670084d1d4e5fd097872aba"
+    }
+  ]
+}

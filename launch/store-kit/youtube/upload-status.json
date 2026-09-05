@@ -1,0 +1,16 @@
+{
+  "status": "Private",
+  "videoUrl": "https://youtu.be/GT7aEfalP1E",
+  "publiclyPublished": false,
+  "pending": "Human feedback on voice quality",
+  "customCaptionsUploaded": true,
+  "customThumbnailUploaded": true,
+  "chapters": [
+    "00:00",
+    "00:12",
+    "00:24"
+  ],
+  "syntheticVoiceExplanationIncluded": true,
+  "storeListingUsage": "Make the approved video public before adding it as the public store listing demo.",
+  "metadataSource": "metadata.json matches the saved YouTube Studio upload, verified on 2026-09-05."
+}

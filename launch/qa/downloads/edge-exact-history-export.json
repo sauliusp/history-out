@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Research beta",
+    "url": "https://research.historyout-qa.invalid/project?campaign=beta#notes",
+    "timestamp": 1788555599999,
+    "domain": "research.historyout-qa.invalid"
+  },
+  {
+    "title": "Unrelated useful page",
+    "url": "https://other.historyout-qa.invalid/unrelated",
+    "timestamp": 1788526800000,
+    "domain": "other.historyout-qa.invalid"
+  },
+  {
+    "title": "=SUM(1,2)\n<img src=x onerror=\"alert(1)\">",
+    "url": "https://historyout-qa.invalid/hostile?token=alpha#section",
+    "timestamp": 1788523200000,
+    "domain": "historyout-qa.invalid"
+  },
+  {
+    "title": "Research beta",
+    "url": "https://research.historyout-qa.invalid/project?campaign=beta#notes",
+    "timestamp": 1788505200000,
+    "domain": "research.historyout-qa.invalid"
+  },
+  {
+    "title": "Research alpha",
+    "url": "https://research.historyout-qa.invalid/project?campaign=alpha#overview",
+    "timestamp": 1788501600000,
+    "domain": "research.historyout-qa.invalid"
+  },
+  {
+    "title": "Start boundary",
+    "url": "https://historyout-qa.invalid/start-boundary",
+    "timestamp": 1788469200000,
+    "domain": "historyout-qa.invalid"
+  }
+]

@@ -1,0 +1,31 @@
+{
+  "checked": "2026-09-05T08:57:27.888Z",
+  "scope": "Native unpacked MV3 upgrade in an isolated profile. Baseline is rebuilt v1 source, not a signed store download.",
+  "cases": [
+    {
+      "name": "Real v1 to v2 upgrade opens one changelog and no welcome",
+      "status": "passed"
+    },
+    {
+      "name": "Real update preserves exact v1 preferences and original native history",
+      "status": "passed"
+    },
+    {
+      "name": "Restart at the same version does not open a duplicate lifecycle page",
+      "status": "passed"
+    }
+  ],
+  "browserVersion": "149.0.7827.55",
+  "manifestAfterReload": "2.0.0",
+  "lifecycleTabs": [
+    {
+      "url": "about:blank"
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/changelog/"
+    }
+  ],
+  "previousVersion": "1.0.1",
+  "currentVersion": "2.0.0",
+  "status": "passed"
+}

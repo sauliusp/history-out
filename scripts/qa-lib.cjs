@@ -32,7 +32,7 @@ function installFixture(){
     rows.push({id:String(index+1),url,title,lastVisitTime:Math.max(...times),visitCount:times.length+3,typedCount:1});
   });
   window.__fixture={reads:0,delay:0,fail:false,empty:false,rows,visits};
-  const wait=()=>new Promise(r=>setTimeout(r,window.__fixture.delay));
+  const wait=()=>window.__fixture.delay>0?new Promise(r=>setTimeout(r,window.__fixture.delay)):Promise.resolve();
   window.chrome={
     history:{search:async q=>{window.__fixture.reads++;await wait();if(window.__fixture.fail)throw new Error('History is temporarily unavailable. Try again.');if(window.__fixture.empty)return [];return rows.filter(r=>r.lastVisitTime>=q.startTime&&r.lastVisitTime<=q.endTime).sort((a,b)=>b.lastVisitTime-a.lastVisitTime).slice(0,q.maxResults);},getVisits:async({url})=>{await wait();return visits[url]||[];}},
     storage:{local:{get:async key=>({[key]:JSON.parse(localStorage.getItem(key)||'null')}),set:async values=>Object.entries(values).forEach(([k,v])=>localStorage.setItem(k,JSON.stringify(v)))}},

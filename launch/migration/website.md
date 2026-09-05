@@ -1,76 +1,44 @@
-# Website migration handoff
+# Website release and domain handoff
 
-Prepared **5 September 2026**. The website is now maintained inside the extension repository under `website/`. It has a static Node build and Sites configuration. **No production DNS cutover or store update has been performed.**
+Updated 5 September 2026. The website lives in `website/` inside the HistoryOut repository. The original site and DNS remain unchanged until the owner connects the domain.
 
-## Provenance and destinations
+## Current destinations
 
-| Item | Recorded value |
-| --- | --- |
-| Original website source revision | `7e3985ce741ba9e0b5c2f8e2945392fa93368b20` |
-| Existing canonical domain from migration discovery | [exportchromehistory.app](https://exportchromehistory.app/) |
-| Existing alias | [historyout.site](https://historyout.site/) redirects to the canonical domain |
-| New source | `website/` in the HistoryOut repository |
-| Sites project configuration | `website/.openai/hosting.json`, project `appgprj_6a9bc53bba78819185f33b92719dd87c` |
-| Preview build origin | [historyout.sauliusdev.chatgpt.site](https://historyout.sauliusdev.chatgpt.site/) |
-| Build output | `website/dist/` |
+- New Sites address: https://historyout.sauliusdev.chatgpt.site/
+- Existing domain: https://exportchromehistory.app/
+- Existing alias: https://historyout.site/
+- Sites project: `appgprj_6a9bc53bba78819185f33b92719dd87c`, recorded in `website/.openai/hosting.json`.
+- Original website source revision: `7e3985ce741ba9e0b5c2f8e2945392fa93368b20`.
 
-The old Jekyll `_config` is stale and must not be treated as current production routing evidence. Preserve the recorded source revision for reference. All new icon, product and promotional visuals use the new identity; existing imagery is not reused.
+The original wordmark and favicon are preserved. Product screenshots, promotional compositions and narrated video are newly made. The existing website repository is retained.
 
-The preview origin is a review destination with indexing disabled. Its configuration alone does not establish deployment completion or access control. Check the current Sites deployment state before sharing it as a working preview.
+## Build and content settings
 
-## Build and local checks
+`website/site.config.json` is the source of truth for the canonical origin, indexability, current store version and video metadata. Default builds allow public indexing. The welcome page is publicly accessible but has `noindex,follow`, because it serves installed users rather than search queries. The other 12 pages appear in the sitemap.
 
-```sh
-npm --prefix website run build
-npm --prefix website test
-npm --prefix website run dev
-```
+Run `npm --prefix website run build` and `npm --prefix website test`. The local preview is `npm --prefix website run dev` at http://127.0.0.1:8766/.
 
-The development server builds first and serves [127.0.0.1:8766](http://127.0.0.1:8766). The default build uses `noindex,nofollow` and `robots.txt` disallowing crawling. A sitemap is still generated for inspecting route coverage. The tests check preview state, page metadata, local links, structured data and no remote script/image sources.
+The homepage, three competitor comparisons, comparison hub, four useful guides, browser page, privacy page and changelog have unique metadata and canonical URLs. Static HTML contains the actual content. The footer links to all comparisons and guides. Robots allow Google and OAI-SearchBot. Structured data describes the software, articles, breadcrumbs, visible FAQs and the actual video. The original Search Console verification meta tag is retained.
 
-The 11 routes are:
+## On store approval
 
-```text
-/
-/alternatives/
-/alternatives/export-chrome-history/
-/alternatives/history-trends-unlimited/
-/alternatives/better-history/
-/guides/export-chrome-history-to-excel/
-/guides/filter-browser-history/
-/guides/browser-history-limits/
-/browsers/
-/privacy/
-/changelog/
-```
+After verifying the live Chrome Web Store serves version 2.0.0, change `storeVersion` to `2.0.0` in `website/site.config.json`. Rebuild, test, publish and verify. This removes the pending-release notes and updates software metadata. `RELEASE_V2=true` is a temporary build override, not a substitute for recording the released version. No store submission has been performed by website tooling.
 
-Production output requires both flags explicitly:
+## When connecting the domain
 
-```sh
-RELEASE_V2=true SITE_ORIGIN=https://exportchromehistory.app npm --prefix website run build
-```
+1. Preserve the existing DNS and website deployment for rollback.
+2. Connect the desired domain through Sites. The owner is handling this step.
+3. Set `origin` in `website/site.config.json` to the verified HTTPS canonical domain. `SITE_ORIGIN` can override it for a deliberate build.
+4. Rebuild, test, push the exact website source to its configured Sites repository, save and publish that version.
+5. Verify anonymous HTTPS responses, canonicals, robots, sitemap, sample downloads and all routes on the domain. Preserve the old homepage anchors and working privacy/support paths.
+6. Permanently redirect obsolete hostnames to the chosen canonical hostname without redirect chains. Keep the generated Sites origin working because installed extensions use its welcome/changelog paths.
+7. Submit the sitemap in Search Console and Bing Webmaster Tools. Inspect the homepage, HTML export guide and comparison pages. Verify the host allows published crawler addresses as well as the robots rules.
+8. Add website analytics as planned by the owner, then update the website privacy paragraph to match what is actually enabled. Do not add extension analytics or history collection.
 
-This command only builds files. It changes generated indexing metadata, canonicals, sitemap origin, release banner/CTA and version fields; it does not deploy, connect a domain, change DNS or publish the extension. Existing preview-only tests intentionally expect blocked indexing, so production output needs its own explicit release validation.
+Opening the welcome/changelog does not pass browsing records, queries or settings to the site. Analytics for website visits must remain separate from extension data.
 
-## Before a public build
+## Search and answer-engine foundations
 
-- [ ] Recheck the live canonical/alias behavior and inventory current public URLs, policy links, redirects and ownership verification. Preserve useful existing URLs or document exact replacement redirects.
-- [ ] Review the original source revision and retained license/ownership material. Do not infer current routing from stale Jekyll configuration.
-- [ ] Update hardcoded candidate notes in `website/content/pages.mjs`, especially guides, browser compatibility and changelog. `RELEASE_V2=true` does not rewrite those paragraphs.
-- [ ] Ensure public copy matches the actual store version and named-browser evidence. Do not claim store-signed or visible Edge/Brave testing from automated API checks.
-- [ ] Confirm final screenshots/video are completed assets with synthetic data. A placeholder, storyboard or still animation must not be described as an actual product recording.
-- [ ] Confirm privacy/support links, sample exports, browser-neutral brand text and deliberate Chrome-query guide titles.
-- [ ] Build with the production origin and inspect every route for title, canonical, description, schema, indexability and missing assets. Check that no preview hostname or stale v1/candidate statement remains where it would mislead.
+Implementation follows [Google’s generative search guidance](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide), [OpenAI’s publisher guidance](https://help.openai.com/en/articles/12627856-publishers-and-developers-faq) and [Google video metadata guidance](https://developers.google.com/search/docs/appearance/structured-data/video). Public access and useful, crawlable content make discovery possible; they do not guarantee indexing, citations or rankings. No hidden keyword pages, fabricated reviews or ranking promises are used.
 
-## Deliberate deployment and cutover
-
-- [ ] Preserve the current site's working deployment and DNS values for rollback.
-- [ ] Save the reviewed website version in Sites and deploy the intended production version after release review. Record version/deployment IDs and source commit.
-- [ ] Coordinate website v2 claims with publication of the approved extension. Keep the current-version CTA truthful until the store serves v2.
-- [ ] Connect the intended custom domain and perform the DNS change as a separate deliberate production step. Preserve unrelated DNS records and aliases.
-- [ ] Verify live HTTPS on the canonical domain, alias and applicable `www` variants; validate permanent redirects and avoid loops.
-- [ ] Check all 11 live routes, privacy/support links, sample downloads, mobile layout, missing-page handling and unexpected remote assets.
-- [ ] Confirm live robots, sitemap, HTML robots tags, canonical/OG URLs and schema use the production origin and released version.
-- [ ] Preserve Search Console ownership verification; submit the live sitemap and inspect key URLs. Allow Googlebot and OAI-SearchBot through the production host's crawler controls where intended.
-
-If cutover fails, restore the prior known-good website/DNS state and keep public copy consistent with the store. Do not disable the existing extension or delete history as part of website recovery.
+Measure non-brand queries such as export history to HTML and the named competitor alternatives. Track visits to install links and the existing store’s install/conversion reports after analytics is enabled. ChatGPT referral URLs can carry `utm_source=chatgpt.com`.

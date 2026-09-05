@@ -1,0 +1,16 @@
+{
+  "origin": "https://historyout.sauliusdev.chatgpt.site",
+  "indexable": true,
+  "storeVersion": "1.0.1",
+  "latestVersion": "2.0.0",
+  "updated": "2026-09-05",
+  "video": {
+    "title": "Find your way back with HistoryOut",
+    "description": "A real HistoryOut walkthrough with fictional browsing data: daily recap, search, saved views and a filtered HTML export.",
+    "poster": "/assets/historyout-poster.png",
+    "file": "/assets/historyout-34s.mp4",
+    "duration": "PT34.5S",
+    "uploadDate": "2026-09-05T12:00:00+03:00",
+    "transcript": "Lost that useful page? Find your way back with HistoryOut. Review your day, then search the pages you need. Keep the latest visit to each page. Save your view, and resume your research later. Choose your dates, your columns, and your format. Clean up URL parameters, then export a useful file. Free. Local. No account. Get HistoryOut, and keep what matters."
+  }
+}

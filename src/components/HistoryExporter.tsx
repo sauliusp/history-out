@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Alert, Box, Button, Checkbox, Chip, Divider, FormControl, FormControlLabel,
   IconButton, InputAdornment, InputLabel, LinearProgress, Link, MenuItem,
-  Select, Stack, TextField, Typography,
+  Select, Stack, TextField, Typography, Snackbar, Dialog, DialogTitle, DialogContent, DialogActions, Tooltip,
 } from '@mui/material';
 import ArrowDownwardRoundedIcon from '@mui/icons-material/ArrowDownwardRounded';
 import ArrowOutwardRoundedIcon from '@mui/icons-material/ArrowOutwardRounded';
@@ -31,6 +31,7 @@ const exportService = ExportService.getInstance();
 const storageService = StorageService.getInstance();
 const PREVIEW_LIMIT = 100;
 const SAVED_VIEWS_KEY = 'historyoutSavedViews';
+const STORE_URL = 'https://chromewebstore.google.com/detail/historyout/idohnkdgejocejlkihihonhemndpiiei';
 interface SavedView {
   id: string;
   name: string;
@@ -101,6 +102,8 @@ export const HistoryExporter: React.FC = () => {
   const [progress, setProgress] = useState<{ done: number; total: number } | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
+  const [shareCopied, setShareCopied] = useState(false);
+  const [shareFallback, setShareFallback] = useState(false);
   const controllerRef = useRef<AbortController | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
 
@@ -171,6 +174,16 @@ export const HistoryExporter: React.FC = () => {
 
   const clearFilters = () => { if (loading) return; setQuery(''); setDomain(''); setUniqueUrls(false); setNotice(null); };
 
+  const shareHistoryOut = async () => {
+    try {
+      if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
+      await navigator.clipboard.writeText(STORE_URL);
+      setShareCopied(true);
+    } catch {
+      setShareFallback(true);
+    }
+  };
+
   const run = async (exportAfterLoad: boolean) => {
     if (loading || !customValid || !hydrated) return;
     setError(null); setNotice(null);
@@ -183,9 +196,16 @@ export const HistoryExporter: React.FC = () => {
         const range = config.historyRange === 'custom' ? config.dateRange! : getRangeFromType(config.historyRange);
         const history = await historyService.getHistory(range, { signal: controller.signal });
         if (controller.signal.aborted) throw new DOMException('Cancelled', 'AbortError');
+        let lastProgressUpdate = 0;
         source = await historyService.prepareHistoryItems(history, range, {
           signal: controller.signal,
-          onProgress: (done, total) => setProgress({ done, total }),
+          onProgress: (done, total) => {
+            const now = performance.now();
+            if (done === 0 || done === total || now - lastProgressUpdate >= 100) {
+              lastProgressUpdate = now;
+              setProgress({ done, total });
+            }
+          },
         });
         if (controller.signal.aborted) throw new DOMException('Cancelled', 'AbortError');
         setItems(source); setLoaded({ time: Date.now(), range });
@@ -217,7 +237,6 @@ export const HistoryExporter: React.FC = () => {
         <Box sx={{ flex: 1 }}>
           <Stack direction="row" spacing={0.8} alignItems="center">
             <Typography component="h1" variant="h1">HistoryOut</Typography>
-            <Chip label="2.0" size="small" sx={{ height: 18, borderRadius: '4px', bgcolor: '#e9eef9', color: '#586a8b', fontSize: '0.75rem', fontWeight: 700, '& .MuiChip-label': { px: 0.6 } }} />
           </Stack>
           <Typography variant="caption" color="text.secondary">Find your way back. Keep what matters.</Typography>
         </Box>
@@ -359,14 +378,27 @@ export const HistoryExporter: React.FC = () => {
           <LockOutlinedIcon sx={{ fontSize: 12 }} />
           <Typography variant="caption" sx={{ fontSize: '0.75rem' }}>Free. On your device. No account needed.</Typography>
         </Stack>
-        <Stack component="footer" direction="row" justifyContent="center" spacing={2} sx={{ pb: 1.5 }}>
-          {[
-            ['Support', 'https://chromewebstore.google.com/detail/historyout/idohnkdgejocejlkihihonhemndpiiei/support'],
-            ['Leave a review', 'https://chromewebstore.google.com/detail/historyout/idohnkdgejocejlkihihonhemndpiiei/reviews'],
-            ['Buy me a coffee', 'https://www.buymeacoffee.com/saulius.developer'],
-          ].map(([label, href]) => <Link key={label} href={href} target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>{label}</Link>)}
+        <Stack component="footer" direction="row" justifyContent="center" alignItems="center" sx={{ pb: 1.5, flexWrap: 'wrap', columnGap: 1.7, rowGap: 0.5 }}>
+          <Link href={`${STORE_URL}/support`} target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>Get help</Link>
+          <Link href={`${STORE_URL}/reviews`} target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>Leave a review</Link>
+          <Button size="small" onClick={() => void shareHistoryOut()} sx={{ minHeight: 30, minWidth: 0, p: 0, color: 'text.secondary', fontWeight: 400, fontSize: '0.75rem' }}>Tell a friend</Button>
+          <Tooltip title="An optional contribution to this free project. Opens Buy Me a Coffee." describeChild>
+            <Link href="https://www.buymeacoffee.com/saulius.developer" target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>Support HistoryOut</Link>
+          </Tooltip>
         </Stack>
       </Stack>
+
+      <Snackbar open={shareCopied} autoHideDuration={6000} onClose={() => setShareCopied(false)} anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}>
+        <Alert severity="success" role="status" onClose={() => setShareCopied(false)} sx={{ maxWidth: 440 }}>Link copied. Paste it anywhere to share HistoryOut.</Alert>
+      </Snackbar>
+      <Dialog open={shareFallback} onClose={() => setShareFallback(false)} aria-labelledby="share-historyout-title" fullWidth maxWidth="sm">
+        <DialogTitle id="share-historyout-title">Share HistoryOut</DialogTitle>
+        <DialogContent>
+          <Typography variant="body2" color="text.secondary" sx={{ mb: 2 }}>Copy this link and paste it anywhere to share HistoryOut.</Typography>
+          <TextField fullWidth autoFocus label="Installation link" value={STORE_URL} onFocus={(event) => event.target.select()} slotProps={{ htmlInput: { readOnly: true, 'aria-label': 'HistoryOut installation link' } }} />
+        </DialogContent>
+        <DialogActions><Button onClick={() => setShareFallback(false)}>Done</Button></DialogActions>
+      </Dialog>
 
       <Box sx={{ position: 'sticky', bottom: 0, mx: -2, px: 2, pt: 1.2, pb: 1.25, bgcolor: 'rgba(245,247,251,0.97)', backdropFilter: 'blur(12px)', borderTop: '1px solid', borderColor: 'divider', zIndex: 3 }}>
         <Button fullWidth variant="contained" disabled={!exportEnabled} onClick={() => void run(true)} startIcon={<ArrowDownwardRoundedIcon sx={{ fontSize: '18px !important' }} />} sx={{ minHeight: 42 }} aria-busy={loading}>

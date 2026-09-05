@@ -1,49 +1,44 @@
-# HistoryOut v2 release checklist
+# HistoryOut release checklist
 
-Status checked **5 September 2026**. Branch: `codex/historyout-v2`. Candidate: **2.0.0**. Existing release baseline: **1.0.1**, source commit `0272441`. Production store and DNS cutovers remain pending review.
+Candidate technical version: **2.0.0**. Previous source baseline: **1.0.1** at `0272441`. Branch: `codex/historyout-v2`. Product name and original icon remain **HistoryOut**.
 
-## Evidence already available
+The [local release-readiness report](./qa/release-readiness.md) is the source for exact versions, timings and limitations. Website and domain publication are tracked in the [website migration handoff](./migration/website.md).
 
-- Core tests: **31 passed**; TypeScript typecheck passed in this work session. Coverage includes retrieval/date boundaries, cancellation, serialization, settings migration and permission/fallback behavior.
-- [Browser QA results](./qa/browser-results.json) completed at `2026-09-05T08:01:36.994Z` with 10 recorded checks. These cover synthetic UI/CSV behavior and an actual isolated Manifest V3 Chromium 149 install, history API, v1 settings and JSON download.
-- A separate [isolated headless Microsoft Edge smoke check](./qa/edge-api-smoke.json) loaded the 2.0.0 worker, returned `openPanelOnActionClick: true` from the side-panel API and successfully queried history. This is API smoke evidence, not visible toolbar/sidebar or store-signed installation verification.
-- [Package hashes](./qa/packages.json) record the four v2 ZIPs and a v1 source-baseline archive. The baseline ZIP was rebuilt from `0272441`; it is not a fetched copy of the signed store package.
-- Source has the same three permissions for Chrome/Edge/Brave; generic Chromium removes `sidePanel`. No new host/optional permissions or content scripts are declared.
-- Website source and Sites preview configuration are in the repository. Production DNS and the existing store item have not been changed.
+## Completed local extension checks
 
-Automated checks do not establish every browser, store-signed update behavior or actual toolbar/sidebar interaction. Update this checklist only from new evidence.
+- [x] TypeScript, production build and **37 core/background/stress tests** pass.
+- [x] **30 browser scenarios** pass across Google Chrome for Testing **149.0.7827.55** and installed Microsoft Edge **152.0.4191.62** on macOS **26.6.2**, Apple silicon.
+- [x] Native custom-date tests include both daily boundaries, exclude adjacent visits and retain a page revisited after the selected range.
+- [x] Actual CSV, JSON and HTML downloads match the selected native history. Formula-looking/multiline titles and hostile HTML text remain safe.
+- [x] Saved v1 preferences persist through normalization/reload, while optional new fields remain disabled until selected.
+- [x] Named views persist, restore their filters/settings and do not store a browsing-history archive.
+- [x] Search, domains, deduplication, optional cleanup, preview and exported rows agree.
+- [x] Empty/no-match, failure, cancellation, stale snapshot and mid-load filter controls behave correctly.
+- [x] A synthetic browser UI fixture loads **10,000 URLs / 30,000 visits**, renders 100 preview rows and exports all 30,000 rows. This is a synthetic timing observation, not a promised real-profile speed.
+- [x] Tell a friend, clipboard denial fallback, canonical store URL and optional contribution link are verified. No clipboard or other new permission was added.
+- [x] Fresh native installs open one welcome page. **Three native installer checks** verify a rebuilt-source 1.0.1 to 2.0.0 update opens one changelog, preserves native history/preferences and does not repeat after restart.
+- [x] Browser/module updates and duplicate lifecycle events do not cause repeated welcome/changelog tabs.
+- [x] Original 16/32/48/128 PNG icons match baseline bytes. The UI has no numeric product badge.
+- [x] The final built extension is visible as an isolated local app with fictional native history, and its Preview was clicked through native computer controls. Ordinary browser profiles remain untouched.
 
-## Before producing the final package
+## Completed package verification
 
-- [ ] Review the final diff against `0272441`, including saved settings, default fields, new assets and manifest declarations.
-- [ ] Record the final source commit. Confirm `npm run typecheck`, `npm test` and `npm run build` pass after the last relevant code change.
-- [ ] Confirm browser QA evidence against that build; preserve the distinction between fixtures and actual browser APIs.
-- [ ] Complete the outstanding named-browser checks in [browser-compatibility.md](./browser-compatibility.md).
-- [ ] Verify a representative large history, exact custom dates, repeated visits, empty/error/cancel flows and real CSV/JSON/HTML files. Confirm responsiveness and no silently truncated result.
-- [ ] Check that previews, exports and optional cleanup agree; lifetime URL metadata must not be presented as selected-period activity.
-- [ ] Confirm all new screenshots show the final UI with synthetic data and actual exported output. Retain raw captures and new editable asset sources.
-- [ ] Confirm video delivery status: a script or animation is not a recorded, verified product demonstration. Match captions and controls to the final build.
+- [x] Chrome, Edge, Brave and generic Chromium ZIPs were rebuilt from the final extension files.
+- [x] **125 package checks** pass, including root-level manifests, exact runtime-file hashes, versions and exclusions.
+- [x] Chrome/Edge/Brave retain `history`, `storage`, `sidePanel`. Generic Chromium contains only `history`, `storage` and no `side_panel` manifest entry.
+- [x] No host permissions, optional permissions, content scripts, fixtures, QA data or source maps appear in the packages.
+- [x] Generic fallback checks require both manifest support and a working side-panel API; otherwise the toolbar opens the extension's own app page.
+- [x] Final archive SHA-256 hashes and source comparisons are in [package-audit.json](./qa/package-audit.json).
 
-## Package and submission handoff
+If any extension source or asset changes, rebuild, repeat affected checks, run `node scripts/pack.mjs` and refresh `node scripts/audit-release-packages.cjs` before using those hashes. Record the final committed source revision in the handoff.
 
-- [ ] Run `npm run pack`. Confirm four ZIPs and a `manifest.json` at each ZIP root.
-- [ ] Inspect each packaged manifest. Chrome/Edge/Brave: `history`, `storage`, `sidePanel`. Generic Chromium: `history`, `storage`, with no `side_panel` key.
-- [ ] Check ZIP contents exclude source maps, fixtures, demo data, local QA files and secrets. Record SHA-256 hashes, source commit and build date.
-- [ ] Use the Chrome ZIP for the existing store item `idohnkdgejocejlkihihonhemndpiiei`. Do not create a replacement public Chrome listing or change the public item to private for testing.
-- [ ] Review the [store copy](./store-listing.md), privacy declaration, new screenshots, icon and finished YouTube link. Only use public URLs that resolve correctly.
-- [ ] Retain the known-good v1 package/source and prepare a rollback or higher-version hotfix. Do not assume an older uploaded version number is a valid rollback procedure.
-- [ ] Submit with deliberate publishing timing after review. Submission, approval and publication are separate states.
+## Remaining browser and store release verification
 
-At this audience size, do not rely on percentage rollout: Google's published threshold is more than 10,000 seven-day active users. Use the prepared test evidence and a deliberate release. [Official update guidance](https://developer.chrome.com/docs/webstore/update).
+- [ ] Run the practical install/preview/filter/save/export flow in **Brave** before claiming runtime-tested Brave support. Brave is not installed on this Mac; its archive is verified but its runtime is not.
+- [ ] Upload the reviewed Chrome ZIP to the **existing** Chrome Web Store item `idohnkdgejocejlkihihonhemndpiiei`, using the reviewed store copy and final assets. The product remains free.
+- [ ] After store approval/publication, verify a clean **signed store install** and a signed **1.0.1 to 2.0.0 update**, including unchanged permission prompts, retained preferences/history and welcome/changelog behavior. Local unpacked installer evidence does not replace this signed-distribution check.
+- [ ] Verify the public listing serves the intended approved version, public URLs resolve and the final YouTube destination is correct.
 
-## Coordinated production release
+Retain the known-good baseline source/package. If a shipped issue requires a rollback, follow the store's versioning process with an appropriate higher-version hotfix rather than assuming an older version number can be uploaded again.
 
-- [ ] Complete the [website migration checklist](./migration/website.md), including candidate-text updates and production output validation.
-- [ ] Confirm the approved v2 package is ready for the existing Chrome Web Store item. Publish at the agreed release time.
-- [ ] Verify the public store actually offers 2.0.0 and a clean profile can install it.
-- [ ] Deploy the reviewed Sites production build and perform the deliberate custom-domain/DNS cutover. A saved Sites version is not a production deployment.
-- [ ] Verify the canonical domain, redirects, privacy/support links, indexability, schema, all 11 routes and sample downloads on the live domain.
-- [ ] Check a v1-to-v2 store update retains valid preferences and adds no permission prompt.
-- [ ] Inspect support, removal trends and version adoption during the first week. Stop promotion and repair or roll back promptly for a critical regression.
-
-No outreach, community posts, YouTube upload or messages to users have been performed merely by preparing these files. Publishing and promotion should use concrete reviewed artifacts and the owner's authorized channels.
+Website deployment, custom-domain/DNS changes and YouTube publication are separate release operations. Complete them from their current reviewed artifacts and live evidence; passing these local extension checks does not imply they have happened.

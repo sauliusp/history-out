@@ -1,0 +1,32 @@
+{
+  "checked": "2026-09-05",
+  "website": {
+    "status": "public",
+    "url": "https://historyout.sauliusdev.chatgpt.site/",
+    "anonymousHTTPChecksPassed": 20,
+    "sourceCommit": "68a02d03cd0509fbfa491c5046456472249a3a0c"
+  },
+  "youtube": {
+    "url": "https://youtu.be/GT7aEfalP1E",
+    "studioUrl": "https://studio.youtube.com/video/GT7aEfalP1E/edit",
+    "visibility": "private",
+    "title": "Find and Export Browser History to CSV, JSON or HTML | HistoryOut",
+    "englishCaptions": "uploaded and saved",
+    "customThumbnail": "uploaded",
+    "checks": "Copyright and Community Guidelines: no issues found",
+    "pending": "Creator listening feedback for synthetic voice likeness before public publication"
+  },
+  "buyMeACoffee": {
+    "url": "https://buymeacoffee.com/saulius.developer",
+    "cover": "new1600x400 cover uploaded and saved"
+  },
+  "store": {
+    "submitted": false,
+    "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
+    "targetVersion": "2.0.0"
+  },
+  "dns": {
+    "changed": false,
+    "ownerWillConnectDomain": true
+  }
+}

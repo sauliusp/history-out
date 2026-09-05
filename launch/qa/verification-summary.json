@@ -1,0 +1,22 @@
+{
+  "checked": "2026-09-05T09:13:04.075Z",
+  "status": "passed",
+  "unitTests": {
+    "tests": 37,
+    "failed": 0
+  },
+  "typecheck": "passed",
+  "browserCases": 30,
+  "nativeUpgradeCases": 3,
+  "packageChecks": 125,
+  "originalIcons": {
+    "baseline": "0272441",
+    "sha256": {
+      "16": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+      "32": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+      "48": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+      "128": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111"
+    }
+  },
+  "bundleBytes": 475603
+}

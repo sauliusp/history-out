@@ -6,7 +6,7 @@ const source = fs.readFileSync('extension-unpacked/background.js', 'utf8');
 for (const behavior of ['supported','missing','partial','rejected']) {
   test(`toolbar opens the right surface when side panel is ${behavior}`, async()=>{
     let click; const opened=[]; const requests=[];
-    const chrome={action:{onClicked:{addListener(fn){click=fn;}}},runtime:{getURL:p=>`chrome-extension://fixture/${p}`,getManifest:()=>({permissions:['history','storage','sidePanel'],side_panel:{default_path:'side-panel.html'}})},tabs:{create:async arg=>opened.push(arg)}};
+    const chrome={action:{onClicked:{addListener(fn){click=fn;}}},runtime:{getURL:p=>`chrome-extension://fixture/${p}`,onInstalled:{addListener(){}},getManifest:()=>({permissions:['history','storage','sidePanel'],side_panel:{default_path:'side-panel.html'}})},tabs:{create:async arg=>opened.push(arg)}};
     if(behavior!=='missing') chrome.sidePanel=behavior==='partial'?{}:{setPanelBehavior:async args=>{requests.push(args);if(behavior==='rejected')throw new Error('unsupported');}};
     vm.runInNewContext(source,{chrome}); await click();
     assert.equal(opened.length,behavior==='supported'?0:1);
@@ -30,7 +30,7 @@ for (const missing of ['permission', 'path']) {
     else delete manifest.side_panel;
     const chrome = {
       action: {onClicked: {addListener(fn) {click = fn;}}},
-      runtime: {getURL: file => `chrome-extension://fixture/${file}`, getManifest: () => manifest},
+      runtime: {getURL: file => `chrome-extension://fixture/${file}`, getManifest: () => manifest, onInstalled: {addListener(){}}},
       sidePanel: {setPanelBehavior: async () => {setupCalls++;}},
       tabs: {create: async options => opened.push(options)},
     };
@@ -41,3 +41,52 @@ for (const missing of ['permission', 'path']) {
     assert.equal(opened[0].url, 'chrome-extension://fixture/side-panel.html');
   });
 }
+
+function lifecycleHarness(saved = {}) {
+  let installed;
+  const opened = [];
+  const values = {...saved};
+  const chrome = {
+    action: {onClicked: {addListener(){}}},
+    runtime: {
+      getManifest: () => ({version:'2.0.0',permissions:['history','storage']}),
+      getURL: file => `chrome-extension://fixture/${file}`,
+      onInstalled: {addListener(fn){installed = fn;}},
+    },
+    storage: {local: {
+      get: async key => ({[key]:values[key]}),
+      set: async updates => Object.assign(values,updates),
+    }},
+    tabs: {create: async options => opened.push(options)},
+  };
+  vm.runInNewContext(source,{chrome});
+  return {installed,opened,values};
+}
+
+test('a fresh install opens its welcome once and preserves existing settings', async () => {
+  const config={format:'json',historyRange:'week'};
+  const fixture=lifecycleHarness({HISTORY_OUTPUT_CONFIG:config});
+  await Promise.all([fixture.installed({reason:'install'}),fixture.installed({reason:'install'})]);
+  assert.equal(fixture.opened.length,1);
+  assert.equal(fixture.opened[0].url,'https://historyout.sauliusdev.chatgpt.site/welcome/');
+  assert.equal(fixture.values.historyoutOpenedVersion,'2.0.0');
+  assert.deepEqual(fixture.values.HISTORY_OUTPUT_CONFIG,config);
+});
+
+test('a v1 update opens changelog once and keeps v1 preferences intact', async () => {
+  const config={format:'csv',fields:{url:true,title:false}};
+  const fixture=lifecycleHarness({HISTORY_OUTPUT_CONFIG:config,historyoutOpenedVersion:'1.0.1'});
+  await fixture.installed({reason:'update',previousVersion:'1.0.1'});
+  await fixture.installed({reason:'update',previousVersion:'1.0.1'});
+  assert.equal(fixture.opened.length,1);
+  assert.equal(fixture.opened[0].url,'https://historyout.sauliusdev.chatgpt.site/changelog/');
+  assert.deepEqual(fixture.values.HISTORY_OUTPUT_CONFIG,config);
+});
+
+test('browser, module, and same-version developer reloads never open a lifecycle page', async () => {
+  const fixture=lifecycleHarness();
+  for(const reason of ['chrome_update','browser_update','shared_module_update']) await fixture.installed({reason});
+  await fixture.installed({reason:'update',previousVersion:'2.0.0'});
+  assert.equal(fixture.opened.length,0);
+  assert.deepEqual(fixture.values,{});
+});

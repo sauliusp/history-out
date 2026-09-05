@@ -1,0 +1,201 @@
+{
+  "checkedAt": "2026-09-05T09:11:48.143437+00:00",
+  "anonymous": true,
+  "client": "curl with no cookies or credentials",
+  "origin": "https://historyout.sauliusdev.chatgpt.site",
+  "deploymentId": "appgdep_6a9bdc59fc648191829f774f91c559b4",
+  "versionId": "appgprj_6a9bc53bba78819185f33b92719dd87c~appgver_1d6fa27aa3a081918cc9f834099a8552",
+  "sourceCommit": "68a02d03cd0509fbfa491c5046456472249a3a0c",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 15817,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/welcome/",
+      "status": 200,
+      "bytes": 7736,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/changelog/",
+      "status": 200,
+      "bytes": 11245,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/alternatives/",
+      "status": 200,
+      "bytes": 8260,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/alternatives/export-chrome-history/",
+      "status": 200,
+      "bytes": 10212,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/alternatives/history-trends-unlimited/",
+      "status": 200,
+      "bytes": 10537,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/alternatives/better-history/",
+      "status": 200,
+      "bytes": 10295,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/guides/export-browser-history-to-html/",
+      "status": 200,
+      "bytes": 12319,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/guides/export-chrome-history-to-excel/",
+      "status": 200,
+      "bytes": 9678,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/guides/filter-browser-history/",
+      "status": 200,
+      "bytes": 8745,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/guides/browser-history-limits/",
+      "status": 200,
+      "bytes": 9032,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/browsers/",
+      "status": 200,
+      "bytes": 8747,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/privacy/",
+      "status": 200,
+      "bytes": 8774,
+      "contentType": "text/html",
+      "hasHistoryOut": true,
+      "noLoginWall": true,
+      "noVersionBrand": true,
+      "hasOriginalLogo": true,
+      "robots": true
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 124,
+      "contentType": "text/plain",
+      "crawlerAllowed": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 1512,
+      "contentType": "text/xml"
+    },
+    {
+      "path": "/assets/historyout-captions.vtt",
+      "status": 200,
+      "bytes": 596,
+      "contentType": "text/vtt"
+    },
+    {
+      "path": "/assets/social-card.png",
+      "status": 200,
+      "bytes": 145600,
+      "contentType": "image/png"
+    },
+    {
+      "path": "/assets/historyout-34s.mp4",
+      "status": 200,
+      "bytes": 6040920,
+      "contentType": "video/mp4"
+    },
+    {
+      "path": "/assets/sample-history.html",
+      "status": 200,
+      "bytes": 4882,
+      "contentType": "text/html",
+      "initialStatus": 307,
+      "finalUrl": "https://historyout.sauliusdev.chatgpt.site/assets/sample-history",
+      "redirectFollowed": true
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200,
+      "bytes": 101477,
+      "contentType": "image/vnd.microsoft.icon"
+    }
+  ],
+  "hostNote": "Python urllib requests received403 from host bot protection. Normal anonymous curl requests tested separately. Public access does not certify all crawler IP allowlists."
+}

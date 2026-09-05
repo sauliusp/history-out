@@ -1,0 +1,20 @@
+{
+  "title": "Find and Export Browser History to CSV, JSON or HTML | HistoryOut",
+  "description": "Find a page again. Keep the history you need. HistoryOut is a free browser history extension that searches and filters available history, then exports matching visits as CSV, JSON or readable HTML.\n\nInstall HistoryOut:\nhttps://chromewebstore.google.com/detail/historyout-export-chrome/idohnkdgejocejlkihihonhemndpiiei\n\nFeatures, browser options and examples:\nhttps://historyout.sauliusdev.chatgpt.site/\n\nThis demo shows the upcoming update. Check the changelog for release status:\nhttps://historyout.sauliusdev.chatgpt.site/changelog/\n\n00:00 Find your pages again\n00:12 Save a view and choose your export\n00:24 Keep a useful history file\n\nWhat can I export?\nCSV for Excel or Google Sheets, JSON for structured data, or HTML for a readable local file with clickable links.\n\nDoes HistoryOut upload my history?\nNo. It reads available browser history when you choose Preview or export. Files download to your device. No account or subscription is required.\n\nCan it recover deleted history?\nNo. It works with history available to your current browser profile. Saved views remember settings; they do not create a permanent history archive.\n\nWhich browsers can install it?\nChrome and Brave use the Chrome Web Store. Edge also supports other-store installations and has its own Add-ons store. See the website for current verification and installation details.\n\nUseful to you? An optional contribution supports my independent development. Every HistoryOut feature stays free:\nhttps://www.buymeacoffee.com/saulius.developer\n\nRecorded from the working extension with fictional browsing data. Narration is generated locally from my own voice reference. Original ambient music and click sounds.\n\n#BrowserHistory #HistoryOut #Productivity",
+  "tags": [
+    "HistoryOut",
+    "export browser history",
+    "browser history CSV",
+    "browser history HTML",
+    "browser history JSON",
+    "export Chrome history",
+    "find browsing history",
+    "free browser extension"
+  ],
+  "language": "English",
+  "thumbnail": "launch/store-kit/youtube/thumbnail-1280x720.png",
+  "captionInstruction": "Final custom English SRT and custom thumbnail are uploaded and saved.",
+  "publicationStatus": "Uploaded as a private YouTube video by root. Voice quality feedback is pending; not publicly published.",
+  "uploadedVideoUrl": "https://youtu.be/GT7aEfalP1E",
+  "metadataStatus": "Matches the saved YouTube Studio title and description verified on 2026-09-05. The video remains private pending creator feedback on the voice."
+}
