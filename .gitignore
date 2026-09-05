@@ -21,3 +21,8 @@ Thumbs.db
 # Other
 output-samples/
 extension-packed.zip
+# Generated release and QA artifacts
+releases/
+.test-build/
+playwright-report/
+test-results/

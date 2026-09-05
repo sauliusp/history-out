@@ -1,0 +1,32 @@
+{
+  "version": "2.0.0",
+  "baseline_source": "0272441",
+  "note": "Baseline archive rebuilt from v1 source; not a fetched copy of the signed Chrome Web Store package.",
+  "packages": [
+    {
+      "file": "historyout-1.0.1-source-baseline.zip",
+      "size_bytes": 126708,
+      "sha256": "22731213b137985e2fafebb838c25b70474612be55bfd20858a271a1f5234f16"
+    },
+    {
+      "file": "historyout-2.0.0-brave.zip",
+      "size_bytes": 136465,
+      "sha256": "25ccc8c801087b074e7056ec6fe00f5fc23b318b50801d3f6c929f0ef68d642d"
+    },
+    {
+      "file": "historyout-2.0.0-chrome.zip",
+      "size_bytes": 136465,
+      "sha256": "25ccc8c801087b074e7056ec6fe00f5fc23b318b50801d3f6c929f0ef68d642d"
+    },
+    {
+      "file": "historyout-2.0.0-chromium.zip",
+      "size_bytes": 136435,
+      "sha256": "893ae673322def96c1c67662282e6344661e68908eaf362e38a486486aced85d"
+    },
+    {
+      "file": "historyout-2.0.0-edge.zip",
+      "size_bytes": 136465,
+      "sha256": "25ccc8c801087b074e7056ec6fe00f5fc23b318b50801d3f6c929f0ef68d642d"
+    }
+  ]
+}

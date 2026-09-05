@@ -5,91 +5,43 @@ import { DateRange } from '../types/DateRange';
 interface DateRangePickerProps {
   value: DateRange | null;
   onChange: (range: DateRange) => void;
+  disabled?: boolean;
 }
 
-export const DateRangePicker: React.FC<DateRangePickerProps> = ({
-  value,
-  onChange,
-}) => {
-  const parseDateComponents = (
-    dateString: string
-  ): [number, number, number] => {
-    return dateString.split('-').map(Number) as [number, number, number];
-  };
+const formatDate = (timestamp: number): string => {
+  if (!Number.isFinite(timestamp)) return '';
+  const date = new Date(timestamp);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+};
 
-  const handleStartChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const [year, month, day] = parseDateComponents(e.target.value);
-    const startTime = Date.UTC(year, month - 1, day, 0, 0, 0);
-
+export const DateRangePicker: React.FC<DateRangePickerProps> = ({ value, onChange, disabled }) => {
+  const updateDate = (text: string, end: boolean) => {
+    const [year, month, day] = text.split('-').map(Number);
+    const timestamp = text
+      ? new Date(year, month - 1, day, end ? 23 : 0, end ? 59 : 0, end ? 59 : 0, end ? 999 : 0).getTime()
+      : Number.NaN;
     onChange({
-      startTime,
-      endTime: value?.endTime || Date.now(),
+      startTime: end ? value?.startTime ?? Number.NaN : timestamp,
+      endTime: end ? timestamp : value?.endTime ?? new Date(new Date().setHours(23, 59, 59, 999)).getTime(),
     });
   };
-
-  const handleEndChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const [year, month, day] = parseDateComponents(e.target.value);
-    const endTime = Date.UTC(year, month - 1, day, 23, 59, 59, 999);
-
-    onChange({
-      startTime: value?.startTime || Date.now(),
-      endTime,
-    });
-  };
-
-  const formatDate = (timestamp: number) => {
-    const date = new Date(timestamp);
-    return date.toISOString().split('T')[0];
-  };
-
   const today = formatDate(Date.now());
 
   return (
-    <Stack
-      direction="row"
-      spacing={2}
-      role="group"
-      aria-label="Date range selection"
-    >
+    <Stack direction="row" spacing={1} role="group" aria-label="Custom date range, in your local time">
       <TextField
-        label="Start Date"
-        type="date"
+        label="From" type="date" fullWidth disabled={disabled}
         value={value ? formatDate(value.startTime) : ''}
-        onChange={handleStartChange}
-        slotProps={{
-          inputLabel: {
-            shrink: true,
-          },
-          input: {
-            'aria-label': 'Start date',
-            'aria-describedby': 'start-date-description',
-            inputProps: {
-              max: value ? formatDate(value.endTime) : today,
-            },
-          },
-        }}
-        fullWidth
+        onChange={(event) => updateDate(event.target.value, false)}
+        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, 'aria-label': 'Start date' } }}
+        sx={{ minWidth: 0, '& input': { minWidth: 0, px: 1 } }}
       />
       <TextField
-        label="End Date"
-        type="date"
+        label="Through" type="date" fullWidth disabled={disabled}
         value={value ? formatDate(value.endTime) : ''}
-        onChange={handleEndChange}
-        disabled={!value?.startTime}
-        slotProps={{
-          inputLabel: {
-            shrink: true,
-          },
-          input: {
-            'aria-label': 'End date',
-            'aria-describedby': 'end-date-description',
-            inputProps: {
-              max: today,
-              min: value ? formatDate(value.startTime) : undefined,
-            },
-          },
-        }}
-        fullWidth
+        onChange={(event) => updateDate(event.target.value, true)}
+        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, min: value ? formatDate(value.startTime) : undefined, 'aria-label': 'End date' } }}
+        sx={{ minWidth: 0, '& input': { minWidth: 0, px: 1 } }}
       />
     </Stack>
   );

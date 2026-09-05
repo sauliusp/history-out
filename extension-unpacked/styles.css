@@ -1,0 +1,10 @@
+html { min-width: 260px; scroll-behavior: smooth; }
+body { margin: 0; }
+* { box-sizing: border-box; }
+button, input, select { font: inherit; }
+::selection { background: #dbe5ff; }
+:focus-visible { outline: 2px solid #185adb; outline-offset: 3px; }
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-thumb { background: #cdd5e3; border-radius: 9px; }
+::-webkit-scrollbar-track { background: transparent; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }

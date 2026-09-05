@@ -1,0 +1,18 @@
+{
+  "checked": "2026-09-05",
+  "browser": "Microsoft Edge installed desktop binary",
+  "mode": "isolated disposable profile, headless",
+  "extension_version": "2.0.0",
+  "checks": {
+    "service_worker_loaded": true,
+    "history_search_succeeded": true,
+    "side_panel_behavior": {
+      "openPanelOnActionClick": true
+    }
+  },
+  "not_verified": [
+    "Visible toolbar click and sidebar rendering",
+    "Store-signed installation",
+    "Brave runtime"
+  ]
+}

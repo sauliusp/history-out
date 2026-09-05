@@ -1,0 +1,15 @@
+{
+  "checked": "2026-09-05T08:01:36.994Z",
+  "results": [
+    "No history read on opening the workspace",
+    "CSV matches search, latest URL mode and query cleanup",
+    "Saved view restores preferences without silently reading history",
+    "No-match state disables empty export",
+    "Incomplete custom dates cannot run",
+    "Cancel discards pending history reads",
+    "API failure is visible and retryable",
+    "No horizontal overflow at 320, 380, 760 and 1200 pixels",
+    "No runtime errors or extension network requests",
+    "Real Manifest V3 Chromium install, history API, saved v1 settings and JSON download"
+  ]
+}
