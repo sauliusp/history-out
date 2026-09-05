@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-05T09:22:52.884Z",
+  "generated": "2026-09-05T09:26:58.866Z",
   "extensionVersion": "2.0.0",
   "bundleSHA256": "2be0d7e412641f683d49992751445efdc10be29350c2378a617c6faa37c82900",
   "backgroundSHA256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
@@ -111,8 +111,8 @@
     },
     {
       "file": "chrome/listing.json",
-      "bytes": 3350,
-      "sha256": "ce005e4c95d931b34d58fbacc6857488164994d2d809b6e554b27a1675bd4823"
+      "bytes": 3400,
+      "sha256": "889db1405140c3ee35807fc95f70f761ffab670eb1e69194e5d76309503a1b32"
     },
     {
       "file": "chrome/promotional/marquee-1400x560.png",
@@ -172,8 +172,8 @@
     },
     {
       "file": "chrome/submission.md",
-      "bytes": 3603,
-      "sha256": "7ff718ac7156d7fa8274c02178a1936a28aaa6057f1ffe5bbadfb533ea9b3fbf"
+      "bytes": 3588,
+      "sha256": "0b97f5df7b2cb0828a0fe567ac69dfe5beb15d4727794d5d43993f7fbecac7c8"
     },
     {
       "file": "distribution.md",
@@ -200,8 +200,8 @@
     },
     {
       "file": "edge/listing.json",
-      "bytes": 3472,
-      "sha256": "7725d75b371fb24c958bf7c142221b96fe85cb29f06d5d0a7fd3f3a892c11b7f"
+      "bytes": 3522,
+      "sha256": "b9be655996961213a4f239e4931eba62b2dfcce15c5ad653acd9009bb4b16e9e"
     },
     {
       "file": "edge/promotional/marquee-1400x560.png",
@@ -261,8 +261,8 @@
     },
     {
       "file": "edge/submission.md",
-      "bytes": 2139,
-      "sha256": "419dca707eb79c6e1d199c44d6258c944e02484d325cc2ef8a6384ae2aa8fd83"
+      "bytes": 2158,
+      "sha256": "1602f46cd78153d46d145112e5fb25a0023c02d8ae0fee05a15aa71a411fe8de"
     },
     {
       "file": "promotional/marquee-1400x560.png",
@@ -348,8 +348,8 @@
     },
     {
       "file": "youtube/metadata.json",
-      "bytes": 2634,
-      "sha256": "8328e4b7a28c8e096c696b0f7c9488290de9b94cb50f9c677893ae7362c20f6d"
+      "bytes": 2536,
+      "sha256": "857a6520e93fe92eef6b533d8c7a0ef776a6baf6755d815104d11314b9b5e48a"
     },
     {
       "file": "youtube/thumbnail-1280x720.png",
@@ -361,8 +361,8 @@
     },
     {
       "file": "youtube/upload-status.json",
-      "bytes": 533,
-      "sha256": "7bd38ee1bae396ded7cc581141097f9d6c4e00c18670084d1d4e5fd097872aba"
+      "bytes": 695,
+      "sha256": "3102e8834ef791384ef933302a41831adc2a17efbf61cc90c668cf701bbf05ae"
     }
   ]
 }

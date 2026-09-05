@@ -9,12 +9,13 @@
   "youtube": {
     "url": "https://youtu.be/GT7aEfalP1E",
     "studioUrl": "https://studio.youtube.com/video/GT7aEfalP1E/edit",
-    "visibility": "private",
+    "visibility": "public",
     "title": "Find and Export Browser History to CSV, JSON or HTML | HistoryOut",
     "englishCaptions": "uploaded and saved",
     "customThumbnail": "uploaded",
     "checks": "Copyright and Community Guidelines: no issues found",
-    "pending": "Creator listening feedback for synthetic voice likeness before public publication"
+    "verification": "YouTube Studio shows Public and All changes saved.",
+    "voiceReviewLimit": "Transcript and timing verified automatically. Perceptual voice likeness has not been independently confirmed."
   },
   "buyMeACoffee": {
     "url": "https://buymeacoffee.com/saulius.developer",
@@ -28,5 +29,10 @@
   "dns": {
     "changed": false,
     "ownerWillConnectDomain": true
+  },
+  "releaseCandidate": {
+    "sourceCommit": "56bdd7d02c8513ccb955d6b5c7e3898003a06421",
+    "chromeArchiveSHA256": "795d56c66eae12de2c9b6e0766555559f7cb6c99b31cf631aeefcac5542783d9",
+    "submitted": false
   }
 }

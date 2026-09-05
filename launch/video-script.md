@@ -34,7 +34,7 @@ The narration is generated locally from the creator-authorized reference in [the
 
 All seven generated segments and the complete mixed soundtrack were independently transcribed with MLX Whisper. The intended wording was verified. The final MP4 has valid H.264 video and stereo AAC audio, and the mix peak remains below clipping. Screenshots and a six-frame video contact sheet were visually inspected. The visible version badge was removed before final capture.
 
-Human listening for perceptual voice similarity and the subjective mix is pending, as requested for this release. The agent session cannot hear audio directly and does not claim that voice similarity has been confirmed. The complete video, isolated voice and audio stems are available for that review. No upload was performed by the media-production agent.
+The agent session cannot hear audio directly and does not claim that perceptual voice similarity has been confirmed. The complete video, isolated voice and audio stems are available for listening review. The video was published to the creator's YouTube channel as requested: https://youtu.be/GT7aEfalP1E. Studio confirms Public and all changes saved.
 
 ## YouTube metadata draft
 
