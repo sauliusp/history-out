@@ -1,0 +1,71 @@
+{
+  "checkedAt": "2026-09-06T17:21:45Z",
+  "method": "Native Chrome Developer Dashboard accessibility and visual inspection; saved values reloaded. No submission or publication action.",
+  "itemId": "idohnkdgejocejlkihihonhemndpiiei",
+  "dashboardUrl": "https://chrome.google.com/webstore/devconsole/6bc51b6e-4903-4534-823e-9d7dc4f3705f/idohnkdgejocejlkihihonhemndpiiei/edit",
+  "status": {
+    "submitted": false,
+    "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
+    "targetVersion": "2.0.0",
+    "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-06",
+    "status": "saved draft",
+    "published": false,
+    "draftVersion": "2.0.0",
+    "draftVerifiedAt": "2026-09-06T17:21:45Z",
+    "dashboardStatusText": "This draft is unpublished.",
+    "graphics": {
+      "screenshots": 5,
+      "promotionalTiles": 2,
+      "originalIconRetained": true
+    },
+    "video": "https://www.youtube.com/watch?v=cGybkRSkk2Y",
+    "privacyPolicy": "https://exportchromehistory.app/privacy/",
+    "localWebHistoryDisclosure": true,
+    "testInstructionsSaved": true,
+    "permissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "evidence": "chrome-draft.json",
+    "ownerNextAction": "Review draft, submit for review and publish after approval"
+  },
+  "package": {
+    "file": "releases/historyout-2.0.0-chrome.zip",
+    "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+    "draftVersion": "2.0.0",
+    "publishedVersion": "1.0.1",
+    "draftPermissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "publishedPermissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ]
+  },
+  "privacy": {
+    "savedToast": "Item saved.",
+    "singlePurpose": "Help users find, revisit, filter and export the browsing history available to their current browser profile as CSV, JSON or HTML files. All history processing happens locally on the user's device.",
+    "dataCategory": "Web history",
+    "remoteCode": false,
+    "limitedUseCertifications": 3,
+    "privacyUrl": "https://exportchromehistory.app/privacy/"
+  },
+  "reviewerInstructions": {
+    "textFile": "../chrome-reviewer-dashboard.txt",
+    "characters": 467,
+    "confirmation": "Test instructions were saved on 6 September 2026."
+  },
+  "distribution": {
+    "price": "Free of charge",
+    "visibility": "Public",
+    "regionsChanged": false
+  },
+  "limitations": [
+    "Signed store install and update verification remains after owner submission, approval and publication.",
+    "The website pending-store-update notice remains until public version 2.0.0 is verified."
+  ]
+}

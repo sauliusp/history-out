@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T03:44:24.997771Z",
+  "generated": "2026-09-06T17:22:28.918648Z",
   "extensionVersion": "2.0.0",
   "bundleSHA256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
   "backgroundSHA256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
@@ -101,8 +101,8 @@
     },
     {
       "file": "chrome/description.txt",
-      "bytes": 2392,
-      "sha256": "1e81a63404da3a036cf28670045a43639f0d8d98da0554dec0bbef2f6e4fcb87"
+      "bytes": 2381,
+      "sha256": "3425e589dabdb438dfdc003bc2aa894e12e11d816052039ea1d7805bbb178bbb"
     },
     {
       "file": "chrome/historyout-2.0.0-chrome.zip",
@@ -111,8 +111,8 @@
     },
     {
       "file": "chrome/listing.json",
-      "bytes": 3214,
-      "sha256": "93c0446a5f0850903fca3b3ede57fc8ae403ce29f8fd1deddf58f8342c50fa87"
+      "bytes": 3326,
+      "sha256": "2f0e292fba89e380a28cac3674138b8e375ff12dfd667e31c600e424e77eebe9"
     },
     {
       "file": "chrome/promotional/marquee-1400x560.png",
@@ -172,8 +172,8 @@
     },
     {
       "file": "chrome/submission.md",
-      "bytes": 3587,
-      "sha256": "30bc20c5fe1670d35f3a49b2f8552c09e7a205a9f90d831af8ab33e7e5b07567"
+      "bytes": 4038,
+      "sha256": "41a3f9fc3a6f3640c9ff50cfd3cd57c07dbfeaf72b2ad491262c4044b584fe6f"
     },
     {
       "file": "distribution.md",
@@ -190,8 +190,8 @@
     },
     {
       "file": "edge/description.txt",
-      "bytes": 2392,
-      "sha256": "1e81a63404da3a036cf28670045a43639f0d8d98da0554dec0bbef2f6e4fcb87"
+      "bytes": 2381,
+      "sha256": "3425e589dabdb438dfdc003bc2aa894e12e11d816052039ea1d7805bbb178bbb"
     },
     {
       "file": "edge/historyout-2.0.0-edge.zip",
@@ -200,8 +200,8 @@
     },
     {
       "file": "edge/listing.json",
-      "bytes": 3336,
-      "sha256": "4fcce95359c58b360a7ca96fde0a865cb422f5ae0c38d56a438a4c7a5adf1682"
+      "bytes": 3303,
+      "sha256": "6280de9c420ad0e90dde9eafe444c5948d4103b1c1af646ebf9c283f554d9bb3"
     },
     {
       "file": "edge/promotional/marquee-1400x560.png",

@@ -2,15 +2,19 @@
   "checked": "2026-09-06",
   "website": {
     "status": "public",
-    "url": "https://historyout.sauliusdev.chatgpt.site/",
-    "anonymousHTTPChecksPassed": 5,
-    "sourceCommit": "af7573c36c86592e32c8a67d90baa709373e3623",
+    "url": "https://exportchromehistory.app/",
+    "anonymousHTTPChecksPassed": 58,
+    "sourceCommit": "c3d0b920a33bf50ddf768dacc316f8742e2aaf76",
     "currentVideoSeconds": 24.833333,
     "currentMediaChecksPassed": 4,
-    "siteVersion": 5,
-    "deploymentId": "appgdep_6a9ce14ceffc81918a67af74f2996c86",
-    "evidence": "public-voice-refresh.json",
-    "earlierRouteEvidence": "public-marketing-refresh.json"
+    "siteVersion": 6,
+    "deploymentId": "appgdep_6a9d9eb74564819196de1fce703b8be1",
+    "evidence": "domain-cutover/public-checks.json",
+    "earlierRouteEvidence": "public-marketing-refresh.json",
+    "additionalHostname": "https://www.exportchromehistory.app/",
+    "fallbackUrl": "https://historyout.sauliusdev.chatgpt.site/",
+    "domainCertificatesActive": true,
+    "assetsCheckedPerDomain": 14
   },
   "youtube": {
     "url": "https://youtu.be/cGybkRSkk2Y",
@@ -41,11 +45,47 @@
     "submitted": false,
     "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
     "targetVersion": "2.0.0",
-    "liveVersionChecked": "1.0.1 on 2026-09-06"
+    "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-06",
+    "status": "saved draft",
+    "published": false,
+    "draftVersion": "2.0.0",
+    "draftVerifiedAt": "2026-09-06T17:21:45Z",
+    "dashboardStatusText": "This draft is unpublished.",
+    "graphics": {
+      "screenshots": 5,
+      "promotionalTiles": 2,
+      "originalIconRetained": true
+    },
+    "video": "https://www.youtube.com/watch?v=cGybkRSkk2Y",
+    "privacyPolicy": "https://exportchromehistory.app/privacy/",
+    "localWebHistoryDisclosure": true,
+    "testInstructionsSaved": true,
+    "permissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "evidence": "chrome-draft.json",
+    "ownerNextAction": "Review draft, submit for review and publish after approval"
   },
   "dns": {
-    "changed": false,
-    "ownerWillConnectDomain": true
+    "changed": true,
+    "ownerWillConnectDomain": false,
+    "registrar": "Namecheap",
+    "canonical": "exportchromehistory.app",
+    "www": "www.exportchromehistory.app",
+    "apexA": [
+      "162.159.143.30",
+      "172.66.3.26"
+    ],
+    "wwwCname": "custom-domains.chatgpt.site.",
+    "webTtlSeconds": 300,
+    "ownershipTxtRecordsAdded": 4,
+    "nameserversPreserved": true,
+    "emailRecordsPreserved": true,
+    "rollback": "domain-cutover/dns-before.json",
+    "publicEvidence": "domain-cutover/public-checks.json",
+    "ssl": "active on both hostnames"
   },
   "releaseCandidate": {
     "chromeArchiveSHA256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",

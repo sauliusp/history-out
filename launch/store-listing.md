@@ -52,7 +52,7 @@ https://www.buymeacoffee.com/saulius.developer
 You can also use Tell a friend to copy the installation link and share it wherever you like.
 
 Features, examples, browser options and release notes:
-https://historyout.sauliusdev.chatgpt.site/
+https://exportchromehistory.app/
 
 ## Changelog text
 

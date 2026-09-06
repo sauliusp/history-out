@@ -38,7 +38,8 @@ If any extension source or asset changes, rebuild, repeat affected checks, run `
 ## Remaining browser and store release verification
 
 - [ ] Run the practical install/preview/filter/save/export flow in **Brave** before claiming runtime-tested Brave support. Brave is not installed on this Mac; its archive is verified but its runtime is not.
-- [ ] Upload the reviewed Chrome ZIP to the **existing** Chrome Web Store item `idohnkdgejocejlkihihonhemndpiiei`, using the reviewed store copy and final assets. The product remains free.
+- [x] Upload the reviewed Chrome ZIP to the **existing** Chrome Web Store item `idohnkdgejocejlkihihonhemndpiiei`, using the reviewed store copy and final assets. Saved draft 2.0.0, privacy fields and reviewer instructions verified on 6 September 2026. The product remains free. See [draft evidence](./qa/chrome-draft.json).
+- [ ] The owner reviews the saved draft, submits it for review and publishes after approval. No submission or publication was performed by this task.
 - [ ] After store approval/publication, verify a clean **signed store install** and a signed **1.0.1 to 2.0.0 update**, including unchanged permission prompts, retained preferences/history and welcome/changelog behavior. Local unpacked installer evidence does not replace this signed-distribution check.
 - [ ] Verify the public listing serves the intended approved version, public URLs resolve and the final YouTube destination is correct.
 

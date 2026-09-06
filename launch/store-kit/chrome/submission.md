@@ -1,6 +1,8 @@
 # Chrome Web Store update
 
-Updated 6 September 2026. Submit the existing item `idohnkdgejocejlkihihonhemndpiiei` to preserve its users, reviews and update path. The product remains **HistoryOut**; 2.0.0 is the technical release version.
+Updated 6 September 2026. Save a draft on the existing item `idohnkdgejocejlkihihonhemndpiiei` to preserve its users, reviews and update path. The owner reviews and submits separately. The product remains **HistoryOut**; 2.0.0 is the technical release version.
+
+Current verified status on 6 September 2026: version 2.0.0 and the updated listing, assets, video, privacy fields and reviewer notes are saved as an unpublished draft. Published version remains 1.0.1. Free and Public distribution settings are retained. No review submission or publication has been performed.
 
 ## Upload fields
 
@@ -10,8 +12,8 @@ Use `listing.json` for field values and `description.txt` for the complete publi
 2. Set the public name and description from `listing.json`. The name must match the manifest.
 3. Upload `brand/icon128.png`, the five ordered files under `screenshots/`, and both files under `promotional/`.
 4. Add the new public YouTube demo: https://youtu.be/cGybkRSkk2Y. Do not use the old silent draft.
-5. Use the public website and privacy URLs from `listing.json`. Check both anonymously before submitting.
-6. Complete the privacy fields below, review the final listing preview, and submit the update for review.
+5. Use the public website and privacy URLs from `listing.json`. Check both anonymously before saving the draft.
+6. Complete the privacy fields below, review the final listing preview, and save the draft only. The owner reviews and submits separately; do not submit or publish during draft preparation.
 
 The 128px PNG is the byte-identical original extension icon. The five screenshots are 1280 x 800, the required small promo is 440 x 280, and the optional marquee is 1400 x 560. Chrome permits up to five screenshots. [Official image requirements](https://developer.chrome.com/docs/webstore/images/)
 

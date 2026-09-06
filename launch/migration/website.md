@@ -1,14 +1,15 @@
 # Website release and domain handoff
 
-Updated 6 September 2026. The website lives in `website/` inside the HistoryOut repository. The original site and DNS remain unchanged until the owner connects the domain.
+Updated 6 September 2026. The website lives in `website/` inside the HistoryOut repository. Namecheap web records now point the existing domain to Sites. Nameservers, email forwarding, SPF and the old hosting verification records are preserved. The original web records are saved in `launch/qa/domain-cutover/dns-before.json` for rollback.
 
-The current public publication is Sites version 5, from exact source commit `af7573c36c86592e32c8a67d90baa709373e3623`. It leads with CSV, JSON and HTML export and serves the 25-second demo with a fresh expressive narration. This voice-only update preserves all existing website imagery. Five anonymous checks verify the homepage metadata and exact current video, captions, poster and hero bytes. The earlier full-route checks remain in `public-marketing-refresh.json`. See [current publication evidence](../qa/public-voice-refresh.json).
+The current public publication is Sites version 6, from exact source commit `c3d0b920a33bf50ddf768dacc316f8742e2aaf76`. Deployment `appgdep_6a9d9eb74564819196de1fce703b8be1` succeeded on 6 September 2026. It sets the canonical origin to `https://exportchromehistory.app` and adds an explicit Chrome Web Store Limited Use disclosure. Export-first content, the 25-second narrated demo and all imagery remain unchanged. Current domain verification is recorded in `launch/qa/domain-cutover/`; earlier media evidence remains in [public-voice-refresh.json](../qa/public-voice-refresh.json).
 
 ## Current destinations
 
-- New Sites address: https://historyout.sauliusdev.chatgpt.site/
-- Existing domain: https://exportchromehistory.app/
-- Existing alias: https://historyout.site/
+- Canonical domain: https://exportchromehistory.app/
+- Additional hostname: https://www.exportchromehistory.app/
+- Working Sites fallback: https://historyout.sauliusdev.chatgpt.site/
+- `historyout.site` currently has no public DNS records. It is not a working alias.
 - Sites project: `appgprj_6a9bc53bba78819185f33b92719dd87c`, recorded in `website/.openai/hosting.json`.
 - Original website source revision: `7e3985ce741ba9e0b5c2f8e2945392fa93368b20`.
 
@@ -26,14 +27,14 @@ The homepage, three competitor comparisons, comparison hub, four useful guides, 
 
 After verifying the live Chrome Web Store serves version 2.0.0, change `storeVersion` to `2.0.0` in `website/site.config.json`. Rebuild, test, publish and verify. This removes the pending-release notes and updates software metadata. `RELEASE_V2=true` is a temporary build override, not a substitute for recording the released version. No store submission has been performed by website tooling.
 
-## When connecting the domain
+## Domain configuration and ongoing tasks
 
 1. Preserve the existing DNS and website deployment for rollback.
-2. Connect the desired domain through Sites. The owner is handling this step.
+2. Sites domain registrations cover both the apex and `www`. Apex A records are `162.159.143.30` and `172.66.3.26`; `www` is a CNAME to `custom-domains.chatgpt.site.`. Four separate TXT ownership records are configured. Web-record TTL is 300 seconds.
 3. Set `origin` in `website/site.config.json` to the verified HTTPS canonical domain. `SITE_ORIGIN` can override it for a deliberate build.
 4. Rebuild, test, push the exact website source to its configured Sites repository, save and publish that version.
 5. Verify anonymous HTTPS responses, canonicals, robots, sitemap, sample downloads and all routes on the domain. Preserve the old homepage anchors and working privacy/support paths.
-6. Permanently redirect obsolete hostnames to the chosen canonical hostname without redirect chains. Keep the generated Sites origin working because installed extensions use its welcome/changelog paths.
+6. Both hostnames serve the same static site with canonical metadata pointing to the apex. The supported static Sites configuration does not expose a hostname redirect, so no `www` redirect is claimed. Keep the generated Sites origin working because installed extensions use its welcome/changelog paths. Do not add a shared unconditional redirect that would loop on the apex.
 7. Submit the sitemap in Search Console and Bing Webmaster Tools. Inspect the homepage, HTML export guide and comparison pages. Verify the host allows published crawler addresses as well as the robots rules.
 8. Add website analytics as planned by the owner, then update the website privacy paragraph to match what is actually enabled. Do not add extension analytics or history collection.
 
