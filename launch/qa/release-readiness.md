@@ -6,6 +6,10 @@ Broad release validation completed 2026-09-05T09:13:04.075Z. Latest focused supp
 
 **Current support update passed:** focused UI checks at 320, 400 and 1200 pixels, TypeScript, production build, native visible preview and **137 package integrity checks**. The package audit also reran all three core stress cases. The current bundle is **476,832 bytes** and emits the existing webpack bundle-size advisory.
 
+## Store metadata update
+
+On 6 September 2026, the manifest name and description were aligned with the export-first positioning: **HistoryOut - Export Browser History**. The extension runtime, icons, support button, version and permissions are unchanged from `88f0383`. All four packages were regenerated without rebuilding the runtime. **137 package integrity checks** and the three core stress cases passed again. Current package hashes are in [package-audit.json](./package-audit.json).
+
 ## Final support UI update
 
 The compact **Buy me a coffee** button is visible below the original header, with “Free to use.” and “Optional support.” context. The original footer, including **Support HistoryOut**, is byte-identical to the pre-change source at `ba1914f631fec37db90c1cd5225b2537d6755275`. No history-processing logic or permissions changed.

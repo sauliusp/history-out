@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-05T11:33:56.115Z",
+  "generated_at": "2026-09-06T03:05:53.317Z",
   "command": "node scripts/audit-release-packages.cjs",
   "node_version": "v22.20.0",
-  "git_head": "ba1914f631fec37db90c1cd5225b2537d6755275",
+  "git_head": "88f0383966c6254bd2bc7a477e3b4dd356e2d640",
   "version": "2.0.0",
   "status": "pass",
   "scope": "Local v2 archives and their staging directories compared with extension-unpacked. Does not certify a signed Chrome Web Store package or a store submission.",
   "source": {
     "manifest": {
       "manifest_version": 3,
-      "name": "HistoryOut - Find & Export History",
+      "name": "HistoryOut - Export Browser History",
       "short_name": "HistoryOut",
       "version": "2.0.0",
-      "description": "Revisit your day. Find and filter browser history, then export what matters to CSV, JSON or HTML. Free and local.",
+      "description": "Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account.",
       "permissions": [
         "history",
         "storage",
@@ -75,8 +75,8 @@
         "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1"
       },
       "manifest.json": {
-        "bytes": 841,
-        "sha256": "8f1eca639c42046ff7ade3243981de1f904ef90326393fef9a31f29948b4c763"
+        "bytes": 843,
+        "sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e"
       },
       "side-panel.html": {
         "bytes": 405,
@@ -185,10 +185,10 @@
         },
         {
           "file": "manifest.json",
-          "bytes": 857,
-          "sha256": "2c9cf3b12f4e8f9a534cf788225dd86a9fe9f74d0543d8f54ae5171998b811ab",
-          "source_sha256": "8f1eca639c42046ff7ade3243981de1f904ef90326393fef9a31f29948b4c763",
-          "staging_sha256": "2c9cf3b12f4e8f9a534cf788225dd86a9fe9f74d0543d8f54ae5171998b811ab",
+          "bytes": 859,
+          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
         },
@@ -211,8 +211,8 @@
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 156877,
-      "sha256": "916bf31ada39b5f2b833e23bc7b9e3eb314933d3269f4a7cafc1dd790320efb8",
+      "bytes": 156873,
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
       "version": "2.0.0",
       "permissions": {
         "permissions": [
@@ -307,10 +307,10 @@
         },
         {
           "file": "manifest.json",
-          "bytes": 857,
-          "sha256": "2c9cf3b12f4e8f9a534cf788225dd86a9fe9f74d0543d8f54ae5171998b811ab",
-          "source_sha256": "8f1eca639c42046ff7ade3243981de1f904ef90326393fef9a31f29948b4c763",
-          "staging_sha256": "2c9cf3b12f4e8f9a534cf788225dd86a9fe9f74d0543d8f54ae5171998b811ab",
+          "bytes": 859,
+          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
         },
@@ -333,8 +333,8 @@
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 156877,
-      "sha256": "916bf31ada39b5f2b833e23bc7b9e3eb314933d3269f4a7cafc1dd790320efb8",
+      "bytes": 156873,
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
       "version": "2.0.0",
       "permissions": {
         "permissions": [
@@ -429,10 +429,10 @@
         },
         {
           "file": "manifest.json",
-          "bytes": 857,
-          "sha256": "2c9cf3b12f4e8f9a534cf788225dd86a9fe9f74d0543d8f54ae5171998b811ab",
-          "source_sha256": "8f1eca639c42046ff7ade3243981de1f904ef90326393fef9a31f29948b4c763",
-          "staging_sha256": "2c9cf3b12f4e8f9a534cf788225dd86a9fe9f74d0543d8f54ae5171998b811ab",
+          "bytes": 859,
+          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
         },
@@ -455,8 +455,8 @@
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 156877,
-      "sha256": "916bf31ada39b5f2b833e23bc7b9e3eb314933d3269f4a7cafc1dd790320efb8",
+      "bytes": 156873,
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
       "version": "2.0.0",
       "permissions": {
         "permissions": [
@@ -551,10 +551,10 @@
         },
         {
           "file": "manifest.json",
-          "bytes": 779,
-          "sha256": "afb79c9aee614ebfb80d1c2f75683ba3d33bcd1e61f7b74c3aeac4970d7a1c12",
-          "source_sha256": "8f1eca639c42046ff7ade3243981de1f904ef90326393fef9a31f29948b4c763",
-          "staging_sha256": "afb79c9aee614ebfb80d1c2f75683ba3d33bcd1e61f7b74c3aeac4970d7a1c12",
+          "bytes": 781,
+          "sha256": "6f0e1598b1880304ea2d4234a9310dad86be2bd401692550cfc4a13d8914b86e",
+          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+          "staging_sha256": "6f0e1598b1880304ea2d4234a9310dad86be2bd401692550cfc4a13d8914b86e",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
         },
@@ -577,8 +577,8 @@
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 156847,
-      "sha256": "0c26a86e821584fdaecd84af509cc76a21d1886809892beb0233cc7b06dfa82b",
+      "bytes": 156843,
+      "sha256": "f3cf8b98a0ff7ed39543c458492bac7c034115582d6073aa670cde30de5a9902",
       "version": "2.0.0",
       "permissions": {
         "permissions": [
@@ -597,7 +597,7 @@
     "command": "node --test --test-reporter=tap tests/release-stress.test.cjs",
     "file_sha256": "0c32b621e3cace03cb38a03e4df34bdaa96e9b70c2565d607e8ba42e419d2a61",
     "exit_code": 0,
-    "elapsed_ms": 773.26,
+    "elapsed_ms": 790.92,
     "tests": 3,
     "passed": 3,
     "failed": 0,
@@ -609,28 +609,28 @@
           "unique_clean_pages": 5000,
           "combined_filter_pages": 84
         },
-        "first_load_ms": 116.16,
-        "reordered_load_ms": 77.02,
-        "filter_validation_ms": 23.81,
+        "first_load_ms": 117.11,
+        "reordered_load_ms": 75.85,
+        "filter_validation_ms": 23.24,
         "peak_api_concurrency": 8,
         "serialization": {
           "json": {
-            "elapsed_ms": 16.54,
+            "elapsed_ms": 16.06,
             "bytes": 6415598,
             "sha256": "6fad890d7af72c5cf4517150e04b9e9660c3edb53c87e6bc7a8ccc1a331e7858"
           },
           "csv": {
-            "elapsed_ms": 25.94,
+            "elapsed_ms": 22.37,
             "bytes": 3865628,
             "sha256": "239174e21117210d95fc2be49510eea7a025c9b77730adda3231dbe8fb6f0496"
           },
           "html": {
-            "elapsed_ms": 39.38,
+            "elapsed_ms": 41.4,
             "bytes": 8756786,
             "sha256": "32fb531b3c5f5a3fac8b2d9e3ef184cfa49b2e6b2eece2a644bada83e3bc9308"
           }
         },
-        "total_test_ms": 576.5,
+        "total_test_ms": 587.25,
         "note": "Synthetic API-boundary timing on this machine, not a Chrome UI latency guarantee."
       },
       {
@@ -638,13 +638,13 @@
         "api_calls_before_cancel": 12,
         "late_api_responses_discarded": 8,
         "recovery_visits": 256,
-        "abort_ms": 0.32
+        "abort_ms": 0.28
       },
       {
         "failed_candidate_urls": 10000,
         "failed_load_api_calls": 8,
         "overlapping_success_visits": 768,
-        "rejection_ms": 0.14
+        "rejection_ms": 0.15
       }
     ]
   },
@@ -1417,7 +1417,7 @@
     }
   ],
   "issues": [],
-  "elapsed_ms": 891.77,
+  "elapsed_ms": 918.35,
   "check_count": 137,
   "passed_check_count": 137,
   "note": "Snapshot evidence. Re-run this audit after rebuilding or repacking; archive hashes are final only for the bytes recorded here."

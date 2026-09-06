@@ -1,0 +1,8 @@
+{
+  "original_samples": 1104728,
+  "output_samples": 1191128,
+  "sample_rate": 48000,
+  "inserted_silence_samples": 86400,
+  "spoken_audio_sample_identical": true,
+  "source_pcm_sha256": "9c33a7d84a4a9761903bff3495d18c5fee484481b3ac7bb0d5c5a9989a69b5fd"
+}

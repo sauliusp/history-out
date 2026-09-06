@@ -4,58 +4,54 @@ Prepared 5 September 2026 for technical version 2.0.0. Public branding remains H
 
 ## Name
 
-HistoryOut - Find & Export History
+HistoryOut - Export Browser History
 
 ## Short description
 
-Revisit your day. Find and filter browser history, then export what matters to CSV, JSON or HTML. Free and local.
+Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account.
 
 ## Detailed description
 
-Find your way back to useful pages. Revisit your browsing day, find a page again, and keep the history you need as CSV, JSON or readable HTML.
+Export your browser history as CSV, JSON or readable HTML. Choose your dates, select your columns, and keep the matching pages in a useful local file.
 
 HistoryOut is free. No account, no subscription, and no uploads of your browsing history.
 
-REVISIT YOUR DAY
+THREE USEFUL FORMATS
 
-Choose Today or Yesterday and click Preview. See visits, pages and your most visited sites for that period. Reopen a useful page from Your recent trail. Refresh when you want to include new visits.
-
-PICK UP YOUR RESEARCH
-
-Search page titles and URLs. Filter by website, choose a date range, and keep the latest visit to each URL if you prefer a shorter list.
-
-Save a named view to keep your filters and export settings ready. Select it next time and preview the current matching history. Saved views keep settings on this device; they do not create a history archive.
-
-KEEP A FILE YOU CAN USE
-
-CSV: open your history in Excel, Google Sheets or another spreadsheet tool.
-JSON: use structured records in your own scripts and workflows.
+CSV: open and analyze your history in Excel, Google Sheets or another spreadsheet tool.
+JSON: use structured history records in your own scripts and workflows.
 HTML: keep a readable file with clickable links, ready to open locally in a browser.
 
-Choose your columns and preview the results before downloading. Your export includes every matching row from the loaded result, even when the preview displays only the first 100.
+MAKE THE FILE YOURS
 
-Optional URL cleanup removes query strings and fragments. It does not anonymize your history. Titles and URL paths can still contain personal information, so review your file before sharing it.
+Choose a preset or custom date range. Search page titles and URLs, filter by website, and select the columns that belong in your file. Optional fields include Domain and Timestamp.
+
+Keep every matching visit, or choose One row per URL for the latest matching visit to each page. Optional URL cleanup removes query strings and fragments. It does not anonymize your history; titles and URL paths can still contain personal information.
+
+PREVIEW, THEN DOWNLOAD
+
+Review your matching history before exporting. The preview shows up to 100 rows; your file includes every match from the loaded result. Export downloads directly to your device.
 
 FREE AND LOCAL
 
-HistoryOut reads available browser history when you choose Preview or export. Files download to your device. The extension has no advertising, analytics or account requirement, and it does not upload history to a server.
+HistoryOut reads available browser history when you choose Preview or export. The extension has no advertising, analytics or account requirement. It does not upload history to a server or delete your browser history.
 
-The update keeps the same three permissions: history, storage and sidePanel. HistoryOut does not delete your browser history.
+This update keeps the same three permissions: history, storage and sidePanel.
 
-HELPFUL TO KNOW
+USEFUL EXTRAS, INCLUDED
 
-HistoryOut works with history available to the current browser profile. It cannot recover deleted history, guarantee access to older account history or create a permanent automatic archive.
+A daily recap and recent trail help you revisit useful pages. Save a named view to reuse your date range, filters and export settings next time. Every feature stays free.
 
-Visit counts describe navigation events. They do not measure time spent on a page or productivity.
+Saved views remember settings on this device, not a permanent history archive. HistoryOut works with history available to your current browser profile. It cannot recover deleted history or guarantee access to older account history. Visit counts describe navigation events, not time spent or productivity.
 
-A LITTLE SUPPORT GOES A LONG WAY
+OPTIONAL SUPPORT
 
-If HistoryOut saves you time, you can support independent development with an optional one-time contribution:
+If HistoryOut saves you time, an optional contribution supports independent development. Every feature remains free whether you contribute or not:
 https://www.buymeacoffee.com/saulius.developer
 
-Every feature stays free whether you contribute or not. You can also use Tell a friend to copy the installation link and share it wherever you like.
+You can also use Tell a friend to copy the installation link and share it wherever you like.
 
-Learn more, see browser installation options and read the changelog:
+Features, examples, browser options and release notes:
 https://historyout.sauliusdev.chatgpt.site/
 
 ## Changelog text
@@ -70,19 +66,19 @@ Kept: the original HistoryOut identity, CSV/JSON/HTML exports, existing preferen
 
 ## Screenshot order
 
-1. Revisit your day: recap, most visited sites and recent trail.
-2. Resume your research: search, filters and a saved view.
-3. Export clickable HTML: the actual downloaded file, shown in a browser.
-4. Choose your dates: presets and local custom dates.
-5. Export what matters: rows, columns, CSV/JSON/HTML and optional cleanup.
+1. Export browser history: CSV, JSON and HTML controls, download action and a real HTML result.
+2. Customize your export: date range and chosen columns.
+3. Readable HTML: the actual downloaded file with clickable links.
+4. Filter your results: search and website filters before export.
+5. Revisit and repeat: daily recap and saved views as useful extras.
 
-Use the final images in [the store kit](./store-kit/index.html). Every displayed browsing record is fictional. The HTML file is produced by the extension, not a hand-built mock interface.
+Use the final images in [the store kit](./store-kit/index.html). Every browsing record is fictional. Product controls are real. The optional support strip is omitted only in marketing captures; the installed extension remains unchanged.
 
 ## Submission kit
 
 The [Chrome submission notes](./store-kit/chrome/submission.md) contain ready-to-paste privacy and permission explanations. The [Edge submission notes](./store-kit/edge/submission.md) cover its separate listing and search terms. [Browser distribution](./store-kit/distribution.md) explains that Brave uses the Chrome Web Store.
 
-The title is 34 characters. The short description is 113 characters. The detailed description is 2,576 characters. Machine-readable values are in each store folder's listing.json.
+The title is 35 characters. The short description is 114 characters. The detailed description is 2,392 characters. Machine-readable values are in each store folder's listing.json.
 
 ## Release copy checks
 

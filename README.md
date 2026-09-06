@@ -1,6 +1,6 @@
 # HistoryOut
 
-**Find your way back.** Revisit useful pages, resume a saved view and export the browser history that matters. Free, local and account-free.
+**Export your browser history as CSV, JSON or HTML.** Choose dates, columns and matching pages, then keep a useful local file. Daily recaps and saved views help you return to useful pages between exports. Free, with no account.
 
 This repository contains the **2.0.0 release candidate** on `codex/historyout-v2`, the website and launch material. The existing Chrome Web Store release is **1.0.1**. The refreshed website is publicly available on Sites. The existing store item and production DNS have not been changed.
 

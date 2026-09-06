@@ -1,6 +1,6 @@
 # Microsoft Edge Add-ons
 
-Prepared 5 September 2026. This is a later distribution option; no Edge listing has been submitted or published.
+Updated 6 September 2026. This is a later distribution option; no Edge listing has been submitted or published.
 
 Edge has its own store, Microsoft Edge Add-ons, managed through Partner Center. Edge also supports installations from the Chrome Web Store, subject to the browser's other-store setting and organization policies. [Microsoft installation guidance](https://support.microsoft.com/en-US/edge/add-turn-off-or-remove-extensions-in-microsoft-edge)
 
@@ -17,6 +17,6 @@ Partner Center recommends a 300px square logo and accepts a minimum of 128px. We
 
 ## Submission sequence
 
-Create an extension entry in Partner Center, upload the final tested Edge package, and populate the English listing using these files. Add the public website/privacy URLs and the public YouTube demo: https://youtu.be/CqMeYRX0hWQ. Use the local data handling and permission explanations in the Chrome submission notes, adjusted to the current Partner Center form. Verify the listing preview before sending it for store review.
+Create an extension entry in Partner Center, upload the final tested Edge package, and populate the English listing using these files. Add the public website/privacy URLs and the public YouTube demo: https://youtu.be/duxsGpO5t8Y. Use the local data handling and permission explanations in the Chrome submission notes, adjusted to the current Partner Center form. Verify the listing preview before sending it for store review.
 
 The prepared screenshots show HistoryOut's actual interface, not a claim that Edge store review has passed. Local Chromium/Edge evidence and the remaining browser checks are in `launch/browser-compatibility.md` and `launch/qa/release-readiness.json`.

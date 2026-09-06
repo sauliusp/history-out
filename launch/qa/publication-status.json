@@ -1,29 +1,34 @@
 {
-  "checked": "2026-09-05",
+  "checked": "2026-09-06",
   "website": {
     "status": "public",
     "url": "https://historyout.sauliusdev.chatgpt.site/",
-    "anonymousHTTPChecksPassed": 20,
-    "sourceCommit": "84615ae64f202204f9c4e813c9555ea19a4fd76e",
-    "currentVideoSeconds": 24,
-    "currentMediaChecksPassed": 4
+    "anonymousHTTPChecksPassed": 25,
+    "sourceCommit": "eb81e07dd6a8c316bc978610b243ef056a0fcba2",
+    "currentVideoSeconds": 29,
+    "currentMediaChecksPassed": 5,
+    "siteVersion": 4,
+    "deploymentId": "appgdep_6a9cdb346a748191b6837adf8144f538",
+    "evidence": "public-marketing-refresh.json"
   },
   "youtube": {
-    "url": "https://youtu.be/CqMeYRX0hWQ",
-    "studioUrl": "https://studio.youtube.com/video/CqMeYRX0hWQ/edit",
+    "url": "https://youtu.be/duxsGpO5t8Y",
+    "studioUrl": "https://studio.youtube.com/video/duxsGpO5t8Y/edit",
     "visibility": "public",
     "title": "Export Browser History to CSV, JSON or HTML | HistoryOut",
     "englishCaptions": "uploaded and saved",
     "customThumbnail": "uploaded",
     "checks": "Copyright and Community Guidelines: no issues found",
-    "verification": "YouTube Studio Video published dialog confirmed on 2026-09-05.",
+    "verification": "YouTube Studio Video published dialog confirmed on 2026-09-06.",
     "voiceReviewLimit": "Transcript and timing verified automatically. Perceptual voice likeness has not been independently confirmed.",
-    "durationSeconds": 24,
+    "durationSeconds": 29,
     "previousVideo": {
-      "url": "https://youtu.be/GT7aEfalP1E",
+      "url": "https://youtu.be/CqMeYRX0hWQ",
       "visibility": "unlisted",
-      "replacementLinkInDescription": true
-    }
+      "replacementLinkInDescription": true,
+      "verification": "All changes saved, Save disabled and Unlisted shown in YouTube Studio on 2026-09-06."
+    },
+    "closingHoldAfterVoiceSeconds": 3.985
   },
   "buyMeACoffee": {
     "url": "https://buymeacoffee.com/saulius.developer",
@@ -32,15 +37,16 @@
   "store": {
     "submitted": false,
     "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
-    "targetVersion": "2.0.0"
+    "targetVersion": "2.0.0",
+    "liveVersionChecked": "1.0.1 on 2026-09-06"
   },
   "dns": {
     "changed": false,
     "ownerWillConnectDomain": true
   },
   "releaseCandidate": {
-    "chromeArchiveSHA256": "916bf31ada39b5f2b833e23bc7b9e3eb314933d3269f4a7cafc1dd790320efb8",
+    "chromeArchiveSHA256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
     "submitted": false,
-    "sourceRevisionNote": "Current support CTA source and package are recorded in bmc-cta.json and package-audit.json."
+    "sourceRevisionNote": "Export-first manifest name and description updated on 2026-09-06. Runtime and permissions unchanged; 137 package checks pass in package-audit.json."
   }
 }

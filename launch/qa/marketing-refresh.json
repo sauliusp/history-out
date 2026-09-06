@@ -1,0 +1,112 @@
+{
+  "checked": "2026-09-06T03:11:20.423Z",
+  "viewports": [
+    {
+      "width": 1440,
+      "documentWidth": 1440,
+      "heading": "Export your\nbrowser history.",
+      "formats": "CSV\nJSON\nHTML",
+      "heroImage": "/assets/historyout-export-hero.png",
+      "imageLoaded": 1600,
+      "sections": [
+        "Pick the file that fits.",
+        "From browsing\nto a useful file.",
+        "Make the export\nyour own.",
+        "A quick way back to your work.",
+        "Your history stays\nin your hands.",
+        "A better fit for your task.",
+        "A few useful answers.",
+        "Take your browser\nhistory with you."
+      ],
+      "coffeeInHero": false,
+      "playback": {
+        "duration": 29,
+        "time": 0.658619,
+        "width": 1920,
+        "height": 1080,
+        "error": null,
+        "captionTracks": 1
+      }
+    },
+    {
+      "width": 900,
+      "documentWidth": 900,
+      "heading": "Export your\nbrowser history.",
+      "formats": "CSV\nJSON\nHTML",
+      "heroImage": "/assets/historyout-export-hero.png",
+      "imageLoaded": 1600,
+      "sections": [
+        "Pick the file that fits.",
+        "From browsing\nto a useful file.",
+        "Make the export\nyour own.",
+        "A quick way back to your work.",
+        "Your history stays\nin your hands.",
+        "A better fit for your task.",
+        "A few useful answers.",
+        "Take your browser\nhistory with you."
+      ],
+      "coffeeInHero": false
+    },
+    {
+      "width": 390,
+      "documentWidth": 390,
+      "heading": "Export your\nbrowser history.",
+      "formats": "CSV\nJSON\nHTML",
+      "heroImage": "/assets/historyout-export-hero.png",
+      "imageLoaded": 1600,
+      "sections": [
+        "Pick the file that fits.",
+        "From browsing\nto a useful file.",
+        "Make the export\nyour own.",
+        "A quick way back to your work.",
+        "Your history stays\nin your hands.",
+        "A better fit for your task.",
+        "A few useful answers.",
+        "Take your browser\nhistory with you."
+      ],
+      "coffeeInHero": false
+    },
+    {
+      "width": 320,
+      "documentWidth": 320,
+      "heading": "Export your\nbrowser history.",
+      "formats": "CSV\nJSON\nHTML",
+      "heroImage": "/assets/historyout-export-hero.png",
+      "imageLoaded": 1600,
+      "sections": [
+        "Pick the file that fits.",
+        "From browsing\nto a useful file.",
+        "Make the export\nyour own.",
+        "A quick way back to your work.",
+        "Your history stays\nin your hands.",
+        "A better fit for your task.",
+        "A few useful answers.",
+        "Take your browser\nhistory with you."
+      ],
+      "coffeeInHero": false
+    }
+  ],
+  "status": "passed",
+  "scope": "Marketing layout, content hierarchy, hero image decoding and video playback. Fictional UI captures. Extension runtime unchanged; store metadata audited separately.",
+  "finalStoreKitIntegrityChecks": 18,
+  "storeKitArchiveHashes": [
+    {
+      "file": "historyout-chrome-store-kit.zip",
+      "bytes": 999921,
+      "sha256": "c01b0099c65e83d68ad12b9592dc06517c6363e257356ccec3fa1c5c72921278"
+    },
+    {
+      "file": "historyout-edge-store-kit.zip",
+      "bytes": 999281,
+      "sha256": "53442f81aa6f95fe081288f2cf276f619b2bc7dcd5c548072e48ed1915120d98"
+    }
+  ],
+  "publicVerification": "public-marketing-refresh.json",
+  "video": {
+    "durationSeconds": 29,
+    "tailAfterVoiceSeconds": 3.985,
+    "transitionSeconds": 0.3,
+    "youtubeUrl": "https://youtu.be/duxsGpO5t8Y",
+    "mediaEvidence": "../assets/video-v4/historyout-media.json"
+  }
+}

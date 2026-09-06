@@ -1,50 +1,50 @@
-# HistoryOut v2: focused growth and launch plan
+# HistoryOut: focused growth and launch plan
 
-Prepared **5 September 2026**. Goal: grow from approximately **900 to 9,000 reported users**, while remaining free and retaining the three existing extension permissions. The research baseline and competitor sources are in [market-research.md](./market-research.md).
+Updated **6 September 2026**. Goal: grow from approximately **900 to 9,000 reported users**, while remaining free and retaining the three existing extension permissions. The research baseline and competitor sources are in [market-research.md](./market-research.md).
 
 This plan and its copy were reconciled with the v2.0.0 UI/services on 5 September 2026. Daily recap, saved views, search, website filtering, preview and the described export controls are implemented in the release-candidate source. Public availability and hands-on browser certification remain separate checks. Proposed channels, experiments and publication steps below have not been executed merely by writing this document.
 
 ## Positioning
 
-**Category:** free browser history companion for revisiting, filtering and export.
+**Category:** free browser history exporter with control over the result.
 
 **Primary user:** someone who needs a useful record of past browsing: a researcher collecting sources, a professional reconstructing a project's links, or a person analyzing available history in a spreadsheet.
 
-**Core promise and hero:** Find your way back.
+**Core promise and hero:** Export your browser history. CSV, JSON or HTML.
 
-**Supporting brand line:** Your browser history, useful again.
+**Supporting brand line:** Your export. Your way.
 
-**Supporting copy:** Pick up where you left off. Revisit today's and yesterday's pages, return to a saved view, and export the links you need as CSV, JSON, or HTML. Free, with no account and no uploads of your browsing history.
+**Supporting copy:** Choose your dates and columns. Filter the pages you need. Save CSV for a spreadsheet, JSON for a script or HTML for a page of clickable links. Free, with no account and local processing. Daily recaps and saved views add value between exports.
 
 **Primary CTA:** Get HistoryOut free.
 
 **Secondary CTA:** See a sample export.
 
-The sample should open a synthetic, useful file or a readable explanation. It must not ask for a real browsing-history upload. Show the daily benefit and a useful output within the first screen. Keep the existing HistoryOut name and store ID so the current reputation and update path carry forward, while replacing the visual identity, logo/icon, promotional graphics and screenshots with newly created assets. Product language is browser-neutral; the destination is explicitly the Chrome Web Store where appropriate.
+The sample should open a synthetic, useful file or a readable explanation. It must not ask for a real browsing-history upload. Show export formats and a useful file within the first screen. Keep the exact original HistoryOut name, wordmark, icons, favicon and store ID so the current reputation and update path carry forward. Create fresh promotional layouts and screenshots around those existing brand assets. Keep donation prompts in the extension interface and out of promotional imagery. Product language is browser-neutral; the destination is explicitly the Chrome Web Store where appropriate.
 
 ### Why this position
 
-The incumbent export category is already substantial, while broad managers own cleanup and long-term archive use cases. Make history useful between exports: recover a page from yesterday, see the sites visited today, or resume a project from a saved filter. V2 can add more value without promising a permanent archive or charging for basic functions.
+Export is the established reason people install HistoryOut. Make CSV, JSON and readable HTML immediately visible, then explain control over dates, columns and matching pages. Broad managers own cleanup and long-term archive use cases. Daily recaps and saved views give existing users reasons to return between exports, without displacing the primary promise or implying a permanent archive.
 
 Use privacy as concrete supporting evidence. “Three permissions, unchanged from v1” belongs in an upgrade note or detailed privacy explanation. The install-facing benefit is “Your history is processed in your browser.” Avoid “zero permissions,” “anonymous exports,” “unlimited history,” “recover deleted history,” “native Excel export,” and “tracks time spent” unless the final implementation and evidence actually support those statements.
 
 ## Store listing copy direction
 
-Use **HistoryOut - Find & Export History** as the browser-neutral store title. Do not turn the title into a list of competitor or browser names. The full copy draft is in [store-listing.md](./store-listing.md).
+Use **HistoryOut - Export Browser History** as the browser-neutral store title. Do not turn the title into a list of competitor or browser names. The full copy draft is in [store-listing.md](./store-listing.md).
 
 Proposed short description:
 
-> Revisit your day. Find and filter browser history, then export what matters to CSV, JSON or HTML. Free and local.
+> Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account.
 
 Proposed first paragraph:
 
-> Find your way back to useful pages. Revisit today or yesterday, search by title or URL, and return to a project with a saved view. When you need a file, preview the matching history and export it as CSV, JSON or HTML. HistoryOut is free and processes browsing history in your browser.
+> Export your browser history as CSV, JSON or readable HTML. Choose your dates and columns, search or filter for the pages you need, and preview the result before downloading. HistoryOut is free and processes your history locally.
 
 Recommended description order:
 
-1. The outcome and a concrete research/project example.
-2. Three to five verified features users can recognize in the screenshots.
-3. CSV for spreadsheets, JSON for structured data, HTML for a readable local page.
+1. CSV for spreadsheets, JSON for structured data, HTML for a readable local page.
+2. Date, column and relevance controls, with a concrete research/project example.
+3. Daily recaps and saved views as useful supporting features.
 4. Local processing, no account, no new permissions in this update.
 5. “Exports the history your browser currently makes available. It cannot recover deleted history or guarantee older account history.”
 6. A brief v2 upgrade note and support link.
@@ -59,7 +59,7 @@ Minimum initial content:
 
 | Page | Job | Proof on the page |
 | --- | --- | --- |
-| Home | Explain daily revisiting and precise export | Real UI, daily recap, sample output, clear CTA, visible limits |
+| Home | Explain CSV, JSON and HTML export, then customization | Real export controls, sample output, clear CTA, visible limits; daily workflows lower on the page |
 | Export to Excel/CSV guide | Resolve a specific task | Synthetic CSV, actual import directions, timestamp/column explanation |
 | Date and website filtering guide | Demonstrate v2 value | One realistic before/after example |
 | Chrome history limits guide | Prevent the wrong installation | Available local history vs account exports/backups; useful alternatives |

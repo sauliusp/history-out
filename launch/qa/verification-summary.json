@@ -1,5 +1,5 @@
 {
-  "checked": "2026-09-05T11:40:54.623Z",
+  "checked": "2026-09-06T03:05:53.317Z",
   "status": "passed",
   "unitTests": {
     "tests": 37,
@@ -41,9 +41,19 @@
       "nativeVisiblePreview": "passed; six fictional yesterday visits, five pages, three sites"
     },
     "currentPackageAudit": {
-      "checked": "2026-09-05T11:33:56.115Z",
+      "checked": "2026-09-06T03:05:53.317Z",
       "checks": 137,
-      "stressTestsRerun": 3
+      "stressTestsRerun": 3,
+      "note": "Manifest name and description updated to lead with export. Runtime, original assets, version and permissions are unchanged."
+    },
+    "currentMarketingMetadata": {
+      "checked": "2026-09-06T03:05:53.317Z",
+      "manifestSHA256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+      "chromeEdgeBraveArchiveSHA256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+      "genericChromiumArchiveSHA256": "f3cf8b98a0ff7ed39543c458492bac7c034115582d6073aa670cde30de5a9902",
+      "runtimeComparedWith": "88f0383966c6254bd2bc7a477e3b4dd356e2d640",
+      "runtimeChanged": false,
+      "permissionsChanged": false
     }
   }
 }

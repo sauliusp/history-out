@@ -1,15 +1,15 @@
 # HistoryOut store launch kit
 
-The original HistoryOut wordmark, extension icon and favicon are preserved. All surrounding marketing layouts are newly created. Screenshots show the actual extension interface with fictional browsing history, including a real HTML download.
+The original HistoryOut wordmark, extension icon and favicon are preserved. All surrounding marketing layouts are newly created. Screenshots show the actual extension interface with fictional browsing history, including a real HTML download. Optional donation prompts are omitted only from promotional captures; they remain in the extension.
 
 ## Start here
 
 - `index.html`: visual gallery.
 - `chrome/`: complete English Chrome Web Store fields, privacy notes and assets.
 - `edge/`: complete English Edge Add-ons fields, submission notes and assets.
-- `screenshots/`: five ordered 1280 x 800 images.
+- `screenshots/`: five ordered 1280 x 800 images: export formats, customization, readable HTML, filtering and daily-use extras.
 - `promotional/`: small tile and marquee.
-- `youtube/thumbnail-1280x720.png`: video thumbnail.
+- `youtube/thumbnail-1280x720.png`: video thumbnail. Current public demo: https://youtu.be/duxsGpO5t8Y.
 - `brand/`: byte-identical original SVG wordmark, favicon and 128px extension icon; a high-resolution PNG render of the original vector wordmark.
 - `support/`: completed 1600 x 400 Buy Me a Coffee cover, published to the live profile, plus its publication record.
 - `manifest.json`: dimensions and SHA-256 checksums for the generated files.

@@ -1,6 +1,8 @@
 # Website release and domain handoff
 
-Updated 5 September 2026. The website lives in `website/` inside the HistoryOut repository. The original site and DNS remain unchanged until the owner connects the domain.
+Updated 6 September 2026. The website lives in `website/` inside the HistoryOut repository. The original site and DNS remain unchanged until the owner connects the domain.
+
+The current public publication is Sites version 4, from exact source commit `eb81e07dd6a8c316bc978610b243ef056a0fcba2`. It leads with CSV, JSON and HTML export, uses fresh export imagery without donation prompts, and serves the 29-second narrated demo. All 25 anonymous route/asset checks pass; five media hashes match local delivery files. See [current publication evidence](../qa/public-marketing-refresh.json).
 
 ## Current destinations
 

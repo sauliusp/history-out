@@ -1,6 +1,6 @@
 {
   "name": "historyout",
-  "description": "Revisit your day. Find, filter and export your browser history. Free and local.",
+  "description": "Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account.",
   "version": "2.0.0",
   "scripts": {
     "dev": "webpack --mode development --watch",

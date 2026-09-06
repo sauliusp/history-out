@@ -24,6 +24,8 @@ The [local release-readiness report](./qa/release-readiness.md) is the source fo
 
 ## Completed package verification
 
+The 6 September metadata update leads with browser history export. Runtime behavior, original assets, version and permissions are unchanged. Packages were regenerated for the new manifest text and the 137 integrity checks passed again.
+
 - [x] Chrome, Edge, Brave and generic Chromium ZIPs were rebuilt from the final extension files.
 - [x] **137 package checks** pass, including root-level manifests, exact runtime-file hashes, versions, exclusions and the bundled official cup SVG. All three core stress cases pass again during this audit.
 - [x] Chrome/Edge/Brave retain `history`, `storage`, `sidePanel`. Generic Chromium contains only `history`, `storage` and no `side_panel` manifest entry.
