@@ -1,5 +1,5 @@
 {
-  "generated": "2026-09-06T03:19:36.455Z",
+  "generated": "2026-09-06T03:44:24.997771Z",
   "extensionVersion": "2.0.0",
   "bundleSHA256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
   "backgroundSHA256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
@@ -36,7 +36,7 @@
     {
       "file": "README.md",
       "bytes": 2386,
-      "sha256": "26e87f5ef7a5c6b4c67cd2320ef80a0acc68e6397dcf5e43c507f5d6d47277cd"
+      "sha256": "adf62c21f10bde77904dcaf97936fd04f2f0dda851853c1d22a41b7b67232a64"
     },
     {
       "file": "brand/favicon.ico",
@@ -112,7 +112,7 @@
     {
       "file": "chrome/listing.json",
       "bytes": 3214,
-      "sha256": "a96dda6e40affa55d5fa1be35e1b1410ab77504e7befe287aec27906bdf36687"
+      "sha256": "93c0446a5f0850903fca3b3ede57fc8ae403ce29f8fd1deddf58f8342c50fa87"
     },
     {
       "file": "chrome/promotional/marquee-1400x560.png",
@@ -173,7 +173,7 @@
     {
       "file": "chrome/submission.md",
       "bytes": 3587,
-      "sha256": "c54ee0a5f3be63660a05f55b2df2e38c1bbea7b344b1bc28ab49a5cb4635d72e"
+      "sha256": "30bc20c5fe1670d35f3a49b2f8552c09e7a205a9f90d831af8ab33e7e5b07567"
     },
     {
       "file": "distribution.md",
@@ -201,7 +201,7 @@
     {
       "file": "edge/listing.json",
       "bytes": 3336,
-      "sha256": "d25fe69bd22f2c8e767ec0692b6a770953ac8537cd365792fbf381586c82d7c1"
+      "sha256": "4fcce95359c58b360a7ca96fde0a865cb422f5ae0c38d56a438a4c7a5adf1682"
     },
     {
       "file": "edge/promotional/marquee-1400x560.png",
@@ -262,7 +262,7 @@
     {
       "file": "edge/submission.md",
       "bytes": 2157,
-      "sha256": "6a38ac54bd4cfbdbf8272883eed5d82815fa33e0437034833d0bbdf97b5394b2"
+      "sha256": "000f5d2e703065dade48c4531bd35f26b3630a8fa2a44a4f9d0888f9eb22607c"
     },
     {
       "file": "promotional/marquee-1400x560.png",
@@ -382,14 +382,34 @@
       "sha256": "3102e8834ef791384ef933302a41831adc2a17efbf61cc90c668cf701bbf05ae"
     },
     {
-      "file": "youtube/export-first-metadata.json",
+      "file": "youtube/archive/duxsGpO5t8Y/README.md",
+      "bytes": 369,
+      "sha256": "8cdfa474179d82ba99314d476e9930bd40a4c5cf1c0b4ac429ab7081890887be"
+    },
+    {
+      "file": "youtube/archive/duxsGpO5t8Y/metadata.json",
       "bytes": 2943,
       "sha256": "827809b6c7b0f80c07f3b1d8516986fdebc8efe825d6a54e6ba4fae584ef428d"
     },
     {
+      "file": "youtube/archive/duxsGpO5t8Y/retired-status.json",
+      "bytes": 430,
+      "sha256": "2a00334c26af526e4c130621bf4ac05703e2c61a3505736cc2defd46da66e48c"
+    },
+    {
+      "file": "youtube/archive/duxsGpO5t8Y/upload-status.json",
+      "bytes": 1060,
+      "sha256": "b418aff1091709d7be89ffe42e59f69a33670026febf8f1c5068c6e8b9a1eb1a"
+    },
+    {
+      "file": "youtube/export-first-metadata.json",
+      "bytes": 3119,
+      "sha256": "76dd482c993575bd8c1a22f40a92c35b48528b472689de6a63825e1c9554016b"
+    },
+    {
       "file": "youtube/metadata.json",
-      "bytes": 2943,
-      "sha256": "827809b6c7b0f80c07f3b1d8516986fdebc8efe825d6a54e6ba4fae584ef428d"
+      "bytes": 3119,
+      "sha256": "76dd482c993575bd8c1a22f40a92c35b48528b472689de6a63825e1c9554016b"
     },
     {
       "file": "youtube/thumbnail-1280x720.png",
@@ -401,8 +421,8 @@
     },
     {
       "file": "youtube/upload-status.json",
-      "bytes": 1060,
-      "sha256": "b418aff1091709d7be89ffe42e59f69a33670026febf8f1c5068c6e8b9a1eb1a"
+      "bytes": 1782,
+      "sha256": "7990649524356a3219b4ea078534bb810eed63a87b20e91cdfdca21ac4091642"
     }
   ]
 }

@@ -6,12 +6,12 @@
   "updated": "2026-09-06",
   "video": {
     "title": "Export your browser history as CSV, JSON or HTML with HistoryOut",
-    "description": "Export browser history as CSV, JSON or readable HTML, then customize dates, columns and matching pages. A 29-second walkthrough with fictional browsing data.",
+    "description": "Export browser history as CSV, JSON or readable HTML, then customize dates, columns and matching pages. A 25-second walkthrough with fictional browsing data.",
     "poster": "/assets/historyout-export-story-poster.png",
-    "file": "/assets/historyout-export-story.mp4",
-    "duration": "PT29S",
-    "uploadDate": "2026-09-06T03:15:07.358140+00:00",
+    "file": "/assets/historyout-export-demo.mp4",
+    "duration": "PT24.833333S",
+    "uploadDate": "2026-09-06T03:40:40Z",
     "transcript": "Export your browser history as CSV, JSON, or HTML. With HistoryOut, turn your visits into a useful file you can open or share. Choose your own dates and columns, then search or filter to keep the pages you need. Remove repeat visits and URL parameters before exporting. Daily recaps and saved views help tomorrow, too. HistoryOut is free and local, with no account.",
-    "youtubeUrl": "https://www.youtube.com/watch?v=duxsGpO5t8Y"
+    "youtubeUrl": "https://www.youtube.com/watch?v=cGybkRSkk2Y"
   }
 }

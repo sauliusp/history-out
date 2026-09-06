@@ -2,7 +2,7 @@
 
 Updated 6 September 2026. The website lives in `website/` inside the HistoryOut repository. The original site and DNS remain unchanged until the owner connects the domain.
 
-The current public publication is Sites version 4, from exact source commit `eb81e07dd6a8c316bc978610b243ef056a0fcba2`. It leads with CSV, JSON and HTML export, uses fresh export imagery without donation prompts, and serves the 29-second narrated demo. All 25 anonymous route/asset checks pass; five media hashes match local delivery files. See [current publication evidence](../qa/public-marketing-refresh.json).
+The current public publication is Sites version 5, from exact source commit `af7573c36c86592e32c8a67d90baa709373e3623`. It leads with CSV, JSON and HTML export and serves the 25-second demo with a fresh expressive narration. This voice-only update preserves all existing website imagery. Five anonymous checks verify the homepage metadata and exact current video, captions, poster and hero bytes. The earlier full-route checks remain in `public-marketing-refresh.json`. See [current publication evidence](../qa/public-voice-refresh.json).
 
 ## Current destinations
 

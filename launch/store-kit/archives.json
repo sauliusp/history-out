@@ -1,12 +1,12 @@
 [
   {
     "file": "historyout-chrome-store-kit.zip",
-    "bytes": 999921,
-    "sha256": "c01b0099c65e83d68ad12b9592dc06517c6363e257356ccec3fa1c5c72921278"
+    "bytes": 999919,
+    "sha256": "53d60bcd26564223d24a31a93137391ffb097afe0d8a24209cce286a65a08bf8"
   },
   {
     "file": "historyout-edge-store-kit.zip",
-    "bytes": 999281,
-    "sha256": "53442f81aa6f95fe081288f2cf276f619b2bc7dcd5c548072e48ed1915120d98"
+    "bytes": 999280,
+    "sha256": "88aa62d7e5dd56cb79605cc1b88c19e6eaaf69d59d490a0a7923d77e7d4b5b83"
   }
 ]

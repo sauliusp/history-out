@@ -1,0 +1,62 @@
+{
+  "duration": 24.833333,
+  "voice_file_start": 0.2,
+  "speech_start": 0.2,
+  "speech_end": 20.3,
+  "raw_audio_end": 20.82,
+  "raw_duration": 20.62,
+  "tail_seconds_after_raw_audio": 4.013333,
+  "tail_seconds_after_last_word": 4.533333,
+  "word_count": 63,
+  "words_per_minute_including_native_pauses": 183.3171677982541,
+  "fixed_gain": 1.0262201879065287,
+  "sample_rate": 48000,
+  "voice_model": "mlx-community/chatterbox-multilingual-v3",
+  "exaggeration": 0.35,
+  "cfg_weight": 0.5,
+  "audio_speed_change": false,
+  "pitch_change": false,
+  "internal_silence_edits": false,
+  "anchors": [
+    {
+      "old": 0,
+      "new": 0
+    },
+    {
+      "old": 0.2,
+      "new": 0.2
+    },
+    {
+      "old": 4.58,
+      "new": 4.4
+    },
+    {
+      "old": 9.26,
+      "new": 8.58
+    },
+    {
+      "old": 11.06,
+      "new": 10.32
+    },
+    {
+      "old": 13.78,
+      "new": 12.74
+    },
+    {
+      "old": 17.48,
+      "new": 15.78
+    },
+    {
+      "old": 20.4,
+      "new": 18.1
+    },
+    {
+      "old": 23.215,
+      "new": 20.82
+    }
+  ],
+  "final_card_start": 18.06,
+  "transition_seconds": 0.3,
+  "music_fade_start": 21.833333333333332,
+  "music_fade_end": 24.833333333333332
+}

@@ -1,0 +1,13 @@
+{
+  "checked": "2026-09-06T03:41:30.065Z",
+  "status": "passed",
+  "scope": "Local browser playback, caption loading and actual encoded duration; not subjective listening",
+  "duration": 24.833333,
+  "currentTime": 0.66641,
+  "source": "http://127.0.0.1:8766/assets/historyout-export-demo.mp4",
+  "width": 1920,
+  "height": 1080,
+  "captionTracks": 1,
+  "loadedCues": 14,
+  "error": null
+}

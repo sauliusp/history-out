@@ -31,7 +31,7 @@ body:`<section class="hero">
 </section>
 <section class="section demo-section" id="demo">
   <div><p class="eyebrow">Your export. Your way.</p><h2>From browsing<br>to a useful file.</h2><p>See CSV, JSON and HTML export in action, then make the file yours with dates, columns and filters. The demo uses fictional browsing data.</p></div>
-  <video controls preload="metadata" playsinline poster="/assets/historyout-export-story-poster.png"><source src="/assets/historyout-export-story.mp4" type="video/mp4"><track kind="captions" src="/assets/historyout-export-story-captions.vtt" srclang="en" label="English"><a href="/assets/historyout-export-story.mp4">Watch the HistoryOut demo</a></video>
+  <video controls preload="metadata" playsinline poster="/assets/historyout-export-story-poster.png"><source src="/assets/historyout-export-demo.mp4" type="video/mp4"><track kind="captions" src="/assets/historyout-export-demo-captions.vtt" srclang="en" label="English"><a href="/assets/historyout-export-demo.mp4">Watch the HistoryOut demo</a></video>
 </section>
 <span id="why-use-historyout"></span>
 <section class="use-case section">

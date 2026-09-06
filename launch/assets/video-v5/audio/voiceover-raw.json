@@ -1,0 +1,12 @@
+{
+  "file": "voiceover-raw.wav",
+  "text": "Export your browser history as CSV, JSON, or HTML. With HistoryOut, turn your visits into a useful file you can open or share. Choose your own dates and columns, then search or filter to keep the pages you need. Remove repeat visits and URL parameters before exporting. Daily recaps and saved views help tomorrow, too. HistoryOut is free and local, with no account.",
+  "sample_rate": 24000,
+  "duration_seconds": 20.62,
+  "peak_float": 0.7601020336151123,
+  "generation_seconds": 14.979260875028558,
+  "exaggeration": 0.35,
+  "cfg_weight": 0.5,
+  "raw_timing_preserved": true,
+  "sha256": "64396165e43a2975e72560f663da6480e54098bce592deb253196003f9698efc"
+}

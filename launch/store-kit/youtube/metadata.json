@@ -13,11 +13,11 @@
   ],
   "language": "English",
   "thumbnail": "launch/store-kit/youtube/thumbnail-1280x720.png",
-  "uploadedVideoUrl": "https://youtu.be/duxsGpO5t8Y",
-  "publicationStatus": "Published publicly to the creator channel on 2026-09-06. YouTube Studio displayed Video published.",
+  "uploadedVideoUrl": "https://youtu.be/cGybkRSkk2Y",
+  "publicationStatus": "Published publicly to the creator channel on 2026-09-06 at 03:40:40 UTC. YouTube Studio displayed Video published.",
   "chapters": [],
-  "chapterNote": "No chapters for the 29-second demonstration.",
-  "captionInstruction": "Final custom English SRT from launch/assets/video-v4/historyout-captions.srt is uploaded.",
-  "narrationNote": "Continuous locally generated narration based on the creator's own original voice reference. Words and timing checked automatically; perceptual voice likeness is not independently certified.",
-  "metadataStatus": "Title, description, eight tags, English language, custom thumbnail and custom English SRT were uploaded by root. This is the canonical launch video metadata."
+  "chapterNote": "No chapters for the 25-second demonstration.",
+  "captionInstruction": "Final custom English SRT from launch/assets/video-v5/historyout-captions.srt is uploaded and saved.",
+  "narrationNote": "A fresh single Chatterbox V3 narration take generated locally from the creator-authorized voice reference, with expression 0.35 and fixed gain only. No speed, pitch, internal pause or speech-cut edits. Technical transcript and timing checks do not certify perceptual voice likeness.",
+  "metadataStatus": "Title and description are unchanged from the prior upload. Eight tags, English language, the unchanged custom thumbnail and new custom English SRT were uploaded by root. This is the canonical launch video metadata."
 }

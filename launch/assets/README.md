@@ -4,15 +4,15 @@ All interface imagery is captured from the working extension. Optional donation 
 
 ## Current narrated video
 
-- `video-v4/historyout-export-demo.mp4`: finished 29-second, 1920 × 1080, 30 fps video with the existing reference-conditioned synthetic narration, brief scene pauses and a branded closing hold, original ambient music and action-synchronized click effects.
-- `video-v4/historyout-captions.vtt` and `.srt`: complete timed captions, also visible in the video.
-- `video-v4/historyout-poster.png`: web-ready 1920 × 1080 poster.
-- `video-v4/historyout-media.json`: authoritative duration, codecs, checksum and transcript timings.
-- `video-v4/audio/voiceover-review.wav`: isolated narration for listening review.
-- `video-v4/historyout-demo-export.html`: the actual downloaded file shown in the video.
+- `video-v5/historyout-export-demo.mp4`: finished 24.833-second, 1920 × 1080, 30 fps video with a fresh expressive voice take, natural timing, a complete branded ending, original music and synchronized clicks.
+- `video-v5/historyout-captions.vtt` and `.srt`: complete timed captions, also visible in the video.
+- `video-v5/historyout-poster.png`: web-ready 1920 × 1080 poster.
+- `video-v5/historyout-media.json`: authoritative duration, codecs, checksum and transcript timings.
+- `video-v5/audio/voiceover-review.wav`: isolated narration for listening review.
+- `video-v5/historyout-demo-export.html`: the actual downloaded file shown in the video.
 - `index.html`: review gallery with the current video and screenshot links.
 
-Narration wording was independently verified by transcription. Human perceptual listening for voice likeness and subjective audio mix is not claimed by the media agent. This session cannot hear audio directly; no claim of confirmed perceptual similarity is made. The complete media remains ready to review, and the media-production agent has not uploaded it.
+The narration is generated locally from the creator-authorized original voice reference with Chatterbox Multilingual V3, using modest expression. No speech speed or pitch change and no internal pause edits are applied. Independent transcription verifies all words in the raw take and encoded mix. These checks do not establish subjective voice likeness. Current publication evidence is in `../store-kit/youtube/upload-status.json`.
 
 ## Images and sources
 
@@ -21,8 +21,8 @@ Narration wording was independently verified by transcription. Human perceptual 
 - `demo-history.html`: actual HTML download used in the screenshots.
 - `source/logo.svg`: exact original HistoryOut wordmark, restored from the original website.
 - `source/`: reproducible screenshot layouts.
-- `video-v4/source/`: narrated-video stage, voice generation, original audio synthesis, interaction timings and verification evidence.
+- `video-v5/source/`: narrated-video stage, voice generation, original audio synthesis, interaction timings and verification evidence.
 
-The earlier 24-second narrated edit is retained in `video-v3/`. The 34.5-second narrated edit is retained in `video-v2.1/`, and the silent 50-second study in `video/`. Neither is the current launch video. Current store-ready compositions and submission materials are also organized separately in `launch/store-kit/`.
+The previous 29-second edit is retained in `video-v4/`. The earlier 24-second narrated edit is retained in `video-v3/`. The 34.5-second narrated edit is retained in `video-v2.1/`, and the silent 50-second study in `video/`. Neither is the current launch video. Current store-ready compositions and submission materials are also organized separately in `launch/store-kit/`.
 
-For screenshots, rebuild the extension and run `node scripts/capture-assets.cjs --screenshots-only`. For the current narrated video, follow `video-v4/README.md` and run its `source/produce-video.cjs`. The older `--video-only` capture option reproduces the earlier silent study. These assets and all media-generation tooling are excluded from the extension package.
+For screenshots, rebuild the extension and run `node scripts/capture-assets.cjs --screenshots-only`. For the current narrated video, follow `video-v5/README.md` and run its `source/produce-video.cjs`. The older `--video-only` capture option reproduces the earlier silent study. These assets and all media-generation tooling are excluded from the extension package.

@@ -54,6 +54,17 @@
       "runtimeComparedWith": "88f0383966c6254bd2bc7a477e3b4dd356e2d640",
       "runtimeChanged": false,
       "permissionsChanged": false
+    },
+    "currentVoiceRefresh": {
+      "checked": "2026-09-06T03:44:58.186012+00:00",
+      "technicalChecksPassed": 27,
+      "websiteTestsPassed": 3,
+      "browserPlayback": "passed with 14 loaded caption cues",
+      "publicHTTPChecksPassed": 5,
+      "media": "../assets/video-v5/historyout-media.json",
+      "evidence": "voice-refresh-audit.json",
+      "publicEvidence": "public-voice-refresh.json",
+      "extensionSourceAndPackagesChanged": false
     }
   }
 }

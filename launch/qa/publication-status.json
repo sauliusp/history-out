@@ -3,32 +3,35 @@
   "website": {
     "status": "public",
     "url": "https://historyout.sauliusdev.chatgpt.site/",
-    "anonymousHTTPChecksPassed": 25,
-    "sourceCommit": "eb81e07dd6a8c316bc978610b243ef056a0fcba2",
-    "currentVideoSeconds": 29,
-    "currentMediaChecksPassed": 5,
-    "siteVersion": 4,
-    "deploymentId": "appgdep_6a9cdb346a748191b6837adf8144f538",
-    "evidence": "public-marketing-refresh.json"
+    "anonymousHTTPChecksPassed": 5,
+    "sourceCommit": "af7573c36c86592e32c8a67d90baa709373e3623",
+    "currentVideoSeconds": 24.833333,
+    "currentMediaChecksPassed": 4,
+    "siteVersion": 5,
+    "deploymentId": "appgdep_6a9ce14ceffc81918a67af74f2996c86",
+    "evidence": "public-voice-refresh.json",
+    "earlierRouteEvidence": "public-marketing-refresh.json"
   },
   "youtube": {
-    "url": "https://youtu.be/duxsGpO5t8Y",
-    "studioUrl": "https://studio.youtube.com/video/duxsGpO5t8Y/edit",
+    "url": "https://youtu.be/cGybkRSkk2Y",
+    "studioUrl": "https://studio.youtube.com/video/cGybkRSkk2Y/edit",
     "visibility": "public",
     "title": "Export Browser History to CSV, JSON or HTML | HistoryOut",
     "englishCaptions": "uploaded and saved",
     "customThumbnail": "uploaded",
     "checks": "Copyright and Community Guidelines: no issues found",
-    "verification": "YouTube Studio Video published dialog confirmed on 2026-09-06.",
+    "verification": "YouTube Studio Video published dialog and Public content row confirmed on 2026-09-06.",
     "voiceReviewLimit": "Transcript and timing verified automatically. Perceptual voice likeness has not been independently confirmed.",
-    "durationSeconds": 29,
+    "durationSeconds": 24.833333,
     "previousVideo": {
-      "url": "https://youtu.be/CqMeYRX0hWQ",
+      "url": "https://youtu.be/duxsGpO5t8Y",
       "visibility": "unlisted",
       "replacementLinkInDescription": true,
       "verification": "All changes saved, Save disabled and Unlisted shown in YouTube Studio on 2026-09-06."
     },
-    "closingHoldAfterVoiceSeconds": 3.985
+    "closingHoldAfterVoiceSeconds": 4.013333,
+    "publishedAt": "2026-09-06T03:40:40Z",
+    "notificationsForReplacement": false
   },
   "buyMeACoffee": {
     "url": "https://buymeacoffee.com/saulius.developer",
@@ -48,5 +51,14 @@
     "chromeArchiveSHA256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
     "submitted": false,
     "sourceRevisionNote": "Export-first manifest name and description updated on 2026-09-06. Runtime and permissions unchanged; 137 package checks pass in package-audit.json."
+  },
+  "voiceRefresh": {
+    "mediaEvidence": "../assets/video-v5/historyout-media.json",
+    "technicalAudit": "voice-refresh-audit.json",
+    "technicalChecksPassed": 27,
+    "browserEvidence": "voice-refresh-browser.json",
+    "speechSpeedAdjusted": false,
+    "internalPauseEdits": false,
+    "extensionSourceAndPackageChanges": false
   }
 }
