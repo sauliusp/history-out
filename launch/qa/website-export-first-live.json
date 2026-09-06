@@ -1,0 +1,31 @@
+{
+  "checked": "2026-09-05",
+  "sourceCommit": "84615ae64f202204f9c4e813c9555ea19a4fd76e",
+  "status": "passed",
+  "results": [
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/",
+      "status": 200,
+      "bytes": 16009,
+      "newVideoMarkupAndSchema": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/assets/historyout-export-demo.mp4",
+      "status": 200,
+      "bytes": 3856732,
+      "matchesLocalSHA256": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/assets/historyout-export-poster.png",
+      "status": 200,
+      "bytes": 533065,
+      "matchesLocalSHA256": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/assets/historyout-export-captions.vtt",
+      "status": 200,
+      "bytes": 840,
+      "matchesLocalSHA256": true
+    }
+  ]
+}

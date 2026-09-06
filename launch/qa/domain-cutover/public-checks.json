@@ -1,0 +1,1791 @@
+{
+  "checkedAt": "2026-09-06T17:18:50.868Z",
+  "startedAt": "2026-09-06T17:13:14Z",
+  "status": "passed",
+  "scope": "Anonymous public DNS, certificate, HTTPS route, discovery file and runtime asset verification after domain cutover. No browser, Sites, account or website changes performed.",
+  "domains": [
+    "exportchromehistory.app",
+    "www.exportchromehistory.app"
+  ],
+  "method": {
+    "httpClient": "Node.js built-in fetch; no authorization headers, cookie headers or cookie jar; standard TLS validation enabled",
+    "dns": "dig against both authoritative name servers, Cloudflare 1.1.1.1 and Google 8.8.8.8",
+    "comparison": "Current website/dist for generated pages, sitemap and robots; website/public for static assets. HTML differences are ignored only when they exactly match the observed Cloudflare challenge-platform script before the closing body tag.",
+    "sampling": "Point-in-time requests from this machine. This is not global propagation or ongoing uptime monitoring."
+  },
+  "summary": {
+    "dnsChecksPassed": 40,
+    "dnsChecksTotal": 40,
+    "endpointChecksPassed": 58,
+    "endpointChecksTotal": 58,
+    "pagesPerDomain": 13,
+    "assetsPerDomain": 14,
+    "discoveryFilesPerDomain": 2,
+    "validCertificates": 2,
+    "httpToHttpsRedirectsPassed": 2,
+    "privacyLimitedUseBothHosts": true,
+    "emailDnsPreserved": true,
+    "approvedVideoUnchanged": true
+  },
+  "propagationObservations": [
+    {
+      "checkedAt": "2026-09-06T17:13:29Z",
+      "observation": "Anonymous homepage requests initially returned prior site content."
+    },
+    {
+      "checkedAt": "2026-09-06T17:13:52Z",
+      "observation": "Apex served a Cloudflare 1034 Edge IP Restricted response during activation."
+    },
+    {
+      "checkedAt": "2026-09-06T17:15:30.254Z",
+      "origin": "https://exportchromehistory.app",
+      "status": 403,
+      "location": null,
+      "bytes": 966,
+      "sha256": "91e445c892e1bb48fa476ca5ff7db28265990360edd88c71894fb46beb92418d",
+      "title": "An error occured",
+      "bodySummary": "Cloudflare 1034 Edge IP Restricted",
+      "expectedHomeExact": false
+    },
+    {
+      "checkedAt": "2026-09-06T17:15:30.275Z",
+      "origin": "https://www.exportchromehistory.app",
+      "status": 404,
+      "location": null,
+      "bytes": 1875,
+      "sha256": "a8c56b2b937c079d1e1c52b15b172c883dec48402b566b912cbb8b32bbb0b548",
+      "title": "Not Found",
+      "bodySummary": "Sites Site not found",
+      "expectedHomeExact": false
+    },
+    {
+      "checkedAt": "2026-09-06T17:17:02.985Z",
+      "url": "https://exportchromehistory.app/",
+      "kind": "page",
+      "status": 404,
+      "finalUrl": "https://exportchromehistory.app/",
+      "contentType": "text/html; charset=utf-8",
+      "bytes": 1875,
+      "sha256": "f4767b9d0f7b9c39ba1791a843bb7014bc622419f9e83a89e8f64dfa144f2b94",
+      "localFile": "website/dist/index.html",
+      "expectedSha256": "cff11fb89b7278a5d21622390f8d3bc1642b4842852fe47d33bb9d6253fa0c30",
+      "byteIdentical": false,
+      "pass": false,
+      "title": "Not Found",
+      "canonical": null,
+      "expectedCanonical": "https://exportchromehistory.app/",
+      "canonicalPass": false,
+      "robots": null,
+      "observation": "Apex had transitioned to the new provider but deployment was not ready."
+    },
+    {
+      "checkedAt": "2026-09-06T17:18:50.868Z",
+      "observation": "Both hostnames served the expected deployment; final content checks passed."
+    }
+  ],
+  "dns": {
+    "checkedAt": "2026-09-06T17:16:26.702Z",
+    "records": [
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "NS",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tNS\tdns1.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tNS\tdns2.registrar-servers.com."
+        ],
+        "actual": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "expected": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "A",
+        "raw": [
+          "exportchromehistory.app. 300\tIN\tA\t172.66.3.26",
+          "exportchromehistory.app. 300\tIN\tA\t162.159.143.30"
+        ],
+        "actual": [
+          "162.159.143.30",
+          "172.66.3.26"
+        ],
+        "expected": [
+          "162.159.143.30",
+          "172.66.3.26"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "AAAA",
+        "raw": [],
+        "actual": [],
+        "expected": [],
+        "pass": true
+      },
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "www.exportchromehistory.app",
+        "type": "CNAME",
+        "raw": [
+          "www.exportchromehistory.app. 300 IN\tCNAME\tcustom-domains.chatgpt.site."
+        ],
+        "actual": [
+          "custom-domains.chatgpt.site"
+        ],
+        "expected": [
+          "custom-domains.chatgpt.site"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "MX",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward1.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward2.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward3.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t15 eforward4.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t20 eforward5.registrar-servers.com."
+        ],
+        "actual": [
+          "10 eforward1.registrar-servers.com",
+          "10 eforward2.registrar-servers.com",
+          "10 eforward3.registrar-servers.com",
+          "15 eforward4.registrar-servers.com",
+          "20 eforward5.registrar-servers.com"
+        ],
+        "expected": [
+          "10 eforward1.registrar-servers.com",
+          "10 eforward2.registrar-servers.com",
+          "10 eforward3.registrar-servers.com",
+          "15 eforward4.registrar-servers.com",
+          "20 eforward5.registrar-servers.com"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "TXT",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tTXT\t\"v=spf1 include:spf.efwd.registrar-servers.com ~all\""
+        ],
+        "actual": [
+          "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+        ],
+        "expected": [
+          "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "NS",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tNS\tdns1.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tNS\tdns2.registrar-servers.com."
+        ],
+        "actual": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "expected": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "A",
+        "raw": [
+          "exportchromehistory.app. 300\tIN\tA\t162.159.143.30",
+          "exportchromehistory.app. 300\tIN\tA\t172.66.3.26"
+        ],
+        "actual": [
+          "162.159.143.30",
+          "172.66.3.26"
+        ],
+        "expected": [
+          "162.159.143.30",
+          "172.66.3.26"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "AAAA",
+        "raw": [],
+        "actual": [],
+        "expected": [],
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "www.exportchromehistory.app",
+        "type": "CNAME",
+        "raw": [
+          "www.exportchromehistory.app. 300 IN\tCNAME\tcustom-domains.chatgpt.site."
+        ],
+        "actual": [
+          "custom-domains.chatgpt.site"
+        ],
+        "expected": [
+          "custom-domains.chatgpt.site"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "MX",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward1.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward2.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward3.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t15 eforward4.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t20 eforward5.registrar-servers.com."
+        ],
+        "actual": [
+          "10 eforward1.registrar-servers.com",
+          "10 eforward2.registrar-servers.com",
+          "10 eforward3.registrar-servers.com",
+          "15 eforward4.registrar-servers.com",
+          "20 eforward5.registrar-servers.com"
+        ],
+        "expected": [
+          "10 eforward1.registrar-servers.com",
+          "10 eforward2.registrar-servers.com",
+          "10 eforward3.registrar-servers.com",
+          "15 eforward4.registrar-servers.com",
+          "20 eforward5.registrar-servers.com"
+        ],
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "exportchromehistory.app",
+        "type": "TXT",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tTXT\t\"v=spf1 include:spf.efwd.registrar-servers.com ~all\""
+        ],
+        "actual": [
+          "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+        ],
+        "expected": [
+          "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+        ],
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "exportchromehistory.app",
+        "type": "NS",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tNS\tdns1.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tNS\tdns2.registrar-servers.com."
+        ],
+        "actual": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "expected": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "exportchromehistory.app",
+        "type": "A",
+        "raw": [
+          "exportchromehistory.app. 300\tIN\tA\t162.159.143.30",
+          "exportchromehistory.app. 300\tIN\tA\t172.66.3.26"
+        ],
+        "actual": [
+          "162.159.143.30",
+          "172.66.3.26"
+        ],
+        "expected": [
+          "162.159.143.30",
+          "172.66.3.26"
+        ],
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "exportchromehistory.app",
+        "type": "AAAA",
+        "raw": [],
+        "actual": [],
+        "expected": [],
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "www.exportchromehistory.app",
+        "type": "CNAME",
+        "raw": [
+          "www.exportchromehistory.app. 300 IN\tCNAME\tcustom-domains.chatgpt.site."
+        ],
+        "actual": [
+          "custom-domains.chatgpt.site"
+        ],
+        "expected": [
+          "custom-domains.chatgpt.site"
+        ],
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "exportchromehistory.app",
+        "type": "MX",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward1.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward2.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward3.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t15 eforward4.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t20 eforward5.registrar-servers.com."
+        ],
+        "actual": [
+          "10 eforward1.registrar-servers.com",
+          "10 eforward2.registrar-servers.com",
+          "10 eforward3.registrar-servers.com",
+          "15 eforward4.registrar-servers.com",
+          "20 eforward5.registrar-servers.com"
+        ],
+        "expected": [
+          "10 eforward1.registrar-servers.com",
+          "10 eforward2.registrar-servers.com",
+          "10 eforward3.registrar-servers.com",
+          "15 eforward4.registrar-servers.com",
+          "20 eforward5.registrar-servers.com"
+        ],
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "exportchromehistory.app",
+        "type": "TXT",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tTXT\t\"v=spf1 include:spf.efwd.registrar-servers.com ~all\""
+        ],
+        "actual": [
+          "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+        ],
+        "expected": [
+          "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+        ],
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "exportchromehistory.app",
+        "type": "NS",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tNS\tdns2.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tNS\tdns1.registrar-servers.com."
+        ],
+        "actual": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "expected": [
+          "dns1.registrar-servers.com",
+          "dns2.registrar-servers.com"
+        ],
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "exportchromehistory.app",
+        "type": "A",
+        "raw": [
+          "exportchromehistory.app. 300\tIN\tA\t172.66.3.26",
+          "exportchromehistory.app. 300\tIN\tA\t162.159.143.30"
+        ],
+        "actual": [
+          "162.159.143.30",
+          "172.66.3.26"
+        ],
+        "expected": [
+          "162.159.143.30",
+          "172.66.3.26"
+        ],
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "exportchromehistory.app",
+        "type": "AAAA",
+        "raw": [],
+        "actual": [],
+        "expected": [],
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "www.exportchromehistory.app",
+        "type": "CNAME",
+        "raw": [
+          "www.exportchromehistory.app. 238 IN\tCNAME\tcustom-domains.chatgpt.site."
+        ],
+        "actual": [
+          "custom-domains.chatgpt.site"
+        ],
+        "expected": [
+          "custom-domains.chatgpt.site"
+        ],
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "exportchromehistory.app",
+        "type": "MX",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward3.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward1.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t10 eforward2.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t15 eforward4.registrar-servers.com.",
+          "exportchromehistory.app. 1800\tIN\tMX\t20 eforward5.registrar-servers.com."
+        ],
+        "actual": [
+          "10 eforward1.registrar-servers.com",
+          "10 eforward2.registrar-servers.com",
+          "10 eforward3.registrar-servers.com",
+          "15 eforward4.registrar-servers.com",
+          "20 eforward5.registrar-servers.com"
+        ],
+        "expected": [
+          "10 eforward1.registrar-servers.com",
+          "10 eforward2.registrar-servers.com",
+          "10 eforward3.registrar-servers.com",
+          "15 eforward4.registrar-servers.com",
+          "20 eforward5.registrar-servers.com"
+        ],
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "exportchromehistory.app",
+        "type": "TXT",
+        "raw": [
+          "exportchromehistory.app. 1800\tIN\tTXT\t\"v=spf1 include:spf.efwd.registrar-servers.com ~all\""
+        ],
+        "actual": [
+          "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+        ],
+        "expected": [
+          "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+        ],
+        "pass": true
+      }
+    ],
+    "validationCheckedAt": "2026-09-06T17:15:12.669Z",
+    "validationRecords": [
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "_openai-site-verification.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ",
+        "answer": "; <<>> DiG 9.10.6 <<>> @dns1.registrar-servers.com _openai-site-verification.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_openai-site-verification.exportchromehistory.app. 1799\tIN TXT \"openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ\"",
+        "pass": true
+      },
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "_cf-custom-hostname.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "d99f55a7-6a64-43f0-8efc-24f35a995b9b",
+        "answer": "; <<>> DiG 9.10.6 <<>> @dns1.registrar-servers.com _cf-custom-hostname.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_cf-custom-hostname.exportchromehistory.app. 1799 IN TXT \"d99f55a7-6a64-43f0-8efc-24f35a995b9b\"",
+        "pass": true
+      },
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "_openai-site-verification.www.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU",
+        "answer": "; <<>> DiG 9.10.6 <<>> @dns1.registrar-servers.com _openai-site-verification.www.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_openai-site-verification.www.exportchromehistory.app. 1799 IN TXT \"openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU\"",
+        "pass": true
+      },
+      {
+        "server": "dns1.registrar-servers.com",
+        "name": "_cf-custom-hostname.www.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "8a183868-fd46-4033-bdc5-f0d096851407",
+        "answer": "; <<>> DiG 9.10.6 <<>> @dns1.registrar-servers.com _cf-custom-hostname.www.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_cf-custom-hostname.www.exportchromehistory.app. 1799 IN TXT \"8a183868-fd46-4033-bdc5-f0d096851407\"",
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "_openai-site-verification.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ",
+        "answer": "; <<>> DiG 9.10.6 <<>> @dns2.registrar-servers.com _openai-site-verification.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_openai-site-verification.exportchromehistory.app. 1799\tIN TXT \"openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ\"",
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "_cf-custom-hostname.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "d99f55a7-6a64-43f0-8efc-24f35a995b9b",
+        "answer": "; <<>> DiG 9.10.6 <<>> @dns2.registrar-servers.com _cf-custom-hostname.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_cf-custom-hostname.exportchromehistory.app. 1799 IN TXT \"d99f55a7-6a64-43f0-8efc-24f35a995b9b\"",
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "_openai-site-verification.www.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU",
+        "answer": "; <<>> DiG 9.10.6 <<>> @dns2.registrar-servers.com _openai-site-verification.www.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_openai-site-verification.www.exportchromehistory.app. 1799 IN TXT \"openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU\"",
+        "pass": true
+      },
+      {
+        "server": "dns2.registrar-servers.com",
+        "name": "_cf-custom-hostname.www.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "8a183868-fd46-4033-bdc5-f0d096851407",
+        "answer": "; <<>> DiG 9.10.6 <<>> @dns2.registrar-servers.com _cf-custom-hostname.www.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_cf-custom-hostname.www.exportchromehistory.app. 1799 IN TXT \"8a183868-fd46-4033-bdc5-f0d096851407\"",
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "_openai-site-verification.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ",
+        "answer": "; <<>> DiG 9.10.6 <<>> @1.1.1.1 _openai-site-verification.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_openai-site-verification.exportchromehistory.app. 1799\tIN TXT \"openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ\"",
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "_cf-custom-hostname.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "d99f55a7-6a64-43f0-8efc-24f35a995b9b",
+        "answer": "; <<>> DiG 9.10.6 <<>> @1.1.1.1 _cf-custom-hostname.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_cf-custom-hostname.exportchromehistory.app. 1799 IN TXT \"d99f55a7-6a64-43f0-8efc-24f35a995b9b\"",
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "_openai-site-verification.www.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU",
+        "answer": "; <<>> DiG 9.10.6 <<>> @1.1.1.1 _openai-site-verification.www.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_openai-site-verification.www.exportchromehistory.app. 1799 IN TXT \"openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU\"",
+        "pass": true
+      },
+      {
+        "server": "1.1.1.1",
+        "name": "_cf-custom-hostname.www.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "8a183868-fd46-4033-bdc5-f0d096851407",
+        "answer": "; <<>> DiG 9.10.6 <<>> @1.1.1.1 _cf-custom-hostname.www.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_cf-custom-hostname.www.exportchromehistory.app. 1799 IN TXT \"8a183868-fd46-4033-bdc5-f0d096851407\"",
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "_openai-site-verification.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ",
+        "answer": "; <<>> DiG 9.10.6 <<>> @8.8.8.8 _openai-site-verification.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_openai-site-verification.exportchromehistory.app. 1799\tIN TXT \"openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ\"",
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "_cf-custom-hostname.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "d99f55a7-6a64-43f0-8efc-24f35a995b9b",
+        "answer": "; <<>> DiG 9.10.6 <<>> @8.8.8.8 _cf-custom-hostname.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_cf-custom-hostname.exportchromehistory.app. 1799 IN TXT \"d99f55a7-6a64-43f0-8efc-24f35a995b9b\"",
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "_openai-site-verification.www.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU",
+        "answer": "; <<>> DiG 9.10.6 <<>> @8.8.8.8 _openai-site-verification.www.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_openai-site-verification.www.exportchromehistory.app. 1799 IN TXT \"openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU\"",
+        "pass": true
+      },
+      {
+        "server": "8.8.8.8",
+        "name": "_cf-custom-hostname.www.exportchromehistory.app",
+        "type": "TXT",
+        "expected": "8a183868-fd46-4033-bdc5-f0d096851407",
+        "answer": "; <<>> DiG 9.10.6 <<>> @8.8.8.8 _cf-custom-hostname.www.exportchromehistory.app TXT +noall +answer +time=3 +tries=1\n; (1 server found)\n;; global options: +cmd\n_cf-custom-hostname.www.exportchromehistory.app. 1799 IN TXT \"8a183868-fd46-4033-bdc5-f0d096851407\"",
+        "pass": true
+      }
+    ]
+  },
+  "tls": {
+    "checkedAt": "2026-09-06T17:16:26.702Z",
+    "certificates": [
+      {
+        "host": "exportchromehistory.app",
+        "authorized": true,
+        "protocol": "TLSv1.3",
+        "issuer": {
+          "C": "US",
+          "O": "Google Trust Services",
+          "CN": "WE1"
+        },
+        "subject": {
+          "CN": "exportchromehistory.app"
+        },
+        "subjectAltName": "DNS:exportchromehistory.app",
+        "validFrom": "Sep  6 16:16:15 2026 GMT",
+        "validTo": "Dec  5 17:16:10 2026 GMT",
+        "fingerprint256": "1B:2A:F8:F3:FC:5A:53:A4:8E:70:A3:96:9A:8B:C2:99:47:7B:42:58:96:B0:10:73:96:DF:13:14:B3:97:BB:8B"
+      },
+      {
+        "host": "www.exportchromehistory.app",
+        "authorized": true,
+        "protocol": "TLSv1.3",
+        "issuer": {
+          "C": "US",
+          "O": "Google Trust Services",
+          "CN": "WE1"
+        },
+        "subject": {
+          "CN": "www.exportchromehistory.app"
+        },
+        "subjectAltName": "DNS:www.exportchromehistory.app",
+        "validFrom": "Sep  6 16:14:33 2026 GMT",
+        "validTo": "Dec  5 17:14:28 2026 GMT",
+        "fingerprint256": "CA:D0:2D:BA:14:D9:94:33:61:8E:09:83:CB:08:3D:0A:0C:D2:9E:74:63:67:B1:9F:B3:2C:3A:24:1B:8E:34:87"
+      }
+    ]
+  },
+  "https": {
+    "checks": [
+      {
+        "checkedAt": "2026-09-06T17:18:45.405Z",
+        "url": "https://exportchromehistory.app/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/",
+        "contentType": "text/html",
+        "bytes": 17544,
+        "sha256": "4302be7ec04aac8fd62a2d4376039265b0d695f5fc525123b97f71800989166d",
+        "localFile": "website/dist/index.html",
+        "expectedSha256": "cff11fb89b7278a5d21622390f8d3bc1642b4842852fe47d33bb9d6253fa0c30",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "cff11fb89b7278a5d21622390f8d3bc1642b4842852fe47d33bb9d6253fa0c30",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.609Z",
+        "url": "https://exportchromehistory.app/alternatives/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/alternatives/",
+        "contentType": "text/html",
+        "bytes": 8164,
+        "sha256": "49c9e7376cd62507efc826a38d59a6afcdda9e84e9c4ca6385103e269efb964d",
+        "localFile": "website/dist/alternatives/index.html",
+        "expectedSha256": "7059118e3e992d91d74960e9aff6314a8bfb2eebd4f1f6b5e78a333e3feca330",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "7059118e3e992d91d74960e9aff6314a8bfb2eebd4f1f6b5e78a333e3feca330",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/alternatives/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.429Z",
+        "url": "https://exportchromehistory.app/alternatives/better-history/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/alternatives/better-history/",
+        "contentType": "text/html",
+        "bytes": 10177,
+        "sha256": "3dd03640dab13b2fa05aee3f8c677580da8139f01966434050a4d28072dcc1d8",
+        "localFile": "website/dist/alternatives/better-history/index.html",
+        "expectedSha256": "31e0007cd01aa21eed1f78136ae2efd4180e3757e9003d82e1bfec6978533d20",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "31e0007cd01aa21eed1f78136ae2efd4180e3757e9003d82e1bfec6978533d20",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/alternatives/better-history/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.428Z",
+        "url": "https://exportchromehistory.app/alternatives/export-chrome-history/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/alternatives/export-chrome-history/",
+        "contentType": "text/html",
+        "bytes": 10094,
+        "sha256": "65363b81db04cae94d757ab74e61c2f4208932e5e9970277b06ade9a178a5feb",
+        "localFile": "website/dist/alternatives/export-chrome-history/index.html",
+        "expectedSha256": "ff5369f4f11dfaadf67c802d0e0f886dcc37d785a98582249c99ee95083b236d",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "ff5369f4f11dfaadf67c802d0e0f886dcc37d785a98582249c99ee95083b236d",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/alternatives/export-chrome-history/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.428Z",
+        "url": "https://exportchromehistory.app/alternatives/history-trends-unlimited/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/alternatives/history-trends-unlimited/",
+        "contentType": "text/html",
+        "bytes": 10419,
+        "sha256": "0691c35340cf4d14587f2bce55eac42930a446ef3b8abc3576740cf60ad8f709",
+        "localFile": "website/dist/alternatives/history-trends-unlimited/index.html",
+        "expectedSha256": "6fe28047a582ccbbfd8cf64288661c8da58457ba7dfcce0e784c3b78f4f81e57",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "6fe28047a582ccbbfd8cf64288661c8da58457ba7dfcce0e784c3b78f4f81e57",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/alternatives/history-trends-unlimited/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.888Z",
+        "url": "https://exportchromehistory.app/assets/historyout-export-demo-captions.vtt",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/historyout-export-demo-captions.vtt",
+        "contentType": "text/vtt",
+        "bytes": 840,
+        "sha256": "7842e2afd5809c2e99107fc13e495223ed605a9554cb0a768da8a0c812779852",
+        "localFile": "website/public/assets/historyout-export-demo-captions.vtt",
+        "expectedSha256": "7842e2afd5809c2e99107fc13e495223ed605a9554cb0a768da8a0c812779852",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "7842e2afd5809c2e99107fc13e495223ed605a9554cb0a768da8a0c812779852",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.914Z",
+        "url": "https://exportchromehistory.app/assets/historyout-export-demo.mp4",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/historyout-export-demo.mp4",
+        "contentType": "video/mp4",
+        "bytes": 6082386,
+        "sha256": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb",
+        "localFile": "website/public/assets/historyout-export-demo.mp4",
+        "expectedSha256": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.991Z",
+        "url": "https://exportchromehistory.app/assets/historyout-export-hero.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/historyout-export-hero.png",
+        "contentType": "image/png",
+        "bytes": 204629,
+        "sha256": "9d3c3f92fb3905022f415b55c08c4aeeb7b3f4730012ad32d46c4cc4bfc9d75e",
+        "localFile": "website/public/assets/historyout-export-hero.png",
+        "expectedSha256": "9d3c3f92fb3905022f415b55c08c4aeeb7b3f4730012ad32d46c4cc4bfc9d75e",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "9d3c3f92fb3905022f415b55c08c4aeeb7b3f4730012ad32d46c4cc4bfc9d75e",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.116Z",
+        "url": "https://exportchromehistory.app/assets/historyout-export-story-poster.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/historyout-export-story-poster.png",
+        "contentType": "image/png",
+        "bytes": 573561,
+        "sha256": "b8d4466e8e74d6991c5c40d0604243ede6fb389054e7de00368857d5989f6741",
+        "localFile": "website/public/assets/historyout-export-story-poster.png",
+        "expectedSha256": "b8d4466e8e74d6991c5c40d0604243ede6fb389054e7de00368857d5989f6741",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "b8d4466e8e74d6991c5c40d0604243ede6fb389054e7de00368857d5989f6741",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.337Z",
+        "url": "https://exportchromehistory.app/assets/icon128.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/icon128.png",
+        "contentType": "image/png",
+        "bytes": 2908,
+        "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "localFile": "website/public/assets/icon128.png",
+        "expectedSha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.445Z",
+        "url": "https://exportchromehistory.app/assets/logo.svg",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/logo.svg",
+        "contentType": "image/svg+xml",
+        "bytes": 7525,
+        "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+        "localFile": "website/public/assets/logo.svg",
+        "expectedSha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.520Z",
+        "url": "https://exportchromehistory.app/assets/sample-history.csv",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/sample-history.csv",
+        "contentType": "text/csv",
+        "bytes": 501,
+        "sha256": "aca1eff20418cfcf0e4423bd9664bdefb4c5c0e6cf05ca936ffbb589fab714df",
+        "localFile": "website/public/assets/sample-history.csv",
+        "expectedSha256": "aca1eff20418cfcf0e4423bd9664bdefb4c5c0e6cf05ca936ffbb589fab714df",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "aca1eff20418cfcf0e4423bd9664bdefb4c5c0e6cf05ca936ffbb589fab714df",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.537Z",
+        "url": "https://exportchromehistory.app/assets/sample-history.html",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/sample-history",
+        "contentType": "text/html",
+        "bytes": 4882,
+        "sha256": "359b69b2983e904a8c2424a06982f2988403639fc3747f99ad3177e73cbe4308",
+        "localFile": "website/public/assets/sample-history.html",
+        "expectedSha256": "467b34343c597c03f1983afb595061912eb15905d00036d05d477dee91da5e78",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "467b34343c597c03f1983afb595061912eb15905d00036d05d477dee91da5e78",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.727Z",
+        "url": "https://exportchromehistory.app/assets/sample-history.json",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/sample-history.json",
+        "contentType": "application/json",
+        "bytes": 802,
+        "sha256": "b5113b37b55ca26ec6b2d9d47b5548ffd9bd110ddcf50ead0fd8a520fa01419e",
+        "localFile": "website/public/assets/sample-history.json",
+        "expectedSha256": "b5113b37b55ca26ec6b2d9d47b5548ffd9bd110ddcf50ead0fd8a520fa01419e",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "b5113b37b55ca26ec6b2d9d47b5548ffd9bd110ddcf50ead0fd8a520fa01419e",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.772Z",
+        "url": "https://exportchromehistory.app/assets/social-card.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/assets/social-card.png",
+        "contentType": "image/png",
+        "bytes": 142655,
+        "sha256": "b009b1ecc5e3a9f59be19b6503d86994d085e192dced24c8fdfa7d23a2725c66",
+        "localFile": "website/public/assets/social-card.png",
+        "expectedSha256": "b009b1ecc5e3a9f59be19b6503d86994d085e192dced24c8fdfa7d23a2725c66",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "b009b1ecc5e3a9f59be19b6503d86994d085e192dced24c8fdfa7d23a2725c66",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.703Z",
+        "url": "https://exportchromehistory.app/browsers/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/browsers/",
+        "contentType": "text/html",
+        "bytes": 8651,
+        "sha256": "98e6b1b30c682b2fc3e04eee3353644fb1de97c1adf805f89005871a6774cf07",
+        "localFile": "website/dist/browsers/index.html",
+        "expectedSha256": "2c972d6dfe7d35b6762a919011324ed04c4a3739284c2db2fece8a49560133cb",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "2c972d6dfe7d35b6762a919011324ed04c4a3739284c2db2fece8a49560133cb",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/browsers/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.726Z",
+        "url": "https://exportchromehistory.app/changelog/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/changelog/",
+        "contentType": "text/html",
+        "bytes": 11139,
+        "sha256": "d446d46e39ecafc62cb74be381fb99d6f2443329196ea8bdc0d3759f18966792",
+        "localFile": "website/dist/changelog/index.html",
+        "expectedSha256": "71ae4951c7fc491779c8cf63acb29ac96ed2f1b013a90556c51ac92d315d80b8",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "71ae4951c7fc491779c8cf63acb29ac96ed2f1b013a90556c51ac92d315d80b8",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/changelog/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.855Z",
+        "url": "https://exportchromehistory.app/favicon.ico",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/favicon.ico",
+        "contentType": "image/vnd.microsoft.icon",
+        "bytes": 101477,
+        "sha256": "db4b5357e9e93ad1cc88acffeae60ca47c58349e4c87b678a9d88db976d4ac14",
+        "localFile": "website/public/favicon.ico",
+        "expectedSha256": "db4b5357e9e93ad1cc88acffeae60ca47c58349e4c87b678a9d88db976d4ac14",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "db4b5357e9e93ad1cc88acffeae60ca47c58349e4c87b678a9d88db976d4ac14",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.943Z",
+        "url": "https://exportchromehistory.app/favicon.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/favicon.png",
+        "contentType": "image/png",
+        "bytes": 2908,
+        "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "localFile": "website/public/favicon.png",
+        "expectedSha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.613Z",
+        "url": "https://exportchromehistory.app/guides/browser-history-limits/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/guides/browser-history-limits/",
+        "contentType": "text/html",
+        "bytes": 8925,
+        "sha256": "d53095ec1862962fef93425be609d63ead9498c720aeae93cb2b1063c75592f6",
+        "localFile": "website/dist/guides/browser-history-limits/index.html",
+        "expectedSha256": "da877ae35fdbfd6a08b6de3b2a66e3c5bb69165304f802fcae228e2be49debd7",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "da877ae35fdbfd6a08b6de3b2a66e3c5bb69165304f802fcae228e2be49debd7",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/guides/browser-history-limits/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.933Z",
+        "url": "https://exportchromehistory.app/guides/export-browser-history-to-html/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/guides/export-browser-history-to-html/",
+        "contentType": "text/html",
+        "bytes": 12212,
+        "sha256": "6556ef396bff1f7d06b58cca761bb56544d74eb6baa4ed5e1792da01439187a9",
+        "localFile": "website/dist/guides/export-browser-history-to-html/index.html",
+        "expectedSha256": "547fdd2520319c720db94d7efce59f6311ca0463090ed30fbe33a66b85711b72",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "547fdd2520319c720db94d7efce59f6311ca0463090ed30fbe33a66b85711b72",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/guides/export-browser-history-to-html/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.611Z",
+        "url": "https://exportchromehistory.app/guides/export-chrome-history-to-excel/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/guides/export-chrome-history-to-excel/",
+        "contentType": "text/html",
+        "bytes": 9571,
+        "sha256": "e9974d7524f61f2db6b39c327fd8503241faa5c5daa564efcce329c5f8b99917",
+        "localFile": "website/dist/guides/export-chrome-history-to-excel/index.html",
+        "expectedSha256": "ce47531fdd245f861df280601be205f7c23f9b514c5d127c40d919abe2357996",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "ce47531fdd245f861df280601be205f7c23f9b514c5d127c40d919abe2357996",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/guides/export-chrome-history-to-excel/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.612Z",
+        "url": "https://exportchromehistory.app/guides/filter-browser-history/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/guides/filter-browser-history/",
+        "contentType": "text/html",
+        "bytes": 8638,
+        "sha256": "4afea7607c1ba567b9239ffb26f2ba037fcb16dc4dc3d9eaa581b73ed939cc35",
+        "localFile": "website/dist/guides/filter-browser-history/index.html",
+        "expectedSha256": "680e1f530049e16cb042eb33a7a00b0b04a46b49386ad4b0a596801b44176344",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "680e1f530049e16cb042eb33a7a00b0b04a46b49386ad4b0a596801b44176344",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/guides/filter-browser-history/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.717Z",
+        "url": "https://exportchromehistory.app/privacy/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/privacy/",
+        "contentType": "text/html",
+        "bytes": 9283,
+        "sha256": "a67dc32a2d7dec44855c0cb71045d7f12bb2623ea3cd642a1249740232036c46",
+        "localFile": "website/dist/privacy/index.html",
+        "expectedSha256": "4ebf570dd11d46f7cfb6a078ebc2af9034b232b3d3d2bc70966d3d2054065b9f",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "4ebf570dd11d46f7cfb6a078ebc2af9034b232b3d3d2bc70966d3d2054065b9f",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/privacy/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true,
+        "limitedUseDisclosure": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.821Z",
+        "url": "https://exportchromehistory.app/robots.txt",
+        "kind": "discovery",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/robots.txt",
+        "contentType": "text/plain",
+        "bytes": 113,
+        "sha256": "9a7b98cf3e54c53775b2a6327e3d1029577b26ab0d4353a7d4d0e767d7f69634",
+        "localFile": "website/dist/robots.txt",
+        "expectedSha256": "9a7b98cf3e54c53775b2a6327e3d1029577b26ab0d4353a7d4d0e767d7f69634",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "9a7b98cf3e54c53775b2a6327e3d1029577b26ab0d4353a7d4d0e767d7f69634",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:49.959Z",
+        "url": "https://exportchromehistory.app/site.js",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/site.js",
+        "contentType": "text/javascript",
+        "bytes": 586,
+        "sha256": "ce20d3cb1407c82597773a8f051c6b86d9d92d5c3f3341ea8ce66e2680673fac",
+        "localFile": "website/public/site.js",
+        "expectedSha256": "ce20d3cb1407c82597773a8f051c6b86d9d92d5c3f3341ea8ce66e2680673fac",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "ce20d3cb1407c82597773a8f051c6b86d9d92d5c3f3341ea8ce66e2680673fac",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.783Z",
+        "url": "https://exportchromehistory.app/sitemap.xml",
+        "kind": "discovery",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/sitemap.xml",
+        "contentType": "text/xml",
+        "bytes": 1380,
+        "sha256": "10c690381f1d074269dbc88778d78e32cf2eff7a8aeef92b0c15d7d10e7cb81d",
+        "localFile": "website/dist/sitemap.xml",
+        "expectedSha256": "10c690381f1d074269dbc88778d78e32cf2eff7a8aeef92b0c15d7d10e7cb81d",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "10c690381f1d074269dbc88778d78e32cf2eff7a8aeef92b0c15d7d10e7cb81d",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:50.022Z",
+        "url": "https://exportchromehistory.app/style.css",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/style.css",
+        "contentType": "text/css",
+        "bytes": 14921,
+        "sha256": "c74b274911e15c061d3f57f0b1559ccba474d108cee37f8b8f442bbfd206ab06",
+        "localFile": "website/public/style.css",
+        "expectedSha256": "c74b274911e15c061d3f57f0b1559ccba474d108cee37f8b8f442bbfd206ab06",
+        "byteIdentical": true,
+        "providerChallengeBlocks": 0,
+        "contentSha256IgnoringProviderChallenge": "c74b274911e15c061d3f57f0b1559ccba474d108cee37f8b8f442bbfd206ab06",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.744Z",
+        "url": "https://exportchromehistory.app/welcome/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://exportchromehistory.app/welcome/",
+        "contentType": "text/html",
+        "bytes": 7630,
+        "sha256": "4ebecbac97bfb61adc1bfefb494e2bc9c73174f3d2c7979a82e576a77a5943b7",
+        "localFile": "website/dist/welcome/index.html",
+        "expectedSha256": "4846e9cde60aee531418f5a33ee22a470ad900f31d8929dc4f2cbcbb2afd9453",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "4846e9cde60aee531418f5a33ee22a470ad900f31d8929dc4f2cbcbb2afd9453",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/welcome/",
+        "canonicalPass": true,
+        "robots": "noindex,follow",
+        "expectedRobots": "noindex,follow",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.933Z",
+        "url": "https://www.exportchromehistory.app/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/",
+        "contentType": "text/html",
+        "bytes": 17544,
+        "sha256": "944c2a84908f4c36480dadb251d5e274fafeab1b2036379b4b420f6cde1ad645",
+        "localFile": "website/dist/index.html",
+        "expectedSha256": "cff11fb89b7278a5d21622390f8d3bc1642b4842852fe47d33bb9d6253fa0c30",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "cff11fb89b7278a5d21622390f8d3bc1642b4842852fe47d33bb9d6253fa0c30",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:47.770Z",
+        "url": "https://www.exportchromehistory.app/alternatives/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/alternatives/",
+        "contentType": "text/html",
+        "bytes": 8164,
+        "sha256": "1d419ada7af603b506fed2ee0297ece2ef9f7032ed55f051679474a040e94c30",
+        "localFile": "website/dist/alternatives/index.html",
+        "expectedSha256": "7059118e3e992d91d74960e9aff6314a8bfb2eebd4f1f6b5e78a333e3feca330",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "7059118e3e992d91d74960e9aff6314a8bfb2eebd4f1f6b5e78a333e3feca330",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/alternatives/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:46.135Z",
+        "url": "https://www.exportchromehistory.app/alternatives/better-history/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/alternatives/better-history/",
+        "contentType": "text/html",
+        "bytes": 10177,
+        "sha256": "187ab5dc73dc61982ba070b0ed8a313f691eb604a0dc15ebf900a60e900ca8ee",
+        "localFile": "website/dist/alternatives/better-history/index.html",
+        "expectedSha256": "31e0007cd01aa21eed1f78136ae2efd4180e3757e9003d82e1bfec6978533d20",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "31e0007cd01aa21eed1f78136ae2efd4180e3757e9003d82e1bfec6978533d20",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/alternatives/better-history/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.934Z",
+        "url": "https://www.exportchromehistory.app/alternatives/export-chrome-history/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/alternatives/export-chrome-history/",
+        "contentType": "text/html",
+        "bytes": 10094,
+        "sha256": "2c7aec952a300b50da07430889a4d21e0603e4c241988ab0e8e10f685dee3130",
+        "localFile": "website/dist/alternatives/export-chrome-history/index.html",
+        "expectedSha256": "ff5369f4f11dfaadf67c802d0e0f886dcc37d785a98582249c99ee95083b236d",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "ff5369f4f11dfaadf67c802d0e0f886dcc37d785a98582249c99ee95083b236d",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/alternatives/export-chrome-history/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:45.935Z",
+        "url": "https://www.exportchromehistory.app/alternatives/history-trends-unlimited/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/alternatives/history-trends-unlimited/",
+        "contentType": "text/html",
+        "bytes": 10419,
+        "sha256": "964928ceef95ff955747795e4f31be680fc740efd7f5cd24eef0abf7938ac90e",
+        "localFile": "website/dist/alternatives/history-trends-unlimited/index.html",
+        "expectedSha256": "6fe28047a582ccbbfd8cf64288661c8da58457ba7dfcce0e784c3b78f4f81e57",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "6fe28047a582ccbbfd8cf64288661c8da58457ba7dfcce0e784c3b78f4f81e57",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/alternatives/history-trends-unlimited/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:00.625Z",
+        "url": "https://www.exportchromehistory.app/assets/historyout-export-demo-captions.vtt",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/historyout-export-demo-captions.vtt",
+        "contentType": "text/vtt",
+        "bytes": 840,
+        "sha256": "7842e2afd5809c2e99107fc13e495223ed605a9554cb0a768da8a0c812779852",
+        "localFile": "website/public/assets/historyout-export-demo-captions.vtt",
+        "expectedSha256": "7842e2afd5809c2e99107fc13e495223ed605a9554cb0a768da8a0c812779852",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:00.625Z",
+        "url": "https://www.exportchromehistory.app/assets/historyout-export-demo.mp4",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/historyout-export-demo.mp4",
+        "contentType": "video/mp4",
+        "bytes": 6082386,
+        "sha256": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb",
+        "localFile": "website/public/assets/historyout-export-demo.mp4",
+        "expectedSha256": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:00.625Z",
+        "url": "https://www.exportchromehistory.app/assets/historyout-export-hero.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/historyout-export-hero.png",
+        "contentType": "image/png",
+        "bytes": 204629,
+        "sha256": "9d3c3f92fb3905022f415b55c08c4aeeb7b3f4730012ad32d46c4cc4bfc9d75e",
+        "localFile": "website/public/assets/historyout-export-hero.png",
+        "expectedSha256": "9d3c3f92fb3905022f415b55c08c4aeeb7b3f4730012ad32d46c4cc4bfc9d75e",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:00.626Z",
+        "url": "https://www.exportchromehistory.app/assets/historyout-export-story-poster.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/historyout-export-story-poster.png",
+        "contentType": "image/png",
+        "bytes": 573561,
+        "sha256": "b8d4466e8e74d6991c5c40d0604243ede6fb389054e7de00368857d5989f6741",
+        "localFile": "website/public/assets/historyout-export-story-poster.png",
+        "expectedSha256": "b8d4466e8e74d6991c5c40d0604243ede6fb389054e7de00368857d5989f6741",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:00.734Z",
+        "url": "https://www.exportchromehistory.app/assets/icon128.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/icon128.png",
+        "contentType": "image/png",
+        "bytes": 2908,
+        "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "localFile": "website/public/assets/icon128.png",
+        "expectedSha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:00.778Z",
+        "url": "https://www.exportchromehistory.app/assets/logo.svg",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/logo.svg",
+        "contentType": "image/svg+xml",
+        "bytes": 7525,
+        "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+        "localFile": "website/public/assets/logo.svg",
+        "expectedSha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:01.247Z",
+        "url": "https://www.exportchromehistory.app/assets/sample-history.csv",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/sample-history.csv",
+        "contentType": "text/csv",
+        "bytes": 501,
+        "sha256": "aca1eff20418cfcf0e4423bd9664bdefb4c5c0e6cf05ca936ffbb589fab714df",
+        "localFile": "website/public/assets/sample-history.csv",
+        "expectedSha256": "aca1eff20418cfcf0e4423bd9664bdefb4c5c0e6cf05ca936ffbb589fab714df",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:50.043Z",
+        "url": "https://www.exportchromehistory.app/assets/sample-history.html",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/sample-history",
+        "contentType": "text/html",
+        "bytes": 4882,
+        "sha256": "11625ef11ac65a07ae3903e86f3d70f2caacc0f798883ed2bb0adc7f4e2dc2be",
+        "localFile": "website/public/assets/sample-history.html",
+        "expectedSha256": "467b34343c597c03f1983afb595061912eb15905d00036d05d477dee91da5e78",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "467b34343c597c03f1983afb595061912eb15905d00036d05d477dee91da5e78",
+        "contentMatchesLocal": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:01.818Z",
+        "url": "https://www.exportchromehistory.app/assets/sample-history.json",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/sample-history.json",
+        "contentType": "application/json",
+        "bytes": 802,
+        "sha256": "b5113b37b55ca26ec6b2d9d47b5548ffd9bd110ddcf50ead0fd8a520fa01419e",
+        "localFile": "website/public/assets/sample-history.json",
+        "expectedSha256": "b5113b37b55ca26ec6b2d9d47b5548ffd9bd110ddcf50ead0fd8a520fa01419e",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:01.819Z",
+        "url": "https://www.exportchromehistory.app/assets/social-card.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/assets/social-card.png",
+        "contentType": "image/png",
+        "bytes": 142655,
+        "sha256": "b009b1ecc5e3a9f59be19b6503d86994d085e192dced24c8fdfa7d23a2725c66",
+        "localFile": "website/public/assets/social-card.png",
+        "expectedSha256": "b009b1ecc5e3a9f59be19b6503d86994d085e192dced24c8fdfa7d23a2725c66",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.425Z",
+        "url": "https://www.exportchromehistory.app/browsers/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/browsers/",
+        "contentType": "text/html",
+        "bytes": 8651,
+        "sha256": "02a2e26b4a6df25ffbc5fbff536c52181ef16b84964dd97f1d25d8aae2f9c7b2",
+        "localFile": "website/dist/browsers/index.html",
+        "expectedSha256": "2c972d6dfe7d35b6762a919011324ed04c4a3739284c2db2fece8a49560133cb",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "2c972d6dfe7d35b6762a919011324ed04c4a3739284c2db2fece8a49560133cb",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/browsers/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.582Z",
+        "url": "https://www.exportchromehistory.app/changelog/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/changelog/",
+        "contentType": "text/html",
+        "bytes": 11139,
+        "sha256": "0f65658a1b6438c0a12c7fe863043f9d6e952aa337c6f976626880b9f994260f",
+        "localFile": "website/dist/changelog/index.html",
+        "expectedSha256": "71ae4951c7fc491779c8cf63acb29ac96ed2f1b013a90556c51ac92d315d80b8",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "71ae4951c7fc491779c8cf63acb29ac96ed2f1b013a90556c51ac92d315d80b8",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/changelog/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:01.912Z",
+        "url": "https://www.exportchromehistory.app/favicon.ico",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/favicon.ico",
+        "contentType": "image/vnd.microsoft.icon",
+        "bytes": 101477,
+        "sha256": "db4b5357e9e93ad1cc88acffeae60ca47c58349e4c87b678a9d88db976d4ac14",
+        "localFile": "website/public/favicon.ico",
+        "expectedSha256": "db4b5357e9e93ad1cc88acffeae60ca47c58349e4c87b678a9d88db976d4ac14",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:02.001Z",
+        "url": "https://www.exportchromehistory.app/favicon.png",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/favicon.png",
+        "contentType": "image/png",
+        "bytes": 2908,
+        "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "localFile": "website/public/favicon.png",
+        "expectedSha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.374Z",
+        "url": "https://www.exportchromehistory.app/guides/browser-history-limits/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/guides/browser-history-limits/",
+        "contentType": "text/html",
+        "bytes": 8925,
+        "sha256": "3aa1d0c44ea9c28055379454ca36cc8913cab9125b5933140109f3773d23d12e",
+        "localFile": "website/dist/guides/browser-history-limits/index.html",
+        "expectedSha256": "da877ae35fdbfd6a08b6de3b2a66e3c5bb69165304f802fcae228e2be49debd7",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "da877ae35fdbfd6a08b6de3b2a66e3c5bb69165304f802fcae228e2be49debd7",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/guides/browser-history-limits/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.735Z",
+        "url": "https://www.exportchromehistory.app/guides/export-browser-history-to-html/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/guides/export-browser-history-to-html/",
+        "contentType": "text/html",
+        "bytes": 12212,
+        "sha256": "053cc7306f2d383e1b9f87331b2250c2fe18bc63794f698c59f8709faa8238e9",
+        "localFile": "website/dist/guides/export-browser-history-to-html/index.html",
+        "expectedSha256": "547fdd2520319c720db94d7efce59f6311ca0463090ed30fbe33a66b85711b72",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "547fdd2520319c720db94d7efce59f6311ca0463090ed30fbe33a66b85711b72",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/guides/export-browser-history-to-html/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:47.770Z",
+        "url": "https://www.exportchromehistory.app/guides/export-chrome-history-to-excel/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/guides/export-chrome-history-to-excel/",
+        "contentType": "text/html",
+        "bytes": 9571,
+        "sha256": "465a4c8825d2a7cf4e09845622cd27a3296412b2dbd7f41d142efcfa3a0e4e11",
+        "localFile": "website/dist/guides/export-chrome-history-to-excel/index.html",
+        "expectedSha256": "ce47531fdd245f861df280601be205f7c23f9b514c5d127c40d919abe2357996",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "ce47531fdd245f861df280601be205f7c23f9b514c5d127c40d919abe2357996",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/guides/export-chrome-history-to-excel/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.273Z",
+        "url": "https://www.exportchromehistory.app/guides/filter-browser-history/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/guides/filter-browser-history/",
+        "contentType": "text/html",
+        "bytes": 8638,
+        "sha256": "75734bdb5d0a2d0af60010d97c56d96d169fc7b5a9dc35b7562a6037e9b3368d",
+        "localFile": "website/dist/guides/filter-browser-history/index.html",
+        "expectedSha256": "680e1f530049e16cb042eb33a7a00b0b04a46b49386ad4b0a596801b44176344",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "680e1f530049e16cb042eb33a7a00b0b04a46b49386ad4b0a596801b44176344",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/guides/filter-browser-history/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.492Z",
+        "url": "https://www.exportchromehistory.app/privacy/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/privacy/",
+        "contentType": "text/html",
+        "bytes": 9283,
+        "sha256": "01fbafb5ec591a2554c8a020edbf1ca42b29c9b9dc9905779335ce88160e96f5",
+        "localFile": "website/dist/privacy/index.html",
+        "expectedSha256": "4ebf570dd11d46f7cfb6a078ebc2af9034b232b3d3d2bc70966d3d2054065b9f",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "4ebf570dd11d46f7cfb6a078ebc2af9034b232b3d3d2bc70966d3d2054065b9f",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/privacy/",
+        "canonicalPass": true,
+        "robots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "expectedRobots": "index,follow,max-image-preview:large,max-video-preview:-1",
+        "robotsPass": true,
+        "limitedUseDisclosure": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:00.438Z",
+        "url": "https://www.exportchromehistory.app/robots.txt",
+        "kind": "discovery",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/robots.txt",
+        "contentType": "text/plain",
+        "bytes": 113,
+        "sha256": "9a7b98cf3e54c53775b2a6327e3d1029577b26ab0d4353a7d4d0e767d7f69634",
+        "localFile": "website/dist/robots.txt",
+        "expectedSha256": "9a7b98cf3e54c53775b2a6327e3d1029577b26ab0d4353a7d4d0e767d7f69634",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:02.307Z",
+        "url": "https://www.exportchromehistory.app/site.js",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/site.js",
+        "contentType": "text/javascript",
+        "bytes": 586,
+        "sha256": "ce20d3cb1407c82597773a8f051c6b86d9d92d5c3f3341ea8ce66e2680673fac",
+        "localFile": "website/public/site.js",
+        "expectedSha256": "ce20d3cb1407c82597773a8f051c6b86d9d92d5c3f3341ea8ce66e2680673fac",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:00.420Z",
+        "url": "https://www.exportchromehistory.app/sitemap.xml",
+        "kind": "discovery",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/sitemap.xml",
+        "contentType": "text/xml",
+        "bytes": 1380,
+        "sha256": "10c690381f1d074269dbc88778d78e32cf2eff7a8aeef92b0c15d7d10e7cb81d",
+        "localFile": "website/dist/sitemap.xml",
+        "expectedSha256": "10c690381f1d074269dbc88778d78e32cf2eff7a8aeef92b0c15d7d10e7cb81d",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:17:02.397Z",
+        "url": "https://www.exportchromehistory.app/style.css",
+        "kind": "asset",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/style.css",
+        "contentType": "text/css",
+        "bytes": 14921,
+        "sha256": "c74b274911e15c061d3f57f0b1559ccba474d108cee37f8b8f442bbfd206ab06",
+        "localFile": "website/public/style.css",
+        "expectedSha256": "c74b274911e15c061d3f57f0b1559ccba474d108cee37f8b8f442bbfd206ab06",
+        "byteIdentical": true,
+        "pass": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:48.685Z",
+        "url": "https://www.exportchromehistory.app/welcome/",
+        "kind": "page",
+        "status": 200,
+        "finalUrl": "https://www.exportchromehistory.app/welcome/",
+        "contentType": "text/html",
+        "bytes": 7630,
+        "sha256": "7f1aab987d30720c05e6cbdb921373cbd21bcf33ae055ebbbeaa3c876cddc66d",
+        "localFile": "website/dist/welcome/index.html",
+        "expectedSha256": "4846e9cde60aee531418f5a33ee22a470ad900f31d8929dc4f2cbcbb2afd9453",
+        "byteIdentical": false,
+        "providerChallengeBlocks": 1,
+        "contentSha256IgnoringProviderChallenge": "4846e9cde60aee531418f5a33ee22a470ad900f31d8929dc4f2cbcbb2afd9453",
+        "contentMatchesLocal": true,
+        "pass": true,
+        "canonical": "https://exportchromehistory.app/welcome/",
+        "canonicalPass": true,
+        "robots": "noindex,follow",
+        "expectedRobots": "noindex,follow",
+        "robotsPass": true
+      }
+    ],
+    "redirects": [
+      {
+        "checkedAt": "2026-09-06T17:18:50.868Z",
+        "url": "http://exportchromehistory.app/privacy/",
+        "status": 302,
+        "location": "https://exportchromehistory.app/privacy/",
+        "httpsRedirect": true
+      },
+      {
+        "checkedAt": "2026-09-06T17:18:50.868Z",
+        "url": "http://www.exportchromehistory.app/privacy/",
+        "status": 302,
+        "location": "https://www.exportchromehistory.app/privacy/",
+        "httpsRedirect": true
+      }
+    ],
+    "htmlTransformation": "Cloudflare injects /cdn-cgi/challenge-platform/scripts/jsd/main.js in an inline script. All 26 pages and both sample HTML responses match local source bytes after removing that exact script. Other assets, sitemap and robots match raw bytes.",
+    "canonicalBehavior": "www pages return 200 and declare matching apex canonical URLs. They do not redirect to apex."
+  },
+  "approvedLocalMedia": [
+    {
+      "file": "website/public/assets/historyout-export-demo.mp4",
+      "bytes": 6082386,
+      "sha256": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb"
+    },
+    {
+      "file": "launch/assets/video-v5/historyout-export-demo.mp4",
+      "bytes": 6082386,
+      "sha256": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb"
+    },
+    {
+      "file": "website/public/assets/historyout-export-demo-captions.vtt",
+      "bytes": 840,
+      "sha256": "7842e2afd5809c2e99107fc13e495223ed605a9554cb0a768da8a0c812779852"
+    },
+    {
+      "file": "website/public/assets/historyout-export-story-poster.png",
+      "bytes": 573561,
+      "sha256": "b8d4466e8e74d6991c5c40d0604243ede6fb389054e7de00368857d5989f6741"
+    }
+  ],
+  "limits": [
+    "Email preservation was checked through DNS records against dns-before.json; no email was sent and mailbox delivery was not tested.",
+    "Cloudflare HTML injection and extension-generated HTML exports are different surfaces: no generated extension runtime or release package changed in this check.",
+    "The site still accurately labels the store update as pending. Successful site cutover does not establish Chrome Web Store publication."
+  ]
+}

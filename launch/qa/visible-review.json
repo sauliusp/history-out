@@ -1,0 +1,19 @@
+{
+  "verifiedAt": "2026-09-05T11:40:54.623Z",
+  "status": "passed",
+  "method": "Native CUA app inspection and button click, not an HTTP fixture",
+  "bundleSha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+  "app": "Google Chrome for Testing",
+  "version": "149.0.7827.55",
+  "pid": 14406,
+  "profile": "/var/folders/fd/xbpmmdn54b7fk6gy1tb0_4vr0000gq/T/historyout-chromium-isolated-E4FA47",
+  "url": "chrome-extension://nicccgchpkdffjihnglmkmdajmichgbf/side-panel.html",
+  "checked": [
+    "Latest built HistoryOut tab refreshed in known isolated QA profile; PID 14406 command line rechecked",
+    "Original icon and locally bundled official Buy Me a Coffee cup visibly present; numeric product badge absent",
+    "Yesterday selected and Preview clicked through native CUA controls",
+    "Six fictional native visits, five pages and three sites displayed",
+    "New Buy me a coffee link plus unchanged Tell a friend and Support HistoryOut footer present in native accessibility tree"
+  ],
+  "note": "This QA profile also retains test navigation to the extension, downloaded HTML and support links. The app is left on Yesterday, containing only the six seeded fictional visits. No unrelated tabs were changed and no ordinary browser profile was accessed."
+}

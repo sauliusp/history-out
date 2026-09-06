@@ -1,0 +1,50 @@
+[
+  {
+    "time": 4.763,
+    "label": "Preview history"
+  },
+  {
+    "time": 7.199,
+    "label": "Search history"
+  },
+  {
+    "time": 9.207,
+    "label": "Latest visit per page"
+  },
+  {
+    "time": 13.245,
+    "label": "Save view"
+  },
+  {
+    "time": 14.189,
+    "label": "Save research settings"
+  },
+  {
+    "time": 17.796,
+    "label": "Choose history range"
+  },
+  {
+    "time": 18.296,
+    "label": "Custom dates"
+  },
+  {
+    "time": 18.539,
+    "label": "Preview selected dates"
+  },
+  {
+    "time": 19.014,
+    "label": "HTML export format"
+  },
+  {
+    "time": 22.398,
+    "label": "Clean URL parameters"
+  },
+  {
+    "time": 22.633,
+    "label": "Choose export columns"
+  },
+  {
+    "time": 25.197,
+    "label": "Download matching pages"
+  }
+]

@@ -1,0 +1,17 @@
+{
+  "status": "Public",
+  "videoUrl": "https://youtu.be/GT7aEfalP1E",
+  "publiclyPublished": true,
+  "customCaptionsUploaded": true,
+  "customThumbnailUploaded": true,
+  "chapters": [
+    "00:00",
+    "00:12",
+    "00:24"
+  ],
+  "syntheticVoiceExplanationIncluded": true,
+  "storeListingUsage": "Use this public video URL as the new store listing demo after reviewing the release assets.",
+  "metadataSource": "metadata.json matches the saved YouTube Studio upload, verified on 2026-09-05.",
+  "voiceReviewLimit": "Transcript and timing are checked; perceptual voice likeness has not been independently confirmed.",
+  "visibilityVerified": "YouTube Studio shows Public and All changes saved."
+}

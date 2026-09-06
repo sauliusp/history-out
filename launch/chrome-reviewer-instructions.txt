@@ -1,0 +1,13 @@
+No account, sign-in, payment, API key or special credentials are required. Every feature is free.
+
+Use a normal browser profile with some browsing history. Visit a few public pages first if the review profile is empty. HistoryOut can only read history retained in the current profile; it cannot recover deleted history.
+
+1. Install the extension and click its toolbar icon. HistoryOut opens beside the current page. A one-time welcome page opens on a fresh install. An update from 1.0.1 opens the changelog once and preserves valid saved export preferences.
+2. Choose Today or an appropriate date range, then choose Preview. Confirm that the preview contains the matching visits. No history is loaded until Preview or export is requested.
+3. Choose CSV, JSON or HTML and export. Repeat with the other formats. The files download locally. CSV is spreadsheet-readable, JSON contains structured records, and HTML opens locally with clickable links.
+4. Customize dates and columns, search a page title or URL, and filter by website. Preview and export use the same matching result. The preview displays at most 100 rows; the file contains every match from the loaded result.
+5. Try One row per URL and optional URL cleanup. Deduplication keeps the latest matching visit for each URL. Cleanup removes query strings and fragments; it is not anonymization.
+6. Save a named view, reopen HistoryOut, and restore it. Saved views remember settings locally, not a permanent history archive. The recap and recent trail derive from the loaded history.
+7. Tell a friend copies the public installation link. Clipboard denial offers a manual-copy fallback. Optional support links are external navigation and never unlock or block features.
+
+The extension uses only history, storage and sidePanel, matching version 1.0.1. No host or optional permissions, remote code, advertisements, extension analytics, history uploads or history deletion. All executable code and UI assets are bundled. The welcome/changelog, store and optional support links make normal website requests without transmitting browsing history.

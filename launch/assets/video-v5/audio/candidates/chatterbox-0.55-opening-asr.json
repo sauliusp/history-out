@@ -1,0 +1,228 @@
+{
+  "text": " Export your browser history as CSV, JSON or HTML. With History Out, turn your visits into a useful file you can open or share.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.84,
+      "text": " Export your browser history as CSV, JSON or HTML.",
+      "tokens": [
+        50364,
+        50130,
+        428,
+        11185,
+        2503,
+        382,
+        48814,
+        11,
+        31828,
+        420,
+        17995,
+        13,
+        50588
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.29261673518589565,
+      "compression_ratio": 1.1454545454545455,
+      "no_speech_prob": 0.00043570477282628417,
+      "words": [
+        {
+          "word": " Export",
+          "start": 0.0,
+          "end": 0.3,
+          "probability": 0.92822265625
+        },
+        {
+          "word": " your",
+          "start": 0.3,
+          "end": 0.5,
+          "probability": 0.9921875
+        },
+        {
+          "word": " browser",
+          "start": 0.5,
+          "end": 0.78,
+          "probability": 0.974609375
+        },
+        {
+          "word": " history",
+          "start": 0.78,
+          "end": 1.28,
+          "probability": 0.9921875
+        },
+        {
+          "word": " as",
+          "start": 1.28,
+          "end": 1.68,
+          "probability": 0.98388671875
+        },
+        {
+          "word": " CSV,",
+          "start": 1.68,
+          "end": 2.38,
+          "probability": 0.521484375
+        },
+        {
+          "word": " JSON",
+          "start": 2.68,
+          "end": 2.94,
+          "probability": 0.97802734375
+        },
+        {
+          "word": " or",
+          "start": 2.94,
+          "end": 3.36,
+          "probability": 0.5966796875
+        },
+        {
+          "word": " HTML.",
+          "start": 3.36,
+          "end": 3.84,
+          "probability": 0.89013671875
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.5,
+      "end": 7.3,
+      "text": " With History Out, turn your visits into a useful file",
+      "tokens": [
+        50588,
+        2022,
+        12486,
+        5925,
+        11,
+        1261,
+        428,
+        17753,
+        666,
+        257,
+        4420,
+        3991,
+        50732
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.29261673518589565,
+      "compression_ratio": 1.1454545454545455,
+      "no_speech_prob": 0.00043570477282628417,
+      "words": [
+        {
+          "word": " With",
+          "start": 4.5,
+          "end": 4.64,
+          "probability": 0.9921875
+        },
+        {
+          "word": " History",
+          "start": 4.64,
+          "end": 4.92,
+          "probability": 0.49267578125
+        },
+        {
+          "word": " Out,",
+          "start": 4.92,
+          "end": 5.24,
+          "probability": 0.488037109375
+        },
+        {
+          "word": " turn",
+          "start": 5.54,
+          "end": 5.66,
+          "probability": 0.9892578125
+        },
+        {
+          "word": " your",
+          "start": 5.66,
+          "end": 5.82,
+          "probability": 0.99609375
+        },
+        {
+          "word": " visits",
+          "start": 5.82,
+          "end": 6.14,
+          "probability": 0.91943359375
+        },
+        {
+          "word": " into",
+          "start": 6.14,
+          "end": 6.48,
+          "probability": 0.984375
+        },
+        {
+          "word": " a",
+          "start": 6.48,
+          "end": 6.64,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " useful",
+          "start": 6.64,
+          "end": 6.84,
+          "probability": 0.99609375
+        },
+        {
+          "word": " file",
+          "start": 6.84,
+          "end": 7.3,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 7.3,
+      "end": 8.54,
+      "text": " you can open or share.",
+      "tokens": [
+        50732,
+        291,
+        393,
+        1269,
+        420,
+        2073,
+        13,
+        50860
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.29261673518589565,
+      "compression_ratio": 1.1454545454545455,
+      "no_speech_prob": 0.00043570477282628417,
+      "words": [
+        {
+          "word": " you",
+          "start": 7.3,
+          "end": 7.5,
+          "probability": 0.9853515625
+        },
+        {
+          "word": " can",
+          "start": 7.5,
+          "end": 7.64,
+          "probability": 0.998046875
+        },
+        {
+          "word": " open",
+          "start": 7.64,
+          "end": 7.98,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " or",
+          "start": 7.98,
+          "end": 8.26,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " share.",
+          "start": 8.26,
+          "end": 8.54,
+          "probability": 0.99853515625
+        }
+      ]
+    }
+  ]
+}

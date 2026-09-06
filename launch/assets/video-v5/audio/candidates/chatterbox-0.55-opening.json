@@ -1,0 +1,12 @@
+{
+  "file": "chatterbox-0.55-opening.wav",
+  "text": "Export your browser history as CSV, JSON, or HTML. With HistoryOut, turn your visits into a useful file you can open or share.",
+  "sample_rate": 24000,
+  "duration_seconds": 9.06,
+  "peak_float": 0.5541216731071472,
+  "generation_seconds": 6.197652749950066,
+  "exaggeration": 0.55,
+  "cfg_weight": 0.5,
+  "raw_timing_preserved": true,
+  "sha256": "cdd708d9962d701be60877e2c3b8bd96aeaa9853b2f0db2519e5d701c36bbaad"
+}

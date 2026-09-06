@@ -1,0 +1,104 @@
+{
+  "checked": "2026-09-06",
+  "website": {
+    "status": "public",
+    "url": "https://exportchromehistory.app/",
+    "anonymousHTTPChecksPassed": 58,
+    "sourceCommit": "c3d0b920a33bf50ddf768dacc316f8742e2aaf76",
+    "currentVideoSeconds": 24.833333,
+    "currentMediaChecksPassed": 4,
+    "siteVersion": 6,
+    "deploymentId": "appgdep_6a9d9eb74564819196de1fce703b8be1",
+    "evidence": "domain-cutover/public-checks.json",
+    "earlierRouteEvidence": "public-marketing-refresh.json",
+    "additionalHostname": "https://www.exportchromehistory.app/",
+    "fallbackUrl": "https://historyout.sauliusdev.chatgpt.site/",
+    "domainCertificatesActive": true,
+    "assetsCheckedPerDomain": 14
+  },
+  "youtube": {
+    "url": "https://youtu.be/cGybkRSkk2Y",
+    "studioUrl": "https://studio.youtube.com/video/cGybkRSkk2Y/edit",
+    "visibility": "public",
+    "title": "Export Browser History to CSV, JSON or HTML | HistoryOut",
+    "englishCaptions": "uploaded and saved",
+    "customThumbnail": "uploaded",
+    "checks": "Copyright and Community Guidelines: no issues found",
+    "verification": "YouTube Studio Video published dialog and Public content row confirmed on 2026-09-06.",
+    "voiceReviewLimit": "Transcript and timing verified automatically. Perceptual voice likeness has not been independently confirmed.",
+    "durationSeconds": 24.833333,
+    "previousVideo": {
+      "url": "https://youtu.be/duxsGpO5t8Y",
+      "visibility": "unlisted",
+      "replacementLinkInDescription": true,
+      "verification": "All changes saved, Save disabled and Unlisted shown in YouTube Studio on 2026-09-06."
+    },
+    "closingHoldAfterVoiceSeconds": 4.013333,
+    "publishedAt": "2026-09-06T03:40:40Z",
+    "notificationsForReplacement": false
+  },
+  "buyMeACoffee": {
+    "url": "https://buymeacoffee.com/saulius.developer",
+    "cover": "new1600x400 cover uploaded and saved"
+  },
+  "store": {
+    "submitted": false,
+    "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
+    "targetVersion": "2.0.0",
+    "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-06",
+    "status": "saved draft",
+    "published": false,
+    "draftVersion": "2.0.0",
+    "draftVerifiedAt": "2026-09-06T17:21:45Z",
+    "dashboardStatusText": "This draft is unpublished.",
+    "graphics": {
+      "screenshots": 5,
+      "promotionalTiles": 2,
+      "originalIconRetained": true
+    },
+    "video": "https://www.youtube.com/watch?v=cGybkRSkk2Y",
+    "privacyPolicy": "https://exportchromehistory.app/privacy/",
+    "localWebHistoryDisclosure": true,
+    "testInstructionsSaved": true,
+    "permissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "evidence": "chrome-draft.json",
+    "ownerNextAction": "Review draft, submit for review and publish after approval"
+  },
+  "dns": {
+    "changed": true,
+    "ownerWillConnectDomain": false,
+    "registrar": "Namecheap",
+    "canonical": "exportchromehistory.app",
+    "www": "www.exportchromehistory.app",
+    "apexA": [
+      "162.159.143.30",
+      "172.66.3.26"
+    ],
+    "wwwCname": "custom-domains.chatgpt.site.",
+    "webTtlSeconds": 300,
+    "ownershipTxtRecordsAdded": 4,
+    "nameserversPreserved": true,
+    "emailRecordsPreserved": true,
+    "rollback": "domain-cutover/dns-before.json",
+    "publicEvidence": "domain-cutover/public-checks.json",
+    "ssl": "active on both hostnames"
+  },
+  "releaseCandidate": {
+    "chromeArchiveSHA256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+    "submitted": false,
+    "sourceRevisionNote": "Export-first manifest name and description updated on 2026-09-06. Runtime and permissions unchanged; 137 package checks pass in package-audit.json."
+  },
+  "voiceRefresh": {
+    "mediaEvidence": "../assets/video-v5/historyout-media.json",
+    "technicalAudit": "voice-refresh-audit.json",
+    "technicalChecksPassed": 27,
+    "browserEvidence": "voice-refresh-browser.json",
+    "speechSpeedAdjusted": false,
+    "internalPauseEdits": false,
+    "extensionSourceAndPackageChanges": false
+  }
+}

@@ -1,0 +1,1424 @@
+{
+  "generated_at": "2026-09-06T03:05:53.317Z",
+  "command": "node scripts/audit-release-packages.cjs",
+  "node_version": "v22.20.0",
+  "git_head": "88f0383966c6254bd2bc7a477e3b4dd356e2d640",
+  "version": "2.0.0",
+  "status": "pass",
+  "scope": "Local v2 archives and their staging directories compared with extension-unpacked. Does not certify a signed Chrome Web Store package or a store submission.",
+  "source": {
+    "manifest": {
+      "manifest_version": 3,
+      "name": "HistoryOut - Export Browser History",
+      "short_name": "HistoryOut",
+      "version": "2.0.0",
+      "description": "Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account.",
+      "permissions": [
+        "history",
+        "storage",
+        "sidePanel"
+      ],
+      "background": {
+        "service_worker": "background.js"
+      },
+      "side_panel": {
+        "default_path": "side-panel.html"
+      },
+      "action": {
+        "default_title": "Click to open HistoryOut",
+        "default_icon": {
+          "16": "icons/icon16.png",
+          "32": "icons/icon32.png",
+          "48": "icons/icon48.png",
+          "128": "icons/icon128.png"
+        }
+      },
+      "icons": {
+        "16": "icons/icon16.png",
+        "32": "icons/icon32.png",
+        "48": "icons/icon48.png",
+        "128": "icons/icon128.png"
+      },
+      "minimum_chrome_version": "114.0.0"
+    },
+    "files": {
+      "assets/bmc-cup.svg": {
+        "bytes": 8178,
+        "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba"
+      },
+      "background.js": {
+        "bytes": 1912,
+        "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd"
+      },
+      "bundle.js": {
+        "bytes": 476832,
+        "sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38"
+      },
+      "bundle.js.LICENSE.txt": {
+        "bytes": 1640,
+        "sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8"
+      },
+      "icons/icon128.png": {
+        "bytes": 2908,
+        "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111"
+      },
+      "icons/icon16.png": {
+        "bytes": 364,
+        "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f"
+      },
+      "icons/icon32.png": {
+        "bytes": 654,
+        "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f"
+      },
+      "icons/icon48.png": {
+        "bytes": 1116,
+        "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1"
+      },
+      "manifest.json": {
+        "bytes": 843,
+        "sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e"
+      },
+      "side-panel.html": {
+        "bytes": 405,
+        "sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656"
+      },
+      "styles.css": {
+        "bytes": 499,
+        "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d"
+      }
+    }
+  },
+  "baseline": {
+    "file": "releases/historyout-1.0.1-source-baseline.zip",
+    "bytes": 126708,
+    "sha256": "22731213b137985e2fafebb838c25b70474612be55bfd20858a271a1f5234f16",
+    "source_commit": "0272441",
+    "version": "1.0.1",
+    "permissions": {
+      "permissions": [
+        "history",
+        "sidePanel",
+        "storage"
+      ],
+      "host_permissions": [],
+      "optional_permissions": [],
+      "optional_host_permissions": []
+    },
+    "note": "Rebuilt from v1 source. Not downloaded from the signed Chrome Web Store release."
+  },
+  "packages": [
+    {
+      "target": "chrome",
+      "file": "releases/historyout-2.0.0-chrome.zip",
+      "files": [
+        {
+          "file": "assets/bmc-cup.svg",
+          "bytes": 8178,
+          "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "source_sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "staging_sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "background.js",
+          "bytes": 1912,
+          "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "source_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "staging_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "bundle.js",
+          "bytes": 476832,
+          "sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "source_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "staging_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "bundle.js.LICENSE.txt",
+          "bytes": 1640,
+          "sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "source_sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "staging_sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon128.png",
+          "bytes": 2908,
+          "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "source_sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "staging_sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon16.png",
+          "bytes": 364,
+          "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "source_sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "staging_sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon32.png",
+          "bytes": 654,
+          "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "source_sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "staging_sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon48.png",
+          "bytes": 1116,
+          "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "source_sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "staging_sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "manifest.json",
+          "bytes": 859,
+          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "matches_source": true,
+          "source_comparison": "semantic JSON with target-specific sidePanel removal only"
+        },
+        {
+          "file": "side-panel.html",
+          "bytes": 405,
+          "sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "source_sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "staging_sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "styles.css",
+          "bytes": 499,
+          "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "source_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "staging_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        }
+      ],
+      "bytes": 156873,
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+      "version": "2.0.0",
+      "permissions": {
+        "permissions": [
+          "history",
+          "sidePanel",
+          "storage"
+        ],
+        "host_permissions": [],
+        "optional_permissions": [],
+        "optional_host_permissions": []
+      },
+      "side_panel": {
+        "default_path": "side-panel.html"
+      },
+      "status": "pass"
+    },
+    {
+      "target": "edge",
+      "file": "releases/historyout-2.0.0-edge.zip",
+      "files": [
+        {
+          "file": "assets/bmc-cup.svg",
+          "bytes": 8178,
+          "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "source_sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "staging_sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "background.js",
+          "bytes": 1912,
+          "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "source_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "staging_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "bundle.js",
+          "bytes": 476832,
+          "sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "source_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "staging_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "bundle.js.LICENSE.txt",
+          "bytes": 1640,
+          "sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "source_sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "staging_sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon128.png",
+          "bytes": 2908,
+          "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "source_sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "staging_sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon16.png",
+          "bytes": 364,
+          "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "source_sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "staging_sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon32.png",
+          "bytes": 654,
+          "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "source_sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "staging_sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon48.png",
+          "bytes": 1116,
+          "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "source_sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "staging_sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "manifest.json",
+          "bytes": 859,
+          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "matches_source": true,
+          "source_comparison": "semantic JSON with target-specific sidePanel removal only"
+        },
+        {
+          "file": "side-panel.html",
+          "bytes": 405,
+          "sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "source_sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "staging_sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "styles.css",
+          "bytes": 499,
+          "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "source_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "staging_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        }
+      ],
+      "bytes": 156873,
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+      "version": "2.0.0",
+      "permissions": {
+        "permissions": [
+          "history",
+          "sidePanel",
+          "storage"
+        ],
+        "host_permissions": [],
+        "optional_permissions": [],
+        "optional_host_permissions": []
+      },
+      "side_panel": {
+        "default_path": "side-panel.html"
+      },
+      "status": "pass"
+    },
+    {
+      "target": "brave",
+      "file": "releases/historyout-2.0.0-brave.zip",
+      "files": [
+        {
+          "file": "assets/bmc-cup.svg",
+          "bytes": 8178,
+          "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "source_sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "staging_sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "background.js",
+          "bytes": 1912,
+          "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "source_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "staging_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "bundle.js",
+          "bytes": 476832,
+          "sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "source_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "staging_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "bundle.js.LICENSE.txt",
+          "bytes": 1640,
+          "sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "source_sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "staging_sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon128.png",
+          "bytes": 2908,
+          "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "source_sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "staging_sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon16.png",
+          "bytes": 364,
+          "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "source_sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "staging_sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon32.png",
+          "bytes": 654,
+          "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "source_sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "staging_sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon48.png",
+          "bytes": 1116,
+          "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "source_sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "staging_sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "manifest.json",
+          "bytes": 859,
+          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "matches_source": true,
+          "source_comparison": "semantic JSON with target-specific sidePanel removal only"
+        },
+        {
+          "file": "side-panel.html",
+          "bytes": 405,
+          "sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "source_sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "staging_sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "styles.css",
+          "bytes": 499,
+          "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "source_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "staging_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        }
+      ],
+      "bytes": 156873,
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+      "version": "2.0.0",
+      "permissions": {
+        "permissions": [
+          "history",
+          "sidePanel",
+          "storage"
+        ],
+        "host_permissions": [],
+        "optional_permissions": [],
+        "optional_host_permissions": []
+      },
+      "side_panel": {
+        "default_path": "side-panel.html"
+      },
+      "status": "pass"
+    },
+    {
+      "target": "chromium",
+      "file": "releases/historyout-2.0.0-chromium.zip",
+      "files": [
+        {
+          "file": "assets/bmc-cup.svg",
+          "bytes": 8178,
+          "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "source_sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "staging_sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "background.js",
+          "bytes": 1912,
+          "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "source_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "staging_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "bundle.js",
+          "bytes": 476832,
+          "sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "source_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "staging_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "bundle.js.LICENSE.txt",
+          "bytes": 1640,
+          "sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "source_sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "staging_sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon128.png",
+          "bytes": 2908,
+          "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "source_sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "staging_sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon16.png",
+          "bytes": 364,
+          "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "source_sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "staging_sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon32.png",
+          "bytes": 654,
+          "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "source_sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "staging_sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "icons/icon48.png",
+          "bytes": 1116,
+          "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "source_sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "staging_sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "manifest.json",
+          "bytes": 781,
+          "sha256": "6f0e1598b1880304ea2d4234a9310dad86be2bd401692550cfc4a13d8914b86e",
+          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+          "staging_sha256": "6f0e1598b1880304ea2d4234a9310dad86be2bd401692550cfc4a13d8914b86e",
+          "matches_source": true,
+          "source_comparison": "semantic JSON with target-specific sidePanel removal only"
+        },
+        {
+          "file": "side-panel.html",
+          "bytes": 405,
+          "sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "source_sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "staging_sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "styles.css",
+          "bytes": 499,
+          "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "source_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "staging_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        }
+      ],
+      "bytes": 156843,
+      "sha256": "f3cf8b98a0ff7ed39543c458492bac7c034115582d6073aa670cde30de5a9902",
+      "version": "2.0.0",
+      "permissions": {
+        "permissions": [
+          "history",
+          "storage"
+        ],
+        "host_permissions": [],
+        "optional_permissions": [],
+        "optional_host_permissions": []
+      },
+      "side_panel": null,
+      "status": "pass"
+    }
+  ],
+  "stress_tests": {
+    "command": "node --test --test-reporter=tap tests/release-stress.test.cjs",
+    "file_sha256": "0c32b621e3cace03cb38a03e4df34bdaa96e9b70c2565d607e8ba42e419d2a61",
+    "exit_code": 0,
+    "elapsed_ms": 790.92,
+    "tests": 3,
+    "passed": 3,
+    "failed": 0,
+    "observations": [
+      {
+        "dataset": {
+          "candidate_urls": 10000,
+          "output_visits": 30000,
+          "unique_clean_pages": 5000,
+          "combined_filter_pages": 84
+        },
+        "first_load_ms": 117.11,
+        "reordered_load_ms": 75.85,
+        "filter_validation_ms": 23.24,
+        "peak_api_concurrency": 8,
+        "serialization": {
+          "json": {
+            "elapsed_ms": 16.06,
+            "bytes": 6415598,
+            "sha256": "6fad890d7af72c5cf4517150e04b9e9660c3edb53c87e6bc7a8ccc1a331e7858"
+          },
+          "csv": {
+            "elapsed_ms": 22.37,
+            "bytes": 3865628,
+            "sha256": "239174e21117210d95fc2be49510eea7a025c9b77730adda3231dbe8fb6f0496"
+          },
+          "html": {
+            "elapsed_ms": 41.4,
+            "bytes": 8756786,
+            "sha256": "32fb531b3c5f5a3fac8b2d9e3ef184cfa49b2e6b2eece2a644bada83e3bc9308"
+          }
+        },
+        "total_test_ms": 587.25,
+        "note": "Synthetic API-boundary timing on this machine, not a Chrome UI latency guarantee."
+      },
+      {
+        "candidate_urls": 10000,
+        "api_calls_before_cancel": 12,
+        "late_api_responses_discarded": 8,
+        "recovery_visits": 256,
+        "abort_ms": 0.28
+      },
+      {
+        "failed_candidate_urls": 10000,
+        "failed_load_api_calls": 8,
+        "overlapping_success_visits": 768,
+        "rejection_ms": 0.15
+      }
+    ]
+  },
+  "checks": [
+    {
+      "name": "package-lock-and-manifest-versions-match",
+      "passed": true,
+      "detail": {
+        "package_json": "2.0.0",
+        "package_lock": "2.0.0",
+        "package_lock_root": "2.0.0",
+        "manifest": "2.0.0"
+      }
+    },
+    {
+      "name": "source-permission-set-stays-at-three",
+      "passed": true,
+      "detail": {
+        "permissions": [
+          "history",
+          "sidePanel",
+          "storage"
+        ],
+        "host_permissions": [],
+        "optional_permissions": [],
+        "optional_host_permissions": []
+      }
+    },
+    {
+      "name": "baseline-manifest-matches-original-source",
+      "passed": true
+    },
+    {
+      "name": "v2-permissions-equal-v1-source-baseline",
+      "passed": true
+    },
+    {
+      "name": "chrome:exact-file-allowlist",
+      "passed": true,
+      "detail": [
+        "assets/bmc-cup.svg",
+        "background.js",
+        "bundle.js",
+        "bundle.js.LICENSE.txt",
+        "icons/icon128.png",
+        "icons/icon16.png",
+        "icons/icon32.png",
+        "icons/icon48.png",
+        "manifest.json",
+        "side-panel.html",
+        "styles.css"
+      ]
+    },
+    {
+      "name": "chrome:no-duplicate-or-unsafe-entries",
+      "passed": true,
+      "detail": [
+        "side-panel.html",
+        "styles.css",
+        "background.js",
+        "bundle.js",
+        "icons/",
+        "icons/icon16.png",
+        "icons/icon48.png",
+        "icons/icon128.png",
+        "icons/icon32.png",
+        "manifest.json",
+        "bundle.js.LICENSE.txt",
+        "assets/",
+        "assets/bmc-cup.svg"
+      ]
+    },
+    {
+      "name": "chrome:no-maps-fixtures-test-or-nested-archives",
+      "passed": true
+    },
+    {
+      "name": "chrome:manifest-matches-target",
+      "passed": true
+    },
+    {
+      "name": "chrome:version-matches-source",
+      "passed": true
+    },
+    {
+      "name": "chrome:permission-baseline",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "permissions": [
+            "history",
+            "sidePanel",
+            "storage"
+          ],
+          "host_permissions": [],
+          "optional_permissions": [],
+          "optional_host_permissions": []
+        },
+        "actual": {
+          "permissions": [
+            "history",
+            "sidePanel",
+            "storage"
+          ],
+          "host_permissions": [],
+          "optional_permissions": [],
+          "optional_host_permissions": []
+        },
+        "change": "unchanged"
+      }
+    },
+    {
+      "name": "chrome:assets/bmc-cup.svg:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:assets/bmc-cup.svg:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:assets/bmc-cup.svg:no-active-or-remote-content",
+      "passed": true
+    },
+    {
+      "name": "chrome:background.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:background.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:background.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:bundle.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:bundle.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:bundle.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:bundle.js.LICENSE.txt:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:bundle.js.LICENSE.txt:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:icons/icon128.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:icons/icon128.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:icons/icon16.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:icons/icon16.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:icons/icon32.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:icons/icon32.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:icons/icon48.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:icons/icon48.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:manifest.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:manifest.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:side-panel.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:side-panel.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:side-panel.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:styles.css:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:styles.css:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:styles.css:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:exact-file-allowlist",
+      "passed": true,
+      "detail": [
+        "assets/bmc-cup.svg",
+        "background.js",
+        "bundle.js",
+        "bundle.js.LICENSE.txt",
+        "icons/icon128.png",
+        "icons/icon16.png",
+        "icons/icon32.png",
+        "icons/icon48.png",
+        "manifest.json",
+        "side-panel.html",
+        "styles.css"
+      ]
+    },
+    {
+      "name": "edge:no-duplicate-or-unsafe-entries",
+      "passed": true,
+      "detail": [
+        "side-panel.html",
+        "styles.css",
+        "background.js",
+        "bundle.js",
+        "icons/",
+        "icons/icon16.png",
+        "icons/icon48.png",
+        "icons/icon128.png",
+        "icons/icon32.png",
+        "manifest.json",
+        "bundle.js.LICENSE.txt",
+        "assets/",
+        "assets/bmc-cup.svg"
+      ]
+    },
+    {
+      "name": "edge:no-maps-fixtures-test-or-nested-archives",
+      "passed": true
+    },
+    {
+      "name": "edge:manifest-matches-target",
+      "passed": true
+    },
+    {
+      "name": "edge:version-matches-source",
+      "passed": true
+    },
+    {
+      "name": "edge:permission-baseline",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "permissions": [
+            "history",
+            "sidePanel",
+            "storage"
+          ],
+          "host_permissions": [],
+          "optional_permissions": [],
+          "optional_host_permissions": []
+        },
+        "actual": {
+          "permissions": [
+            "history",
+            "sidePanel",
+            "storage"
+          ],
+          "host_permissions": [],
+          "optional_permissions": [],
+          "optional_host_permissions": []
+        },
+        "change": "unchanged"
+      }
+    },
+    {
+      "name": "edge:assets/bmc-cup.svg:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:assets/bmc-cup.svg:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:assets/bmc-cup.svg:no-active-or-remote-content",
+      "passed": true
+    },
+    {
+      "name": "edge:background.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:background.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:background.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:bundle.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:bundle.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:bundle.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:bundle.js.LICENSE.txt:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:bundle.js.LICENSE.txt:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:icons/icon128.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:icons/icon128.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:icons/icon16.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:icons/icon16.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:icons/icon32.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:icons/icon32.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:icons/icon48.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:icons/icon48.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:manifest.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:manifest.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:side-panel.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:side-panel.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:side-panel.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:styles.css:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:styles.css:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:styles.css:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:exact-file-allowlist",
+      "passed": true,
+      "detail": [
+        "assets/bmc-cup.svg",
+        "background.js",
+        "bundle.js",
+        "bundle.js.LICENSE.txt",
+        "icons/icon128.png",
+        "icons/icon16.png",
+        "icons/icon32.png",
+        "icons/icon48.png",
+        "manifest.json",
+        "side-panel.html",
+        "styles.css"
+      ]
+    },
+    {
+      "name": "brave:no-duplicate-or-unsafe-entries",
+      "passed": true,
+      "detail": [
+        "side-panel.html",
+        "styles.css",
+        "background.js",
+        "bundle.js",
+        "icons/",
+        "icons/icon16.png",
+        "icons/icon48.png",
+        "icons/icon128.png",
+        "icons/icon32.png",
+        "manifest.json",
+        "bundle.js.LICENSE.txt",
+        "assets/",
+        "assets/bmc-cup.svg"
+      ]
+    },
+    {
+      "name": "brave:no-maps-fixtures-test-or-nested-archives",
+      "passed": true
+    },
+    {
+      "name": "brave:manifest-matches-target",
+      "passed": true
+    },
+    {
+      "name": "brave:version-matches-source",
+      "passed": true
+    },
+    {
+      "name": "brave:permission-baseline",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "permissions": [
+            "history",
+            "sidePanel",
+            "storage"
+          ],
+          "host_permissions": [],
+          "optional_permissions": [],
+          "optional_host_permissions": []
+        },
+        "actual": {
+          "permissions": [
+            "history",
+            "sidePanel",
+            "storage"
+          ],
+          "host_permissions": [],
+          "optional_permissions": [],
+          "optional_host_permissions": []
+        },
+        "change": "unchanged"
+      }
+    },
+    {
+      "name": "brave:assets/bmc-cup.svg:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:assets/bmc-cup.svg:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:assets/bmc-cup.svg:no-active-or-remote-content",
+      "passed": true
+    },
+    {
+      "name": "brave:background.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:background.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:background.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:bundle.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:bundle.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:bundle.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:bundle.js.LICENSE.txt:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:bundle.js.LICENSE.txt:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:icons/icon128.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:icons/icon128.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:icons/icon16.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:icons/icon16.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:icons/icon32.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:icons/icon32.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:icons/icon48.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:icons/icon48.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:manifest.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:manifest.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:side-panel.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:side-panel.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:side-panel.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:styles.css:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:styles.css:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:styles.css:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:exact-file-allowlist",
+      "passed": true,
+      "detail": [
+        "assets/bmc-cup.svg",
+        "background.js",
+        "bundle.js",
+        "bundle.js.LICENSE.txt",
+        "icons/icon128.png",
+        "icons/icon16.png",
+        "icons/icon32.png",
+        "icons/icon48.png",
+        "manifest.json",
+        "side-panel.html",
+        "styles.css"
+      ]
+    },
+    {
+      "name": "chromium:no-duplicate-or-unsafe-entries",
+      "passed": true,
+      "detail": [
+        "side-panel.html",
+        "styles.css",
+        "background.js",
+        "bundle.js",
+        "icons/",
+        "icons/icon16.png",
+        "icons/icon48.png",
+        "icons/icon128.png",
+        "icons/icon32.png",
+        "manifest.json",
+        "bundle.js.LICENSE.txt",
+        "assets/",
+        "assets/bmc-cup.svg"
+      ]
+    },
+    {
+      "name": "chromium:no-maps-fixtures-test-or-nested-archives",
+      "passed": true
+    },
+    {
+      "name": "chromium:manifest-matches-target",
+      "passed": true
+    },
+    {
+      "name": "chromium:version-matches-source",
+      "passed": true
+    },
+    {
+      "name": "chromium:permission-baseline",
+      "passed": true,
+      "detail": {
+        "expected": {
+          "permissions": [
+            "history",
+            "storage"
+          ],
+          "host_permissions": [],
+          "optional_permissions": [],
+          "optional_host_permissions": []
+        },
+        "actual": {
+          "permissions": [
+            "history",
+            "storage"
+          ],
+          "host_permissions": [],
+          "optional_permissions": [],
+          "optional_host_permissions": []
+        },
+        "change": "sidePanel removed; no permissions added"
+      }
+    },
+    {
+      "name": "chromium:assets/bmc-cup.svg:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:assets/bmc-cup.svg:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:assets/bmc-cup.svg:no-active-or-remote-content",
+      "passed": true
+    },
+    {
+      "name": "chromium:background.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:background.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:background.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:bundle.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:bundle.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:bundle.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:bundle.js.LICENSE.txt:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:bundle.js.LICENSE.txt:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:icons/icon128.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:icons/icon128.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:icons/icon16.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:icons/icon16.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:icons/icon32.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:icons/icon32.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:icons/icon48.png:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:icons/icon48.png:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:manifest.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:manifest.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:side-panel.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:side-panel.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:side-panel.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:styles.css:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:styles.css:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:styles.css:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "stress-tests-pass",
+      "passed": true
+    }
+  ],
+  "issues": [],
+  "elapsed_ms": 918.35,
+  "check_count": 137,
+  "passed_check_count": 137,
+  "note": "Snapshot evidence. Re-run this audit after rebuilding or repacking; archive hashes are final only for the bytes recorded here."
+}

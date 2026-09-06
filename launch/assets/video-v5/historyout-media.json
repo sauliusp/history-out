@@ -1,0 +1,120 @@
+{
+  "title": "Export your browser history as CSV, JSON or HTML with HistoryOut",
+  "duration_seconds": 24.833333,
+  "width": 1920,
+  "height": 1080,
+  "fps": "30/1",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "audio_channels": 2,
+  "sample_rate": 48000,
+  "bytes": 6082386,
+  "sha256": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb",
+  "mp4": "historyout-export-demo.mp4",
+  "poster": "historyout-poster.png",
+  "captions_vtt": "historyout-captions.vtt",
+  "captions_srt": "historyout-captions.srt",
+  "transcript_text": "Export your browser history as CSV, JSON, or HTML. With HistoryOut, turn your visits into a useful file you can open or share. Choose your own dates and columns, then search or filter to keep the pages you need. Remove repeat visits and URL parameters before exporting. Daily recaps and saved views help tomorrow, too. HistoryOut is free and local, with no account.",
+  "timed_captions": [
+    {
+      "start": 0.2,
+      "end": 1.355,
+      "text": "Export your browser history"
+    },
+    {
+      "start": 1.38,
+      "end": 4.0,
+      "text": "as CSV, JSON, or HTML."
+    },
+    {
+      "start": 4.4,
+      "end": 5.835,
+      "text": "With HistoryOut, turn your visits"
+    },
+    {
+      "start": 5.86,
+      "end": 7.055,
+      "text": "into a useful file"
+    },
+    {
+      "start": 7.08,
+      "end": 8.44,
+      "text": "you can open or share."
+    },
+    {
+      "start": 8.58,
+      "end": 10.0,
+      "text": "Choose your own dates and columns,"
+    },
+    {
+      "start": 10.32,
+      "end": 11.275,
+      "text": "then search or filter"
+    },
+    {
+      "start": 11.3,
+      "end": 12.62,
+      "text": "to keep the pages you need."
+    },
+    {
+      "start": 12.74,
+      "end": 13.655,
+      "text": "Remove repeat visits"
+    },
+    {
+      "start": 13.68,
+      "end": 15.62,
+      "text": "and URL parameters before exporting."
+    },
+    {
+      "start": 15.78,
+      "end": 17.055,
+      "text": "Daily recaps and saved views"
+    },
+    {
+      "start": 17.08,
+      "end": 17.98,
+      "text": "help tomorrow, too."
+    },
+    {
+      "start": 18.1,
+      "end": 19.495,
+      "text": "HistoryOut is free and local,"
+    },
+    {
+      "start": 19.52,
+      "end": 20.400000000000002,
+      "text": "with no account."
+    }
+  ],
+  "voice_file_start": 0.2,
+  "speech_start": 0.2,
+  "speech_end": 20.3,
+  "raw_voice_duration": 20.62,
+  "raw_voice_end": 20.82,
+  "tail_seconds_after_raw_voice": 4.013333,
+  "tail_seconds_after_last_word": 4.533333,
+  "words_per_minute": 183.3171677982541,
+  "model": "mlx-community/chatterbox-multilingual-v3",
+  "exaggeration": 0.35,
+  "cfg_weight": 0.5,
+  "fixed_gain": 1.0262201879065287,
+  "tempo_changes": false,
+  "pitch_changes": false,
+  "internal_gap_edits": false,
+  "speech_cuts": false,
+  "loudness_integrated_lufs": -19.44,
+  "true_peak_dbtp": -2.03,
+  "loudness_range_lu": 2.5,
+  "sample_peak_before_encode": 0.7889508381050996,
+  "click_count": 13,
+  "final_card_start": 18.06,
+  "final_card_text": "Export browser history. CSV \u00b7 JSON \u00b7 HTML. Free. Local. No account. Get HistoryOut free.",
+  "music_fade_start": 21.833333333333332,
+  "music_fade_end": 24.833333333333332,
+  "transition_seconds": 0.3,
+  "voice_provenance": "A completely new local synthetic performance from the creator-authorized original reference. No inherited Qwen audio. Only constant gain and sample-rate conversion for mixing.",
+  "history": "Actual working UI and downloaded files; fictional QA records. Coffee promotions hidden with capture-only CSS. Production extension unchanged.",
+  "verification": "Exact words verified independently in raw voice and encoded MP4. Frames visually reviewed. Technical checks do not claim a human perceptual assessment.",
+  "production_bundle_sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38"
+}

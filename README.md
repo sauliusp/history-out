@@ -1,129 +1,81 @@
-# HistoryOut - Chrome Extension
+# HistoryOut
 
-HistoryOut is a Chrome extension that allows users to export and analyze their browsing history with custom date ranges. Download your history in CSV, JSON, or HTML formats with configurable fields and time ranges.
+**Export your browser history as CSV, JSON or HTML.** Choose dates, columns and matching pages, then keep a useful local file. Daily recaps and saved views help you return to useful pages between exports. Free, with no account.
 
-## Features
+This repository contains the **2.0.0 release candidate** on `codex/historyout-v2`, the website and launch material. The existing Chrome Web Store release is **1.0.1**. The refreshed website is publicly available on Sites. The existing store item and production DNS have not been changed.
 
-- Export browsing history in multiple formats (CSV, JSON, HTML)
-- Custom date range selection
-- Configurable output fields
-- Side panel integration for easy access
-- Responsive Material UI design
-- Persistent settings across sessions
+## What v2 adds
 
-## Development Setup
+- Today and Yesterday recaps with visit, page and site counts.
+- A clickable recent trail, title/URL search and website filtering.
+- Named local saved views for range, filter and export settings.
+- Preview before export, latest matching visit per URL, and optional URL query/fragment removal.
+- CSV, JSON and HTML with chosen columns, including opt-in Domain and Unix-millisecond Timestamp.
+- Safer serialization, corrected date-range retrieval, progress, cancellation and explicit errors.
+- A refreshed workspace with the original identity and a full-page fallback for browsers without side-panel support.
+- A Tell a friend link with clipboard feedback and a clear, optional contribution link.
+- Separate welcome and changelog pages opened once on install or a new version update.
 
-### Prerequisites
+History is read only when the user chooses Preview or export. Saved views store settings, not a history archive. The recap covers the loaded date range; the ready count covers matching export rows. Preview displays up to 100 rows, while export includes all matches from that loaded result. Refresh reads new visits.
 
-- Node.js (LTS version recommended)
-- npm (comes with Node.js)
-- Chrome browser
+HistoryOut cannot recover deleted history, guarantee older account records or measure time spent. URL cleanup is not anonymization. Existing valid v1 export preferences and column choices are preserved; new columns are opt-in.
 
-### Installation
+## Permissions and packages
 
-1. Clone the repository
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
+| Package | Permissions | Interface |
+| --- | --- | --- |
+| Chrome, Edge, Brave | `history`, `storage`, `sidePanel` | Side panel with a full-page fallback |
+| Generic Chromium | `history`, `storage` | Full-page workspace |
 
-### Development Commands
+The first three retain the v1 permission baseline. The generic package removes `sidePanel` and its manifest configuration. Opening the extension's own page does not require the `tabs` permission. No package adds host access, content scripts or another permission.
 
-- Start development mode with hot reload:
+Prepared packages are not browser certifications or published store listings. See [browser compatibility](./launch/browser-compatibility.md).
 
-  ```bash
-  npm run dev
-  ```
+## Develop and verify
 
-- Create a production-ready version of the extension:
+Use Node.js, npm and a desktop Chromium browser. Packaging also uses the system `zip` and `unzip` commands.
 
-  ```bash
-  npm run build
-  ```
+```sh
+npm ci
+npm run typecheck
+npm test
+npm run build
+```
 
-- Create distribution package:
-  ```bash
-  npm run pack
-  ```
+For development, `npm run dev` watches source changes. Load `extension-unpacked/` from the browser's Extensions page with Developer mode enabled. Use a dedicated test profile so development does not touch the user's normal browsing history.
 
-### Project Structure
+```sh
+npx playwright install chromium
+npm run test:browser
+npm run pack
+```
 
-The extension uses a two-directory approach:
+Release QA uses Playwright with isolated Chromium and installed Microsoft Edge profiles, native history and storage, and CSV/JSON/HTML downloads. Synthetic fixtures cover faults, clipboard denial and a 30,000-visit UI workload. A separate native installer test upgrades the rebuilt 1.0.1 source package to 2.0.0 and verifies its changelog, preferences and retained history. Run `node scripts/release-readiness.cjs`, `node scripts/native-update-qa.cjs` and `node scripts/audit-release-packages.cjs`; see the [release readiness report](./launch/qa/release-readiness.md) for exact versions, results and remaining store-signed/Brave limits.
 
-- `src/`: Source code files
-- `extension-unpacked/`: Build output directory containing the extension files
+`npm run pack` builds and creates four root-manifest ZIPs under `releases/`: `historyout-2.0.0-chrome.zip`, `historyout-2.0.0-edge.zip`, `historyout-2.0.0-brave.zip` and `historyout-2.0.0-chromium.zip`. It excludes source maps and demo/fixture files. Current hashes and archive-to-source comparisons are recorded in [package-audit.json](./launch/qa/package-audit.json). Release artifacts are ignored by Git; regenerate them from the reviewed source and refresh hashes after changes.
 
-The `extension-unpacked` directory is required by Chrome's extension system and contains:
+## Website
 
-- Manifest file
-- Compiled bundle
-- Static assets (HTML, icons)
-- Service worker
+`website/` contains a static Node build with 13 prerendered pages and Sites configuration in `website/.openai/hosting.json`.
 
-### Loading the Extension in Chrome
+```sh
+npm --prefix website run build
+npm --prefix website test
+npm --prefix website run dev
+```
 
-1. Build the extension:
-   ```bash
-   npm run build
-   ```
-2. Open Chrome and navigate to `chrome://extensions/`
-3. Enable "Developer mode" in the top right
-4. Click "Load unpacked" and select the `extension-unpacked` directory
+The local preview runs at [127.0.0.1:8766](http://127.0.0.1:8766). Default builds allow public search indexing. `website/site.config.json` records the canonical origin, current store version and media metadata. Set `SITE_NOINDEX=true` for a non-indexable preview. After store approval, set `storeVersion` to `2.0.0` to remove pending-release notes; `RELEASE_V2=true` is a temporary build override. Set `SITE_ORIGIN` only to a verified connected domain. Build flags do not deploy or change DNS. Follow the [website migration handoff](./launch/migration/website.md).
 
-## Configuration
+## Repository guide
 
-The extension supports various configuration options through the UI:
+| Path | Purpose |
+| --- | --- |
+| `src/` | React/TypeScript extension UI and services |
+| `extension-unpacked/` | Manifest, background script, local assets and compiled extension |
+| `tests/`, `scripts/` | Core tests, browser QA and packaging |
+| `website/` | Static website source, build and Sites configuration |
+| `launch/` | Research, brand, store copy, video script, assets and release evidence |
 
-- **Time Ranges**: Last 24 hours, Last 7 days, Last 30 days, All Time, or Custom Range
-- **Export Formats**: CSV, JSON, HTML
-- **Configurable Fields**:
-  - Order
-  - ID
-  - Date
-  - Time
-  - Title
-  - URL
-  - Visit Count
-  - Typed Count
-  - Transition Type
+The original HistoryOut wordmark, favicon and extension icon are preserved. All screenshots, promotional compositions and video footage are newly produced around those familiar assets. The v1 source is preserved at baseline `0272441`.
 
-## Technical Details
-
-- Built with React and TypeScript
-- Uses Material-UI (MUI) for components
-- Implements Chrome's Side Panel API
-- Uses Webpack for bundling
-- Follows Chrome's Manifest V3 specificationss
-
-## Contributing
-
-Contributions are welcome! Here's how you can help:
-
-1. **Fork the Repository**
-
-   - Create a personal fork of the project
-   - Clone your fork locally
-
-2. **Set Up Development Environment**
-
-   ```bash
-   npm install
-   npm run dev
-   ```
-
-3. **Create a Branch**
-
-   - Branch from `main` using a descriptive name
-   - Example: `feature/add-new-export-format` or `fix/date-picker-validation`
-
-4. **Submit a Pull Request**
-   - Push changes to your fork
-   - Open a PR against the `main` branch
-   - Include a clear description of the changes
-   - Reference any related issues
-
-### Development Guidelines
-
-- Follow TypeScript best practices and maintain strict type safety
-- Use the established MUI component patterns
-- Keep bundle size in mind when adding dependencies
+Before publishing, use the [release checklist](./launch/release-checklist.md), [store listing](./launch/store-listing.md), [brand guide](./launch/brand.md) and [GTM plan](./launch/gtm-plan.md). Keep product claims tied to actual behavior and browser evidence. Do not use em dashes in product copy, documentation or launch assets.

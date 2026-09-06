@@ -1,0 +1,23 @@
+{
+  "title": "Export Browser History to CSV, JSON or HTML | HistoryOut",
+  "description": "Export your browser history as CSV, JSON or readable HTML. HistoryOut is free, works locally, and lets you choose the dates, matching pages and columns to include.\n\nInstall HistoryOut:\nhttps://chromewebstore.google.com/detail/historyout-export-chrome/idohnkdgejocejlkihihonhemndpiiei\n\nFeatures, examples and browser options:\nhttps://historyout.sauliusdev.chatgpt.site/\n\nChoose your format first:\nCSV for Excel, Google Sheets or another spreadsheet tool.\nJSON for structured data and your own scripts.\nHTML for a readable local file with clickable links.\n\nThen make the file yours: choose a date range, filter by title or website, select your columns, and preview the matching results before downloading. Optional URL cleanup removes query strings and fragments; it does not anonymize your history.\n\nWhen you want to revisit a page, use the daily recap, recent trail and saved views. These extras are free too.\n\nDoes HistoryOut upload my history?\nNo. It reads available browser history when you choose Preview or export. Files download to your device. No account or subscription is required.\n\nCan it recover deleted history?\nNo. It uses history available to the current browser profile. Saved views remember settings, not a permanent copy of your history.\n\nCheck the changelog for the current release status:\nhttps://historyout.sauliusdev.chatgpt.site/changelog/\n\nUseful to you? You can optionally support my independent development. Every feature stays free:\nhttps://www.buymeacoffee.com/saulius.developer\n\nRecorded from the working extension with fictional browsing data. Narration is generated locally from my own voice reference, with original ambient music and click sounds.\n\n#BrowserHistory #HistoryOut #ExportHistory",
+  "tags": [
+    "HistoryOut",
+    "export browser history",
+    "export history CSV",
+    "export history JSON",
+    "export history HTML",
+    "export Chrome history",
+    "browser history to Excel",
+    "free history export"
+  ],
+  "language": "English",
+  "thumbnail": "launch/store-kit/youtube/thumbnail-1280x720.png",
+  "uploadedVideoUrl": "https://youtu.be/CqMeYRX0hWQ",
+  "publicationStatus": "Published publicly to the creator channel on 2026-09-05. YouTube Studio displayed Video published.",
+  "chapters": [],
+  "chapterNote": "No chapters for the 24-second replacement demo.",
+  "captionInstruction": "Final custom English SRT from launch/assets/video-v3/historyout-captions.srt is uploaded.",
+  "narrationNote": "Continuous locally generated narration based on the creator's own original voice reference. Words and timing checked automatically; perceptual voice likeness is not independently certified.",
+  "metadataStatus": "Title, description, eight tags, English language, custom thumbnail and custom English SRT were uploaded by root. This is the canonical launch video metadata."
+}

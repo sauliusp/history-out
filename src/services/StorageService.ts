@@ -13,7 +13,7 @@ export class StorageService {
   public async get<T>(key: string): Promise<T | null> {
     try {
       const result = await chrome.storage.local.get(key);
-      return (result[key] as T) || null;
+      return (result[key] as T | undefined) ?? null;
     } catch (error) {
       console.error(`Failed to retrieve data for key ${key}:`, error);
       return null;
