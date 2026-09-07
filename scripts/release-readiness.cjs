@@ -235,6 +235,8 @@ async function nativeChecks(name,executablePath,keepForReview=false){
     });
     await check(`${name}: saved view survives closing its app and reapplying after reload`,async()=>{
       await page.getByRole('button',{name:'Save view',exact:true}).click();await page.getByRole('textbox',{name:'View name'}).fill('QA research view');await page.getByRole('button',{name:'Save',exact:true}).click();
+      // Reload only after the UI acknowledges the completed asynchronous write.
+      await page.getByText('Saved “QA research view”. Return to these settings with one click.',{exact:true}).waitFor();
       await page.reload();await page.getByRole('button',{name:'QA research view',exact:true}).click();assert.equal(await page.getByRole('button',{name:'Preview',exact:true}).isVisible(),true);
       await page.getByRole('button',{name:'Preview',exact:true}).click();await awaitLoaded(page);assert.deepEqual(await getPreviewURLs(page),['https://research.historyout-qa.invalid/project']);
       const saved=await liveWorker.evaluate(()=>chrome.storage.local.get(null));assert.deepEqual(Object.keys(saved).sort(),['HISTORY_OUTPUT_CONFIG','historyoutOpenedVersion','historyoutSavedViews']);assert.equal(saved.historyoutSavedViews.length,1);assert.equal(saved.historyoutSavedViews[0].query,'research');assert.equal('items' in saved.historyoutSavedViews[0],false);

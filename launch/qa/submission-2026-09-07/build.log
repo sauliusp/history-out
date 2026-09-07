@@ -1,0 +1,36 @@
+
+> historyout@2.0.0 build
+> rm -f extension-unpacked/bundle.js.map && webpack --mode production
+
+asset bundle.js 470 KiB [emitted] [minimized] [big] (name: main) 1 related asset
+orphan modules 1.97 MiB [orphan] 895 modules
+runtime modules 1.77 KiB 4 modules
+cacheable modules 1.23 MiB
+  modules by path ./node_modules/react/ 8 KiB 4 modules
+  modules by path ./node_modules/react-dom/ 131 KiB
+    ./node_modules/react-dom/client.js 619 bytes [built] [code generated]
+    + 2 modules
+  modules by path ./node_modules/hoist-non-react-statics/ 5.36 KiB
+    ./node_modules/hoist-non-react-statics/dist/hoist-non-react-statics.cjs.js 2.68 KiB [built] [code generated]
+    + 2 modules
+  modules by path ./node_modules/scheduler/ 4.33 KiB
+    ./node_modules/scheduler/index.js 198 bytes [built] [code generated]
+    ./node_modules/scheduler/cjs/scheduler.production.min.js 4.14 KiB [built] [code generated]
+  ./src/index.tsx + 374 modules 1.08 MiB [built] [code generated]
+  ./node_modules/react-is/cjs/react-is.production.js 4.35 KiB [built] [code generated]
+
+WARNING in asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  bundle.js (470 KiB)
+
+WARNING in entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  main (470 KiB)
+      bundle.js
+
+WARNING in webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+webpack 5.98.0 compiled with 3 warnings in 4255 ms

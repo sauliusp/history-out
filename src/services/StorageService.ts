@@ -30,4 +30,19 @@ export class StorageService {
       if (this.pendingWrites.get(key) === pending) this.pendingWrites.delete(key);
     }
   }
+
+  /** Read and mutate shared state under one lock across extension workspaces. */
+  public async update<T>(key: string, mutate: (current: unknown) => T): Promise<T> {
+    if (typeof navigator === 'undefined' || typeof navigator.locks?.request !== 'function') {
+      const error = new Error('This browser cannot safely change saved views across open windows. Update your browser and try again.');
+      error.name = 'StorageLockUnavailableError';
+      throw error;
+    }
+    return navigator.locks.request(`historyout:storage:${key}`, async () => {
+      const current = await this.get<unknown>(key);
+      const next = mutate(current);
+      await this.set(key, next);
+      return next;
+    });
+  }
 }

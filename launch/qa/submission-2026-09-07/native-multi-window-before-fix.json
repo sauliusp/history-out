@@ -1,0 +1,10 @@
+{
+  "checked": "2026-09-07T06:13:24.663Z",
+  "scope": "Two real unpacked extension pages in an isolated Chromium profile, actual chrome.storage.local and navigator.locks. No user profile or external publication changes.",
+  "bundleSha256": "b5a063f197164f8e97d5a5e5e25d5022cdea6da2b5819ce5bf41060c001cd23c",
+  "output": "/tmp/historyout-submission-2026-09-07/native-multi-window-0rcwak",
+  "browserVersion": "149.0.7827.55",
+  "extensionId": "nicccgchpkdffjihnglmkmdajmichgbf",
+  "status": "failed",
+  "error": "AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:\n+ actual - expected\n\n  [\n-   'window a',\n    'window b'\n  ]\n\n    at exerciseMultiplePages (/Users/spetreikis/Desktop/apps/HistoryOut/scripts/native-multi-window-qa.cjs:22:10)\n    at async main (/Users/spetreikis/Desktop/apps/HistoryOut/scripts/native-multi-window-qa.cjs:63:19)"
+}

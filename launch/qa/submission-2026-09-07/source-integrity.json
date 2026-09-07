@@ -1,0 +1,31 @@
+{
+  "checked": "2026-09-07T06:21:55.348568+00:00",
+  "baselineCommit": "386e640616dd55598bb96fd247100d9f3080e491",
+  "runtimeDelta": "Saved-view capacity preserves records. Save and delete re-read latest state inside a shared exclusive browser lock, merge by name or ID, and use collision-checked UUIDs. No unsynchronized write fallback.",
+  "protectedFiles": {
+    "src/components/OutputSettings.tsx": {
+      "unchangedFromPreviousCommit": true,
+      "sha256": "b775c19c5ae628808f969aecfc3d3af499c0271e98ae3694157de7478d5da242"
+    },
+    "extension-unpacked/manifest.json": {
+      "unchangedFromPreviousCommit": true,
+      "sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e"
+    },
+    "package.json": {
+      "unchangedFromPreviousCommit": true,
+      "sha256": "08c2c4889f6180be7b22f033ca22c15ff822d6781c4fdaa79e6da493cefac1fd"
+    },
+    "package-lock.json": {
+      "unchangedFromPreviousCommit": true,
+      "sha256": "f2bff29bae557a7358066c86b5d498158d25d0cd4dddd32ff72f472c256a7b22"
+    }
+  },
+  "version": "2.0.0",
+  "permissions": [
+    "history",
+    "storage",
+    "sidePanel"
+  ],
+  "bundleBytes": 481593,
+  "bundleSha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf"
+}

@@ -2,14 +2,18 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs/promises');
 const path=require('node:path');
 const os=require('node:os');
+const crypto=require('node:crypto');
 const {execFileSync}=require('node:child_process');
 const {chromium}=require('playwright');
-const report={checked:new Date().toISOString(),scope:'Native unpacked MV3 upgrade in an isolated profile. Baseline is rebuilt v1 source, not a signed store download.',cases:[]};
+const output=path.resolve(process.env.QA_OUTPUT_DIR||'launch/qa');
+const report={checked:new Date().toISOString(),scope:process.env.QA_BASELINE_ZIP?'Native unpacked MV3 upgrade using an explicitly supplied baseline payload. This exercises payload migration, not the signed automatic update transport.':'Native unpacked MV3 upgrade in an isolated profile. Baseline is rebuilt v1 source, not a signed store download.',cases:[]};
 const waitFor=async(fn,message)=>{for(let attempt=0;attempt<100;attempt++){if(await fn())return;await new Promise(resolve=>setTimeout(resolve,50));}throw new Error(message);};
 (async()=>{
  const temp=await fs.mkdtemp(path.join(os.tmpdir(),'historyout-native-upgrade-'));const profile=path.join(temp,'profile');const extension=path.join(temp,'extension');let context;
  try{
-  await fs.mkdir(extension);const baseline=path.resolve('releases/historyout-1.0.1-source-baseline.zip');
+  await fs.mkdir(extension);const baseline=path.resolve(process.env.QA_BASELINE_ZIP||'releases/historyout-1.0.1-source-baseline.zip');report.baselineArchive=baseline;
+  report.baselineArchiveSHA256=crypto.createHash('sha256').update(await fs.readFile(baseline)).digest('hex');
+  report.candidateBundleSHA256=crypto.createHash('sha256').update(await fs.readFile('extension-unpacked/bundle.js')).digest('hex');
   execFileSync('unzip',['-q',baseline,'-d',extension]);
   // The source-baseline archive stores files at its root; assert instead of guessing.
   const oldManifest=JSON.parse(await fs.readFile(path.join(extension,'manifest.json'),'utf8'));assert.match(oldManifest.version,/^1\./);
@@ -35,5 +39,5 @@ const waitFor=async(fn,message)=>{for(let attempt=0;attempt<100;attempt++){if(aw
   context=await chromium.launchPersistentContext(profile,options);worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');await new Promise(resolve=>setTimeout(resolve,400));tabs=context.pages().map(page=>({url:page.url()}));assert.ok(tabs.filter(tab=>tab.url?.startsWith('https://historyout.sauliusdev.chatgpt.site/changelog/')).length<=1);report.cases.push({name:'Restart at the same version does not open a duplicate lifecycle page',status:'passed'});
   report.previousVersion=oldManifest.version;report.currentVersion='2.0.0';report.status='passed';console.log(JSON.stringify(report,null,2));
  }catch(error){report.status='failed';report.error=error.stack;process.exitCode=1;console.error(error);if(context){const debug=await context.newPage();await debug.goto('chrome://extensions');report.extensionManager=await debug.locator('extensions-item').allTextContents();console.log(JSON.stringify(report.extensionManager));}}
- finally{if(context)await context.close();await fs.rm(temp,{recursive:true,force:true});await fs.writeFile('launch/qa/native-update.json',JSON.stringify(report,null,2)+'\n');}
+ finally{if(context)await context.close();await fs.rm(temp,{recursive:true,force:true});await fs.mkdir(output,{recursive:true});await fs.writeFile(path.join(output,'native-update.json'),JSON.stringify(report,null,2)+'\n');}
 })();

@@ -1,5 +1,5 @@
 {
-  "checked": "2026-09-07",
+  "checked": "2026-09-07T06:24:45.621859+00:00",
   "website": {
     "status": "public",
     "url": "https://exportchromehistory.app/",
@@ -42,21 +42,22 @@
     "cover": "new1600x400 cover uploaded and saved"
   },
   "store": {
-    "submitted": false,
+    "submitted": true,
     "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
     "targetVersion": "2.0.0",
     "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-07",
-    "status": "saved draft",
+    "status": "pending review",
     "published": false,
     "draftVersion": "2.0.0",
-    "draftVerifiedAt": "2026-09-07T05:49:54.499733+00:00",
-    "dashboardStatusText": "This draft is unpublished.",
+    "draftVerifiedAt": "2026-09-07T06:24:45.621859+00:00",
+    "dashboardStatusText": "This draft is pending review.",
     "graphics": {
       "screenshots": 5,
       "promotionalTiles": 2,
       "originalIconRetained": true,
       "screenshotsChangedThisPass": false,
-      "promotionalTilesReplaced": 2
+      "promotionalTilesReplaced": 0,
+      "approvedPromotionalTilesVerified": 2
     },
     "video": "https://www.youtube.com/watch?v=cGybkRSkk2Y",
     "privacyPolicy": "https://exportchromehistory.app/privacy/",
@@ -68,7 +69,8 @@
       "sidePanel"
     ],
     "evidence": "chrome-draft.json",
-    "ownerNextAction": "Review draft, submit for review and publish after approval"
+    "ownerNextAction": "No manual publishing action is required. Google review is pending; verify the signed release after automatic publication.",
+    "automaticPublishAfterApproval": true
   },
   "dns": {
     "changed": true,
@@ -90,10 +92,10 @@
     "ssl": "active on both hostnames"
   },
   "releaseCandidate": {
-    "chromeArchiveSHA256": "2874136b5c896956eeafed23d03b8f4623ffd0ff33e1fcc6ced43f9ac79768ba",
-    "submitted": false,
-    "sourceRevisionNote": "7 September preflight: history availability guidance, support strip moved below export, safe storage error/retry handling and two professional promo tiles. Version remains 2.0.0. 52 tests, 30 browser scenarios, 7 focused UI scenarios, 3 support layouts, 3 native upgrade checks and 137 package checks pass.",
-    "qa": "preflight-2026-09-07/README.md"
+    "chromeArchiveSHA256": "718719358b9d9a9146e52fbc48f56c8b6c17886a47c7c9b37070bd8d1551c44f",
+    "submitted": true,
+    "sourceRevisionNote": "7 September final submission: 64 unit tests, 30 broad browser scenarios, 10 options groups/43 control rows, 7 focused UI cases, 3 support widths, 3 actual-published-payload upgrade checks, 8 cross-window checks each in Chrome and Edge, and 137 package checks pass. Saved-view capacity and cross-window data-loss cases fixed. Version remains 2.0.0.",
+    "qa": "submission-2026-09-07/README.md"
   },
   "voiceRefresh": {
     "mediaEvidence": "../assets/video-v5/historyout-media.json",
@@ -104,5 +106,5 @@
     "internalPauseEdits": false,
     "extensionSourceAndPackageChanges": false
   },
-  "verificationScopeToday": "Extension QA, same-version Chrome draft replacement, and two promotional tiles. Existing website/domain/video states below retain their earlier dated evidence; those surfaces were not changed today."
+  "verificationScopeToday": "Final extension QA, exact server draft comparison, unchanged approved listing assets and submission for review with automatic publication checked. Existing website/domain/video states retain their earlier evidence."
 }

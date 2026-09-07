@@ -1,0 +1,48 @@
+{
+  "checked": "2026-09-07T06:17:37.040Z",
+  "scope": "Two real unpacked extension pages in an isolated browser profile, actual chrome.storage.local and navigator.locks. No user profile or external publication changes.",
+  "browserName": "Microsoft Edge",
+  "bundleSha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+  "output": "/tmp/historyout-submission-2026-09-07/native-multi-window-O92QgI",
+  "browserVersion": "152.0.4191.66",
+  "extensionId": "nicccgchpkdffjihnglmkmdajmichgbf",
+  "result": {
+    "pages": 2,
+    "sharedOrigin": "chrome-extension://nicccgchpkdffjihnglmkmdajmichgbf",
+    "secureContext": true,
+    "webLocksAvailable": true,
+    "queuedLocks": {
+      "held": [
+        {
+          "clientId": "402EB284CE27FF47796A7F840692FB40",
+          "mode": "exclusive",
+          "name": "historyout:storage:historyoutSavedViews"
+        }
+      ],
+      "pending": [
+        {
+          "clientId": "402EB284CE27FF47796A7F840692FB40",
+          "mode": "exclusive",
+          "name": "historyout:storage:historyoutSavedViews"
+        },
+        {
+          "clientId": "C1A8D460900767819A108532F5CF0B5E",
+          "mode": "exclusive",
+          "name": "historyout:storage:historyoutSavedViews"
+        }
+      ]
+    },
+    "checks": [
+      "Stale sequential additions preserve both names",
+      "Two actual writes wait behind the same exclusive Web Lock, then preserve all distinct names and unique IDs",
+      "Concurrent case-insensitive same-name saves retain one record",
+      "Stale deletion preserves later additions",
+      "Capacity uses latest storage and rejects overflow without mutation",
+      "Stale overwrite keeps ID and updates existing record at capacity",
+      "Stale deletion preserves another window updated record",
+      "Freed capacity permits a new record; both pages reload all 12"
+    ]
+  },
+  "pageErrors": [],
+  "status": "passed"
+}

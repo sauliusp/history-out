@@ -44,7 +44,7 @@ interface SavedView {
 }
 const normalizeViews = (value: unknown): SavedView[] => {
   if (!Array.isArray(value)) return [];
-  return value.filter((view) => view && typeof view === 'object' && typeof view.name === 'string' && typeof view.id === 'string').slice(0, 12).map((view) => ({
+  return value.filter((view) => view && typeof view === 'object' && typeof view.name === 'string' && typeof view.id === 'string').map((view) => ({
     id: view.id.slice(0, 80), name: view.name.slice(0, 40), config: normalizeOutputConfig(view.config),
     query: typeof view.query === 'string' ? view.query.slice(0, 500) : '',
     domain: typeof view.domain === 'string' ? view.domain.slice(0, 253) : '',
@@ -173,16 +173,27 @@ export const HistoryExporter: React.FC = () => {
   const saveView = async () => {
     const name = viewName.trim();
     if (!name || !customValid || !fieldsValid || !hydrated || loading || viewWritePending.current) return;
-    const existing = savedViews.find((view) => view.name.toLowerCase() === name.toLowerCase());
-    const view: SavedView = { id: existing?.id ?? `${Date.now()}`, name, config: normalizeOutputConfig(config), query, domain, uniqueUrls, stripQuery };
-    const views = [view, ...savedViews.filter((saved) => saved.id !== view.id)].slice(0, 12);
     viewWritePending.current = true; setViewSaving(true); setError(null); setNotice(null);
     try {
-      await storageService.set(SAVED_VIEWS_KEY, views);
+      const views = await storageService.update(SAVED_VIEWS_KEY, (current) => {
+        const latest = normalizeViews(current);
+        const existing = latest.find((view) => view.name.toLowerCase() === name.toLowerCase());
+        if (!existing && latest.length >= 12) {
+          setSavedViews(latest);
+          const error = new Error('You already have 12 saved views. Delete an existing view or reuse its name to update it.');
+          error.name = 'SavedViewLimitError';
+          throw error;
+        }
+        let id = existing?.id ?? crypto.randomUUID();
+        while (!existing && latest.some((view) => view.id === id)) id = crypto.randomUUID();
+        const view: SavedView = { id, name, config: normalizeOutputConfig(config), query, domain, uniqueUrls, stripQuery };
+        return [view, ...latest.filter((saved) => saved.id !== view.id)];
+      });
       setSavedViews(views); setShowSaveView(false); setViewName('');
       setNotice(`Saved “${name}”. Return to these settings with one click.`);
-    } catch {
-      setError('This view could not be saved. Your existing views are unchanged. Try Save again.');
+    } catch (error) {
+      setError(error instanceof Error && ['SavedViewLimitError', 'StorageLockUnavailableError'].includes(error.name)
+        ? error.message : 'This view could not be saved. Your existing views are unchanged. Try Save again.');
     } finally {
       viewWritePending.current = false; setViewSaving(false);
     }
@@ -194,13 +205,13 @@ export const HistoryExporter: React.FC = () => {
   };
   const removeView = async (id: string) => {
     if (!hydrated || loading || viewWritePending.current) return;
-    const views = savedViews.filter((view) => view.id !== id);
     viewWritePending.current = true; setViewSaving(true); setError(null); setNotice(null);
     try {
-      await storageService.set(SAVED_VIEWS_KEY, views);
+      const views = await storageService.update(SAVED_VIEWS_KEY, (current) => normalizeViews(current).filter((view) => view.id !== id));
       setSavedViews(views);
-    } catch {
-      setError('This view could not be deleted. It is still saved. Please try again.');
+    } catch (error) {
+      setError(error instanceof Error && error.name === 'StorageLockUnavailableError'
+        ? error.message : 'This view could not be deleted. It is still saved. Please try again.');
     } finally {
       viewWritePending.current = false; setViewSaving(false);
     }

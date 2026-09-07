@@ -1,0 +1,49 @@
+{
+  "notes": [
+    {
+      "subject": "Column control targeting",
+      "detail": "The MUI menu exposes named options containing unnamed checkbox inputs. The suite operates the named options and checks aria-selected; an earlier checkbox-name locator was a harness mismatch."
+    },
+    {
+      "subject": "Repeated download pacing",
+      "detail": "The final suite waits 350ms before each automated export. A separate plain local HTML Blob download button with no HistoryOut code invoked its click handler 12 times but emitted 10 download events unpaced and all 12 with 350ms pacing. This reproduces the earlier missing 11th event independently of the extension.",
+      "isolation": {
+        "checked": "2026-09-07T06:08:32.692Z",
+        "browser": "149.0.7827.55",
+        "scope": "Plain local HTML Blob download button, no HistoryOut code",
+        "results": [
+          {
+            "gapMs": 0,
+            "clicked": 12,
+            "downloadEvents": 10,
+            "elapsedMs": 1422,
+            "handlerInvocations": 12
+          },
+          {
+            "gapMs": 350,
+            "clicked": 12,
+            "downloadEvents": 12,
+            "elapsedMs": 5617,
+            "handlerInvocations": 12
+          }
+        ]
+      }
+    },
+    {
+      "subject": "Visual inspection",
+      "detail": "Inspected final all-columns.png and saved-view-capacity.png. Controls, recovered 12 saved views, export action and support/footer placement render correctly. QA images use fictional data and remain in /tmp."
+    },
+    {
+      "subject": "Footer hover after keyboard focus and scrolling",
+      "detail": "The preceding final-candidate run passed nine workflow groups and timed out only on the optional support tooltip. A targeted DOM probe observed the link move upward 18px after hover as scrollY changed from196 to214; the pointer stayed at y890.64 while the link bottom moved to881.64, so :hover became false. A second hover at the settled link displayed the tooltip. The final harness explicitly scrolls the footer link fully into view before the separate pointer check. Final10-group run passes without runtime changes."
+    },
+    {
+      "subject": "Cross-window before and after evidence",
+      "detail": "The preceding b5a063f1 native baseline lost Window A after stale Window B saved, an expected failure. The corrected d6e8107d candidate passes identical regression plus explicit shared-lock queue checks in real native CFT149 and Edge152 pages. Separate temporary profiles were removed after runs.",
+      "baseline": "/tmp/historyout-submission-2026-09-07/native-multi-window-0rcwak/report.json",
+      "finalChromium": "/tmp/historyout-submission-2026-09-07/native-multi-window-RGvc2t/report.json",
+      "finalEdge": "/tmp/historyout-submission-2026-09-07/native-multi-window-O92QgI/report.json"
+    }
+  ],
+  "runtimeEdits": false
+}

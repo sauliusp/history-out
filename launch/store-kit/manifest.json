@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-07T05:47:45.480479Z",
+  "generated": "2026-09-07T06:18:25.954790+00:00",
   "extensionVersion": "2.0.0",
-  "bundleSHA256": "425adcc1a7cc7f1c0d0eff9dc00c917ada813635a6e36cd656560ff30db506eb",
+  "bundleSHA256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
   "backgroundSHA256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
   "originalIconGitRef": "0272441",
   "originalIconSHA256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
@@ -106,8 +106,8 @@
     },
     {
       "file": "chrome/historyout-2.0.0-chrome.zip",
-      "bytes": 158035,
-      "sha256": "2874136b5c896956eeafed23d03b8f4623ffd0ff33e1fcc6ced43f9ac79768ba"
+      "bytes": 158398,
+      "sha256": "718719358b9d9a9146e52fbc48f56c8b6c17886a47c7c9b37070bd8d1551c44f"
     },
     {
       "file": "chrome/listing.json",
@@ -195,8 +195,8 @@
     },
     {
       "file": "edge/historyout-2.0.0-edge.zip",
-      "bytes": 158035,
-      "sha256": "2874136b5c896956eeafed23d03b8f4623ffd0ff33e1fcc6ced43f9ac79768ba"
+      "bytes": 158398,
+      "sha256": "f820015a10ff574a531b18beb5945b6c46077be47822f32b2f3c5033417b00f7"
     },
     {
       "file": "edge/listing.json",
