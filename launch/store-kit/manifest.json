@@ -1,7 +1,7 @@
 {
-  "generated": "2026-09-06T17:22:28.918648Z",
+  "generated": "2026-09-07T05:47:45.480479Z",
   "extensionVersion": "2.0.0",
-  "bundleSHA256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+  "bundleSHA256": "425adcc1a7cc7f1c0d0eff9dc00c917ada813635a6e36cd656560ff30db506eb",
   "backgroundSHA256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
   "originalIconGitRef": "0272441",
   "originalIconSHA256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
@@ -106,8 +106,8 @@
     },
     {
       "file": "chrome/historyout-2.0.0-chrome.zip",
-      "bytes": 156873,
-      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032"
+      "bytes": 158035,
+      "sha256": "2874136b5c896956eeafed23d03b8f4623ffd0ff33e1fcc6ced43f9ac79768ba"
     },
     {
       "file": "chrome/listing.json",
@@ -116,16 +116,16 @@
     },
     {
       "file": "chrome/promotional/marquee-1400x560.png",
-      "bytes": 205031,
-      "sha256": "b1d5e83466fc4ef22495b74b80214dbc13cdfbd19dbaf80b8c6e7c226953ea3a",
+      "bytes": 52055,
+      "sha256": "1063ae5a041bb8ad09cee7b0e03f96becc53d0d6ae28088001aad54b348cfa83",
       "width": 1400,
       "height": 560,
       "hasAlpha": false
     },
     {
       "file": "chrome/promotional/small-promo-440x280.png",
-      "bytes": 47101,
-      "sha256": "7a4bf022d3a09296abb1afcc997275464b1907493d78e3af5b514c44c8a19737",
+      "bytes": 14031,
+      "sha256": "ec13e681b4d82b1de901d79c33b2f6c141120cb5050e7e9ac8a4940a3dd17883",
       "width": 440,
       "height": 280,
       "hasAlpha": false
@@ -195,8 +195,8 @@
     },
     {
       "file": "edge/historyout-2.0.0-edge.zip",
-      "bytes": 156873,
-      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032"
+      "bytes": 158035,
+      "sha256": "2874136b5c896956eeafed23d03b8f4623ffd0ff33e1fcc6ced43f9ac79768ba"
     },
     {
       "file": "edge/listing.json",
@@ -205,16 +205,16 @@
     },
     {
       "file": "edge/promotional/marquee-1400x560.png",
-      "bytes": 205031,
-      "sha256": "b1d5e83466fc4ef22495b74b80214dbc13cdfbd19dbaf80b8c6e7c226953ea3a",
+      "bytes": 52055,
+      "sha256": "1063ae5a041bb8ad09cee7b0e03f96becc53d0d6ae28088001aad54b348cfa83",
       "width": 1400,
       "height": 560,
       "hasAlpha": false
     },
     {
       "file": "edge/promotional/small-promo-440x280.png",
-      "bytes": 47101,
-      "sha256": "7a4bf022d3a09296abb1afcc997275464b1907493d78e3af5b514c44c8a19737",
+      "bytes": 14031,
+      "sha256": "ec13e681b4d82b1de901d79c33b2f6c141120cb5050e7e9ac8a4940a3dd17883",
       "width": 440,
       "height": 280,
       "hasAlpha": false
@@ -266,16 +266,16 @@
     },
     {
       "file": "promotional/marquee-1400x560.png",
-      "bytes": 205031,
-      "sha256": "b1d5e83466fc4ef22495b74b80214dbc13cdfbd19dbaf80b8c6e7c226953ea3a",
+      "bytes": 52055,
+      "sha256": "1063ae5a041bb8ad09cee7b0e03f96becc53d0d6ae28088001aad54b348cfa83",
       "width": 1400,
       "height": 560,
       "hasAlpha": false
     },
     {
       "file": "promotional/small-promo-440x280.png",
-      "bytes": 47101,
-      "sha256": "7a4bf022d3a09296abb1afcc997275464b1907493d78e3af5b514c44c8a19737",
+      "bytes": 14031,
+      "sha256": "ec13e681b4d82b1de901d79c33b2f6c141120cb5050e7e9ac8a4940a3dd17883",
       "width": 440,
       "height": 280,
       "hasAlpha": false

@@ -1,71 +1,72 @@
 # HistoryOut local release readiness
 
-Broad release validation completed 2026-09-05T09:13:04.075Z. Latest focused support UI verification 2026-09-05T11:38:08.879Z. Candidate technical version: **2.0.0**. Product name: **HistoryOut**. Previous source release: **1.0.1**, baseline `0272441`.
+The final **7 September 2026** candidate passed the complete local preflight. Technical version remains **2.0.0**; the product remains **HistoryOut**. The previous source release is **1.0.1** at `0272441`. The [dated preflight handoff](./preflight-2026-09-07/README.md) is the primary evidence index for this build and supersedes the earlier September 5 and 6 runtime snapshots.
 
-**Earlier broad validation passed:** 37 automated core/background/stress tests, 30 browser scenarios and 3 native upgrade checks. These results predate the additive support CTA and were not all rerun for that UI change.
+| Final validation | Result | Evidence |
+| --- | --- | --- |
+| Core, background, storage and stress tests | 52 passed | [TAP results](./preflight-2026-09-07/unit-results.tap) |
+| Broad fixture and native browser scenarios | 30 passed | [Browser results](./preflight-2026-09-07/release-readiness.json) |
+| Availability guidance and storage recovery UI | 7 passed | [Focused results](./preflight-2026-09-07/ui-recovery.json) |
+| Support CTA layout and interaction | 320, 400 and 1200px passed | [Support results](./preflight-2026-09-07/bmc-cta.json) |
+| Native unpacked upgrade and restart | 3 passed | [Upgrade results](./preflight-2026-09-07/native-update.json) |
+| Package integrity | 137 passed, zero issues | [Package audit](./preflight-2026-09-07/package-audit.json) |
 
-**Current support update passed:** focused UI checks at 320, 400 and 1200 pixels, TypeScript, production build, native visible preview and **137 package integrity checks**. The package audit also reran all three core stress cases. The current bundle is **476,832 bytes** and emits the existing webpack bundle-size advisory.
+TypeScript and the production build passed. The bundle is **480,428 bytes**; webpack still emits its bundle-size advisory. The reported counts are separate suites with some overlapping coverage, not a combined count of unique behaviors.
 
-## Store metadata update
+## Requested changes and the preferences fix
 
-On 6 September 2026, the manifest name and description were aligned with the export-first positioning: **HistoryOut - Export Browser History**. The extension runtime, icons, support button, version and permissions are unchanged from `88f0383`. All four packages were regenerated without rebuilding the runtime. **137 package integrity checks** and the three core stress cases passed again. Current package hashes are in [package-audit.json](./package-audit.json).
+The existing yellow **Buy me a coffee** strip now follows the export action and sits immediately above the original footer. Its content and styling are preserved. The export action retains its sticky behavior. The free-status line, original footer links, native date picker, original logo/icons, version and permissions are unchanged.
 
-## Final support UI update
+**Custom dates** and **All available history** now show concise availability guidance with a keyboard-operable disclosure. Today does not show it. The guidance explains that exports use retained browser records and suggests saving dated exports regularly. It adds no history archive, automatic export job or permission. A fictional visit from **11 March 2026** was still exported successfully through both Custom and All ranges: the guidance does not impose a 90-day cutoff.
 
-The compact **Buy me a coffee** button is visible below the original header, with “Free to use.” and “Optional support.” context. The original footer, including **Support HistoryOut**, is byte-identical to the pre-change source at `ba1914f631fec37db90c1cd5225b2537d6755275`. No history-processing logic or permissions changed.
+Review caught and fixed a real preferences failure mode: a failed storage read could be treated as missing settings, allowing default preferences to overwrite saved choices. Failed writes could also appear to succeed. Startup now waits for a successful read before enabling the workflow or saving settings. **Retry** restores the existing format, range, column choices and views. Preference-write errors leave the current session usable and offer **Retry saving**. Saved-view changes become visible only after the write succeeds, preserve existing views on failure, and remain retryable. Writes are ordered per key and duplicate pending view operations are guarded.
 
-Focused Chromium **149.0.7827.55** fixture checks verify keyboard focus, secure new-tab link attributes, the locally bundled official cup, no horizontal overflow, no initial history reads, zero external page requests and successful Preview at all three widths. The four ZIPs contain the exact same safe local SVG bytes; no remote or active SVG content is packaged. Original icon bytes were rechecked against `0272441`.
+The injected-error browser tests verify zero default writes after a startup failure, successful preference restoration, no false saved-view success, persistence after recovery/reload, and a real HTML download while preference persistence is unavailable. These tests reproduce the bug in isolated fixtures; they do not establish that a production user lost preferences.
 
-Current bundle SHA-256: `d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38`. [Focused machine-readable evidence](./bmc-cta.json), [400px layout](./bmc-cta-400.png), [full-page layout](./bmc-cta-1200.png) and [keyboard-focus example](./bmc-cta-focus-400.png).
+## History retention sources
 
-## Environment and isolation
+Verified on **7 September 2026**: [Chrome Help, answer 95589](https://support.google.com/chrome/answer/95589?hl=en) describes a 90-day history window. Chromium revision `6d42e2166179405faac6fe0fa83f5c0d60068e73` defines `HistoryBackend::kExpireDaysThreshold = 90` in [history_backend.h](https://chromium.googlesource.com/chromium/src/+/6d42e2166179405faac6fe0fa83f5c0d60068e73/components/history/core/browser/history_backend.h#214) and uses it when starting expiration in [history_backend.cc](https://chromium.googlesource.com/chromium/src/+/6d42e2166179405faac6fe0fa83f5c0d60068e73/components/history/core/browser/history_backend.cc#1361).
 
-ProductName:		macOS; ProductVersion:		26.6.2; BuildVersion:		25G83; arm64; Node v22.20.0.
+Chrome has no normal built-in setting to extend this local retention period. Google My Activity is a separate source and changing account activity settings does not extend what this extension can read. Other browsers may differ. Recurring exports preserve available records from now onward; they cannot restore already expired or deleted history. Saved views store settings, not visits.
+
+## Environment and verified scope
+
+macOS **26.6.2**, build **25G83**, Apple silicon; Node **v22.20.0**.
 
 | Browser | Exact version | Verified scope |
 | --- | --- | --- |
-| Google Chrome for Testing (Chromium) | 149.0.7827.55 | Native unpacked MV3 history, settings, clipboard and all three downloads |
-| Installed Microsoft Edge | 152.0.4191.62 | Native unpacked MV3 history, settings, clipboard and all three downloads |
+| Google Chrome for Testing | 149.0.7827.55 | Native unpacked MV3 history, settings, clipboard and CSV/JSON/HTML downloads |
+| Installed Microsoft Edge | 152.0.4191.66 | Native unpacked MV3 history, settings, clipboard and CSV/JSON/HTML downloads |
 
-All browser profiles used by these tests were freshly created for QA. The only history inserted was fictional fixture data. Precise historical timestamps were written to the **closed isolated profile's** SQLite history database, then queried through the actual extension APIs. No ordinary Chrome or Edge profile was opened or modified.
+Native tests use freshly created disposable profiles and fictional data. Precise historical timestamps are inserted into a closed isolated profile before reads through the real extension APIs. Ordinary user profiles are not opened or modified. Storage errors, cancellation and large-data stress are controlled fixture tests.
 
-## Verified behavior
+The final broad suite confirms inclusive custom-date boundaries, inclusion of pages revisited after the selected range, exact six-visit native downloads, safe CSV/HTML output, preview/export agreement, v1 preference migration, saved views, empty/error/cancel states, secure clipboard fallback, and no observed history uploads or uncaught page errors. Fresh native installs open one welcome page. The unpacked 1.0.1 to 2.0.0 transition opens one changelog, preserves preferences/history and avoids duplicate lifecycle pages after restart.
 
-- Original icons match all four baseline PNGs byte-for-byte. The interface says HistoryOut without a numeric product badge.
-- Fresh native Chromium and Edge installs open one welcome page. Unit tests also cover duplicate events and ignore browser/module updates.
-- Chrome's native unpacked installer updates the rebuilt 1.0.1 source package to 2.0.0, opens exactly one changelog, retains native history and exact v1 preferences, and does not repeat the lifecycle page after a same-version restart. This is a real local installer transition, not a simulated event; it is not a signed Chrome Web Store update.
-- Custom dates include start-of-day and end-of-day visits. A page visited within the range and again later still appears. Visits immediately outside the range are excluded.
-- Native CSV, JSON and HTML downloads match exactly six selected visits. JSON fields and timestamps are exact; CSV safely preserves multiline/formula-looking titles; HTML preserves selected cell text while escaping hostile markup.
-- Search, domain matching, latest-URL deduplication and query/fragment removal produce the same rows in preview and export. Preview renders up to 100 rows; export includes the complete matching result.
-- V1 settings migrate without changing valid saved choices. New Timestamp and Domain columns remain off unless selected. Saved views persist and reapply without storing visit records.
-- Clipboard success, clipboard-denial fallback and the canonical share URL pass fixture checks. Native browser clipboard outcomes are recorded separately in the machine-readable results. Support remains optional and uses the existing Buy Me a Coffee URL.
-- Empty results, no matches, delayed cancellation and API failures are handled without silently exporting partial data. Cancelled or failed refreshes retain the prior explicitly loaded snapshot. Filters cannot be reset mid-load while an export uses the previous settings.
-- No preview/export page network uploads or runtime exceptions were observed. Install/update pages are deliberate user-requested navigation, separate from history processing.
-- Search result caps fail explicitly; the tests do not treat the one-million-candidate limit as a silent truncation boundary. Browser-retained history remains the source of truth.
+The synthetic **10,000 URL / 30,000 visit** browser fixture rendered 100 preview rows and exported all 30,000. This run measured **321 ms** to load and **31 ms** to filter, producing a **3,638,965-byte** CSV. These are zero-latency fixture observations on this machine, not real-profile performance promises.
 
-## Scale observation
+## Harness corrections and preserved assets
 
-A browser UI fixture loaded **10,000 URLs / 30,000 visits**, displayed only 100 preview rows and exported all 30,000 rows. Measured load: **150 ms**; changing the search to a 333-visit result: **26 ms**; CSV size: **3,638,965 bytes**. Progress painting is limited to roughly ten updates per second, with exact initial/final counts.
+The final passing run follows two test-harness corrections:
 
-This is a synthetic zero-latency API fixture running in a real browser UI, not a real-profile speed guarantee. A previous mock used per-call zero-duration timers, whose timer scheduling dominated the result; zero-delay fixture responses now resolve immediately. Nonzero test delays remain for cancellation/failure scenarios. Independent core stress tests also verify deterministic exports, bounded API concurrency of eight and recovery from cancelled/failed large loads.
+1. The shared fixture now accepts an explicit seed timestamp. The broad fixture seeds September 5 to match its fixed UI clock; the new preflight fixture explicitly seeds September 7. Previously the fixture used the real date while the broad UI clock stayed on September 5, causing a false empty-preview result.
+2. The clipboard-denial scenario closes the prior success snackbar before its separate click. Hovering the relocated footer could pause the prior snackbar's auto-hide and leave that toast over the control. The denied-clipboard scenario then runs independently.
 
-## Reviewable local app
+The focused script also uses MUI combobox label matching that permits the selected value in the accessible name. These harness corrections did not alter runtime behavior.
 
-The current built extension is open as a **Google Chrome for Testing app window** in an isolated profile. Native computer-use inspection clicked Preview and observed six fictional visits, five pages and three sites. The original icon, new support cup/button and unchanged footer were verified after refreshing the current build. The isolated profile also contains test navigation; the app is left on Yesterday to display only the six seeded fictional visits. Its profile and app URL are in [visible-review.json](./visible-review.json). Normal user history remains untouched.
+New QA images and downloads are only under `/tmp/historyout-preflight-2026-09-07`, including the focused run directory recorded in `ui-recovery.json`. Existing marketing screenshots, videos, captions and brand assets were not regenerated. [Source integrity](./preflight-2026-09-07/source-integrity.json) confirms the native date picker, extension manifest, dependency manifests and technical version are unchanged; [asset integrity](./preflight-2026-09-07/assets.json) records preserved media and the approved promotional tile copies.
 
-## Remaining release limits
+## Final package and distribution boundary
 
-- Verify the signed Chrome Web Store package's clean install and update after store approval, using the existing listing. The local baseline archive is rebuilt source, not the fetched signed production ZIP.
-- Brave is not installed on this Mac. Its package passes integrity/permission checks, but no Brave runtime certification is claimed. Run the same practical workflow in Brave before claiming tested Brave support.
-- Store approval/publication, public live-site checks, DNS and YouTube publication are separate release operations. They are not implied by this extension test result.
+Bundle SHA-256: `425adcc1a7cc7f1c0d0eff9dc00c917ada813635a6e36cd656560ff30db506eb`.
 
-## Evidence and reproduction
+Chrome ZIP SHA-256: `2874136b5c896956eeafed23d03b8f4623ffd0ff33e1fcc6ced43f9ac79768ba` for `releases/historyout-2.0.0-chrome.zip` (**158,035 bytes**).
 
-- [Focused support button and responsive layout checks](./bmc-cta.json)
-- [Browser scenarios and downloads](./release-readiness.json)
-- [Native 1.0.1 to 2.0.0 upgrade](./native-update.json)
-- [Core/background/stress results](./unit-results.tap)
-- [Package hashes and exact source comparisons](./package-audit.json)
-- [Verification summary and original icon hashes](./verification-summary.json)
+All four package targets passed exact-file and permission audits. Chrome, Edge and Brave retain `history`, `storage` and `sidePanel`; generic Chromium removes `sidePanel` and uses the full-page fallback. No target adds host access, optional permissions, content scripts, fixtures or source maps. Original icons match the source baseline.
 
-Run `npm run typecheck`, `npm test`, `npm run build`, `node scripts/release-readiness.cjs`, `node scripts/native-update-qa.cjs`, `node scripts/pack.mjs`, then `node scripts/audit-release-packages.cjs`. Add `--show-review` to the release-readiness command to launch a fictional-data app profile for review. Run `node scripts/bmc-cta-qa.cjs` for the focused support UI checks. Refresh package hashes after any source or asset change.
+The final Chrome replacement was saved to the existing Web Store item on September 7. The dashboard confirmed **Item saved**, **Draft 2.0.0**, **Published 1.0.1**, and **This draft is unpublished**. The listing reload retained the five existing screenshots, the two approved promotional tiles and the video. This is draft verification, not submission or publication; exact external-state evidence is tracked separately in [chrome-draft.json](./chrome-draft.json).
+
+A signed store clean install and signed 1.0.1 to 2.0.0 update remain unverified until approval/publication. The native local baseline is rebuilt source, not a signed production download. Brave is not installed here: its archive passes integrity checks, but no Brave runtime result is claimed. Website, DNS and YouTube outcomes remain separate from extension QA.
+
+## Reproduction
+
+Run `npm run typecheck`, `npm test`, `npm run build`, then `QA_OUTPUT_DIR=/tmp/historyout-preflight-2026-09-07 node scripts/release-readiness.cjs`, `node scripts/native-update-qa.cjs`, `QA_OUTPUT_DIR=/tmp/historyout-preflight-2026-09-07 node scripts/bmc-cta-qa.cjs`, and `node scripts/preflight-ui-qa.cjs`. Package with `node scripts/pack.mjs` and audit with `node scripts/audit-release-packages.cjs`. Refresh hashes and affected checks after any runtime or package change. Preserve the dated reports as snapshot evidence.

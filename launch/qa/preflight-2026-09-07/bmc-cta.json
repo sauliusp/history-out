@@ -1,0 +1,60 @@
+{
+  "checked": "2026-09-07T05:40:35.860Z",
+  "status": "passed",
+  "command": "node scripts/bmc-cta-qa.cjs",
+  "browser": {
+    "name": "Chromium",
+    "version": "149.0.7827.55"
+  },
+  "scope": "Focused optional support UI delta; fictional HTTP API fixture, not native history APIs",
+  "bundleSha256": "425adcc1a7cc7f1c0d0eff9dc00c917ada813635a6e36cd656560ff30db506eb",
+  "footerUnchanged": true,
+  "footerComparisonRevision": "a17e90c7160b26b6af0125192be5da113f302fd0",
+  "footerSha256": "23d99e1f71db658428f6dac522859d8e0899fbabccbcb9a6b0693c689d7ef5c8",
+  "ctaLabel": "Buy me a coffee",
+  "asset": "extension-unpacked/assets/bmc-cup.svg",
+  "results": [
+    {
+      "width": 320,
+      "status": "passed",
+      "ctaBounds": {
+        "x": 137.96875,
+        "y": 861.109375,
+        "width": 153.84375,
+        "height": 39
+      },
+      "keyboardFocusable": true,
+      "localAssetLoaded": true,
+      "externalRequests": 0,
+      "previewWorks": true
+    },
+    {
+      "width": 400,
+      "status": "passed",
+      "ctaBounds": {
+        "x": 217.96875,
+        "y": 797.109375,
+        "width": 153.84375,
+        "height": 39
+      },
+      "keyboardFocusable": true,
+      "localAssetLoaded": true,
+      "externalRequests": 0,
+      "previewWorks": true
+    },
+    {
+      "width": 1200,
+      "status": "passed",
+      "ctaBounds": {
+        "x": 797.96875,
+        "y": 761.109375,
+        "width": 153.84375,
+        "height": 39
+      },
+      "keyboardFocusable": true,
+      "localAssetLoaded": true,
+      "externalRequests": 0,
+      "previewWorks": true
+    }
+  ]
+}

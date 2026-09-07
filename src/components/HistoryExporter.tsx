@@ -21,6 +21,7 @@ import { filterHistory, getDomain, summarizeHistory } from '../utils/historyUtil
 import { DEFAULT_OUTPUT_CONFIG, normalizeOutputConfig } from '../utils/outputConfig';
 import { OutputSettings } from './OutputSettings';
 import { DateRangePicker } from './DateRangePicker';
+import { HistoryAvailabilityNotice } from './HistoryAvailabilityNotice';
 import { OutputConfig } from '../types/OutputConfig';
 import { OutputHistoryItem } from '../types/OutputHistoryItem';
 import { HistoryRange } from '../types/HistoryRange';
@@ -89,7 +90,12 @@ const PreviewRow: React.FC<{ item: OutputHistoryItem }> = ({ item }) => {
 export const HistoryExporter: React.FC = () => {
   const [config, setConfig] = useState<OutputConfig>(() => normalizeOutputConfig(DEFAULT_OUTPUT_CONFIG));
   const [hydrated, setHydrated] = useState(false);
+  const [settingsLoadAttempt, setSettingsLoadAttempt] = useState(0);
+  const [settingsLoadFailed, setSettingsLoadFailed] = useState(false);
+  const [settingsSaveAttempt, setSettingsSaveAttempt] = useState(0);
+  const [settingsSaveFailed, setSettingsSaveFailed] = useState(false);
   const [savedViews, setSavedViews] = useState<SavedView[]>([]);
+  const [viewSaving, setViewSaving] = useState(false);
   const [showSaveView, setShowSaveView] = useState(false);
   const [viewName, setViewName] = useState('');
   const [items, setItems] = useState<OutputHistoryItem[] | null>(null);
@@ -106,23 +112,34 @@ export const HistoryExporter: React.FC = () => {
   const [shareFallback, setShareFallback] = useState(false);
   const controllerRef = useRef<AbortController | null>(null);
   const previewRef = useRef<HTMLDivElement | null>(null);
+  const viewWritePending = useRef(false);
 
   useEffect(() => {
     let active = true;
+    setSettingsLoadFailed(false);
     Promise.all([
       storageService.get<unknown>(StorageKey.OutputConfig),
       storageService.get<unknown>(SAVED_VIEWS_KEY),
     ]).then(([saved, views]) => {
       if (active) { setConfig(normalizeOutputConfig(saved)); setSavedViews(normalizeViews(views)); setHydrated(true); }
+    }).catch(() => {
+      if (active) setSettingsLoadFailed(true);
     });
     return () => { active = false; controllerRef.current?.abort(); };
-  }, []);
+  }, [settingsLoadAttempt]);
 
   useEffect(() => {
     if (!hydrated) return;
-    const timer = window.setTimeout(() => { void storageService.set(StorageKey.OutputConfig, config); }, 300);
-    return () => window.clearTimeout(timer);
-  }, [config, hydrated]);
+    let active = true;
+    const timer = window.setTimeout(() => {
+      void storageService.set(StorageKey.OutputConfig, config).then(() => {
+        if (active) setSettingsSaveFailed(false);
+      }).catch(() => {
+        if (active) setSettingsSaveFailed(true);
+      });
+    }, 300);
+    return () => { active = false; window.clearTimeout(timer); };
+  }, [config, hydrated, settingsSaveAttempt]);
 
   const filteredItems = useMemo(() => filterHistory(items ?? [], { query, domain, uniqueUrls, stripQuery }), [items, query, domain, uniqueUrls, stripQuery]);
   const summary = useMemo(() => summarizeHistory(items ?? []), [items]);
@@ -153,23 +170,40 @@ export const HistoryExporter: React.FC = () => {
     });
   };
 
-  const saveView = () => {
+  const saveView = async () => {
     const name = viewName.trim();
-    if (!name || !customValid || !fieldsValid) return;
+    if (!name || !customValid || !fieldsValid || !hydrated || loading || viewWritePending.current) return;
     const existing = savedViews.find((view) => view.name.toLowerCase() === name.toLowerCase());
     const view: SavedView = { id: existing?.id ?? `${Date.now()}`, name, config: normalizeOutputConfig(config), query, domain, uniqueUrls, stripQuery };
     const views = [view, ...savedViews.filter((saved) => saved.id !== view.id)].slice(0, 12);
-    setSavedViews(views); void storageService.set(SAVED_VIEWS_KEY, views);
-    setShowSaveView(false); setViewName(''); setNotice(`Saved “${name}”. Return to these settings with one click.`);
+    viewWritePending.current = true; setViewSaving(true); setError(null); setNotice(null);
+    try {
+      await storageService.set(SAVED_VIEWS_KEY, views);
+      setSavedViews(views); setShowSaveView(false); setViewName('');
+      setNotice(`Saved “${name}”. Return to these settings with one click.`);
+    } catch {
+      setError('This view could not be saved. Your existing views are unchanged. Try Save again.');
+    } finally {
+      viewWritePending.current = false; setViewSaving(false);
+    }
   };
   const applyView = (view: SavedView) => {
     setConfig(normalizeOutputConfig(view.config)); setQuery(view.query); setDomain(view.domain);
     setUniqueUrls(view.uniqueUrls); setStripQuery(view.stripQuery); setItems(null); setLoaded(null); setError(null);
     setNotice(`“${view.name}” is ready. Preview or export to read the current history.`);
   };
-  const removeView = (id: string) => {
+  const removeView = async (id: string) => {
+    if (!hydrated || loading || viewWritePending.current) return;
     const views = savedViews.filter((view) => view.id !== id);
-    setSavedViews(views); void storageService.set(SAVED_VIEWS_KEY, views);
+    viewWritePending.current = true; setViewSaving(true); setError(null); setNotice(null);
+    try {
+      await storageService.set(SAVED_VIEWS_KEY, views);
+      setSavedViews(views);
+    } catch {
+      setError('This view could not be deleted. It is still saved. Please try again.');
+    } finally {
+      viewWritePending.current = false; setViewSaving(false);
+    }
   };
 
   const clearFilters = () => { if (loading) return; setQuery(''); setDomain(''); setUniqueUrls(false); setNotice(null); };
@@ -243,24 +277,12 @@ export const HistoryExporter: React.FC = () => {
       </Stack>
 
       <Stack spacing={1.5}>
-        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 1, px: 1.4, py: 1.1, border: '1px solid #eeddaa', borderRadius: '12px', bgcolor: '#fffaed' }}>
-          <Box sx={{ minWidth: 0 }}>
-            <Typography variant="body2" sx={{ fontWeight: 650, color: '#122c48', lineHeight: 1.35 }}>Free to use.</Typography>
-            <Typography id="coffee-support-note" variant="caption" sx={{ color: '#756548', display: 'block', mt: 0.15 }}>Optional support.</Typography>
-          </Box>
-          <Button
-            href="https://www.buymeacoffee.com/saulius.developer" target="_blank" rel="noopener noreferrer"
-            aria-label="Buy me a coffee (opens in a new tab)" aria-describedby="coffee-support-note"
-            startIcon={<Box component="img" src="assets/bmc-cup.svg" alt="" aria-hidden="true" sx={{ width: 17, height: 25, objectFit: 'contain' }} />}
-            sx={{ flexShrink: 0, minHeight: 38, px: 1.55, bgcolor: '#ffdd00', color: '#122c48', border: '1px solid #ebcc00', borderRadius: '9px', fontSize: '0.8125rem', fontWeight: 750, boxShadow: '0 2px 3px #7e620010', '& .MuiButton-startIcon': { mr: 0.75, ml: 0 }, '&:hover': { bgcolor: '#f5d400', borderColor: '#d8bb00', boxShadow: '0 3px 6px #7e620019' }, '&:focus-visible': { outline: '2px solid #185adb', outlineOffset: 3 } }}
-          >
-            Buy me a coffee
-          </Button>
-        </Box>
+        {settingsLoadFailed && <Alert severity="error" action={<Button color="inherit" size="small" onClick={() => setSettingsLoadAttempt((attempt) => attempt + 1)}>Retry</Button>}>Your saved settings could not be loaded. Retry to keep your existing preferences.</Alert>}
+        {settingsSaveFailed && <Alert severity="warning" action={<Button color="inherit" size="small" onClick={() => setSettingsSaveAttempt((attempt) => attempt + 1)}>Retry saving</Button>}>Your settings work for this session but could not be saved for next time. You can still preview and export.</Alert>}
         <Box sx={card}>
           <Stack direction="row" alignItems="center" justifyContent="space-between" sx={{ mb: 1.4 }}>
             <Typography component="h2" variant="h2">Start with a time range</Typography>
-            <Button size="small" disabled={loading || !hydrated} onClick={() => setShowSaveView(!showSaveView)} startIcon={<BookmarkAddOutlinedIcon sx={{ fontSize: '16px !important' }} />} sx={{ minHeight: 28, py: 0, px: 0.5, fontSize: '0.875rem' }}>Save view</Button>
+            <Button size="small" disabled={loading || !hydrated || viewSaving} onClick={() => setShowSaveView(!showSaveView)} startIcon={<BookmarkAddOutlinedIcon sx={{ fontSize: '16px !important' }} />} sx={{ minHeight: 28, py: 0, px: 0.5, fontSize: '0.875rem' }}>Save view</Button>
           </Stack>
           <Stack direction="row" spacing={1}>
             <FormControl sx={{ flex: 1, minWidth: 0 }} disabled={loading || !hydrated}>
@@ -282,24 +304,25 @@ export const HistoryExporter: React.FC = () => {
           {config.historyRange === 'custom' && <Box sx={{ mt: 1.4 }}><DateRangePicker value={config.dateRange} onChange={(dateRange) => updateConfig({ dateRange })} disabled={loading} /></Box>}
           {config.historyRange === 'custom' && !customValid && <Typography color="text.secondary" variant="caption" sx={{ display: 'block', mt: 0.7 }}>Choose a start and end date, in that order.</Typography>}
           <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 1 }}>
-            {config.historyRange === 'all' ? 'Only history your browser still retains is available. Deleted or expired visits cannot be recovered.' : 'Your history is read only when you preview or export.'}
+            Your history is read only when you preview or export.
           </Typography>
+          {(config.historyRange === 'custom' || config.historyRange === 'all') && <HistoryAvailabilityNotice />}
           {items === null && filtersActive && <Box sx={{ bgcolor: '#f1f4fb', p: 1, mt: 1.1, borderRadius: '7px' }}>
             <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 0.4 }}>Active on preview & export</Typography>
             <Typography variant="body2" sx={{ overflowWrap: 'anywhere' }}>{[query.trim() ? `Search: “${query.trim()}”` : '', domain, uniqueUrls ? 'Latest visit per URL' : ''].filter(Boolean).join(' · ')}</Typography>
             <Button size="small" disabled={loading} onClick={clearFilters} sx={{ minHeight: 23, p: 0, mt: 0.2, fontSize: '0.75rem' }}>Reset filters</Button>
           </Box>}
-          {showSaveView && <Box component="form" onSubmit={(event: React.FormEvent) => { event.preventDefault(); saveView(); }} sx={{ pt: 1.5 }}>
+          {showSaveView && <Box component="form" onSubmit={(event: React.FormEvent) => { event.preventDefault(); void saveView(); }} sx={{ pt: 1.5 }}>
             <Stack direction="row" spacing={0.8}>
-              <TextField autoFocus fullWidth disabled={loading} label="View name" value={viewName} onChange={(event) => setViewName(event.target.value)} placeholder="Research, daily recap…" slotProps={{ htmlInput: { maxLength: 40 } }} />
-              <Button type="submit" variant="outlined" disabled={loading || !viewName.trim() || !customValid || !fieldsValid}>Save</Button>
+              <TextField autoFocus fullWidth disabled={loading || viewSaving} label="View name" value={viewName} onChange={(event) => setViewName(event.target.value)} placeholder="Research, daily recap…" slotProps={{ htmlInput: { maxLength: 40 } }} />
+              <Button type="submit" variant="outlined" disabled={loading || viewSaving || !viewName.trim() || !customValid || !fieldsValid}>{viewSaving ? 'Saving…' : 'Save'}</Button>
             </Stack>
             <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 0.7 }}>Saves your range, filters and export settings on this device. Your history is never saved here.</Typography>
           </Box>}
           {savedViews.length > 0 && <Box sx={{ mt: 1.2 }}>
             <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mb: 0.6 }}>Your saved views</Typography>
             <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.6 }}>
-              {savedViews.map((view) => <Chip key={view.id} label={view.name} disabled={loading} size="small" variant="outlined" onClick={() => applyView(view)} onDelete={() => removeView(view.id)} deleteIcon={<CloseRoundedIcon aria-label={`Delete saved view ${view.name}`} />} title={`Load saved view: ${view.name}`} sx={{ maxWidth: '100%', fontSize: '0.75rem', borderColor: '#dce3ed', '& .MuiChip-deleteIcon': { fontSize: 14 } }} />)}
+              {savedViews.map((view) => <Chip key={view.id} label={view.name} disabled={loading || viewSaving} size="small" variant="outlined" onClick={() => applyView(view)} onDelete={() => void removeView(view.id)} deleteIcon={<CloseRoundedIcon aria-label={`Delete saved view ${view.name}`} />} title={`Load saved view: ${view.name}`} sx={{ maxWidth: '100%', fontSize: '0.75rem', borderColor: '#dce3ed', '& .MuiChip-deleteIcon': { fontSize: 14 } }} />)}
             </Box>
           </Box>}
         </Box>
@@ -388,10 +411,34 @@ export const HistoryExporter: React.FC = () => {
           <Typography variant="caption" color="text.secondary" sx={{ display: 'block', pl: 3.4 }}>Removes everything after ? and #. This does not anonymize your history.</Typography>
         </Box>
 
+        <Box sx={{ position: 'sticky', bottom: 0, mx: -2, px: 2, pt: 1.2, pb: 1.25, bgcolor: 'rgba(245,247,251,0.97)', backdropFilter: 'blur(12px)', borderTop: '1px solid', borderColor: 'divider', zIndex: 3 }}>
+          <Button fullWidth variant="contained" disabled={!exportEnabled} onClick={() => void run(true)} startIcon={<ArrowDownwardRoundedIcon sx={{ fontSize: '18px !important' }} />} sx={{ minHeight: 42 }} aria-busy={loading}>
+            {items === null ? 'Export history' : `Export ${number(filteredItems.length)} ${uniqueUrls ? 'pages' : 'visits'}`}
+            <Box component="span" sx={{ ml: 1, fontSize: '0.75rem', opacity: 0.8 }}>{config.format.toUpperCase()}</Box>
+          </Button>
+          <Typography variant="caption" color="text.secondary" sx={{ textAlign: 'center', display: 'block', mt: 0.6, fontSize: '0.75rem' }}>
+            {items === null ? 'Downloads directly to your device' : stripQuery ? 'URL cleanup applied · preview matches your export' : 'Your file includes only the matching results'}
+          </Typography>
+        </Box>
+
         <Stack direction="row" justifyContent="center" spacing={0.5} alignItems="center" sx={{ color: 'text.secondary', py: 0.4 }}>
           <LockOutlinedIcon sx={{ fontSize: 12 }} />
           <Typography variant="caption" sx={{ fontSize: '0.75rem' }}>Free. On your device. No account needed.</Typography>
         </Stack>
+        <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 1, px: 1.4, py: 1.1, border: '1px solid #eeddaa', borderRadius: '12px', bgcolor: '#fffaed' }}>
+          <Box sx={{ minWidth: 0 }}>
+            <Typography variant="body2" sx={{ fontWeight: 650, color: '#122c48', lineHeight: 1.35 }}>Free to use.</Typography>
+            <Typography id="coffee-support-note" variant="caption" sx={{ color: '#756548', display: 'block', mt: 0.15 }}>Optional support.</Typography>
+          </Box>
+          <Button
+            href="https://www.buymeacoffee.com/saulius.developer" target="_blank" rel="noopener noreferrer"
+            aria-label="Buy me a coffee (opens in a new tab)" aria-describedby="coffee-support-note"
+            startIcon={<Box component="img" src="assets/bmc-cup.svg" alt="" aria-hidden="true" sx={{ width: 17, height: 25, objectFit: 'contain' }} />}
+            sx={{ flexShrink: 0, minHeight: 38, px: 1.55, bgcolor: '#ffdd00', color: '#122c48', border: '1px solid #ebcc00', borderRadius: '9px', fontSize: '0.8125rem', fontWeight: 750, boxShadow: '0 2px 3px #7e620010', '& .MuiButton-startIcon': { mr: 0.75, ml: 0 }, '&:hover': { bgcolor: '#f5d400', borderColor: '#d8bb00', boxShadow: '0 3px 6px #7e620019' }, '&:focus-visible': { outline: '2px solid #185adb', outlineOffset: 3 } }}
+          >
+            Buy me a coffee
+          </Button>
+        </Box>
         <Stack component="footer" direction="row" justifyContent="center" alignItems="center" sx={{ pb: 1.5, flexWrap: 'wrap', columnGap: 1.7, rowGap: 0.5 }}>
           <Link href={`${STORE_URL}/support`} target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>Get help</Link>
           <Link href={`${STORE_URL}/reviews`} target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>Leave a review</Link>
@@ -413,16 +460,6 @@ export const HistoryExporter: React.FC = () => {
         </DialogContent>
         <DialogActions><Button onClick={() => setShareFallback(false)}>Done</Button></DialogActions>
       </Dialog>
-
-      <Box sx={{ position: 'sticky', bottom: 0, mx: -2, px: 2, pt: 1.2, pb: 1.25, bgcolor: 'rgba(245,247,251,0.97)', backdropFilter: 'blur(12px)', borderTop: '1px solid', borderColor: 'divider', zIndex: 3 }}>
-        <Button fullWidth variant="contained" disabled={!exportEnabled} onClick={() => void run(true)} startIcon={<ArrowDownwardRoundedIcon sx={{ fontSize: '18px !important' }} />} sx={{ minHeight: 42 }} aria-busy={loading}>
-          {items === null ? 'Export history' : `Export ${number(filteredItems.length)} ${uniqueUrls ? 'pages' : 'visits'}`}
-          <Box component="span" sx={{ ml: 1, fontSize: '0.75rem', opacity: 0.8 }}>{config.format.toUpperCase()}</Box>
-        </Button>
-        <Typography variant="caption" color="text.secondary" sx={{ textAlign: 'center', display: 'block', mt: 0.6, fontSize: '0.75rem' }}>
-          {items === null ? 'Downloads directly to your device' : stripQuery ? 'URL cleanup applied · preview matches your export' : 'Your file includes only the matching results'}
-        </Typography>
-      </Box>
     </Box>
   );
 };

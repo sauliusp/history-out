@@ -4,7 +4,7 @@ const path=require('node:path');
 const {chromium}=require('playwright');
 
 // Fictional research trail for QA and marketing only. Never copied into a package.
-function installFixture(){
+function installFixture(seedTime){
   const specs=[
     ['developer.mozilla.org','Responsive images: a practical guide','/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images'],
     ['developer.mozilla.org','CSS grid layout: research notes','/en-US/docs/Web/CSS/CSS_grid_layout'],
@@ -21,7 +21,7 @@ function installFixture(){
     ['w3.org','Web Content Accessibility Guidelines','/WAI/standards-guidelines/wcag'],
     ['smashingmagazine.com','Building better responsive interfaces','/2026/08/responsive-interfaces/'],
   ];
-  const now=Date.now();const midnight=new Date(now);midnight.setHours(0,0,0,0);
+  const now=typeof seedTime==='number'?seedTime:Date.now();const midnight=new Date(now);midnight.setHours(0,0,0,0);
   const available=Math.max(60000,now-midnight.getTime()-60000);
   const rows=[];const visits={};let visitId=0;
   specs.forEach(([domain,title,pathname],index)=>{
@@ -56,7 +56,8 @@ async function startServer(){
 }
 async function openFixture(browser,origin,options={}){
   const context=await browser.newContext({viewport:{width:400,height:900},locale:'en-GB',timezoneId:'Europe/Vilnius',acceptDownloads:true,...options});
-  await context.addInitScript(installFixture);
+  // Seed explicitly: init scripts can run before Playwright installs its fixed clock.
+  await context.addInitScript(installFixture,Date.parse('2026-09-05T14:00:00Z'));
   const page=await context.newPage();
   await page.clock.setFixedTime(new Date('2026-09-05T14:00:00Z'));
   await page.goto(origin+'/panel');

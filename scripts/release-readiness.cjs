@@ -7,7 +7,7 @@ const {execFileSync, spawn} = require('node:child_process');
 const {pathToFileURL} = require('node:url');
 const {chromium, startServer, openFixture} = require('./qa-lib.cjs');
 
-const output = path.resolve('launch/qa');
+const output = path.resolve(process.env.QA_OUTPUT_DIR || 'launch/qa');
 const extension = path.resolve('extension-unpacked');
 const report = {
   checked: new Date().toISOString(),
@@ -58,6 +58,10 @@ async function fixtureChecks(){
       await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async value=>{window.__copiedLink=value;}}});});
       await page.getByRole('button',{name:'Tell a friend',exact:true}).click();await page.getByText('Link copied. Paste it anywhere to share HistoryOut.').waitFor();
       assert.equal(await page.evaluate(()=>window.__copiedLink),'https://chromewebstore.google.com/detail/historyout/idohnkdgejocejlkihihonhemndpiiei');
+      // Dismiss the success popup before testing a separate clipboard-denial action.
+      // Hovering its footer position intentionally pauses MUI's auto-hide timer.
+      await page.getByRole('status').filter({hasText:'Link copied.'}).getByRole('button',{name:'Close',exact:true}).click();
+      await page.getByText('Link copied. Paste it anywhere to share HistoryOut.').waitFor({state:'hidden'});
     });
     await check('Fixture: denied clipboard offers a selectable link without permission requests',async()=>{
       await page.evaluate(()=>{Object.defineProperty(navigator,'clipboard',{configurable:true,value:{writeText:async()=>{throw new Error('Clipboard blocked');}}});});

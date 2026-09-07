@@ -1,5 +1,5 @@
 {
-  "checked": "2026-09-06",
+  "checked": "2026-09-07",
   "website": {
     "status": "public",
     "url": "https://exportchromehistory.app/",
@@ -45,16 +45,18 @@
     "submitted": false,
     "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
     "targetVersion": "2.0.0",
-    "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-06",
+    "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-07",
     "status": "saved draft",
     "published": false,
     "draftVersion": "2.0.0",
-    "draftVerifiedAt": "2026-09-06T17:21:45Z",
+    "draftVerifiedAt": "2026-09-07T05:49:54.499733+00:00",
     "dashboardStatusText": "This draft is unpublished.",
     "graphics": {
       "screenshots": 5,
       "promotionalTiles": 2,
-      "originalIconRetained": true
+      "originalIconRetained": true,
+      "screenshotsChangedThisPass": false,
+      "promotionalTilesReplaced": 2
     },
     "video": "https://www.youtube.com/watch?v=cGybkRSkk2Y",
     "privacyPolicy": "https://exportchromehistory.app/privacy/",
@@ -88,9 +90,10 @@
     "ssl": "active on both hostnames"
   },
   "releaseCandidate": {
-    "chromeArchiveSHA256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+    "chromeArchiveSHA256": "2874136b5c896956eeafed23d03b8f4623ffd0ff33e1fcc6ced43f9ac79768ba",
     "submitted": false,
-    "sourceRevisionNote": "Export-first manifest name and description updated on 2026-09-06. Runtime and permissions unchanged; 137 package checks pass in package-audit.json."
+    "sourceRevisionNote": "7 September preflight: history availability guidance, support strip moved below export, safe storage error/retry handling and two professional promo tiles. Version remains 2.0.0. 52 tests, 30 browser scenarios, 7 focused UI scenarios, 3 support layouts, 3 native upgrade checks and 137 package checks pass.",
+    "qa": "preflight-2026-09-07/README.md"
   },
   "voiceRefresh": {
     "mediaEvidence": "../assets/video-v5/historyout-media.json",
@@ -100,5 +103,6 @@
     "speechSpeedAdjusted": false,
     "internalPauseEdits": false,
     "extensionSourceAndPackageChanges": false
-  }
+  },
+  "verificationScopeToday": "Extension QA, same-version Chrome draft replacement, and two promotional tiles. Existing website/domain/video states below retain their earlier dated evidence; those surfaces were not changed today."
 }

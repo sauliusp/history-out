@@ -1,0 +1,30 @@
+{
+  "checkedAt": "2026-09-07T05:47:20.633671+00:00",
+  "version": "2.0.0",
+  "bundleSHA256": "425adcc1a7cc7f1c0d0eff9dc00c917ada813635a6e36cd656560ff30db506eb",
+  "protectedSourceFiles": [
+    {
+      "file": "package.json",
+      "sha256": "08c2c4889f6180be7b22f033ca22c15ff822d6781c4fdaa79e6da493cefac1fd",
+      "unchanged": true
+    },
+    {
+      "file": "package-lock.json",
+      "sha256": "f2bff29bae557a7358066c86b5d498158d25d0cd4dddd32ff72f472c256a7b22",
+      "unchanged": true
+    },
+    {
+      "file": "extension-unpacked/manifest.json",
+      "sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+      "unchanged": true
+    },
+    {
+      "file": "src/components/DateRangePicker.tsx",
+      "sha256": "25f9a80a905de0cdd0389038e0c7a7a809f0c59df66e1de5dec8c47ed0454fd2",
+      "unchanged": true
+    }
+  ],
+  "runtimeReview": "Independent read-only review of final runtime diff: no actionable findings.",
+  "qaImageDirectory": "/tmp/historyout-preflight-2026-09-07",
+  "storeScreenshotsRegenerated": false
+}
