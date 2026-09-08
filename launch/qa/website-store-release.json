@@ -1,0 +1,296 @@
+{
+  "checkedAt": "2026-09-08T08:13:45.935Z",
+  "storeVersion": "2.0.0",
+  "pages": 13,
+  "hosts": 3,
+  "checks": 39,
+  "softwareMetadata": "2.0.0",
+  "hostingNote": "Cloudflare may append its challenge script after the exact site content. No product-content difference was observed.",
+  "results": [
+    {
+      "url": "https://exportchromehistory.app/alternatives/history-trends-unlimited/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/alternatives/export-chrome-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/alternatives/better-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/alternatives/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/guides/export-chrome-history-to-excel/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/guides/browser-history-limits/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/guides/filter-browser-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/welcome/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/browsers/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/changelog/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/privacy/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://exportchromehistory.app/guides/export-browser-history-to-html/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/alternatives/history-trends-unlimited/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/alternatives/export-chrome-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/alternatives/better-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/guides/export-chrome-history-to-excel/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/guides/browser-history-limits/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/guides/filter-browser-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/alternatives/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/browsers/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/welcome/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/privacy/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/changelog/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://www.exportchromehistory.app/guides/export-browser-history-to-html/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/alternatives/export-chrome-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/alternatives/history-trends-unlimited/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/alternatives/better-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/guides/export-chrome-history-to-excel/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/alternatives/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/guides/filter-browser-history/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/guides/browser-history-limits/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/privacy/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/welcome/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/browsers/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/changelog/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/guides/export-browser-history-to-html/",
+      "status": 200,
+      "validatedSiteContent": true,
+      "pendingReleaseText": false,
+      "hostingChallengeAppended": true
+    }
+  ],
+  "sourceCommit": "a89cbcb3eb35285642ec8517ef1dbcc9ae677112",
+  "siteVersion": 7,
+  "deploymentId": "appgdep_6a9fc357818881918462e3f8fb36dbe4",
+  "deploymentStatus": "succeeded",
+  "storeVerification": {
+    "url": "https://chromewebstore.google.com/detail/historyout-export-browser/idohnkdgejocejlkihihonhemndpiiei",
+    "method": "Anonymous primary listing HTTP 200",
+    "version": "2.0.0",
+    "updated": "September 7, 2026",
+    "checkedAt": "2026-09-08T08:10:05Z"
+  },
+  "sourceChange": "Only website/site.config.json storeVersion changed from 1.0.1 to 2.0.0. This removes the conditional release notes and updates SoftwareApplication metadata."
+}

@@ -1,8 +1,8 @@
 # Website release and domain handoff
 
-Updated 6 September 2026. The website lives in `website/` inside the HistoryOut repository. Namecheap web records now point the existing domain to Sites. Nameservers, email forwarding, SPF and the old hosting verification records are preserved. The original web records are saved in `launch/qa/domain-cutover/dns-before.json` for rollback.
+Updated 8 September 2026. The website lives in `website/` inside the HistoryOut repository. Namecheap web records now point the existing domain to Sites. Nameservers, email forwarding, SPF and the old hosting verification records are preserved. The original web records are saved in `launch/qa/domain-cutover/dns-before.json` for rollback.
 
-The current public publication is Sites version 6, from exact source commit `c3d0b920a33bf50ddf768dacc316f8742e2aaf76`. Deployment `appgdep_6a9d9eb74564819196de1fce703b8be1` succeeded on 6 September 2026. It sets the canonical origin to `https://exportchromehistory.app` and adds an explicit Chrome Web Store Limited Use disclosure. Export-first content, the 25-second narrated demo and all imagery remain unchanged. Current domain verification is recorded in `launch/qa/domain-cutover/`; earlier media evidence remains in [public-voice-refresh.json](../qa/public-voice-refresh.json).
+The current public publication is Sites version 7, from source commit `a89cbcb3eb35285642ec8517ef1dbcc9ae677112`. Deployment `appgdep_6a9fc357818881918462e3f8fb36dbe4` succeeded on 8 September 2026. After the public Chrome Web Store listing was verified at version 2.0.0, `storeVersion` was updated to remove pending-release notes and publish the correct software metadata. All 13 pages were verified anonymously on the apex, www and Sites fallback hostnames. Evidence: [website store-release verification](../qa/website-store-release.json). Domain configuration and the September 6 Limited Use disclosure are unchanged; prior evidence remains in `launch/qa/domain-cutover/`.
 
 ## Current destinations
 
@@ -23,9 +23,9 @@ Run `npm --prefix website run build` and `npm --prefix website test`. The local 
 
 The homepage, three competitor comparisons, comparison hub, four useful guides, browser page, privacy page and changelog have unique metadata and canonical URLs. Static HTML contains the actual content. The footer links to all comparisons and guides. Robots allow Google and OAI-SearchBot. Structured data describes the software, articles, breadcrumbs, visible FAQs and the actual video. The original Search Console verification meta tag is retained.
 
-## On store approval
+## Store approval reflected
 
-After verifying the live Chrome Web Store serves version 2.0.0, change `storeVersion` to `2.0.0` in `website/site.config.json`. Rebuild, test, publish and verify. This removes the pending-release notes and updates software metadata. `RELEASE_V2=true` is a temporary build override, not a substitute for recording the released version. No store submission has been performed by website tooling.
+Completed on 8 September 2026: the live Chrome Web Store serves version 2.0.0, and `storeVersion` is now `2.0.0`. Pending-release notes are removed and software metadata reflects the live release. Default builds now use the released state without the temporary `RELEASE_V2=true` override. Website tooling did not perform another store submission.
 
 ## Domain configuration and ongoing tasks
 
