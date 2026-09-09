@@ -28,14 +28,14 @@ The website keeps its existing welcome and changelog routes for older installed 
 
 The identical Chrome candidate is also in `launch/store-kit/chrome/historyout-2.1.0-chrome.zip`. Existing 2.0.0 artifacts and dated browser reports are historical evidence, not the candidate for this review. The older marketing ZIPs have not been regenerated and must not be used as the 2.1.0 extension payload.
 
-Chrome ZIP SHA-256: `c4d7ab13297afe0196a391fbe266de55f393916ab5192ed0af32d11d622b2bb9`.
+Chrome ZIP SHA-256: `d56633cb46b67eb3ca18ce3e88e5016a5d2b31a715a9e220047c665a71b5b1f4`.
 
 ## Verification
 
 | Area | Result |
 | --- | --- |
 | TypeScript and production build | Passed. Existing webpack bundle-size advisories remain. |
-| Extension test suite | 75 tests passed, including concurrent revisit and parent/subdomain count regressions. |
+| Extension test suite | 80 tests passed, including concurrent revisit and parent/subdomain count regressions. |
 | Lifecycle behavior | Tests cover fresh install, upgrades from 1.0.1 and 2.0.0, duplicate suppression, preserved preferences/saved views, storage/tab failures and recovery. |
 | Open action | Tests verify synchronous panel invocation during the click, targeting the page's stable tab ID, unsupported/rejected APIs, a not-yet-ready tab lookup, and standard modified-link behavior. |
 | Packaged assets/privacy | Both pages resolve packaged resources, use external script files compatible with MV3, contain no remote passive resources, and send no history/settings in feedback links. |
@@ -65,3 +65,5 @@ The first GitHub review of PR #2 returned six P2 findings. The candidate now omi
 Validation after these fixes: 75 extension tests, four website suites, TypeScript/build and 197 package checks passed. A new historical baseline was built in an empty output directory and its ZIP integrity, original manifest and built bundle were verified. The release-report generator correctly rejected old 2.0.0 evidence for the 2.1.0 candidate. Real-Chrome behavior remains a pre-release check.
 
 User-facing review fixes are included in both the packaged update page and the Store changelog: exports retain matching visits during concurrent browsing, and website counts agree with the website filter. Keep this copy current if later review rounds change user-visible behavior.
+
+The follow-up review found one additional release-check issue: an old package audit could still be accepted after non-bundle files changed within the same version. Release verification now compares every source file and every upload archive with the recorded audit hashes, using one shared payload list. Five new regression tests cover valid evidence, changed page content, an incomplete inventory, replaced archives and missing package targets. All 80 tests and 197 package checks pass.

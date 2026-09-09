@@ -1,14 +1,15 @@
 import { readFileSync, mkdirSync, cpSync, rmSync, existsSync } from 'node:fs';
 import { execFileSync } from 'node:child_process';
 import path from 'node:path';
+import payload from './package-files.cjs';
 const manifest=JSON.parse(readFileSync('extension-unpacked/manifest.json'));
 if(JSON.stringify([...manifest.permissions].sort())!==JSON.stringify(['history','sidePanel','storage']))throw new Error('Permission baseline changed.');
 if(!existsSync('extension-unpacked/bundle.js'))throw new Error('Build the extension first.');
 mkdirSync('releases',{recursive:true});
-for(const target of ['chrome','edge','brave','chromium']){
+for(const target of payload.targets){
   const staging=path.resolve(`releases/historyout-${manifest.version}-${target}`);
   rmSync(staging,{recursive:true,force:true});mkdirSync(staging,{recursive:true});
-  for(const file of ['manifest.json','background.js','bundle.js','bundle.js.LICENSE.txt','side-panel.html','styles.css','icons','assets/bmc-cup.svg','assets/logo.svg','welcome.html','updated.html','onboarding.js','onboarding.css']){
+  for(const file of payload.files){
     const destination=path.join(staging,file);
     mkdirSync(path.dirname(destination),{recursive:true});
     cpSync(path.join('extension-unpacked',file),destination,{recursive:true});

@@ -10,6 +10,7 @@ const bundleHash=crypto.createHash('sha256').update(fs.readFileSync('extension-u
 const browser=read('launch/qa/release-readiness.json');
 const upgrade=read('launch/qa/native-update.json');
 const audit=read('launch/qa/package-audit.json');
+require('./check-package-audit.cjs').checkPackageAudit(audit);
 if(browser.status!=='passed'||upgrade.status!=='passed'||audit.status!=='pass')throw new Error('A required QA record has not passed.');
 if(browser.extensionVersion!==candidateVersion||upgrade.currentVersion!==candidateVersion||audit.version!==candidateVersion)throw new Error('QA version does not match the current candidate. Run current browser, upgrade and package checks before generating a report.');
 if(browser.bundleSha256!==bundleHash||upgrade.candidateBundleSHA256!==bundleHash)throw new Error('Browser or upgrade QA is from a different bundle.');

@@ -6,6 +6,7 @@ const path = require('node:path');
 const { createHash } = require('node:crypto');
 const { execFileSync, spawnSync } = require('node:child_process');
 const { performance } = require('node:perf_hooks');
+const {files, targets} = require('./package-files.cjs');
 
 const root = path.resolve(__dirname, '..');
 const read = relative => fs.readFileSync(path.join(root, relative));
@@ -20,11 +21,6 @@ const canonical = value => {
 };
 const permissionFields = ['permissions', 'host_permissions', 'optional_permissions', 'optional_host_permissions'];
 const permissions = manifest => Object.fromEntries(permissionFields.map(key => [key, [...(manifest[key] || [])].sort()]));
-const files = [
-  'assets/bmc-cup.svg', 'background.js', 'bundle.js', 'bundle.js.LICENSE.txt', 'icons/icon128.png',
-  'icons/icon16.png', 'icons/icon32.png', 'icons/icon48.png', 'manifest.json',
-  'side-panel.html', 'styles.css', 'assets/logo.svg', 'welcome.html', 'updated.html', 'onboarding.js', 'onboarding.css',
-].sort();
 const issues = [];
 const checks = [];
 function check(name, passed, detail) {
@@ -72,7 +68,7 @@ try {
   check('v2-permissions-equal-v1-source-baseline', equal(permissions(sourceManifest), permissions(baselineManifest)));
 } catch (error) { check('baseline-audit-completes', false, error.message); }
 
-for (const target of ['chrome', 'edge', 'brave', 'chromium']) {
+for (const target of targets) {
   const relativePath = `releases/historyout-${sourceManifest.version}-${target}.zip`;
   const entry = { target, file: relativePath, files: [] };
   report.packages.push(entry);
