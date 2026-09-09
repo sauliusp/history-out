@@ -21,13 +21,14 @@ The website keeps its existing welcome and changelog routes for older installed 
 - [Welcome page](../extension-unpacked/welcome.html)
 - [Update page](../extension-unpacked/updated.html)
 - [Store description](./store-kit/chrome/description.txt)
+- [Plain-language Store changelog](./store-kit/chrome/changelog.txt)
 - [Featurebase welcome, pinned posts and existing-request reply](./featurebase-preparation.md)
 - [Search Console status and remaining steps](./search-console-preparation.md)
 - [Package audit](./qa/package-audit.json)
 
 The identical Chrome candidate is also in `launch/store-kit/chrome/historyout-2.1.0-chrome.zip`. Existing 2.0.0 artifacts and dated browser reports are historical evidence, not the candidate for this review. The older marketing ZIPs have not been regenerated and must not be used as the 2.1.0 extension payload.
 
-Chrome ZIP SHA-256: `c58e66ec184887afe3ce21856a0aab51252ada6d15810bb7055f2ec02492378c`.
+Chrome ZIP SHA-256: `c4d7ab13297afe0196a391fbe266de55f393916ab5192ed0af32d11d622b2bb9`.
 
 ## Verification
 
@@ -62,3 +63,5 @@ To review the website locally, run `npm --prefix website run dev` and open http:
 The first GitHub review of PR #2 returned six P2 findings. The candidate now omits the history-search upper bound so concurrent revisits cannot exclude older visits, shows parent-site counts including selected subdomains, omits sitemap routes in noindex previews, derives QA report versions from the manifest while rejecting stale evidence, checks the footer against a fixed reviewed fixture, and rebuilds a missing historical baseline from its own source revision and lockfile.
 
 Validation after these fixes: 75 extension tests, four website suites, TypeScript/build and 197 package checks passed. A new historical baseline was built in an empty output directory and its ZIP integrity, original manifest and built bundle were verified. The release-report generator correctly rejected old 2.0.0 evidence for the 2.1.0 candidate. Real-Chrome behavior remains a pre-release check.
+
+User-facing review fixes are included in both the packaged update page and the Store changelog: exports retain matching visits during concurrent browsing, and website counts agree with the website filter. Keep this copy current if later review rounds change user-visible behavior.

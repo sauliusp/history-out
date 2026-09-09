@@ -63,9 +63,13 @@ https://exportchromehistory.app/
 
 ## Changelog text
 
-New in 2.1.0: welcome and update pages are packaged inside the extension. They open automatically once per installed version and include an Open HistoryOut action, with a full-tab fallback where the side panel is unavailable.
+New in 2.1.0: welcome and update pages now open inside HistoryOut. Both include an Open HistoryOut button, so you can start right away. If your browser cannot open a side panel, HistoryOut opens in a full tab.
 
-Added: Suggest a feature links in the extension and lifecycle pages, with the same feedback board linked from the website and Store description. No browsing history or export settings are attached to feedback links.
+Added: share an idea or vote on suggestions through the new Suggest a feature links. You can find the same feedback board in HistoryOut, on the website and in the Store description. Your browsing history is never attached to these links.
+
+Fixed: matching visits are no longer missed if you reopen a page while HistoryOut is loading your history.
+
+Fixed: website visit counts now match the visits included by the website filter.
 
 Updated: contact links now use sauliusthedev@gmail.com.
 
