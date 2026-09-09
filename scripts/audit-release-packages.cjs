@@ -22,8 +22,8 @@ const permissions = manifest => Object.fromEntries(permissionFields.map(key => [
 const files = [
   'assets/bmc-cup.svg', 'background.js', 'bundle.js', 'bundle.js.LICENSE.txt', 'icons/icon128.png',
   'icons/icon16.png', 'icons/icon32.png', 'icons/icon48.png', 'manifest.json',
-  'side-panel.html', 'styles.css',
-];
+  'side-panel.html', 'styles.css', 'assets/logo.svg', 'welcome.html', 'updated.html', 'onboarding.js', 'onboarding.css',
+].sort();
 const issues = [];
 const checks = [];
 function check(name, passed, detail) {

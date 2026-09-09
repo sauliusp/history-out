@@ -1,6 +1,6 @@
 # HistoryOut store listing
 
-Prepared 5 September 2026 for technical version 2.0.0. Public branding remains HistoryOut. The original logo, favicon and extension icon are preserved, with fresh marketing layouts and actual product screenshots. This copy is prepared for submission; it does not assert that store publication has occurred.
+Prepared 9 September 2026 for technical version 2.1.0. This is a local review candidate and has not been uploaded or submitted. Public branding remains HistoryOut. The original logo, favicon and extension icon are preserved, with fresh marketing layouts and actual product screenshots. This copy is prepared for submission; it does not assert that store publication has occurred.
 
 ## Name
 
@@ -44,6 +44,13 @@ A daily recap and recent trail help you revisit useful pages. Save a named view 
 
 Saved views remember settings on this device, not a permanent history archive. HistoryOut works with history available to your current browser profile. It cannot recover deleted history or guarantee access to older account history. Visit counts describe navigation events, not time spent or productivity.
 
+SUGGEST A FEATURE
+
+Have an idea for a better export or an easier workflow? Suggest a feature, add context to an existing request, or vote for an idea you would use:
+https://historyout.featurebase.app/
+
+The feedback board is public and hosted by Featurebase. No browsing history or export settings are attached. Posting or commenting may require a separate Featurebase sign-in. For private help, contact sauliusthedev@gmail.com.
+
 OPTIONAL SUPPORT
 
 If HistoryOut saves you time, an optional contribution supports independent development. Every feature remains free whether you contribute or not:
@@ -56,13 +63,13 @@ https://exportchromehistory.app/
 
 ## Changelog text
 
-New: Today and Yesterday presets, a daily recap, most visited sites, a recent trail, search by title or URL, website filters, named saved views, latest-URL mode, optional URL cleanup, and optional Domain and Timestamp columns.
+New in 2.1.0: welcome and update pages are packaged inside the extension. They open automatically once per installed version and include an Open HistoryOut action, with a full-tab fallback where the side panel is unavailable.
 
-Improved: clearer preview and export states, local custom dates, reliable visits within the chosen range, safer CSV and HTML exports, responsive side-panel and full-page layouts, and browser compatibility fallback.
+Added: Suggest a feature links in the extension and lifecycle pages, with the same feedback board linked from the website and Store description. No browsing history or export settings are attached to feedback links.
 
-Added: Tell a friend with a copy confirmation, clearer optional support, and separate welcome and update pages.
+Updated: contact links now use sauliusthedev@gmail.com.
 
-Kept: the original HistoryOut identity, CSV/JSON/HTML exports, existing preferences, a completely free product, and the same extension permissions.
+Kept: CSV, JSON and HTML export, your preferences and saved views, the familiar blue icon, a completely free extension, and the same permissions.
 
 ## Screenshot order
 
@@ -78,7 +85,7 @@ Use the final images in [the store kit](./store-kit/index.html). Every browsing 
 
 The [Chrome submission notes](./store-kit/chrome/submission.md) contain ready-to-paste privacy and permission explanations. The [Edge submission notes](./store-kit/edge/submission.md) cover its separate listing and search terms. [Browser distribution](./store-kit/distribution.md) explains that Brave uses the Chrome Web Store.
 
-The title is 35 characters. The short description is 114 characters. The detailed description is 2,392 characters. Machine-readable values are in each store folder's listing.json.
+Machine-readable values are in each store folder's listing.json.
 
 ## Release copy checks
 

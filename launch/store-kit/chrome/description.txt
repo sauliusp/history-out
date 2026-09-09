@@ -30,6 +30,13 @@ A daily recap and recent trail help you revisit useful pages. Save a named view 
 
 Saved views remember settings on this device, not a permanent history archive. HistoryOut works with history available to your current browser profile. It cannot recover deleted history or guarantee access to older account history. Visit counts describe navigation events, not time spent or productivity.
 
+SUGGEST A FEATURE
+
+Have an idea for a better export or an easier workflow? Suggest a feature, add context to an existing request, or vote for an idea you would use:
+https://historyout.featurebase.app/
+
+The feedback board is public and hosted by Featurebase. No browsing history or export settings are attached. Posting or commenting may require a separate Featurebase sign-in. For private help, contact sauliusthedev@gmail.com.
+
 OPTIONAL SUPPORT
 
 If HistoryOut saves you time, an optional contribution supports independent development. Every feature remains free whether you contribute or not:

@@ -168,11 +168,11 @@ async function nativeChecks(name,executablePath,keepForReview=false){
     await check(`${name}: a fresh native install opens its welcome once`,async()=>{
       for(let attempt=0;attempt<100;attempt++){
         const saved=await worker.evaluate(async()=>(await chrome.storage.local.get('historyoutOpenedVersion')).historyoutOpenedVersion);
-        if(saved===report.extensionVersion&&context.pages().some(p=>p.url().startsWith('https://historyout.sauliusdev.chatgpt.site/welcome/')))break;
+        if(saved===report.extensionVersion&&context.pages().some(p=>p.url().startsWith(`chrome-extension://${entry.extensionId}/welcome.html`)))break;
         await new Promise(resolve=>setTimeout(resolve,50));
       }
-      assert.equal(context.pages().filter(p=>p.url().startsWith('https://historyout.sauliusdev.chatgpt.site/welcome/')).length,1);
-      return {welcomeURL:'https://historyout.sauliusdev.chatgpt.site/welcome/'};
+      assert.equal(context.pages().filter(p=>p.url().startsWith(`chrome-extension://${entry.extensionId}/welcome.html`)).length,1);
+      return {welcomeURL:`chrome-extension://${entry.extensionId}/welcome.html`};
     });
     await worker.evaluate(async(records)=>{for(const row of records)for(const time of row.times)await chrome.history.addUrl({url:row.url});},seed.records);
     await context.close();context=null;

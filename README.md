@@ -2,7 +2,7 @@
 
 **Export your browser history as CSV, JSON or HTML.** Choose dates, columns and matching pages, then keep a useful local file. Daily recaps and saved views help you return to useful pages between exports. Free, with no account.
 
-This repository contains the **2.0.0 release candidate** on `codex/historyout-v2`, the website and launch material. The existing Chrome Web Store release is **1.0.1**. The refreshed website is publicly available on Sites. The existing store item and production DNS have not been changed.
+This checkout prepares **2.1.0** on `codex/internal-pages-feedback` for owner review. It includes packaged install/update pages, Featurebase links and the corrected contact email. No 2.1.0 Store upload, submission or public website deployment has been performed. See `launch/review-2.1.0.md` for the current preparation and verification status.
 
 ## What v2 adds
 
@@ -14,7 +14,8 @@ This repository contains the **2.0.0 release candidate** on `codex/historyout-v2
 - Safer serialization, corrected date-range retrieval, progress, cancellation and explicit errors.
 - A refreshed workspace with the original identity and a full-page fallback for browsers without side-panel support.
 - A Tell a friend link with clipboard feedback and a clear, optional contribution link.
-- Separate welcome and changelog pages opened once on install or a new version update.
+- Packaged welcome and update pages opened once on install or a new version update, with a direct Open HistoryOut action.
+- A public Featurebase board for feature suggestions and votes. Contact: sauliusthedev@gmail.com.
 
 History is read only when the user chooses Preview or export. Saved views store settings, not a history archive. The recap covers the loaded date range; the ready count covers matching export rows. Preview displays up to 100 rows, while export includes all matches from that loaded result. Refresh reads new visits.
 
@@ -50,9 +51,9 @@ npm run test:browser
 npm run pack
 ```
 
-Release QA uses Playwright with isolated Chromium and installed Microsoft Edge profiles, native history and storage, and CSV/JSON/HTML downloads. Synthetic fixtures cover faults, clipboard denial and a 30,000-visit UI workload. A separate native installer test upgrades the rebuilt 1.0.1 source package to 2.0.0 and verifies its changelog, preferences and retained history. Run `node scripts/release-readiness.cjs`, `node scripts/native-update-qa.cjs` and `node scripts/audit-release-packages.cjs`; see the [release readiness report](./launch/qa/release-readiness.md) for exact versions, results and remaining store-signed/Brave limits.
+Release QA uses Playwright with isolated Chromium and installed Microsoft Edge profiles, native history and storage, and CSV/JSON/HTML downloads. Synthetic fixtures cover faults, clipboard denial and a 30,000-visit UI workload. The native installer script can check an older unpacked package against the current candidate and verify its local update page, preferences and retained history. Existing browser reports describe 2.0.0; they do not certify 2.1.0. Run `node scripts/release-readiness.cjs`, `node scripts/native-update-qa.cjs` and `node scripts/audit-release-packages.cjs`; see the [release readiness report](./launch/qa/release-readiness.md) for exact versions, results and remaining store-signed/Brave limits.
 
-`npm run pack` builds and creates four root-manifest ZIPs under `releases/`: `historyout-2.0.0-chrome.zip`, `historyout-2.0.0-edge.zip`, `historyout-2.0.0-brave.zip` and `historyout-2.0.0-chromium.zip`. It excludes source maps and demo/fixture files. Current hashes and archive-to-source comparisons are recorded in [package-audit.json](./launch/qa/package-audit.json). Release artifacts are ignored by Git; regenerate them from the reviewed source and refresh hashes after changes.
+`npm run pack` builds and creates four root-manifest ZIPs under `releases/`: `historyout-2.1.0-chrome.zip`, `historyout-2.1.0-edge.zip`, `historyout-2.1.0-brave.zip` and `historyout-2.1.0-chromium.zip`. It excludes source maps and demo/fixture files. Current hashes and archive-to-source comparisons are recorded in [package-audit.json](./launch/qa/package-audit.json). Release artifacts are ignored by Git; regenerate them from the reviewed source and refresh hashes after changes.
 
 ## Website
 
@@ -64,7 +65,7 @@ npm --prefix website test
 npm --prefix website run dev
 ```
 
-The local preview runs at [127.0.0.1:8766](http://127.0.0.1:8766). Default builds allow public search indexing. `website/site.config.json` records the canonical origin, current store version and media metadata. Set `SITE_NOINDEX=true` for a non-indexable preview. After store approval, set `storeVersion` to `2.0.0` to remove pending-release notes; `RELEASE_V2=true` is a temporary build override. Set `SITE_ORIGIN` only to a verified connected domain. Build flags do not deploy or change DNS. Follow the [website migration handoff](./launch/migration/website.md).
+The local preview runs at [127.0.0.1:8766](http://127.0.0.1:8766). Default builds allow public search indexing. `website/site.config.json` records the canonical origin, current store version and media metadata. Set `SITE_NOINDEX=true` for a non-indexable preview. After verifying the 2.1.0 release is publicly available, set `storeVersion` to `2.1.0` to remove preparation notes; `RELEASE_V2=true` is a temporary build override and does not prove release. Set `SITE_ORIGIN` only to a verified connected domain. Build flags do not deploy or change DNS. Follow the [website migration handoff](./launch/migration/website.md).
 
 ## Repository guide
 

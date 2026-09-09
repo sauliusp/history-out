@@ -49,7 +49,7 @@ function lifecycleHarness(saved = {}) {
   const chrome = {
     action: {onClicked: {addListener(){}}},
     runtime: {
-      getManifest: () => ({version:'2.0.0',permissions:['history','storage']}),
+      getManifest: () => ({version:'2.1.0',permissions:['history','storage']}),
       getURL: file => `chrome-extension://fixture/${file}`,
       onInstalled: {addListener(fn){installed = fn;}},
     },
@@ -68,25 +68,26 @@ test('a fresh install opens its welcome once and preserves existing settings', a
   const fixture=lifecycleHarness({HISTORY_OUTPUT_CONFIG:config});
   await Promise.all([fixture.installed({reason:'install'}),fixture.installed({reason:'install'})]);
   assert.equal(fixture.opened.length,1);
-  assert.equal(fixture.opened[0].url,'https://historyout.sauliusdev.chatgpt.site/welcome/');
-  assert.equal(fixture.values.historyoutOpenedVersion,'2.0.0');
+  assert.equal(fixture.opened[0].url,'chrome-extension://fixture/welcome.html');
+  assert.equal(fixture.values.historyoutOpenedVersion,'2.1.0');
   assert.deepEqual(fixture.values.HISTORY_OUTPUT_CONFIG,config);
 });
 
-test('a v1 update opens changelog once and keeps v1 preferences intact', async () => {
+for (const previousVersion of ['1.0.1', '2.0.0']) test(`an update from ${previousVersion} opens its internal page once and preserves preferences`, async () => {
   const config={format:'csv',fields:{url:true,title:false}};
-  const fixture=lifecycleHarness({HISTORY_OUTPUT_CONFIG:config,historyoutOpenedVersion:'1.0.1'});
-  await fixture.installed({reason:'update',previousVersion:'1.0.1'});
-  await fixture.installed({reason:'update',previousVersion:'1.0.1'});
+  const fixture=lifecycleHarness({HISTORY_OUTPUT_CONFIG:config,historyoutSavedViews:[{id:'retained'}],historyoutOpenedVersion:previousVersion});
+  await fixture.installed({reason:'update',previousVersion});
+  await fixture.installed({reason:'update',previousVersion});
   assert.equal(fixture.opened.length,1);
-  assert.equal(fixture.opened[0].url,'https://historyout.sauliusdev.chatgpt.site/changelog/');
+  assert.equal(fixture.opened[0].url,'chrome-extension://fixture/updated.html');
+  assert.deepEqual(fixture.values.historyoutSavedViews,[{id:'retained'}]);
   assert.deepEqual(fixture.values.HISTORY_OUTPUT_CONFIG,config);
 });
 
 test('browser, module, and same-version developer reloads never open a lifecycle page', async () => {
   const fixture=lifecycleHarness();
   for(const reason of ['chrome_update','browser_update','shared_module_update']) await fixture.installed({reason});
-  await fixture.installed({reason:'update',previousVersion:'2.0.0'});
+  await fixture.installed({reason:'update',previousVersion:'2.1.0'});
   assert.equal(fixture.opened.length,0);
   assert.deepEqual(fixture.values,{});
 });

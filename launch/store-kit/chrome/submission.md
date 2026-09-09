@@ -1,12 +1,12 @@
 # Chrome Web Store update
 
-Updated 6 September 2026. Save a draft on the existing item `idohnkdgejocejlkihihonhemndpiiei` to preserve its users, reviews and update path. The owner reviews and submits separately. The product remains **HistoryOut**; 2.0.0 is the technical release version.
+Updated 9 September 2026. Save a draft on the existing item `idohnkdgejocejlkihihonhemndpiiei` to preserve its users, reviews and update path. The owner reviews and submits separately. The product remains **HistoryOut**; 2.0.0 is the technical release version.
 
-Current verified status on 6 September 2026: version 2.0.0 and the updated listing, assets, video, privacy fields and reviewer notes are saved as an unpublished draft. Published version remains 1.0.1. Free and Public distribution settings are retained. No review submission or publication has been performed.
+Current preparation status: 2.1.0 is a local review candidate. No package upload, dashboard edit, review submission, or publication has been performed for this candidate. User approval is required before shipping.
 
 ## Upload fields
 
-Use `listing.json` for field values and `description.txt` for the complete public description. Use the freshly tested `historyout-2.0.0-chrome.zip` from this folder when the kit contains it, or the final matching file under `releases/`. Never upload this entire marketing kit as the extension package.
+Use `listing.json` for field values and `description.txt` for the complete public description. Use the freshly tested `historyout-2.1.0-chrome.zip` from this folder when the kit contains it, or the final matching file under `releases/`. Never upload this entire marketing kit as the extension package.
 
 1. Replace the package on the existing item.
 2. Set the public name and description from `listing.json`. The name must match the manifest.
@@ -29,7 +29,7 @@ Single purpose: Help users find, revisit, filter and export the browsing history
 
 Remote code: No. The extension runs code bundled in its package.
 
-Data handling: Browsing history is accessed locally for the user's requested workflow. It is not transmitted to the developer, sold or shared with third parties. User-triggered links open external websites, including the store, support and optional contribution page. Opening the welcome or changelog website makes a normal website request and does not send browsing history.
+Data handling: Browsing history is accessed locally for the user's requested workflow. It is not transmitted to the developer, sold or shared with third parties. User-triggered links open external websites, including the store, support and optional contribution page. Welcome and update pages are packaged inside the extension and make no website request when they open. Clicking Suggest a feature visits the public Featurebase board without attaching browsing history, URLs or export settings.
 
 Use the dashboard's current definitions when answering its data-collection checkboxes, consistently with the public privacy policy. Do not mistake local access to history for a promise that the extension never accesses data. The policy URL and accurate permission justifications are required parts of the listing. [Official privacy-field guidance](https://developer.chrome.com/docs/webstore/cws-dashboard-privacy)
 
@@ -43,3 +43,11 @@ Use the dashboard's current definitions when answering its data-collection check
 - Share confirmation follows a real clipboard success, with a fallback if unavailable.
 - Contribution is optional and never blocks preview or export.
 - Record the approved store version and public listing check after the user publishes it.
+
+## Feedback and contact
+
+Feedback/support URL: https://historyout.featurebase.app/
+
+Contact email: sauliusthedev@gmail.com
+
+Use the current detailed description in description.txt. After approval, verify the Store contact email and support URL, upload the 2.1.0 package, and review the dashboard fields before submitting.

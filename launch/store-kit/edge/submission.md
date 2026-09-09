@@ -11,7 +11,7 @@ Edge has its own store, Microsoft Edge Add-ons, managed through Partner Center. 
 - `brand/icon128.png`: unchanged original logo, accepted at the 128px minimum.
 - `screenshots/`: five ordered 1280 x 800 screenshots.
 - `promotional/`: 440 x 280 small tile and 1400 x 560 large tile.
-- `historyout-2.0.0-edge.zip`: extension package when the final packaging step has populated it. Do not upload the marketing ZIP as the extension package.
+- `historyout-2.1.0-edge.zip`: extension package when the final packaging step has populated it. Do not upload the marketing ZIP as the extension package.
 
 Partner Center recommends a 300px square logo and accepts a minimum of 128px. We preserve the user's exact original 128px artwork. Edge allows up to six screenshots; these five fit its 1280 x 800 format. Its description accepts 250 to 10,000 characters. The prepared search terms stay within seven terms, 21 words in total and 30 characters per term. [Official Edge submission requirements](https://learn.microsoft.com/en-us/microsoft-edge/extensions/publish/publish-extension)
 

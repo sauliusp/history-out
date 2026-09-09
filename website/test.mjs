@@ -12,6 +12,11 @@ test('Every public page is prerendered with unique metadata and resolves its loc
     assert(!html.includes(String.fromCharCode(8212)),`Em dash in ${page.route}`);
     assert(!titles.has(page.title));titles.add(page.title);
     assert(!html.includes('{{'),`Unresolved template in ${page.route}`);
+    assert(html.includes('mailto:sauliusthedev@gmail.com'));
+    assert(!html.includes('saulius.developer@gmail.com'));
+    assert(html.includes('https://historyout.featurebase.app/'));
+    assert(html.includes('name="google-site-verification"'));
+    assert(!html.includes('store currently offers version 1.0.1'));
     for(const match of html.matchAll(/(?:href|src)="(\/[^"#?]*)/g)){
       const link=match[1];const local=path.join('dist',link);let info;
       try{info=await stat(local);}catch{assert.fail(`Broken local link ${link} on ${page.route}`);}

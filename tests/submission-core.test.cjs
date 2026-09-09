@@ -75,7 +75,7 @@ function lifecycleHarness() {
   const chrome = {
     action: { onClicked: { addListener(callback) { clicked = callback; } } },
     runtime: {
-      getManifest: () => ({ version: '2.0.0', permissions: ['history', 'storage'] }),
+      getManifest: () => ({ version: '2.1.0', permissions: ['history', 'storage'] }),
       getURL: route => `chrome-extension://submission-fixture/${route}`,
       onInstalled: { addListener(callback) { installed = callback; } },
     },
@@ -84,7 +84,7 @@ function lifecycleHarness() {
       set: async updates => Object.assign(values, updates),
     } },
     tabs: { create: async options => {
-      if (failures.lifecycleTab && options.url.startsWith('https:')) throw new Error('temporary tab failure');
+      if (failures.lifecycleTab && /\/(welcome|updated)\.html$/.test(options.url)) throw new Error('temporary tab failure');
       opened.push(options.url);
     } },
   };
@@ -102,8 +102,8 @@ test('a failed upgrade-marker read does not alter v1 preferences or disable the 
   assert.deepEqual(fixture.opened, ['chrome-extension://submission-fixture/side-panel.html']);
   fixture.failures.read = false;
   await fixture.installed({ reason: 'update', previousVersion: '1.0.1' });
-  assert.equal(fixture.opened.at(-1), 'https://historyout.sauliusdev.chatgpt.site/changelog/');
-  assert.equal(fixture.values.historyoutOpenedVersion, '2.0.0');
+  assert.equal(fixture.opened.at(-1), 'chrome-extension://submission-fixture/updated.html');
+  assert.equal(fixture.values.historyoutOpenedVersion, '2.1.0');
   await fixture.installed({ reason: 'update', previousVersion: '1.0.1' });
   assert.equal(fixture.opened.length, 2);
   assert.deepEqual(fixture.values.HISTORY_OUTPUT_CONFIG, fixture.savedConfig);
@@ -118,8 +118,8 @@ test('a failed welcome tab is not marked opened and cannot permanently poison li
   assert.equal(fixture.opened[0], 'chrome-extension://submission-fixture/side-panel.html');
   fixture.failures.lifecycleTab = false;
   await fixture.installed({ reason: 'install' });
-  assert.equal(fixture.opened.at(-1), 'https://historyout.sauliusdev.chatgpt.site/welcome/');
-  assert.equal(fixture.values.historyoutOpenedVersion, '2.0.0');
+  assert.equal(fixture.opened.at(-1), 'chrome-extension://submission-fixture/welcome.html');
+  assert.equal(fixture.values.historyoutOpenedVersion, '2.1.0');
   await fixture.installed({ reason: 'install' });
   assert.equal(fixture.opened.length, 2);
   assert.deepEqual(fixture.values.HISTORY_OUTPUT_CONFIG, fixture.savedConfig);

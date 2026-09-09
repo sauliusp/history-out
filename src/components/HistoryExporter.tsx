@@ -1,3 +1,4 @@
+import product from '../../website/content/product.json';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import {
   Alert, Box, Button, Checkbox, Chip, Divider, FormControl, FormControlLabel,
@@ -436,6 +437,11 @@ export const HistoryExporter: React.FC = () => {
           <LockOutlinedIcon sx={{ fontSize: 12 }} />
           <Typography variant="caption" sx={{ fontSize: '0.75rem' }}>Free. On your device. No account needed.</Typography>
         </Stack>
+        <Box sx={{ textAlign: 'center', py: 1 }}>
+          <Link href={product.feedback} target="_blank" rel="noopener noreferrer" sx={{ fontSize: '0.875rem', fontWeight: 600 }}>Suggest a feature ↗</Link>
+          <Typography variant="caption" color="text.secondary" sx={{ display: 'block', mt: 0.4 }}>Share an idea or vote on a request.</Typography>
+          <Typography variant="caption" color="text.secondary" sx={{ display: 'block' }}>Opens our public board. No history is attached.</Typography>
+        </Box>
         <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', flexWrap: 'wrap', gap: 1, px: 1.4, py: 1.1, border: '1px solid #eeddaa', borderRadius: '12px', bgcolor: '#fffaed' }}>
           <Box sx={{ minWidth: 0 }}>
             <Typography variant="body2" sx={{ fontWeight: 650, color: '#122c48', lineHeight: 1.35 }}>Free to use.</Typography>
@@ -451,7 +457,7 @@ export const HistoryExporter: React.FC = () => {
           </Button>
         </Box>
         <Stack component="footer" direction="row" justifyContent="center" alignItems="center" sx={{ pb: 1.5, flexWrap: 'wrap', columnGap: 1.7, rowGap: 0.5 }}>
-          <Link href={`${STORE_URL}/support`} target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>Get help</Link>
+          <Link href={`mailto:${product.contactEmail}`} target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>Contact Saulius</Link>
           <Link href={`${STORE_URL}/reviews`} target="_blank" rel="noopener noreferrer" variant="caption" color="text.secondary" sx={{ fontSize: '0.75rem' }}>Leave a review</Link>
           <Button size="small" onClick={() => void shareHistoryOut()} sx={{ minHeight: 30, minWidth: 0, p: 0, color: 'text.secondary', fontWeight: 400, fontSize: '0.75rem' }}>Tell a friend</Button>
           <Tooltip title="An optional contribution to this free project. Opens Buy Me a Coffee." describeChild>

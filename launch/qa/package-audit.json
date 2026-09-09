@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-09-07T06:17:30.888Z",
+  "generated_at": "2026-09-09T07:23:58.258Z",
   "command": "node scripts/audit-release-packages.cjs",
   "node_version": "v22.20.0",
-  "git_head": "386e640616dd55598bb96fd247100d9f3080e491",
-  "version": "2.0.0",
+  "git_head": "46e8ffbe4c7f8e7094c0bcd8fb8c6b7be7782084",
+  "version": "2.1.0",
   "status": "pass",
   "scope": "Local v2 archives and their staging directories compared with extension-unpacked. Does not certify a signed Chrome Web Store package or a store submission.",
   "source": {
@@ -11,7 +11,7 @@
       "manifest_version": 3,
       "name": "HistoryOut - Export Browser History",
       "short_name": "HistoryOut",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "description": "Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account.",
       "permissions": [
         "history",
@@ -46,13 +46,17 @@
         "bytes": 8178,
         "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba"
       },
+      "assets/logo.svg": {
+        "bytes": 7525,
+        "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536"
+      },
       "background.js": {
-        "bytes": 1912,
-        "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd"
+        "bytes": 1855,
+        "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04"
       },
       "bundle.js": {
-        "bytes": 481593,
-        "sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf"
+        "bytes": 482159,
+        "sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877"
       },
       "bundle.js.LICENSE.txt": {
         "bytes": 1640,
@@ -75,8 +79,16 @@
         "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1"
       },
       "manifest.json": {
-        "bytes": 843,
-        "sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e"
+        "bytes": 859,
+        "sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a"
+      },
+      "onboarding.css": {
+        "bytes": 16596,
+        "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61"
+      },
+      "onboarding.js": {
+        "bytes": 1459,
+        "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8"
       },
       "side-panel.html": {
         "bytes": 405,
@@ -85,6 +97,14 @@
       "styles.css": {
         "bytes": 499,
         "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d"
+      },
+      "updated.html": {
+        "bytes": 7368,
+        "sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444"
+      },
+      "welcome.html": {
+        "bytes": 4038,
+        "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88"
       }
     }
   },
@@ -109,7 +129,7 @@
   "packages": [
     {
       "target": "chrome",
-      "file": "releases/historyout-2.0.0-chrome.zip",
+      "file": "releases/historyout-2.1.0-chrome.zip",
       "files": [
         {
           "file": "assets/bmc-cup.svg",
@@ -121,20 +141,29 @@
           "source_comparison": "exact bytes"
         },
         {
+          "file": "assets/logo.svg",
+          "bytes": 7525,
+          "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "source_sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "staging_sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
           "file": "background.js",
-          "bytes": 1912,
-          "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
-          "source_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
-          "staging_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "bytes": 1855,
+          "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "source_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "staging_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 481593,
-          "sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-          "source_sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-          "staging_sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+          "bytes": 482159,
+          "sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
+          "source_sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
+          "staging_sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -186,11 +215,29 @@
         {
           "file": "manifest.json",
           "bytes": 859,
-          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
-          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
-          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "source_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "staging_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
+        },
+        {
+          "file": "onboarding.css",
+          "bytes": 16596,
+          "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "source_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "staging_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "onboarding.js",
+          "bytes": 1459,
+          "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "source_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "staging_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
         },
         {
           "file": "side-panel.html",
@@ -209,11 +256,29 @@
           "staging_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
           "matches_source": true,
           "source_comparison": "exact bytes"
+        },
+        {
+          "file": "updated.html",
+          "bytes": 7368,
+          "sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "source_sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "staging_sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "welcome.html",
+          "bytes": 4038,
+          "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "source_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "staging_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 158398,
-      "sha256": "718719358b9d9a9146e52fbc48f56c8b6c17886a47c7c9b37070bd8d1551c44f",
-      "version": "2.0.0",
+      "bytes": 171922,
+      "sha256": "2e53e91910427e7188036dea5b41c6611bb36bbee9c04c4b7ac770d0c5bb5c91",
+      "version": "2.1.0",
       "permissions": {
         "permissions": [
           "history",
@@ -231,7 +296,7 @@
     },
     {
       "target": "edge",
-      "file": "releases/historyout-2.0.0-edge.zip",
+      "file": "releases/historyout-2.1.0-edge.zip",
       "files": [
         {
           "file": "assets/bmc-cup.svg",
@@ -243,20 +308,29 @@
           "source_comparison": "exact bytes"
         },
         {
+          "file": "assets/logo.svg",
+          "bytes": 7525,
+          "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "source_sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "staging_sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
           "file": "background.js",
-          "bytes": 1912,
-          "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
-          "source_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
-          "staging_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "bytes": 1855,
+          "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "source_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "staging_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 481593,
-          "sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-          "source_sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-          "staging_sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+          "bytes": 482159,
+          "sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
+          "source_sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
+          "staging_sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -308,11 +382,29 @@
         {
           "file": "manifest.json",
           "bytes": 859,
-          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
-          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
-          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "source_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "staging_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
+        },
+        {
+          "file": "onboarding.css",
+          "bytes": 16596,
+          "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "source_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "staging_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "onboarding.js",
+          "bytes": 1459,
+          "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "source_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "staging_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
         },
         {
           "file": "side-panel.html",
@@ -331,11 +423,29 @@
           "staging_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
           "matches_source": true,
           "source_comparison": "exact bytes"
+        },
+        {
+          "file": "updated.html",
+          "bytes": 7368,
+          "sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "source_sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "staging_sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "welcome.html",
+          "bytes": 4038,
+          "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "source_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "staging_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 158398,
-      "sha256": "f820015a10ff574a531b18beb5945b6c46077be47822f32b2f3c5033417b00f7",
-      "version": "2.0.0",
+      "bytes": 171922,
+      "sha256": "2e53e91910427e7188036dea5b41c6611bb36bbee9c04c4b7ac770d0c5bb5c91",
+      "version": "2.1.0",
       "permissions": {
         "permissions": [
           "history",
@@ -353,7 +463,7 @@
     },
     {
       "target": "brave",
-      "file": "releases/historyout-2.0.0-brave.zip",
+      "file": "releases/historyout-2.1.0-brave.zip",
       "files": [
         {
           "file": "assets/bmc-cup.svg",
@@ -365,20 +475,29 @@
           "source_comparison": "exact bytes"
         },
         {
+          "file": "assets/logo.svg",
+          "bytes": 7525,
+          "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "source_sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "staging_sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
           "file": "background.js",
-          "bytes": 1912,
-          "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
-          "source_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
-          "staging_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "bytes": 1855,
+          "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "source_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "staging_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 481593,
-          "sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-          "source_sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-          "staging_sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+          "bytes": 482159,
+          "sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
+          "source_sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
+          "staging_sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -430,11 +549,29 @@
         {
           "file": "manifest.json",
           "bytes": 859,
-          "sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
-          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
-          "staging_sha256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+          "sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "source_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "staging_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
+        },
+        {
+          "file": "onboarding.css",
+          "bytes": 16596,
+          "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "source_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "staging_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "onboarding.js",
+          "bytes": 1459,
+          "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "source_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "staging_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
         },
         {
           "file": "side-panel.html",
@@ -453,11 +590,29 @@
           "staging_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
           "matches_source": true,
           "source_comparison": "exact bytes"
+        },
+        {
+          "file": "updated.html",
+          "bytes": 7368,
+          "sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "source_sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "staging_sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "welcome.html",
+          "bytes": 4038,
+          "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "source_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "staging_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 158398,
-      "sha256": "f820015a10ff574a531b18beb5945b6c46077be47822f32b2f3c5033417b00f7",
-      "version": "2.0.0",
+      "bytes": 171922,
+      "sha256": "2e53e91910427e7188036dea5b41c6611bb36bbee9c04c4b7ac770d0c5bb5c91",
+      "version": "2.1.0",
       "permissions": {
         "permissions": [
           "history",
@@ -475,7 +630,7 @@
     },
     {
       "target": "chromium",
-      "file": "releases/historyout-2.0.0-chromium.zip",
+      "file": "releases/historyout-2.1.0-chromium.zip",
       "files": [
         {
           "file": "assets/bmc-cup.svg",
@@ -487,20 +642,29 @@
           "source_comparison": "exact bytes"
         },
         {
+          "file": "assets/logo.svg",
+          "bytes": 7525,
+          "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "source_sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "staging_sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
           "file": "background.js",
-          "bytes": 1912,
-          "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
-          "source_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
-          "staging_sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+          "bytes": 1855,
+          "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "source_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "staging_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 481593,
-          "sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-          "source_sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-          "staging_sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+          "bytes": 482159,
+          "sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
+          "source_sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
+          "staging_sha256": "6110c0fb9be7796e821a73a2ba81c6bca7edfc3f2dc315171b571929ca76b877",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -552,11 +716,29 @@
         {
           "file": "manifest.json",
           "bytes": 781,
-          "sha256": "6f0e1598b1880304ea2d4234a9310dad86be2bd401692550cfc4a13d8914b86e",
-          "source_sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
-          "staging_sha256": "6f0e1598b1880304ea2d4234a9310dad86be2bd401692550cfc4a13d8914b86e",
+          "sha256": "cf2812611d2393ad825450e5d85e7661f52500aaf202b87477f08aee8396c0fb",
+          "source_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "staging_sha256": "cf2812611d2393ad825450e5d85e7661f52500aaf202b87477f08aee8396c0fb",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
+        },
+        {
+          "file": "onboarding.css",
+          "bytes": 16596,
+          "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "source_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "staging_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "onboarding.js",
+          "bytes": 1459,
+          "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "source_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "staging_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
         },
         {
           "file": "side-panel.html",
@@ -575,11 +757,29 @@
           "staging_sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
           "matches_source": true,
           "source_comparison": "exact bytes"
+        },
+        {
+          "file": "updated.html",
+          "bytes": 7368,
+          "sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "source_sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "staging_sha256": "5cba0f60bdf9814d36f309b2faa177845e068ab6337098c92cb6f3f193096444",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "welcome.html",
+          "bytes": 4038,
+          "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "source_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "staging_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 158368,
-      "sha256": "3754eb2e01c6f9838752fc147021a36f15673baad9e2744c3b5deeff6804d1bf",
-      "version": "2.0.0",
+      "bytes": 171893,
+      "sha256": "3b67019dcd6afa3d2a885d2d2c66f9ef31c0d2c2de93e52f2e44ba9763973ece",
+      "version": "2.1.0",
       "permissions": {
         "permissions": [
           "history",
@@ -597,7 +797,7 @@
     "command": "node --test --test-reporter=tap tests/release-stress.test.cjs",
     "file_sha256": "0c32b621e3cace03cb38a03e4df34bdaa96e9b70c2565d607e8ba42e419d2a61",
     "exit_code": 0,
-    "elapsed_ms": 1197.01,
+    "elapsed_ms": 762.78,
     "tests": 3,
     "passed": 3,
     "failed": 0,
@@ -609,28 +809,28 @@
           "unique_clean_pages": 5000,
           "combined_filter_pages": 84
         },
-        "first_load_ms": 158.09,
-        "reordered_load_ms": 142.4,
-        "filter_validation_ms": 53.65,
+        "first_load_ms": 102.84,
+        "reordered_load_ms": 76.91,
+        "filter_validation_ms": 21.94,
         "peak_api_concurrency": 8,
         "serialization": {
           "json": {
-            "elapsed_ms": 30.62,
+            "elapsed_ms": 16.69,
             "bytes": 6415598,
             "sha256": "6fad890d7af72c5cf4517150e04b9e9660c3edb53c87e6bc7a8ccc1a331e7858"
           },
           "csv": {
-            "elapsed_ms": 31.14,
+            "elapsed_ms": 24.78,
             "bytes": 3865628,
             "sha256": "239174e21117210d95fc2be49510eea7a025c9b77730adda3231dbe8fb6f0496"
           },
           "html": {
-            "elapsed_ms": 58.44,
+            "elapsed_ms": 39.5,
             "bytes": 8756786,
             "sha256": "32fb531b3c5f5a3fac8b2d9e3ef184cfa49b2e6b2eece2a644bada83e3bc9308"
           }
         },
-        "total_test_ms": 908.69,
+        "total_test_ms": 571.77,
         "note": "Synthetic API-boundary timing on this machine, not a Chrome UI latency guarantee."
       },
       {
@@ -638,13 +838,13 @@
         "api_calls_before_cancel": 12,
         "late_api_responses_discarded": 8,
         "recovery_visits": 256,
-        "abort_ms": 0.36
+        "abort_ms": 0.28
       },
       {
         "failed_candidate_urls": 10000,
         "failed_load_api_calls": 8,
         "overlapping_success_visits": 768,
-        "rejection_ms": 0.43
+        "rejection_ms": 0.15
       }
     ]
   },
@@ -653,10 +853,10 @@
       "name": "package-lock-and-manifest-versions-match",
       "passed": true,
       "detail": {
-        "package_json": "2.0.0",
-        "package_lock": "2.0.0",
-        "package_lock_root": "2.0.0",
-        "manifest": "2.0.0"
+        "package_json": "2.1.0",
+        "package_lock": "2.1.0",
+        "package_lock_root": "2.1.0",
+        "manifest": "2.1.0"
       }
     },
     {
@@ -686,6 +886,7 @@
       "passed": true,
       "detail": [
         "assets/bmc-cup.svg",
+        "assets/logo.svg",
         "background.js",
         "bundle.js",
         "bundle.js.LICENSE.txt",
@@ -694,27 +895,36 @@
         "icons/icon32.png",
         "icons/icon48.png",
         "manifest.json",
+        "onboarding.css",
+        "onboarding.js",
         "side-panel.html",
-        "styles.css"
+        "styles.css",
+        "updated.html",
+        "welcome.html"
       ]
     },
     {
       "name": "chrome:no-duplicate-or-unsafe-entries",
       "passed": true,
       "detail": [
+        "onboarding.js",
         "side-panel.html",
         "styles.css",
         "background.js",
         "bundle.js",
+        "updated.html",
         "icons/",
         "icons/icon16.png",
         "icons/icon48.png",
         "icons/icon128.png",
         "icons/icon32.png",
+        "welcome.html",
         "manifest.json",
         "bundle.js.LICENSE.txt",
+        "onboarding.css",
         "assets/",
-        "assets/bmc-cup.svg"
+        "assets/bmc-cup.svg",
+        "assets/logo.svg"
       ]
     },
     {
@@ -766,6 +976,18 @@
     },
     {
       "name": "chrome:assets/bmc-cup.svg:no-active-or-remote-content",
+      "passed": true
+    },
+    {
+      "name": "chrome:assets/logo.svg:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:assets/logo.svg:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:assets/logo.svg:no-active-or-remote-content",
       "passed": true
     },
     {
@@ -841,6 +1063,30 @@
       "passed": true
     },
     {
+      "name": "chrome:onboarding.css:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:onboarding.css:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:onboarding.css:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:onboarding.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:onboarding.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:onboarding.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "chrome:side-panel.html:matches-current-unpacked",
       "passed": true
     },
@@ -865,10 +1111,35 @@
       "passed": true
     },
     {
+      "name": "chrome:updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "edge:exact-file-allowlist",
       "passed": true,
       "detail": [
         "assets/bmc-cup.svg",
+        "assets/logo.svg",
         "background.js",
         "bundle.js",
         "bundle.js.LICENSE.txt",
@@ -877,27 +1148,36 @@
         "icons/icon32.png",
         "icons/icon48.png",
         "manifest.json",
+        "onboarding.css",
+        "onboarding.js",
         "side-panel.html",
-        "styles.css"
+        "styles.css",
+        "updated.html",
+        "welcome.html"
       ]
     },
     {
       "name": "edge:no-duplicate-or-unsafe-entries",
       "passed": true,
       "detail": [
+        "onboarding.js",
         "side-panel.html",
         "styles.css",
         "background.js",
         "bundle.js",
+        "updated.html",
         "icons/",
         "icons/icon16.png",
         "icons/icon48.png",
         "icons/icon128.png",
         "icons/icon32.png",
+        "welcome.html",
         "manifest.json",
         "bundle.js.LICENSE.txt",
+        "onboarding.css",
         "assets/",
-        "assets/bmc-cup.svg"
+        "assets/bmc-cup.svg",
+        "assets/logo.svg"
       ]
     },
     {
@@ -949,6 +1229,18 @@
     },
     {
       "name": "edge:assets/bmc-cup.svg:no-active-or-remote-content",
+      "passed": true
+    },
+    {
+      "name": "edge:assets/logo.svg:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:assets/logo.svg:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:assets/logo.svg:no-active-or-remote-content",
       "passed": true
     },
     {
@@ -1024,6 +1316,30 @@
       "passed": true
     },
     {
+      "name": "edge:onboarding.css:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:onboarding.css:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:onboarding.css:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:onboarding.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:onboarding.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:onboarding.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "edge:side-panel.html:matches-current-unpacked",
       "passed": true
     },
@@ -1048,10 +1364,35 @@
       "passed": true
     },
     {
+      "name": "edge:updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "brave:exact-file-allowlist",
       "passed": true,
       "detail": [
         "assets/bmc-cup.svg",
+        "assets/logo.svg",
         "background.js",
         "bundle.js",
         "bundle.js.LICENSE.txt",
@@ -1060,27 +1401,36 @@
         "icons/icon32.png",
         "icons/icon48.png",
         "manifest.json",
+        "onboarding.css",
+        "onboarding.js",
         "side-panel.html",
-        "styles.css"
+        "styles.css",
+        "updated.html",
+        "welcome.html"
       ]
     },
     {
       "name": "brave:no-duplicate-or-unsafe-entries",
       "passed": true,
       "detail": [
+        "onboarding.js",
         "side-panel.html",
         "styles.css",
         "background.js",
         "bundle.js",
+        "updated.html",
         "icons/",
         "icons/icon16.png",
         "icons/icon48.png",
         "icons/icon128.png",
         "icons/icon32.png",
+        "welcome.html",
         "manifest.json",
         "bundle.js.LICENSE.txt",
+        "onboarding.css",
         "assets/",
-        "assets/bmc-cup.svg"
+        "assets/bmc-cup.svg",
+        "assets/logo.svg"
       ]
     },
     {
@@ -1132,6 +1482,18 @@
     },
     {
       "name": "brave:assets/bmc-cup.svg:no-active-or-remote-content",
+      "passed": true
+    },
+    {
+      "name": "brave:assets/logo.svg:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:assets/logo.svg:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:assets/logo.svg:no-active-or-remote-content",
       "passed": true
     },
     {
@@ -1207,6 +1569,30 @@
       "passed": true
     },
     {
+      "name": "brave:onboarding.css:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:onboarding.css:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:onboarding.css:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:onboarding.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:onboarding.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:onboarding.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "brave:side-panel.html:matches-current-unpacked",
       "passed": true
     },
@@ -1231,10 +1617,35 @@
       "passed": true
     },
     {
+      "name": "brave:updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "chromium:exact-file-allowlist",
       "passed": true,
       "detail": [
         "assets/bmc-cup.svg",
+        "assets/logo.svg",
         "background.js",
         "bundle.js",
         "bundle.js.LICENSE.txt",
@@ -1243,27 +1654,36 @@
         "icons/icon32.png",
         "icons/icon48.png",
         "manifest.json",
+        "onboarding.css",
+        "onboarding.js",
         "side-panel.html",
-        "styles.css"
+        "styles.css",
+        "updated.html",
+        "welcome.html"
       ]
     },
     {
       "name": "chromium:no-duplicate-or-unsafe-entries",
       "passed": true,
       "detail": [
+        "onboarding.js",
         "side-panel.html",
         "styles.css",
         "background.js",
         "bundle.js",
+        "updated.html",
         "icons/",
         "icons/icon16.png",
         "icons/icon48.png",
         "icons/icon128.png",
         "icons/icon32.png",
+        "welcome.html",
         "manifest.json",
         "bundle.js.LICENSE.txt",
+        "onboarding.css",
         "assets/",
-        "assets/bmc-cup.svg"
+        "assets/bmc-cup.svg",
+        "assets/logo.svg"
       ]
     },
     {
@@ -1313,6 +1733,18 @@
     },
     {
       "name": "chromium:assets/bmc-cup.svg:no-active-or-remote-content",
+      "passed": true
+    },
+    {
+      "name": "chromium:assets/logo.svg:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:assets/logo.svg:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:assets/logo.svg:no-active-or-remote-content",
       "passed": true
     },
     {
@@ -1388,6 +1820,30 @@
       "passed": true
     },
     {
+      "name": "chromium:onboarding.css:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:onboarding.css:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:onboarding.css:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:onboarding.js:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:onboarding.js:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:onboarding.js:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "chromium:side-panel.html:matches-current-unpacked",
       "passed": true
     },
@@ -1412,13 +1868,37 @@
       "passed": true
     },
     {
+      "name": "chromium:updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "stress-tests-pass",
       "passed": true
     }
   ],
   "issues": [],
-  "elapsed_ms": 1429.09,
-  "check_count": 137,
-  "passed_check_count": 137,
+  "elapsed_ms": 910.24,
+  "check_count": 197,
+  "passed_check_count": 197,
   "note": "Snapshot evidence. Re-run this audit after rebuilding or repacking; archive hashes are final only for the bytes recorded here."
 }

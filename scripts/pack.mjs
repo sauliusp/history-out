@@ -8,7 +8,7 @@ mkdirSync('releases',{recursive:true});
 for(const target of ['chrome','edge','brave','chromium']){
   const staging=path.resolve(`releases/historyout-${manifest.version}-${target}`);
   rmSync(staging,{recursive:true,force:true});mkdirSync(staging,{recursive:true});
-  for(const file of ['manifest.json','background.js','bundle.js','bundle.js.LICENSE.txt','side-panel.html','styles.css','icons','assets/bmc-cup.svg']){
+  for(const file of ['manifest.json','background.js','bundle.js','bundle.js.LICENSE.txt','side-panel.html','styles.css','icons','assets/bmc-cup.svg','assets/logo.svg','welcome.html','updated.html','onboarding.js','onboarding.css']){
     const destination=path.join(staging,file);
     mkdirSync(path.dirname(destination),{recursive:true});
     cpSync(path.join('extension-unpacked',file),destination,{recursive:true});

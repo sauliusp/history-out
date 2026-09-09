@@ -20,7 +20,6 @@ chrome.action.onClicked.addListener(async () => {
   }
 });
 
-const RELEASE_SITE = 'https://historyout.sauliusdev.chatgpt.site';
 const OPENED_VERSION_KEY = 'historyoutOpenedVersion';
 let lifecycleQueue = Promise.resolve();
 
@@ -33,8 +32,8 @@ chrome.runtime.onInstalled.addListener((details) => {
     if (details.reason === 'update' && details.previousVersion === version) return;
     const saved = await chrome.storage.local.get(OPENED_VERSION_KEY);
     if (saved[OPENED_VERSION_KEY] === version) return;
-    const route = details.reason === 'install' ? '/welcome/' : '/changelog/';
-    await chrome.tabs.create({ url: RELEASE_SITE + route });
+    const page = details.reason === 'install' ? 'welcome.html' : 'updated.html';
+    await chrome.tabs.create({ url: chrome.runtime.getURL(page) });
     await chrome.storage.local.set({ [OPENED_VERSION_KEY]: version });
   }).catch(() => {
     // An unavailable tab or storage service must never prevent normal exporting.
