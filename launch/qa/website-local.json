@@ -1,0 +1,15 @@
+{
+  "date": "2026-09-05",
+  "method": "CUA browser rendering plus static route and metadata tests",
+  "staticPages": 13,
+  "indexablePages": 12,
+  "automatedTestsPassed": 3,
+  "mobileViewport": {"width":390,"height":844},
+  "mobileRoutes": ["/", "/welcome/", "/changelog/", "/alternatives/export-chrome-history/", "/guides/export-browser-history-to-html/"],
+  "mobileOverflow": false,
+  "brokenImages": 0,
+  "fullChangelogExpands": true,
+  "originalWordmarkAndFavicon": true,
+  "comparisonFooterLinks": 4,
+  "liveVerification": "Recorded separately after publication"
+}

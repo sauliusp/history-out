@@ -1,0 +1,110 @@
+{
+  "checkedAt": "2026-09-07T06:24:45.621859+00:00",
+  "method": "Native Chrome Developer Dashboard upload and Save draft; actual server CRX downloaded and compared to tested ZIP; final Submit for review with automatic-publication checkbox checked; successful submission confirmation and reloaded Status page.",
+  "itemId": "idohnkdgejocejlkihihonhemndpiiei",
+  "dashboardUrl": "https://chrome.google.com/webstore/devconsole/6bc51b6e-4903-4534-823e-9d7dc4f3705f/idohnkdgejocejlkihihonhemndpiiei/edit",
+  "status": {
+    "submitted": true,
+    "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
+    "targetVersion": "2.0.0",
+    "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-07",
+    "status": "pending review",
+    "published": false,
+    "draftVersion": "2.0.0",
+    "draftVerifiedAt": "2026-09-07T06:24:45.621859+00:00",
+    "dashboardStatusText": "This draft is pending review.",
+    "graphics": {
+      "screenshots": 5,
+      "promotionalTiles": 2,
+      "originalIconRetained": true,
+      "screenshotsChangedThisPass": false,
+      "promotionalTilesReplaced": 0,
+      "approvedPromotionalTilesVerified": 2
+    },
+    "video": "https://www.youtube.com/watch?v=cGybkRSkk2Y",
+    "privacyPolicy": "https://exportchromehistory.app/privacy/",
+    "localWebHistoryDisclosure": true,
+    "testInstructionsSaved": true,
+    "permissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "evidence": "chrome-draft.json",
+    "ownerNextAction": "No manual publishing action is required. Google review is pending; verify the signed release after automatic publication.",
+    "automaticPublishAfterApproval": true
+  },
+  "package": {
+    "file": "releases/historyout-2.0.0-chrome.zip",
+    "sha256": "718719358b9d9a9146e52fbc48f56c8b6c17886a47c7c9b37070bd8d1551c44f",
+    "draftVersion": "2.0.0",
+    "publishedVersion": "1.0.1",
+    "draftPermissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "publishedPermissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "bytes": 158398,
+    "verification": "The exact local ZIP was uploaded and saved. The downloaded final server CRX matches all ten non-manifest runtime files byte for byte; the only manifest addition is the normal CWS update_url and the only additional file is _metadata/verified_contents.json.",
+    "downloadedCRXSHA256": "3eba379feceb9a5ac011b955e4cb5835c852087f0614523b8511941ab62cd029",
+    "serverComparison": "submission-2026-09-07/server-draft-comparison.json"
+  },
+  "privacy": {
+    "savedToast": "Item saved.",
+    "singlePurpose": "Help users find, revisit, filter and export the browsing history available to their current browser profile as CSV, JSON or HTML files. All history processing happens locally on the user's device.",
+    "dataCategory": "Web history",
+    "remoteCode": false,
+    "limitedUseCertifications": 3,
+    "privacyUrl": "https://exportchromehistory.app/privacy/"
+  },
+  "reviewerInstructions": {
+    "textFile": "../chrome-reviewer-dashboard.txt",
+    "characters": 467,
+    "confirmation": "Test instructions were saved on 6 September 2026."
+  },
+  "distribution": {
+    "price": "Free of charge",
+    "visibility": "Public",
+    "regionsChanged": false
+  },
+  "limitations": [
+    "Signed store clean install and automatic update transport remain post-publication checks. Native migration was tested using the actual published 1.0.1 program payload.",
+    "The website pending-store-update notice remains until public version 2.0.0 is verified."
+  ],
+  "verificationScope": "Final package/runtime, all existing five screenshots and both approved promotional tiles, unchanged video, same permissions, privacy and free/public distribution, successful review submission with automatic publication enabled. Website/domain/video were not changed.",
+  "promoReplacement": {
+    "savedAt": "2026-09-07T05:49:54.499733+00:00",
+    "originalLogoRetained": true,
+    "screenshotsUntouched": 5,
+    "assets": [
+      {
+        "file": "launch/store-kit/chrome/promotional/small-promo-440x280.png",
+        "sha256": "ec13e681b4d82b1de901d79c33b2f6c141120cb5050e7e9ac8a4940a3dd17883",
+        "bytes": 14031
+      },
+      {
+        "file": "launch/store-kit/chrome/promotional/marquee-1400x560.png",
+        "sha256": "1063ae5a041bb8ad09cee7b0e03f96becc53d0d6ae28088001aad54b348cfa83",
+        "bytes": 52055
+      }
+    ]
+  },
+  "qa": "submission-2026-09-07/README.md",
+  "submission": {
+    "observedAt": "2026-09-07T06:24:45.621859+00:00",
+    "authorizedBy": "Explicit user instruction to submit for review and publish automatically after approval.",
+    "confirmationHeading": "Submit 'HistoryOut - Export Browser History' for review?",
+    "automaticPublicationCheckbox": "Publish 'HistoryOut - Export Browser History' automatically after it has passed review",
+    "checkboxValueAtSubmit": 1,
+    "action": "Clicked final Submit for review",
+    "successHeading": "Your extension was submitted for review",
+    "statusAfterNavigation": "This draft is pending review.",
+    "statusURL": "https://chrome.google.com/webstore/devconsole/6bc51b6e-4903-4534-823e-9d7dc4f3705f/idohnkdgejocejlkihihonhemndpiiei/edit/status",
+    "published": false
+  }
+}

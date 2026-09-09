@@ -1,0 +1,94 @@
+{
+  "checkedAt": "2026-09-07T05:49:54.499733+00:00",
+  "method": "Native Chrome Developer Dashboard file picker upload, saved draft, reload, Package and Status page verification. No submission or publication action.",
+  "itemId": "idohnkdgejocejlkihihonhemndpiiei",
+  "dashboardUrl": "https://chrome.google.com/webstore/devconsole/6bc51b6e-4903-4534-823e-9d7dc4f3705f/idohnkdgejocejlkihihonhemndpiiei/edit",
+  "status": {
+    "submitted": false,
+    "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
+    "targetVersion": "2.0.0",
+    "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-07",
+    "status": "saved draft",
+    "published": false,
+    "draftVersion": "2.0.0",
+    "draftVerifiedAt": "2026-09-07T05:49:54.499733+00:00",
+    "dashboardStatusText": "This draft is unpublished.",
+    "graphics": {
+      "screenshots": 5,
+      "promotionalTiles": 2,
+      "originalIconRetained": true,
+      "screenshotsChangedThisPass": false,
+      "promotionalTilesReplaced": 2
+    },
+    "video": "https://www.youtube.com/watch?v=cGybkRSkk2Y",
+    "privacyPolicy": "https://exportchromehistory.app/privacy/",
+    "localWebHistoryDisclosure": true,
+    "testInstructionsSaved": true,
+    "permissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "evidence": "chrome-draft.json",
+    "ownerNextAction": "Review draft, submit for review and publish after approval"
+  },
+  "package": {
+    "file": "releases/historyout-2.0.0-chrome.zip",
+    "sha256": "2874136b5c896956eeafed23d03b8f4623ffd0ff33e1fcc6ced43f9ac79768ba",
+    "draftVersion": "2.0.0",
+    "publishedVersion": "1.0.1",
+    "draftPermissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "publishedPermissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "bytes": 158035,
+    "verification": "Selected the exact local ZIP in the native file picker. Upload completed and returned to the draft editor; Item saved. appeared after Save draft. Reloaded Package page shows 2.0.0 and the same three permissions. SHA-256 records the uploaded local ZIP, not a downloaded server CRX."
+  },
+  "privacy": {
+    "savedToast": "Item saved.",
+    "singlePurpose": "Help users find, revisit, filter and export the browsing history available to their current browser profile as CSV, JSON or HTML files. All history processing happens locally on the user's device.",
+    "dataCategory": "Web history",
+    "remoteCode": false,
+    "limitedUseCertifications": 3,
+    "privacyUrl": "https://exportchromehistory.app/privacy/"
+  },
+  "reviewerInstructions": {
+    "textFile": "../chrome-reviewer-dashboard.txt",
+    "characters": 467,
+    "confirmation": "Test instructions were saved on 6 September 2026."
+  },
+  "distribution": {
+    "price": "Free of charge",
+    "visibility": "Public",
+    "regionsChanged": false
+  },
+  "limitations": [
+    "Signed store install and update verification remains after owner submission, approval and publication.",
+    "The website pending-store-update notice remains until public version 2.0.0 is verified."
+  ],
+  "verificationScope": "Today: replacement 2.0.0 package, two promotional tiles, unchanged five screenshots/video, draft status and permissions. Privacy, distribution and reviewer values below were prepared and verified on 2026-09-06 and were not edited today.",
+  "promoReplacement": {
+    "savedAt": "2026-09-07T05:49:54.499733+00:00",
+    "originalLogoRetained": true,
+    "screenshotsUntouched": 5,
+    "assets": [
+      {
+        "file": "launch/store-kit/chrome/promotional/small-promo-440x280.png",
+        "sha256": "ec13e681b4d82b1de901d79c33b2f6c141120cb5050e7e9ac8a4940a3dd17883",
+        "bytes": 14031
+      },
+      {
+        "file": "launch/store-kit/chrome/promotional/marquee-1400x560.png",
+        "sha256": "1063ae5a041bb8ad09cee7b0e03f96becc53d0d6ae28088001aad54b348cfa83",
+        "bytes": 52055
+      }
+    ]
+  },
+  "qa": "preflight-2026-09-07/README.md"
+}

@@ -1,0 +1,28 @@
+{
+  "source": "Published main.crx from the existing authenticated Chrome Web Store dashboard, saved with Save Link As",
+  "sha256": "138597ea8bedd0bd97a6260b45ee96b65b2123a89b60c82b22182b80db0f7077",
+  "version": "1.0.1",
+  "permissions": [
+    "history",
+    "storage",
+    "sidePanel"
+  ],
+  "files": [
+    "side-panel.html",
+    "styles.css",
+    "background.js",
+    "bundle.js",
+    "icons/",
+    "icons/icon16.png",
+    "icons/icon48.png",
+    "icons/icon128.png",
+    "icons/icon32.png",
+    "manifest.json",
+    "bundle.js.LICENSE.txt",
+    "extension-packed.zip",
+    "_metadata/",
+    "_metadata/verified_contents.json"
+  ],
+  "testPayload": "published-1.0.1-payload.zip",
+  "omitted": "Only Chrome Web Store _metadata/ content, which is reserved in unpacked extensions; runtime and manifest bytes unchanged."
+}

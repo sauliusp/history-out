@@ -1,0 +1,60 @@
+{
+  "text": " Lost that useful page? Find your way back with history out. Review your day, then search the pages you need. Keep the latest visit to each page. Save your view and resume your research later. Choose your dates, your columns and your format. Clean up URL parameters, then export a useful file. Free? Local? No account. Get history out and keep what matters.",
+  "segments": [
+    {
+      "start": 0.0,
+      "end": 2.4,
+      "text": " Lost that useful page?"
+    },
+    {
+      "start": 2.4,
+      "end": 4.88,
+      "text": " Find your way back with history out."
+    },
+    {
+      "start": 4.88,
+      "end": 9.16,
+      "text": " Review your day, then search the pages you need."
+    },
+    {
+      "start": 9.16,
+      "end": 13.4,
+      "text": " Keep the latest visit to each page."
+    },
+    {
+      "start": 13.4,
+      "end": 17.84,
+      "text": " Save your view and resume your research later."
+    },
+    {
+      "start": 17.84,
+      "end": 22.400000000000002,
+      "text": " Choose your dates, your columns and your format."
+    },
+    {
+      "start": 22.400000000000002,
+      "end": 27.44,
+      "text": " Clean up URL parameters, then export a useful file."
+    },
+    {
+      "start": 27.44,
+      "end": 28.44,
+      "text": " Free?"
+    },
+    {
+      "start": 28.44,
+      "end": 29.44,
+      "text": " Local?"
+    },
+    {
+      "start": 29.44,
+      "end": 31.0,
+      "text": " No account."
+    },
+    {
+      "start": 31.0,
+      "end": 33.2,
+      "text": " Get history out and keep what matters."
+    }
+  ]
+}

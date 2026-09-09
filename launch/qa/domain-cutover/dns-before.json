@@ -1,0 +1,48 @@
+{
+  "source": "Namecheap Advanced DNS UI and both authoritative DNS servers",
+  "domain": "exportchromehistory.app",
+  "nameservers": [
+    "dns1.registrar-servers.com",
+    "dns2.registrar-servers.com"
+  ],
+  "hostRecords": [
+    {
+      "type": "A",
+      "host": "@",
+      "value": "185.158.133.1",
+      "ttl": 300
+    },
+    {
+      "type": "A",
+      "host": "www",
+      "value": "185.158.133.1",
+      "ttl": 300
+    },
+    {
+      "type": "TXT",
+      "host": "_lovable",
+      "value": "lovable_verify=376a04fe1f74e967a4698271fa7767727bf32a3ce38976d12481d76821897807",
+      "ttl": 300
+    },
+    {
+      "type": "TXT",
+      "host": "_lovable.www",
+      "value": "lovable_verify=8aed223409cf87810621a9540aa9159bc40dea2fa7040c2e795641c47ff942c7",
+      "ttl": 300
+    }
+  ],
+  "mailSettings": "Email Forwarding",
+  "mailTxt": "v=spf1 include:spf.efwd.registrar-servers.com ~all",
+  "mx": [
+    "10 eforward1.registrar-servers.com",
+    "10 eforward2.registrar-servers.com",
+    "10 eforward3.registrar-servers.com",
+    "15 eforward4.registrar-servers.com",
+    "20 eforward5.registrar-servers.com"
+  ],
+  "dnssec": false,
+  "dynamicDns": false,
+  "rollback": "Restore only the @ and www A records to 185.158.133.1 with TTL 300. Keep old Lovable association, nameservers and all email records unchanged.",
+  "checkedOn": "2026-09-06",
+  "sequence": "Captured before any DNS record changes"
+}

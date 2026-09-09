@@ -1,0 +1,35 @@
+[aist#0:0/pcm_s16le @ 0x7fc361027640] Guessed Channel Layout: mono
+Input #0, wav, from '/Users/spetreikis/Desktop/apps/HistoryOut/launch/assets/video-v3/audio/voiceover.wav':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Duration: 00:00:23.02, bitrate: 768 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 48000 Hz, mono, s16, 768 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, null, to 'pipe:':
+  Metadata:
+    encoder         : Lavf61.7.100
+  Stream #0:0: Audio: pcm_s16le, 48000 Hz, mono, s16, 768 kb/s
+      Metadata:
+        encoder         : Lavc61.19.100 pcm_s16le
+[silencedetect @ 0x7fc351008a00] silence_start: 2.629333
+[silencedetect @ 0x7fc351008a00] silence_end: 2.810583 | silence_duration: 0.18125
+[silencedetect @ 0x7fc351008a00] silence_start: 4.174854
+[silencedetect @ 0x7fc351008a00] silence_end: 4.340271 | silence_duration: 0.165417
+[silencedetect @ 0x7fc351008a00] silence_start: 5.549917
+[silencedetect @ 0x7fc351008a00] silence_end: 5.703917 | silence_duration: 0.154
+[silencedetect @ 0x7fc351008a00] silence_start: 8.917792
+[silencedetect @ 0x7fc351008a00] silence_end: 9.078604 | silence_duration: 0.160812
+[silencedetect @ 0x7fc351008a00] silence_start: 10.680958
+[silencedetect @ 0x7fc351008a00] silence_end: 10.833292 | silence_duration: 0.152333
+[silencedetect @ 0x7fc351008a00] silence_start: 13.352708
+[silencedetect @ 0x7fc351008a00] silence_end: 13.618187 | silence_duration: 0.265479
+[silencedetect @ 0x7fc351008a00] silence_start: 16.978875
+[silencedetect @ 0x7fc351008a00] silence_end: 17.339708 | silence_duration: 0.360833
+[silencedetect @ 0x7fc351008a00] silence_start: 20.002854
+[silencedetect @ 0x7fc351008a00] silence_end: 20.276708 | silence_duration: 0.273854
+[silencedetect @ 0x7fc351008a00] silence_start: 21.983062
+[silencedetect @ 0x7fc351008a00] silence_end: 22.292333 | silence_duration: 0.309271
+[out#0/null @ 0x7fc351004140] video:0KiB audio:2158KiB subtitle:0KiB other streams:0KiB global headers:0KiB muxing overhead: unknown
+size=N/A time=00:00:23.01 bitrate=N/A speed=6.56e+03x

@@ -1,0 +1,70 @@
+{
+  "checked": "2026-09-06T03:05:53.317Z",
+  "status": "passed",
+  "unitTests": {
+    "tests": 37,
+    "failed": 0
+  },
+  "typecheck": "passed",
+  "browserCases": 30,
+  "nativeUpgradeCases": 3,
+  "packageChecks": 137,
+  "originalIcons": {
+    "baseline": "0272441",
+    "sha256": {
+      "16": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+      "32": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+      "48": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+      "128": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111"
+    }
+  },
+  "bundleBytes": 476832,
+  "bundleSha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+  "validationStages": {
+    "earlierBroadValidation": {
+      "unitTestsChecked": "2026-09-05T09:13:04.075Z",
+      "browserScenariosChecked": "2026-09-05T09:07:05.730Z",
+      "nativeUpgradeChecked": "2026-09-05T08:57:27.888Z",
+      "note": "The 37 unit, 30 browser and 3 native update results predate the additive support CTA. They were not all rerun for this UI-only change."
+    },
+    "currentSupportDelta": {
+      "checked": "2026-09-05T11:38:08.879Z",
+      "evidence": "bmc-cta.json",
+      "viewports": [
+        320,
+        400,
+        1200
+      ],
+      "typecheck": "passed",
+      "productionBuild": "passed",
+      "originalIconBytes": "verified unchanged",
+      "nativeVisiblePreview": "passed; six fictional yesterday visits, five pages, three sites"
+    },
+    "currentPackageAudit": {
+      "checked": "2026-09-06T03:05:53.317Z",
+      "checks": 137,
+      "stressTestsRerun": 3,
+      "note": "Manifest name and description updated to lead with export. Runtime, original assets, version and permissions are unchanged."
+    },
+    "currentMarketingMetadata": {
+      "checked": "2026-09-06T03:05:53.317Z",
+      "manifestSHA256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+      "chromeEdgeBraveArchiveSHA256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+      "genericChromiumArchiveSHA256": "f3cf8b98a0ff7ed39543c458492bac7c034115582d6073aa670cde30de5a9902",
+      "runtimeComparedWith": "88f0383966c6254bd2bc7a477e3b4dd356e2d640",
+      "runtimeChanged": false,
+      "permissionsChanged": false
+    },
+    "currentVoiceRefresh": {
+      "checked": "2026-09-06T03:44:58.186012+00:00",
+      "technicalChecksPassed": 27,
+      "websiteTestsPassed": 3,
+      "browserPlayback": "passed with 14 loaded caption cues",
+      "publicHTTPChecksPassed": 5,
+      "media": "../assets/video-v5/historyout-media.json",
+      "evidence": "voice-refresh-audit.json",
+      "publicEvidence": "public-voice-refresh.json",
+      "extensionSourceAndPackagesChanged": false
+    }
+  }
+}

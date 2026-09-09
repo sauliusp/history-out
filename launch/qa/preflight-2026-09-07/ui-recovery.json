@@ -1,0 +1,88 @@
+{
+  "checked": "2026-09-07T05:45:39.833Z",
+  "status": "passed",
+  "scope": "Focused UI delta with fictional history and controlled storage errors. Does not establish real browser retention or store publication.",
+  "browser": {
+    "name": "Chromium",
+    "version": "149.0.7827.55"
+  },
+  "bundleSha256": "425adcc1a7cc7f1c0d0eff9dc00c917ada813635a6e36cd656560ff30db506eb",
+  "output": "/tmp/historyout-preflight-2026-09-07/run-1788759926192",
+  "results": [
+    {
+      "name": "Availability guidance and final support section at 320px",
+      "status": "passed",
+      "width": 320,
+      "keyboardDetails": true,
+      "guidanceRanges": [
+        "custom",
+        "all"
+      ],
+      "hiddenRange": "today",
+      "supportAfterExport": true,
+      "footerRetained": true
+    },
+    {
+      "name": "Availability guidance and final support section at 400px",
+      "status": "passed",
+      "width": 400,
+      "keyboardDetails": true,
+      "guidanceRanges": [
+        "custom",
+        "all"
+      ],
+      "hiddenRange": "today",
+      "supportAfterExport": true,
+      "footerRetained": true
+    },
+    {
+      "name": "Availability guidance and final support section at 1200px",
+      "status": "passed",
+      "width": 1200,
+      "keyboardDetails": true,
+      "guidanceRanges": [
+        "custom",
+        "all"
+      ],
+      "hiddenRange": "today",
+      "supportAfterExport": true,
+      "footerRetained": true
+    },
+    {
+      "name": "Retained data older than 90 days is not blocked",
+      "status": "passed",
+      "syntheticOldVisit": "2026-03-11T10:00:00.000Z",
+      "exportRanges": [
+        "custom",
+        "all"
+      ],
+      "downloadsContainOldVisit": true
+    },
+    {
+      "name": "Startup storage failure preserves existing preferences until Retry succeeds",
+      "status": "passed",
+      "defaultWritesDuringFailure": 0,
+      "restored": [
+        "JSON format",
+        "Last 7 days",
+        "three selected columns",
+        "existing saved view"
+      ],
+      "historyReads": 0
+    },
+    {
+      "name": "Failed saved-view write reports failure and retry recovers",
+      "status": "passed",
+      "falseSuccessPrevented": true,
+      "priorViewsPreserved": true,
+      "retryPersistedAcrossReload": true
+    },
+    {
+      "name": "Failed preference write permits export and Retry saving persists it",
+      "status": "passed",
+      "sessionExportAvailable": true,
+      "oldPreferencePreservedOnFailure": true,
+      "explicitRetryPersisted": true
+    }
+  ]
+}

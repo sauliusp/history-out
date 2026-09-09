@@ -1,0 +1,328 @@
+{
+  "checked": "2026-09-07T06:22:07.709Z",
+  "status": "passed",
+  "scope": "Actual built UI with synthetic history and isolated storage. Complements native/browser/error suites; does not certify store publication or Brave runtime.",
+  "browser": {
+    "name": "Chromium",
+    "version": "149.0.7827.55"
+  },
+  "bundleSha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+  "output": "/tmp/historyout-submission-2026-09-07/options-xlNMtS",
+  "cases": [
+    {
+      "name": "All preset ranges preview and export their exact boundaries",
+      "status": "passed",
+      "elapsedMs": 9569,
+      "presets": 6
+    },
+    {
+      "name": "Custom dates reject incomplete/reversed input and export valid single days",
+      "status": "passed",
+      "elapsedMs": 1847
+    },
+    {
+      "name": "Every output column can stand alone and all/none states work in each format",
+      "status": "passed",
+      "elapsedMs": 16146,
+      "individualColumns": 11,
+      "allColumnsFormats": 3,
+      "noColumnsFormats": 3
+    },
+    {
+      "name": "Live title/URL/site filters, top sites, clear and reset agree",
+      "status": "passed",
+      "elapsedMs": 4412
+    },
+    {
+      "name": "All cleanup and one-row combinations match preview across CSV/JSON/HTML",
+      "status": "passed",
+      "elapsedMs": 7108,
+      "optionStates": 4,
+      "formatDownloads": 12
+    },
+    {
+      "name": "Preview cap and refresh snapshot preserve full export in all formats",
+      "status": "passed",
+      "elapsedMs": 1754,
+      "rendered": 100,
+      "exportedPerFormat": 105,
+      "afterRefresh": 106
+    },
+    {
+      "name": "Saved views apply, overwrite, reset and delete with persistence",
+      "status": "passed",
+      "elapsedMs": 3818
+    },
+    {
+      "name": "Saved-view capacity rejects a thirteenth name and recovers through update and delete",
+      "status": "passed",
+      "elapsedMs": 668,
+      "capacity": 12,
+      "rejectedExtra": 1,
+      "existingRecordsPreserved": true
+    },
+    {
+      "name": "Two windows preserve saved views across concurrent and stale operations",
+      "status": "passed",
+      "elapsedMs": 1254,
+      "pages": 2,
+      "sharedOrigin": "http://127.0.0.1:56699",
+      "secureContext": true,
+      "webLocksAvailable": true,
+      "queuedLocks": {
+        "held": [
+          {
+            "clientId": "FD22A558C30CED85D41C211F8FD9212D",
+            "mode": "exclusive",
+            "name": "historyout:storage:historyoutSavedViews"
+          }
+        ],
+        "pending": [
+          {
+            "clientId": "FD22A558C30CED85D41C211F8FD9212D",
+            "mode": "exclusive",
+            "name": "historyout:storage:historyoutSavedViews"
+          },
+          {
+            "clientId": "8DF82CB443AAE43E567C881E230FDD63",
+            "mode": "exclusive",
+            "name": "historyout:storage:historyoutSavedViews"
+          }
+        ]
+      },
+      "checks": [
+        "Stale sequential additions preserve both names",
+        "Two actual writes wait behind the same exclusive Web Lock, then preserve all distinct names and unique IDs",
+        "Concurrent case-insensitive same-name saves retain one record",
+        "Stale deletion preserves later additions",
+        "Capacity uses latest storage and rejects overflow without mutation",
+        "Stale overwrite keeps ID and updates existing record at capacity",
+        "Stale deletion preserves another window updated record",
+        "Freed capacity permits a new record; both pages reload all 12"
+      ]
+    },
+    {
+      "name": "Keyboard sharing and disclosure controls have usable close paths",
+      "status": "passed",
+      "elapsedMs": 1889
+    }
+  ],
+  "coverageMatrix": [
+    {
+      "control": "History range: Today",
+      "evidence": "Exact preview and JSON rows, boundary inclusions and exclusions",
+      "scope": "new option suite"
+    },
+    {
+      "control": "History range: Yesterday",
+      "evidence": "Exact preview and JSON rows, boundary inclusions and exclusions",
+      "scope": "new option suite"
+    },
+    {
+      "control": "History range: Last 24 hours",
+      "evidence": "Exact preview and JSON rows, boundary inclusions and exclusions",
+      "scope": "new option suite"
+    },
+    {
+      "control": "History range: Last 7 days",
+      "evidence": "Exact preview and JSON rows, boundary inclusions and exclusions",
+      "scope": "new option suite"
+    },
+    {
+      "control": "History range: Last 30 days",
+      "evidence": "Exact preview and JSON rows, boundary inclusions and exclusions",
+      "scope": "new option suite"
+    },
+    {
+      "control": "History range: All available history",
+      "evidence": "Exact preview and JSON rows, boundary inclusions and exclusions",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Custom dates: From and Through",
+      "evidence": "End-only, start-after-end, cleared values disable export; valid single-day includes both endpoints; native constraints intact",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Order",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Id",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Date",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Time",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Title",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Url",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Visit Count",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Typed Count",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Transition",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Timestamp",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: Domain",
+      "evidence": "Selected alone through UI and present as sole key in real JSON download",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Export format: CSV",
+      "evidence": "Selected and reselected; all 11 columns in real downloaded file",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Export format: JSON",
+      "evidence": "Selected and reselected; all 11 columns in real downloaded file",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Export format: HTML",
+      "evidence": "Selected and reselected; all 11 columns in real downloaded file",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Include: no columns / all columns",
+      "evidence": "Zero columns disables export in all three formats, restoring selection reenables export",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Search, Clear search, website options, All websites",
+      "evidence": "Case-insensitive title and URL search plus each domain option exact rows, no history reread",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Most visited site toggles",
+      "evidence": "Pressed/unpressed state and real subdomain inclusion; similarly named hostile domain excluded",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Reset filters / Clear filters",
+      "evidence": "Loaded reset and no-match clear restore the trail; output cleanup stays independent",
+      "scope": "new option suite"
+    },
+    {
+      "control": "One row per URL / Remove URL queries & fragments",
+      "evidence": "All four states with exact preview agreement in 12 CSV/JSON/HTML downloads, including latest after cleanup",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Preview list, keyboard scrolling and revisit links",
+      "evidence": "100 rendered rows, End scrolls, changed query resets scroll, safe keyboard-focusable links",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Preview / Refresh / export counts and loaded notice",
+      "evidence": "105 complete rows across all formats; cached snapshot changes to 106 only on Refresh",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Save view toggle, name, Save/Enter",
+      "evidence": "Whitespace disabled, 40-character limit, form toggle, successful named settings save",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Saved view chip / overwrite / delete",
+      "evidence": "Case-insensitive overwrite keeps ID; keyboard apply restores settings without read; unloaded Reset filters; direct export; failed deletion preserved; Delete/Backspace/icon deletion persists",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Dismiss notice",
+      "evidence": "Download alert closes without changing loaded data",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Saved views: 12-view capacity / update / delete recovery",
+      "evidence": "A thirteenth distinct name performs zero writes and keeps all views; case-insensitive overwrite retains ID; failed delete preserves capacity; successful delete permits new save; reload confirms all 12 records",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Saved views across multiple windows",
+      "evidence": "Shared storage and real Web Locks: stale/concurrent distinct names, concurrent same-name overwrite, stale deletion, latest capacity rejection, update and deletion recovery, two-page reload",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Tell a friend, copied status and Close",
+      "evidence": "Enter shares exact install URL; close clears the notice",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Clipboard fallback field, Escape and Done",
+      "evidence": "Space opens fallback on denial, URL is selected/read-only, both close paths work",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Availability disclosure",
+      "evidence": "Enter opens and Space closes, supplementing range-specific preflight checks",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Get help / Leave a review / Support HistoryOut / Buy me a coffee",
+      "evidence": "Keyboard focus, exact secure target URLs and new-tab relations verified; optional support tooltip visible; no external messages or contributions sent",
+      "scope": "new option suite"
+    },
+    {
+      "control": "Cancel and loading/progress/aria-busy",
+      "evidence": "release-readiness.cjs: cancellation, no partial downloads, prior snapshot retained; core bounded concurrency/progress tests",
+      "scope": "Existing complementary QA, rerun by root"
+    },
+    {
+      "control": "History error and retry / empty history / no-match notices",
+      "evidence": "release-readiness.cjs: failure retains snapshot, retry works, no empty downloads",
+      "scope": "Existing complementary QA, rerun by root"
+    },
+    {
+      "control": "Startup Retry / preference Retry saving / failed Save",
+      "evidence": "preflight-ui-qa.cjs: no preference overwrite, truthful save failure, recovery and session exports",
+      "scope": "Existing complementary QA, rerun by root"
+    },
+    {
+      "control": "Custom/All availability text and guide link",
+      "evidence": "preflight-ui-qa.cjs: truthful retention guidance, link and >90-day retained download",
+      "scope": "Existing complementary QA, rerun by root"
+    },
+    {
+      "control": "Responsive support placement / original footer / initial export visibility",
+      "evidence": "bmc-cta-qa.cjs: 320/400/1200px, sticky export visible, original footer bytes",
+      "scope": "Existing complementary QA, rerun by root"
+    },
+    {
+      "control": "Recap visits/pages/sites, latest snapshot notice",
+      "evidence": "core.test.cjs validates visit-based counts; native release-readiness validates loaded data and downloads; this suite tests top sites and Refresh",
+      "scope": "Existing complementary QA, rerun by root"
+    }
+  ],
+  "unresolvedIssues": []
+}

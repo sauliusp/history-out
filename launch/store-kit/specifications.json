@@ -1,0 +1,29 @@
+{
+  "checkedOn": "2026-09-05",
+  "chrome": {
+    "source": "https://developer.chrome.com/docs/webstore/images/",
+    "icon": { "width": 128, "height": 128, "format": "PNG", "required": true },
+    "screenshots": { "width": 1280, "height": 800, "prepared": 5, "maximum": 5, "minimum": 1 },
+    "smallPromo": { "width": 440, "height": 280, "required": true },
+    "marquee": { "width": 1400, "height": 560, "required": false }
+  },
+  "edge": {
+    "source": "https://learn.microsoft.com/en-us/microsoft-edge/extensions/publish/publish-extension",
+    "logo": { "width": 128, "height": 128, "minimum": 128, "recommended": 300, "note": "Exact original icon preserved at the accepted minimum." },
+    "screenshots": { "width": 1280, "height": 800, "prepared": 5, "maximum": 6 },
+    "smallPromo": { "width": 440, "height": 280 },
+    "largePromo": { "width": 1400, "height": 560 },
+    "description": { "minimumCharacters": 250, "maximumCharacters": 10000 },
+    "searchTerms": { "maximumTerms": 7, "maximumWords": 21, "maximumCharactersPerTerm": 30 }
+  },
+  "brave": {
+    "source": "https://support.brave.app/hc/en-us/articles/360017909112-How-can-I-add-extensions-to-Brave",
+    "distribution": "Chrome Web Store",
+    "separateStoreSubmission": false
+  },
+  "supportCover": {
+    "source": "https://help.buymeacoffee.com/en/articles/10184401-how-to-set-up-your-buy-me-a-coffee-page",
+    "width": 1600,
+    "height": 400
+  }
+}

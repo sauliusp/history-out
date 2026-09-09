@@ -1,0 +1,22 @@
+{
+  "status": "Public",
+  "videoUrl": "https://youtu.be/duxsGpO5t8Y",
+  "publiclyPublished": true,
+  "durationSeconds": 29,
+  "sourceMP4": "launch/assets/video-v4/historyout-export-demo.mp4",
+  "sourceMP4SHA256": "779d7c2216d2e85a68d9ec210498a51ca4e85387d0faeb4c9350f00a7fc53cbb",
+  "customCaptionsUploaded": true,
+  "customThumbnailUploaded": true,
+  "language": "English",
+  "tagsCount": 8,
+  "chapters": [],
+  "alteredContentDisclosure": "Yes",
+  "checks": "No issues reported by YouTube Studio.",
+  "storeListingUsage": "Use this public 29-second export demonstration as the current store listing video.",
+  "metadataSource": "metadata.json matches the export-first copy uploaded by root.",
+  "voiceReviewLimit": "Transcript and timing are checked; perceptual voice likeness has not been independently confirmed.",
+  "visibilityVerified": "YouTube Studio Video published dialog confirmed on 2026-09-06.",
+  "supersedesVideoUrl": "https://youtu.be/CqMeYRX0hWQ",
+  "publishedAt": "2026-09-06T03:15:07.358140+00:00",
+  "closingHoldAfterVoiceSeconds": 3.985
+}

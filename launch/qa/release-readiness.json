@@ -1,0 +1,261 @@
+{
+  "checked": "2026-09-05T09:07:05.730Z",
+  "platform": {
+    "system": "darwin",
+    "architecture": "arm64",
+    "node": "v22.20.0",
+    "os": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83"
+  },
+  "extensionVersion": "2.0.0",
+  "privacy": "All native history writes use freshly created disposable profiles. Ordinary user browser profiles are never opened or modified.",
+  "cases": [
+    {
+      "name": "Fixture: no initial history reads or network uploads",
+      "status": "passed",
+      "elapsedMs": 2
+    },
+    {
+      "name": "Fixture: Tell a friend copies only the canonical store URL and announces success",
+      "status": "passed",
+      "elapsedMs": 64
+    },
+    {
+      "name": "Fixture: denied clipboard offers a selectable link without permission requests",
+      "status": "passed",
+      "elapsedMs": 78
+    },
+    {
+      "name": "Fixture: support is optional and uses the existing secure contribution URL",
+      "status": "passed",
+      "elapsedMs": 489
+    },
+    {
+      "name": "Fixture: saved-filter direct export cannot reset filters while pending",
+      "status": "passed",
+      "elapsedMs": 1581
+    },
+    {
+      "name": "Fixture: cancellation after prior preview preserves its snapshot and stops downloads",
+      "status": "passed",
+      "elapsedMs": 706
+    },
+    {
+      "name": "Fixture: API failure preserves previous snapshot and retry succeeds",
+      "status": "passed",
+      "elapsedMs": 71
+    },
+    {
+      "name": "Fixture: no-match and empty history states never download empty data",
+      "status": "passed",
+      "elapsedMs": 42
+    },
+    {
+      "name": "Fixture: 10,000 URLs and 30,000 visits remain complete and usable in the browser UI",
+      "status": "passed",
+      "elapsedMs": 2354,
+      "candidateURLs": 10000,
+      "visits": 30000,
+      "renderedPreviewRows": 100,
+      "loadMs": 150,
+      "filterMs": 26,
+      "downloadBytes": 3638965,
+      "file": "/Users/spetreikis/Desktop/apps/HistoryOut/launch/qa/downloads/scale-30000-history-export.csv",
+      "note": "Synthetic Chrome API fixture timing in a real browser UI on this machine. Not a real-profile latency guarantee."
+    },
+    {
+      "name": "Fixture: no runtime exceptions and no extension network requests",
+      "status": "passed",
+      "elapsedMs": 0
+    },
+    {
+      "name": "chromium: a fresh native install opens its welcome once",
+      "status": "passed",
+      "elapsedMs": 1857,
+      "welcomeURL": "https://historyout.sauliusdev.chatgpt.site/welcome/"
+    },
+    {
+      "name": "chromium: native Tell a friend succeeds or exposes its selectable fallback",
+      "status": "passed",
+      "elapsedMs": 61,
+      "outcome": "clipboard-success"
+    },
+    {
+      "name": "chromium: real v1 preferences migrate, persist, and survive reload",
+      "status": "passed",
+      "elapsedMs": 469
+    },
+    {
+      "name": "chromium: custom calendar dates include both boundaries and a URL revisited later",
+      "status": "passed",
+      "elapsedMs": 62,
+      "range": {
+        "start": 1788469200000,
+        "end": 1788555599999,
+        "localDate": "2026-09-04"
+      },
+      "expectedVisits": 6,
+      "revisitedURLIncluded": true
+    },
+    {
+      "name": "chromium: JSON download exactly matches six selected native visits",
+      "status": "passed",
+      "elapsedMs": 25,
+      "file": "/Users/spetreikis/Desktop/apps/HistoryOut/launch/qa/downloads/chromium-exact-history-export.json",
+      "rows": 6,
+      "columns": [
+        "title",
+        "url",
+        "timestamp",
+        "domain"
+      ]
+    },
+    {
+      "name": "chromium: CSV download preserves rows and safely quotes spreadsheet formulas and newlines",
+      "status": "passed",
+      "elapsedMs": 27,
+      "file": "/Users/spetreikis/Desktop/apps/HistoryOut/launch/qa/downloads/chromium-exact-history-export.csv",
+      "rows": 6
+    },
+    {
+      "name": "chromium: HTML download preserves selected cells and blocks injected markup",
+      "status": "passed",
+      "elapsedMs": 131,
+      "file": "/Users/spetreikis/Desktop/apps/HistoryOut/launch/qa/downloads/chromium-exact-history-export.html",
+      "rows": 6
+    },
+    {
+      "name": "chromium: cleanup plus latest-URL mode exports the exact preview",
+      "status": "passed",
+      "elapsedMs": 277
+    },
+    {
+      "name": "chromium: saved view survives closing its app and reapplying after reload",
+      "status": "passed",
+      "elapsedMs": 206
+    },
+    {
+      "name": "chromium: native preview has no runtime errors or page network uploads",
+      "status": "passed",
+      "elapsedMs": 0
+    },
+    {
+      "name": "edge: a fresh native install opens its welcome once",
+      "status": "passed",
+      "elapsedMs": 134,
+      "welcomeURL": "https://historyout.sauliusdev.chatgpt.site/welcome/"
+    },
+    {
+      "name": "edge: native Tell a friend succeeds or exposes its selectable fallback",
+      "status": "passed",
+      "elapsedMs": 131,
+      "outcome": "clipboard-success"
+    },
+    {
+      "name": "edge: real v1 preferences migrate, persist, and survive reload",
+      "status": "passed",
+      "elapsedMs": 455
+    },
+    {
+      "name": "edge: custom calendar dates include both boundaries and a URL revisited later",
+      "status": "passed",
+      "elapsedMs": 73,
+      "range": {
+        "start": 1788469200000,
+        "end": 1788555599999,
+        "localDate": "2026-09-04"
+      },
+      "expectedVisits": 6,
+      "revisitedURLIncluded": true
+    },
+    {
+      "name": "edge: JSON download exactly matches six selected native visits",
+      "status": "passed",
+      "elapsedMs": 66,
+      "file": "/Users/spetreikis/Desktop/apps/HistoryOut/launch/qa/downloads/edge-exact-history-export.json",
+      "rows": 6,
+      "columns": [
+        "title",
+        "url",
+        "timestamp",
+        "domain"
+      ]
+    },
+    {
+      "name": "edge: CSV download preserves rows and safely quotes spreadsheet formulas and newlines",
+      "status": "passed",
+      "elapsedMs": 41,
+      "file": "/Users/spetreikis/Desktop/apps/HistoryOut/launch/qa/downloads/edge-exact-history-export.csv",
+      "rows": 6
+    },
+    {
+      "name": "edge: HTML download preserves selected cells and blocks injected markup",
+      "status": "passed",
+      "elapsedMs": 128,
+      "file": "/Users/spetreikis/Desktop/apps/HistoryOut/launch/qa/downloads/edge-exact-history-export.html",
+      "rows": 6
+    },
+    {
+      "name": "edge: cleanup plus latest-URL mode exports the exact preview",
+      "status": "passed",
+      "elapsedMs": 179
+    },
+    {
+      "name": "edge: saved view survives closing its app and reapplying after reload",
+      "status": "passed",
+      "elapsedMs": 211
+    },
+    {
+      "name": "edge: native preview has no runtime errors or page network uploads",
+      "status": "passed",
+      "elapsedMs": 0
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "profile": "/var/folders/fd/xbpmmdn54b7fk6gy1tb0_4vr0000gq/T/historyout-chromium-isolated-o2ms9a",
+      "mode": "Installed unpacked Manifest V3 extension, isolated profile",
+      "headless": true,
+      "version": "149.0.7827.55",
+      "extensionId": "nicccgchpkdffjihnglmkmdajmichgbf",
+      "fixture": {
+        "seededUrls": 7,
+        "seededVisits": 9
+      },
+      "sidePanelBehavior": {
+        "openPanelOnActionClick": true
+      }
+    },
+    {
+      "name": "edge",
+      "profile": "/var/folders/fd/xbpmmdn54b7fk6gy1tb0_4vr0000gq/T/historyout-edge-isolated-8MoxIl",
+      "mode": "Installed unpacked Manifest V3 extension, isolated profile",
+      "headless": true,
+      "version": "152.0.4191.62",
+      "extensionId": "nicccgchpkdffjihnglmkmdajmichgbf",
+      "fixture": {
+        "seededUrls": 7,
+        "seededVisits": 9
+      },
+      "sidePanelBehavior": {
+        "openPanelOnActionClick": true
+      }
+    }
+  ],
+  "limitations": [
+    "Brave is not installed on this Mac; its archive is checked but no Brave runtime result is claimed.",
+    "Native profiles use unpacked extensions. Chrome Web Store signed update, review, and staged rollout are not reproduced locally.",
+    "Faults and cancellation are browser UI fixture tests; ordinary profile data and browser internals are not fault-injected."
+  ],
+  "visibleReview": {
+    "profile": "/var/folders/fd/xbpmmdn54b7fk6gy1tb0_4vr0000gq/T/historyout-chromium-isolated-o2ms9a",
+    "executable": "/Users/spetreikis/Library/Caches/ms-playwright/chromium-1228/chrome-mac-arm64/Google Chrome for Testing.app/Contents/MacOS/Google Chrome for Testing",
+    "extensionPath": "/Users/spetreikis/Desktop/apps/HistoryOut/extension-unpacked",
+    "extensionId": "nicccgchpkdffjihnglmkmdajmichgbf",
+    "url": "chrome-extension://nicccgchpkdffjihnglmkmdajmichgbf/side-panel.html",
+    "fixture": "Fictional native browser history only"
+  },
+  "status": "passed",
+  "completed": "2026-09-05T09:07:26.648Z",
+  "bundleSha256": "2be0d7e412641f683d49992751445efdc10be29350c2378a617c6faa37c82900"
+}

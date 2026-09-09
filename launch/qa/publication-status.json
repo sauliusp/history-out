@@ -1,0 +1,110 @@
+{
+  "checked": "2026-09-07T06:24:45.621859+00:00",
+  "website": {
+    "status": "public",
+    "url": "https://exportchromehistory.app/",
+    "anonymousHTTPChecksPassed": 58,
+    "sourceCommit": "c3d0b920a33bf50ddf768dacc316f8742e2aaf76",
+    "currentVideoSeconds": 24.833333,
+    "currentMediaChecksPassed": 4,
+    "siteVersion": 6,
+    "deploymentId": "appgdep_6a9d9eb74564819196de1fce703b8be1",
+    "evidence": "domain-cutover/public-checks.json",
+    "earlierRouteEvidence": "public-marketing-refresh.json",
+    "additionalHostname": "https://www.exportchromehistory.app/",
+    "fallbackUrl": "https://historyout.sauliusdev.chatgpt.site/",
+    "domainCertificatesActive": true,
+    "assetsCheckedPerDomain": 14
+  },
+  "youtube": {
+    "url": "https://youtu.be/cGybkRSkk2Y",
+    "studioUrl": "https://studio.youtube.com/video/cGybkRSkk2Y/edit",
+    "visibility": "public",
+    "title": "Export Browser History to CSV, JSON or HTML | HistoryOut",
+    "englishCaptions": "uploaded and saved",
+    "customThumbnail": "uploaded",
+    "checks": "Copyright and Community Guidelines: no issues found",
+    "verification": "YouTube Studio Video published dialog and Public content row confirmed on 2026-09-06.",
+    "voiceReviewLimit": "Transcript and timing verified automatically. Perceptual voice likeness has not been independently confirmed.",
+    "durationSeconds": 24.833333,
+    "previousVideo": {
+      "url": "https://youtu.be/duxsGpO5t8Y",
+      "visibility": "unlisted",
+      "replacementLinkInDescription": true,
+      "verification": "All changes saved, Save disabled and Unlisted shown in YouTube Studio on 2026-09-06."
+    },
+    "closingHoldAfterVoiceSeconds": 4.013333,
+    "publishedAt": "2026-09-06T03:40:40Z",
+    "notificationsForReplacement": false
+  },
+  "buyMeACoffee": {
+    "url": "https://buymeacoffee.com/saulius.developer",
+    "cover": "new1600x400 cover uploaded and saved"
+  },
+  "store": {
+    "submitted": true,
+    "existingChromeItem": "idohnkdgejocejlkihihonhemndpiiei",
+    "targetVersion": "2.0.0",
+    "liveVersionChecked": "1.0.1 in dashboard Published package on 2026-09-07",
+    "status": "pending review",
+    "published": false,
+    "draftVersion": "2.0.0",
+    "draftVerifiedAt": "2026-09-07T06:24:45.621859+00:00",
+    "dashboardStatusText": "This draft is pending review.",
+    "graphics": {
+      "screenshots": 5,
+      "promotionalTiles": 2,
+      "originalIconRetained": true,
+      "screenshotsChangedThisPass": false,
+      "promotionalTilesReplaced": 0,
+      "approvedPromotionalTilesVerified": 2
+    },
+    "video": "https://www.youtube.com/watch?v=cGybkRSkk2Y",
+    "privacyPolicy": "https://exportchromehistory.app/privacy/",
+    "localWebHistoryDisclosure": true,
+    "testInstructionsSaved": true,
+    "permissions": [
+      "history",
+      "storage",
+      "sidePanel"
+    ],
+    "evidence": "chrome-draft.json",
+    "ownerNextAction": "No manual publishing action is required. Google review is pending; verify the signed release after automatic publication.",
+    "automaticPublishAfterApproval": true
+  },
+  "dns": {
+    "changed": true,
+    "ownerWillConnectDomain": false,
+    "registrar": "Namecheap",
+    "canonical": "exportchromehistory.app",
+    "www": "www.exportchromehistory.app",
+    "apexA": [
+      "162.159.143.30",
+      "172.66.3.26"
+    ],
+    "wwwCname": "custom-domains.chatgpt.site.",
+    "webTtlSeconds": 300,
+    "ownershipTxtRecordsAdded": 4,
+    "nameserversPreserved": true,
+    "emailRecordsPreserved": true,
+    "rollback": "domain-cutover/dns-before.json",
+    "publicEvidence": "domain-cutover/public-checks.json",
+    "ssl": "active on both hostnames"
+  },
+  "releaseCandidate": {
+    "chromeArchiveSHA256": "718719358b9d9a9146e52fbc48f56c8b6c17886a47c7c9b37070bd8d1551c44f",
+    "submitted": true,
+    "sourceRevisionNote": "7 September final submission: 64 unit tests, 30 broad browser scenarios, 10 options groups/43 control rows, 7 focused UI cases, 3 support widths, 3 actual-published-payload upgrade checks, 8 cross-window checks each in Chrome and Edge, and 137 package checks pass. Saved-view capacity and cross-window data-loss cases fixed. Version remains 2.0.0.",
+    "qa": "submission-2026-09-07/README.md"
+  },
+  "voiceRefresh": {
+    "mediaEvidence": "../assets/video-v5/historyout-media.json",
+    "technicalAudit": "voice-refresh-audit.json",
+    "technicalChecksPassed": 27,
+    "browserEvidence": "voice-refresh-browser.json",
+    "speechSpeedAdjusted": false,
+    "internalPauseEdits": false,
+    "extensionSourceAndPackageChanges": false
+  },
+  "verificationScopeToday": "Final extension QA, exact server draft comparison, unchanged approved listing assets and submission for review with automatic publication checked. Existing website/domain/video states retain their earlier evidence."
+}

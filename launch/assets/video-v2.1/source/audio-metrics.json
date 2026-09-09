@@ -1,0 +1,50 @@
+{
+  "duration": 34.5,
+  "sample_rate": 48000,
+  "voice_segments": [
+    {
+      "id": "01-hook",
+      "raw_seconds": 3.487625,
+      "processed_seconds": 4.074875,
+      "tempo": 0.8506402439024391
+    },
+    {
+      "id": "02-recap",
+      "raw_seconds": 2.545166666666667,
+      "processed_seconds": 3.1695416666666665,
+      "tempo": 0.8
+    },
+    {
+      "id": "03-latest",
+      "raw_seconds": 1.68,
+      "processed_seconds": 2.0725416666666665,
+      "tempo": 0.8000000000000002
+    },
+    {
+      "id": "04-save",
+      "raw_seconds": 2.48,
+      "processed_seconds": 3.0730833333333334,
+      "tempo": 0.8
+    },
+    {
+      "id": "05-choose",
+      "raw_seconds": 2.6070416666666665,
+      "processed_seconds": 3.253125,
+      "tempo": 0.8
+    },
+    {
+      "id": "06-export",
+      "raw_seconds": 3.68,
+      "processed_seconds": 4.59475,
+      "tempo": 0.8
+    },
+    {
+      "id": "07-cta",
+      "raw_seconds": 4.876416666666667,
+      "processed_seconds": 6.066833333333333,
+      "tempo": 0.8
+    }
+  ],
+  "click_count": 12,
+  "peak": 0.8186094059725463
+}

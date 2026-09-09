@@ -1,0 +1,573 @@
+{
+  "text": " Export your browser history as CSV, JSON, or HTML. With History Out, turn your visits into a useful file you can open or share. Choose your own dates and columns, then search or filter to keep the pages you need. Remove repeat visits and URL parameters before exporting. Daily recaps and saved views help tomorrow too. History Out is free and local with no account.",
+  "segments": [
+    {
+      "id": 0,
+      "seek": 0,
+      "start": 0.0,
+      "end": 3.88,
+      "text": " Export your browser history as CSV, JSON, or HTML.",
+      "tokens": [
+        50364,
+        50130,
+        428,
+        11185,
+        2503,
+        382,
+        48814,
+        11,
+        31828,
+        11,
+        420,
+        17995,
+        13,
+        50576
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15957999497317196,
+      "compression_ratio": 1.5082644628099173,
+      "no_speech_prob": 0.029200300574302673,
+      "words": [
+        {
+          "word": " Export",
+          "start": 0.0,
+          "end": 0.48,
+          "probability": 0.94775390625
+        },
+        {
+          "word": " your",
+          "start": 0.48,
+          "end": 0.7,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " browser",
+          "start": 0.7,
+          "end": 1.0,
+          "probability": 0.96044921875
+        },
+        {
+          "word": " history",
+          "start": 1.0,
+          "end": 1.38,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " as",
+          "start": 1.38,
+          "end": 1.82,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " CSV,",
+          "start": 1.82,
+          "end": 2.16,
+          "probability": 0.59521484375
+        },
+        {
+          "word": " JSON,",
+          "start": 2.72,
+          "end": 2.98,
+          "probability": 0.96875
+        },
+        {
+          "word": " or",
+          "start": 3.42,
+          "end": 3.44,
+          "probability": 0.994140625
+        },
+        {
+          "word": " HTML.",
+          "start": 3.44,
+          "end": 3.88,
+          "probability": 0.96240234375
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "seek": 0,
+      "start": 4.38,
+      "end": 8.34,
+      "text": " With History Out, turn your visits into a useful file you can open or share.",
+      "tokens": [
+        50576,
+        2022,
+        12486,
+        5925,
+        11,
+        1261,
+        428,
+        17753,
+        666,
+        257,
+        4420,
+        3991,
+        291,
+        393,
+        1269,
+        420,
+        2073,
+        13,
+        50788
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15957999497317196,
+      "compression_ratio": 1.5082644628099173,
+      "no_speech_prob": 0.029200300574302673,
+      "words": [
+        {
+          "word": " With",
+          "start": 4.38,
+          "end": 4.48,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " History",
+          "start": 4.48,
+          "end": 4.76,
+          "probability": 0.779296875
+        },
+        {
+          "word": " Out,",
+          "start": 4.76,
+          "end": 5.02,
+          "probability": 0.433837890625
+        },
+        {
+          "word": " turn",
+          "start": 5.3,
+          "end": 5.46,
+          "probability": 0.98974609375
+        },
+        {
+          "word": " your",
+          "start": 5.46,
+          "end": 5.62,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " visits",
+          "start": 5.62,
+          "end": 5.88,
+          "probability": 0.97265625
+        },
+        {
+          "word": " into",
+          "start": 5.88,
+          "end": 6.26,
+          "probability": 0.98583984375
+        },
+        {
+          "word": " a",
+          "start": 6.26,
+          "end": 6.42,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " useful",
+          "start": 6.42,
+          "end": 6.68,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " file",
+          "start": 6.68,
+          "end": 7.08,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " you",
+          "start": 7.08,
+          "end": 7.28,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " can",
+          "start": 7.28,
+          "end": 7.42,
+          "probability": 0.998046875
+        },
+        {
+          "word": " open",
+          "start": 7.42,
+          "end": 7.74,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " or",
+          "start": 7.74,
+          "end": 8.04,
+          "probability": 0.98876953125
+        },
+        {
+          "word": " share.",
+          "start": 8.04,
+          "end": 8.34,
+          "probability": 0.9990234375
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "seek": 0,
+      "start": 8.58,
+      "end": 12.5,
+      "text": " Choose your own dates and columns, then search or filter to keep the pages you need.",
+      "tokens": [
+        50788,
+        21661,
+        428,
+        1065,
+        11691,
+        293,
+        13766,
+        11,
+        550,
+        3164,
+        420,
+        6608,
+        281,
+        1066,
+        264,
+        7183,
+        291,
+        643,
+        13,
+        50996
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15957999497317196,
+      "compression_ratio": 1.5082644628099173,
+      "no_speech_prob": 0.029200300574302673,
+      "words": [
+        {
+          "word": " Choose",
+          "start": 8.58,
+          "end": 8.76,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " your",
+          "start": 8.76,
+          "end": 8.98,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " own",
+          "start": 8.98,
+          "end": 9.18,
+          "probability": 0.99267578125
+        },
+        {
+          "word": " dates",
+          "start": 9.18,
+          "end": 9.38,
+          "probability": 0.99169921875
+        },
+        {
+          "word": " and",
+          "start": 9.38,
+          "end": 9.56,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " columns,",
+          "start": 9.56,
+          "end": 9.88,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " then",
+          "start": 10.36,
+          "end": 10.52,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " search",
+          "start": 10.52,
+          "end": 10.8,
+          "probability": 0.99462890625
+        },
+        {
+          "word": " or",
+          "start": 10.8,
+          "end": 11.04,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " filter",
+          "start": 11.04,
+          "end": 11.32,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " to",
+          "start": 11.32,
+          "end": 11.52,
+          "probability": 0.998046875
+        },
+        {
+          "word": " keep",
+          "start": 11.52,
+          "end": 11.7,
+          "probability": 0.99951171875
+        },
+        {
+          "word": " the",
+          "start": 11.7,
+          "end": 11.82,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " pages",
+          "start": 11.82,
+          "end": 12.08,
+          "probability": 0.99560546875
+        },
+        {
+          "word": " you",
+          "start": 12.08,
+          "end": 12.3,
+          "probability": 0.99853515625
+        },
+        {
+          "word": " need.",
+          "start": 12.3,
+          "end": 12.5,
+          "probability": 0.99951171875
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "seek": 0,
+      "start": 12.74,
+      "end": 15.52,
+      "text": " Remove repeat visits and URL parameters before exporting.",
+      "tokens": [
+        50996,
+        18831,
+        7149,
+        17753,
+        293,
+        12905,
+        9834,
+        949,
+        44686,
+        13,
+        51148
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15957999497317196,
+      "compression_ratio": 1.5082644628099173,
+      "no_speech_prob": 0.029200300574302673,
+      "words": [
+        {
+          "word": " Remove",
+          "start": 12.74,
+          "end": 13.0,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " repeat",
+          "start": 13.0,
+          "end": 13.34,
+          "probability": 0.888671875
+        },
+        {
+          "word": " visits",
+          "start": 13.34,
+          "end": 13.68,
+          "probability": 0.99658203125
+        },
+        {
+          "word": " and",
+          "start": 13.68,
+          "end": 13.92,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " URL",
+          "start": 13.92,
+          "end": 14.24,
+          "probability": 0.955078125
+        },
+        {
+          "word": " parameters",
+          "start": 14.24,
+          "end": 14.68,
+          "probability": 0.998046875
+        },
+        {
+          "word": " before",
+          "start": 14.68,
+          "end": 15.06,
+          "probability": 0.99609375
+        },
+        {
+          "word": " exporting.",
+          "start": 15.06,
+          "end": 15.52,
+          "probability": 0.9970703125
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "seek": 0,
+      "start": 15.78,
+      "end": 17.9,
+      "text": " Daily recaps and saved views help tomorrow too.",
+      "tokens": [
+        51148,
+        19685,
+        43086,
+        1878,
+        293,
+        6624,
+        6809,
+        854,
+        4153,
+        886,
+        13,
+        51264
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15957999497317196,
+      "compression_ratio": 1.5082644628099173,
+      "no_speech_prob": 0.029200300574302673,
+      "words": [
+        {
+          "word": " Daily",
+          "start": 15.78,
+          "end": 15.98,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " recaps",
+          "start": 15.98,
+          "end": 16.46,
+          "probability": 0.9501953125
+        },
+        {
+          "word": " and",
+          "start": 16.46,
+          "end": 16.64,
+          "probability": 0.9951171875
+        },
+        {
+          "word": " saved",
+          "start": 16.64,
+          "end": 16.82,
+          "probability": 0.7353515625
+        },
+        {
+          "word": " views",
+          "start": 16.82,
+          "end": 17.08,
+          "probability": 0.9931640625
+        },
+        {
+          "word": " help",
+          "start": 17.08,
+          "end": 17.32,
+          "probability": 0.98388671875
+        },
+        {
+          "word": " tomorrow",
+          "start": 17.32,
+          "end": 17.64,
+          "probability": 0.98486328125
+        },
+        {
+          "word": " too.",
+          "start": 17.64,
+          "end": 17.9,
+          "probability": 0.7412109375
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "seek": 0,
+      "start": 18.12,
+      "end": 20.3,
+      "text": " History Out is free and local with no account.",
+      "tokens": [
+        51264,
+        12486,
+        5925,
+        307,
+        1737,
+        293,
+        2654,
+        365,
+        572,
+        2696,
+        13,
+        51388
+      ],
+      "temperature": 0,
+      "avg_logprob": -0.15957999497317196,
+      "compression_ratio": 1.5082644628099173,
+      "no_speech_prob": 0.029200300574302673,
+      "words": [
+        {
+          "word": " History",
+          "start": 18.12,
+          "end": 18.34,
+          "probability": 0.982421875
+        },
+        {
+          "word": " Out",
+          "start": 18.34,
+          "end": 18.6,
+          "probability": 0.94775390625
+        },
+        {
+          "word": " is",
+          "start": 18.6,
+          "end": 18.8,
+          "probability": 0.9970703125
+        },
+        {
+          "word": " free",
+          "start": 18.8,
+          "end": 19.1,
+          "probability": 0.9736328125
+        },
+        {
+          "word": " and",
+          "start": 19.1,
+          "end": 19.28,
+          "probability": 0.99755859375
+        },
+        {
+          "word": " local",
+          "start": 19.28,
+          "end": 19.54,
+          "probability": 0.9990234375
+        },
+        {
+          "word": " with",
+          "start": 19.54,
+          "end": 19.84,
+          "probability": 0.49609375
+        },
+        {
+          "word": " no",
+          "start": 19.84,
+          "end": 20.02,
+          "probability": 0.9921875
+        },
+        {
+          "word": " account.",
+          "start": 20.02,
+          "end": 20.3,
+          "probability": 0.99609375
+        }
+      ]
+    }
+  ]
+}

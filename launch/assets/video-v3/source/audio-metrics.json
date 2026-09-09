@@ -1,0 +1,17 @@
+{
+  "duration": 24.0,
+  "sample_rate": 48000,
+  "voice_segments": {
+    "raw_trimmed_seconds": 21.84,
+    "atempo": 0.9413793103448276,
+    "speech_seconds": 23.015166666666666,
+    "word_count": 63,
+    "spoken_words_per_minute": 164.2395232129538,
+    "voice_start": 0.2,
+    "duration": 24.0,
+    "sentence_gap_trim_seconds": 1.8600000000000025,
+    "final_tempo_adjustment": 0.9215
+  },
+  "click_count": 13,
+  "peak": 0.8097609678954438
+}

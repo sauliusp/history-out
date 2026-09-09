@@ -1,0 +1,11 @@
+# Voice pipeline diagnosis
+
+Only Qwen3-TTS 0.6B Base 8-bit was initially cached as a generation model. MLX Whisper Small was available for word verification. The installed MLX code already supported Chatterbox V3, so no library replacement was needed. Chatterbox Multilingual V3 and its S3TokenizerV2 were downloaded to the local model cache for this refresh.
+
+The earlier voice was generated at a different cadence, then processed through two tempo adjustments and pause trimming. The subsequent edit preserved that same processed waveform and inserted silence. Those edits changed timing but could not produce a new emotional delivery. This is a concrete limitation of the earlier pipeline, rather than a finding that ASR or technical audio checks could establish subjective naturalness.
+
+Qwen's Base cloning route uses reference audio and its transcript. Its documented emotion/style instructions are associated with CustomVoice or VoiceDesign, which have different voice-selection behavior. A larger 1.7B Base model would be a fidelity option, but would not offer the same direct expression adjustment as the Chatterbox controls used here. [Qwen implementation documentation](https://github.com/Blaizzy/mlx-audio/blob/main/mlx_audio/tts/models/qwen3_tts/README.md).
+
+The original eight-second reference contained a long sentence pause inside the first six seconds. The new contiguous reference centers on the original format/export/download wording, with a protected final release. Chatterbox uses up to six seconds for encoder conditioning and ten seconds for decoder conditioning, as verified in the installed `prepare_conditionals` source. The reference is 9.06 seconds, so both conditioning paths receive appropriate available context. This does not prove subjective likeness, but avoids using the repeatedly processed synthetic voice as its own reference.
+
+The strongest completed change is a fresh single performance with modest native expression, followed by visuals fitted to it. Speech timing, internal pauses and pitch are left untouched. Both tested opening performances and the complete conservative read pass exact intended-word verification. The complete new performance is used in the final media.

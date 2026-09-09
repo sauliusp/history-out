@@ -1,0 +1,88 @@
+{
+  "title": "Find your way back with HistoryOut",
+  "duration_seconds": 34.5,
+  "width": 1920,
+  "height": 1080,
+  "fps": 30,
+  "video_codec": "H.264",
+  "audio_codec": "AAC",
+  "audio_channels": 2,
+  "sample_rate": 48000,
+  "bytes": 6040920,
+  "sha256": "d66644cb90b8d54e6a9081c83f74569079d3ab44782d7369fcaa89cbc9a75e85",
+  "mp4": "historyout-34s.mp4",
+  "poster": "historyout-poster.png",
+  "captions_vtt": "historyout-captions.vtt",
+  "captions_srt": "historyout-captions.srt",
+  "voice_type": "Locally generated synthetic narration conditioned on the creator-authorized original public speech.",
+  "voice_reference_url": "https://www.youtube.com/watch?v=8k0lNtIhPWs",
+  "audio_verification": "All intended spoken words independently transcribed in full mix; perceptual voice similarity and subjective mix require human listening.",
+  "music": "Original synthesized ambient score",
+  "clicks": "12 synthesized click effects aligned to actual recorded UI interactions",
+  "history": "Fictional QA data; actual working interface and downloaded export",
+  "transcript": [
+    {
+      "id": "01-hook",
+      "start": 0.35,
+      "duration": 4.1,
+      "text": "Lost that useful page? Find your way back with HistoryOut.",
+      "caption": "Find your way back.",
+      "speech_end": 4.425,
+      "caption_end": 4.6
+    },
+    {
+      "id": "02-recap",
+      "start": 4.65,
+      "duration": 4.2,
+      "text": "Review your day, then search the pages you need.",
+      "caption": "Review your day. Find that page.",
+      "speech_end": 7.82,
+      "caption_end": 9.0
+    },
+    {
+      "id": "03-latest",
+      "start": 9.05,
+      "duration": 3.9,
+      "text": "Keep the latest visit to each page.",
+      "caption": "One page. Its latest visit.",
+      "speech_end": 11.123,
+      "caption_end": 13.1
+    },
+    {
+      "id": "04-save",
+      "start": 13.15,
+      "duration": 4.35,
+      "text": "Save your view, and resume your research later.",
+      "caption": "Save your view. Resume your research.",
+      "speech_end": 16.223,
+      "caption_end": 17.65
+    },
+    {
+      "id": "05-choose",
+      "start": 17.7,
+      "duration": 4.4,
+      "text": "Choose your dates, your columns, and your format.",
+      "caption": "Your dates. Your columns. Your format.",
+      "speech_end": 20.953,
+      "caption_end": 22.25
+    },
+    {
+      "id": "06-export",
+      "start": 22.3,
+      "duration": 4.7,
+      "text": "Clean up URL parameters, then export a useful file.",
+      "caption": "Clean up URLs. Keep a useful file.",
+      "speech_end": 26.895,
+      "caption_end": 27.15
+    },
+    {
+      "id": "07-cta",
+      "start": 27.2,
+      "duration": 6.45,
+      "text": "Free. Local. No account. Get HistoryOut, and keep what matters.",
+      "caption": "Free. Local. No account.",
+      "speech_end": 33.267,
+      "caption_end": 34.5
+    }
+  ]
+}

@@ -1,22 +1,11 @@
 import React from 'react';
 import {
-  Box,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Select,
-  Checkbox,
-  ListItemText,
-  Chip,
-  Stack,
-  FormHelperText,
+  Checkbox, FormControl, FormHelperText, InputLabel, ListItemText,
+  MenuItem, Select, Stack, ToggleButton, ToggleButtonGroup, Typography,
 } from '@mui/material';
 import { ExportFormat } from '../types/ExportFormat';
 import { OutputConfig } from '../types/OutputConfig';
 import { ExportService } from '../services/ExportService';
-import { OutputHistoryItem } from '../types/OutputHistoryItem';
-import { DateRangePicker } from '../components/DateRangePicker';
-import { HistoryRange } from '../types/HistoryRange';
 
 const exportService = ExportService.getInstance();
 const columnLabels = exportService.columnLabelMap;
@@ -25,151 +14,60 @@ const columnOrder = exportService.columnOrder;
 interface OutputSettingsProps {
   config: OutputConfig;
   onConfigChange: (updates: Partial<OutputConfig>) => void;
+  disabled?: boolean;
 }
 
-export const OutputSettings: React.FC<OutputSettingsProps> = ({
-  config,
-  onConfigChange,
-}) => {
-  const hasSelectedFields = Object.values(config.fields).some(Boolean);
-
-  const handleFormatChange = (format: ExportFormat) => {
-    onConfigChange({ format });
-  };
-
+export const OutputSettings: React.FC<OutputSettingsProps> = ({ config, onConfigChange, disabled }) => {
+  const selectedFields = columnOrder.filter((field) => config.fields[field]);
   return (
-    <Stack spacing={3} role="form" aria-label="Export settings form">
-      <Stack direction="row" spacing={2}>
-        <FormControl fullWidth>
-          <InputLabel id="export-format-label">Export Format</InputLabel>
+    <Stack spacing={1.2} role="group" aria-label="Export file settings">
+      <Stack direction="row" alignItems="center" justifyContent="space-between">
+        <Typography component="h2" variant="h2">Your export</Typography>
+        <Typography variant="caption" color="text.secondary">Choose what goes in your file</Typography>
+      </Stack>
+      <Stack direction="row" spacing={1} alignItems="flex-start">
+        <ToggleButtonGroup
+          value={config.format} exclusive disabled={disabled} size="small"
+          aria-label="Export format"
+          onChange={(_, format: ExportFormat | null) => format && onConfigChange({ format })}
+          sx={{ flex: '1 1 54%', '& button': { flex: 1, height: 40, px: 1 } }}
+        >
+          <ToggleButton value="csv" aria-label="CSV, for spreadsheets">CSV</ToggleButton>
+          <ToggleButton value="json" aria-label="JSON, structured data">JSON</ToggleButton>
+          <ToggleButton value="html" aria-label="HTML, readable in a browser">HTML</ToggleButton>
+        </ToggleButtonGroup>
+        <FormControl sx={{ flex: '1 1 46%', minWidth: 0 }} error={!selectedFields.length} disabled={disabled}>
+          <InputLabel id="include-fields-label">Include</InputLabel>
           <Select
-            labelId="export-format-label"
-            id="export-format-select"
-            value={config.format}
-            label="Export Format"
-            onChange={(e) => handleFormatChange(e.target.value as ExportFormat)}
-            aria-describedby="export-format-description"
-            renderValue={(value) => value.toString().toUpperCase()}
+            labelId="include-fields-label" id="include-fields-select" multiple
+            value={selectedFields} label="Include"
+            onChange={(event) => {
+              const selected = event.target.value as string[];
+              const fields = { ...config.fields };
+              columnOrder.forEach((field) => { fields[field] = selected.includes(field); });
+              onConfigChange({ fields });
+            }}
+            renderValue={(selected) => `${selected.length} columns`}
+            MenuProps={{ PaperProps: { sx: { maxHeight: 380, maxWidth: 350 } } }}
+            aria-describedby={!selectedFields.length ? 'fields-error' : undefined}
           >
-            <MenuItem value="csv" role="option">
-              <ListItemText primary="CSV" secondary="Excel-readable" />
-            </MenuItem>
-            <MenuItem value="json" role="option">
-              JSON
-            </MenuItem>
-            <MenuItem value="html" role="option">
-              HTML
-            </MenuItem>
+            {columnOrder.map((field) => (
+              <MenuItem key={field} value={field} sx={{ py: 0.5 }}>
+                <Checkbox checked={!!config.fields[field]} aria-label={`Include ${columnLabels[field].label}`} tabIndex={-1} />
+                <ListItemText
+                  primary={columnLabels[field].label}
+                  secondary={columnLabels[field].secondaryLabel}
+                  sx={{ ml: 0.5, '& .MuiListItemText-secondary': { whiteSpace: 'normal', fontSize: '0.75rem' } }}
+                />
+              </MenuItem>
+            ))}
           </Select>
-        </FormControl>
-
-        <FormControl fullWidth>
-          <InputLabel id="time-range-label">Time Range</InputLabel>
-          <Select
-            labelId="time-range-label"
-            id="time-range-select"
-            value={config.historyRange}
-            label="Time Range"
-            onChange={(e) =>
-              onConfigChange({
-                historyRange: e.target.value as HistoryRange,
-              })
-            }
-            aria-describedby="time-range-description"
-          >
-            <MenuItem value="day" role="option">
-              Last 24 Hours
-            </MenuItem>
-            <MenuItem value="week" role="option">
-              Last 7 days
-            </MenuItem>
-            <MenuItem value="month" role="option">
-              Last 30 days
-            </MenuItem>
-            <MenuItem value="all" role="option">
-              All Time
-            </MenuItem>
-            <MenuItem value="custom" role="option">
-              Custom Range
-            </MenuItem>
-          </Select>
+          {!selectedFields.length && <FormHelperText id="fields-error">Choose at least one column.</FormHelperText>}
         </FormControl>
       </Stack>
-
-      {config.historyRange === 'custom' && (
-        <DateRangePicker
-          value={config.dateRange}
-          onChange={(dateRange) => onConfigChange({ dateRange })}
-        />
-      )}
-
-      <FormControl fullWidth error={!hasSelectedFields}>
-        <InputLabel id="include-fields-label">Include Fields</InputLabel>
-        <Select
-          labelId="include-fields-label"
-          id="include-fields-select"
-          multiple
-          value={Object.entries(config.fields)
-            .filter(([_, included]) => included)
-            .map(([field]) => field)}
-          label="Include Fields"
-          onChange={(e) => {
-            const selectedFields = e.target.value as string[];
-
-            const updates = Object.keys(config.fields).reduce(
-              (acc, field) => ({
-                ...acc,
-                [field]: selectedFields.includes(field),
-              }),
-              {}
-            );
-            onConfigChange({
-              fields: updates as Record<keyof OutputHistoryItem, boolean>,
-            });
-          }}
-          renderValue={(selected) => (
-            <Box
-              sx={{ display: 'flex', flexWrap: 'wrap', gap: 0.5 }}
-              role="list"
-            >
-              {columnOrder
-                .filter((field) => (selected as string[]).includes(field))
-                .map((field) => (
-                  <Chip
-                    key={field}
-                    label={columnLabels[field].label}
-                    size="small"
-                    sx={{ m: 0.25 }}
-                    role="listitem"
-                  />
-                ))}
-            </Box>
-          )}
-          aria-describedby="include-fields-description"
-        >
-          {columnOrder.map((field) => (
-            <MenuItem key={field} value={field} role="option">
-              <Checkbox
-                checked={config.fields[field]}
-                aria-label={`Include ${columnLabels[field]}`}
-              />
-              <ListItemText
-                primary={columnLabels[field].label}
-                secondary={columnLabels[field].secondaryLabel}
-                sx={{
-                  '& .MuiListItemText-secondary': {
-                    whiteSpace: 'normal',
-                    wordBreak: 'break-word', // Using wordBreak instead of wordWrap for better backwards compatibility
-                  },
-                }}
-              />
-            </MenuItem>
-          ))}
-        </Select>
-        {!hasSelectedFields && (
-          <FormHelperText>At least one field must be selected</FormHelperText>
-        )}
-      </FormControl>
+      <Typography variant="caption" color="text.secondary">
+        {config.format === 'csv' ? 'CSV opens in Excel, Google Sheets and other spreadsheets.' : config.format === 'json' ? 'JSON keeps your selected fields as structured data.' : 'HTML gives you a readable file with clickable page links.'}
+      </Typography>
     </Stack>
   );
 };

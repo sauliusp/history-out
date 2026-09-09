@@ -1,0 +1,156 @@
+{
+  "checkedAt": "2026-09-07T06:20:53.690263+00:00",
+  "result": "PASS",
+  "scope": "Independent locked-final server draft CRX3 comparison after root uploaded the cross-instance saved-view fix. Validates supplied artifact contents without independently authenticating download provenance or cryptographically verifying CRX signatures. No UI action or repository mutation.",
+  "supersedes": "../final/server-draft-comparison.json",
+  "draft": {
+    "file": "/tmp/historyout-submission-2026-09-07/historyout-cws-locked-final-2.0.0.crx",
+    "format": "CRX3",
+    "bytes": 161260,
+    "sha256": "3eba379feceb9a5ac011b955e4cb5835c852087f0614523b8511941ab62cd029",
+    "protobufHeaderBytes": 1310,
+    "zipOffset": 1322,
+    "zipPayloadSHA256": "0c61e8c4fbfecc0a84478c356150d1649d3670b62d30a4cbaeac97f8280e12b0",
+    "zipCrcValid": true,
+    "signatureCryptographicallyVerifiedByThisScript": false
+  },
+  "publishedBaseline": {
+    "file": "/tmp/historyout-submission-2026-09-07/historyout-cws-published-1.0.1.crx",
+    "format": "CRX3",
+    "bytes": 256493,
+    "sha256": "138597ea8bedd0bd97a6260b45ee96b65b2123a89b60c82b22182b80db0f7077",
+    "protobufHeaderBytes": 1309,
+    "zipOffset": 1321,
+    "zipPayloadSHA256": "3bfbedc6e07f1199b7504e7ee5a46994c94a4e23c6b887d51b6b1c2da10fb3e4",
+    "zipCrcValid": true,
+    "signatureCryptographicallyVerifiedByThisScript": false
+  },
+  "testedLocalRelease": {
+    "file": "/Users/spetreikis/Desktop/apps/HistoryOut/releases/historyout-2.0.0-chrome.zip",
+    "bytes": 158398,
+    "sha256": "718719358b9d9a9146e52fbc48f56c8b6c17886a47c7c9b37070bd8d1551c44f",
+    "storeKitCopyByteIdentical": true
+  },
+  "testedBundleSHA256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+  "versions": {
+    "published": "1.0.1",
+    "draft": "2.0.0",
+    "local": "2.0.0"
+  },
+  "all10NonManifestRuntimeFilesByteIdentical": true,
+  "runtimeFiles": [
+    {
+      "file": "assets/bmc-cup.svg",
+      "bytes": 8178,
+      "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "background.js",
+      "bytes": 1912,
+      "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "bundle.js",
+      "bytes": 481593,
+      "sha256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "bundle.js.LICENSE.txt",
+      "bytes": 1640,
+      "sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "icons/icon128.png",
+      "bytes": 2908,
+      "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "icons/icon16.png",
+      "bytes": 364,
+      "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "icons/icon32.png",
+      "bytes": 654,
+      "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "icons/icon48.png",
+      "bytes": 1116,
+      "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "side-panel.html",
+      "bytes": 405,
+      "sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    },
+    {
+      "file": "styles.css",
+      "bytes": 499,
+      "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+      "serverDraftTestedZIPAndBuildByteIdentical": true
+    }
+  ],
+  "manifest": {
+    "localSHA256": "7db9c62068d6e7a34a6d128fcbb95fef15f37d61d9cf3d233d7829d52394b11f",
+    "draftSHA256": "e298f0b623c1154474738e3c1449d94e349782363b0c352de823fceec2cf2f47",
+    "matchesAfterRemovingOnlyInjectedUpdateURL": true,
+    "onlySemanticDifference": {
+      "added": "update_url",
+      "value": "https://clients2.google.com/service/update2/crx"
+    },
+    "jsonWhitespaceAndOrderingNotRuntimeDifferences": true
+  },
+  "onlyAdditionalNonDirectoryFile": {
+    "file": "_metadata/verified_contents.json",
+    "bytes": 2441,
+    "sha256": "9d1ea058124afb3ff67ef3af2664fdbe593ba33ec1c78c97f61f94330712e0ce",
+    "validJSON": true,
+    "purpose": "Chrome Web Store integrity verification metadata"
+  },
+  "noMissingOrUnexpectedRuntimeFiles": true,
+  "permissions": [
+    "history",
+    "storage",
+    "sidePanel"
+  ],
+  "permissionsUnchangedFromActualPublished101": true,
+  "noHostOrOptionalPermissionsAdded": true,
+  "allFourOriginalIconsPreservedFromActualPublished101": true,
+  "icons": [
+    {
+      "file": "icons/icon16.png",
+      "bytes": 364,
+      "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+      "publishedDraftLocalAndBuildByteIdentical": true
+    },
+    {
+      "file": "icons/icon32.png",
+      "bytes": 654,
+      "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+      "publishedDraftLocalAndBuildByteIdentical": true
+    },
+    {
+      "file": "icons/icon48.png",
+      "bytes": 1116,
+      "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+      "publishedDraftLocalAndBuildByteIdentical": true
+    },
+    {
+      "file": "icons/icon128.png",
+      "bytes": 2908,
+      "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+      "publishedDraftLocalAndBuildByteIdentical": true
+    }
+  ],
+  "storePublicationClaim": "Payload equivalence only. Root owns dashboard submission and publication verification."
+}

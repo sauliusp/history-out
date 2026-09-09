@@ -1,0 +1,138 @@
+{
+  "checked": "2026-09-06T03:17:52.871Z",
+  "status": "passed",
+  "origin": "https://historyout.sauliusdev.chatgpt.site",
+  "authentication": "No authorization header or cookies",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 17696
+    },
+    {
+      "path": "/alternatives/export-chrome-history/",
+      "status": 200,
+      "bytes": 10226
+    },
+    {
+      "path": "/alternatives/history-trends-unlimited/",
+      "status": 200,
+      "bytes": 10551
+    },
+    {
+      "path": "/alternatives/better-history/",
+      "status": 200,
+      "bytes": 10309
+    },
+    {
+      "path": "/alternatives/",
+      "status": 200,
+      "bytes": 8274
+    },
+    {
+      "path": "/guides/export-chrome-history-to-excel/",
+      "status": 200,
+      "bytes": 9692
+    },
+    {
+      "path": "/guides/filter-browser-history/",
+      "status": 200,
+      "bytes": 8759
+    },
+    {
+      "path": "/guides/browser-history-limits/",
+      "status": 200,
+      "bytes": 9046
+    },
+    {
+      "path": "/browsers/",
+      "status": 200,
+      "bytes": 8761
+    },
+    {
+      "path": "/privacy/",
+      "status": 200,
+      "bytes": 8788
+    },
+    {
+      "path": "/changelog/",
+      "status": 200,
+      "bytes": 11249
+    },
+    {
+      "path": "/welcome/",
+      "status": 200,
+      "bytes": 7740
+    },
+    {
+      "path": "/guides/export-browser-history-to-html/",
+      "status": 200,
+      "bytes": 12333
+    },
+    {
+      "path": "/assets/historyout-export-hero.png",
+      "status": 200,
+      "bytes": 204629,
+      "sha256": "9d3c3f92fb3905022f415b55c08c4aeeb7b3f4730012ad32d46c4cc4bfc9d75e"
+    },
+    {
+      "path": "/assets/social-card.png",
+      "status": 200,
+      "bytes": 142655,
+      "sha256": "b009b1ecc5e3a9f59be19b6503d86994d085e192dced24c8fdfa7d23a2725c66"
+    },
+    {
+      "path": "/assets/historyout-export-story.mp4",
+      "status": 200,
+      "bytes": 6150715,
+      "sha256": "779d7c2216d2e85a68d9ec210498a51ca4e85387d0faeb4c9350f00a7fc53cbb"
+    },
+    {
+      "path": "/assets/historyout-export-story-poster.png",
+      "status": 200,
+      "bytes": 573561,
+      "sha256": "b8d4466e8e74d6991c5c40d0604243ede6fb389054e7de00368857d5989f6741"
+    },
+    {
+      "path": "/assets/historyout-export-story-captions.vtt",
+      "status": 200,
+      "bytes": 840,
+      "sha256": "978e4a0e2eb1c4c521296659a0bc54e0a5e8f6ab3697da45bcd5afd72933bab2"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "bytes": 124
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "bytes": 1512
+    },
+    {
+      "path": "/assets/sample-history.csv",
+      "status": 200,
+      "bytes": 501
+    },
+    {
+      "path": "/assets/sample-history.json",
+      "status": 200,
+      "bytes": 802
+    },
+    {
+      "path": "/assets/sample-history.html",
+      "status": 200,
+      "bytes": 4882
+    },
+    {
+      "path": "/assets/logo.svg",
+      "status": 200,
+      "bytes": 7525
+    },
+    {
+      "path": "/favicon.ico",
+      "status": 200,
+      "bytes": 101477
+    }
+  ]
+}

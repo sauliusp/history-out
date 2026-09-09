@@ -1,0 +1,55 @@
+1
+00:00:00,200 --> 00:00:01,715
+Export your browser history
+
+2
+00:00:01,740 --> 00:00:04,555
+as CSV, JSON, or HTML.
+
+3
+00:00:04,580 --> 00:00:06,435
+With HistoryOut, turn your visits
+
+4
+00:00:06,460 --> 00:00:07,655
+into a useful file
+
+5
+00:00:07,680 --> 00:00:09,235
+you can open or share.
+
+6
+00:00:09,260 --> 00:00:11,035
+Choose your own dates and columns,
+
+7
+00:00:11,060 --> 00:00:12,055
+then search or filter
+
+8
+00:00:12,080 --> 00:00:13,755
+to keep the pages you need.
+
+9
+00:00:13,780 --> 00:00:14,815
+Remove repeat visits
+
+10
+00:00:14,840 --> 00:00:17,455
+and URL parameters before exporting.
+
+11
+00:00:17,480 --> 00:00:19,055
+Daily recaps and saved views
+
+12
+00:00:19,080 --> 00:00:20,375
+help tomorrow, too.
+
+13
+00:00:20,400 --> 00:00:22,435
+HistoryOut is free and local,
+
+14
+00:00:22,460 --> 00:00:23,700
+with no account.

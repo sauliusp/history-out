@@ -1,0 +1,34 @@
+{
+  "checked": "2026-09-07T06:17:30.973Z",
+  "scope": "Native unpacked MV3 upgrade using an explicitly supplied baseline payload. This exercises payload migration, not the signed automatic update transport.",
+  "cases": [
+    {
+      "name": "Real v1 to v2 upgrade opens one changelog and no welcome",
+      "status": "passed"
+    },
+    {
+      "name": "Real update preserves exact v1 preferences and original native history",
+      "status": "passed"
+    },
+    {
+      "name": "Restart at the same version does not open a duplicate lifecycle page",
+      "status": "passed"
+    }
+  ],
+  "baselineArchive": "/tmp/historyout-submission-2026-09-07/published-1.0.1-payload.zip",
+  "baselineArchiveSHA256": "34f35fb563528422f40788b0d1c181ba8a252ffcd6ff62f28b6836da6141010e",
+  "candidateBundleSHA256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
+  "browserVersion": "149.0.7827.55",
+  "manifestAfterReload": "2.0.0",
+  "lifecycleTabs": [
+    {
+      "url": "about:blank"
+    },
+    {
+      "url": "https://historyout.sauliusdev.chatgpt.site/changelog/"
+    }
+  ],
+  "previousVersion": "1.0.1",
+  "currentVersion": "2.0.0",
+  "status": "passed"
+}

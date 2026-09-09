@@ -1,0 +1,30 @@
+[
+  {
+    "order": 1,
+    "date": "05/09/2026",
+    "time": "16:30:00",
+    "title": "Responsive images: a practical guide",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images"
+  },
+  {
+    "order": 2,
+    "date": "05/09/2026",
+    "time": "15:30:00",
+    "title": "CSS grid layout: research notes",
+    "url": "https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout"
+  },
+  {
+    "order": 3,
+    "date": "05/09/2026",
+    "time": "14:30:00",
+    "title": "Responsive design foundations",
+    "url": "https://web.dev/learn/design"
+  },
+  {
+    "order": 4,
+    "date": "05/09/2026",
+    "time": "13:30:00",
+    "title": "Web accessibility: getting started",
+    "url": "https://developer.mozilla.org/en-US/docs/Learn/Accessibility"
+  }
+]

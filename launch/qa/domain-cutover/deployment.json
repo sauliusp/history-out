@@ -1,0 +1,86 @@
+{
+  "checkedAt": "2026-09-06T17:17:41.750Z",
+  "projectId": "appgprj_6a9bc53bba78819185f33b92719dd87c",
+  "version": {
+    "id": "appgprj_6a9bc53bba78819185f33b92719dd87c~appgver_e41e8fe24300819197c9de371270c954",
+    "project_id": "appgprj_6a9bc53bba78819185f33b92719dd87c",
+    "version_number": 6,
+    "source": {
+      "commit_sha": "c3d0b920a33bf50ddf768dacc316f8742e2aaf76"
+    },
+    "archive_storage": {
+      "archive_format": "tar",
+      "sediment_file_id": "file_0000000027d48246b3e97efc4c82c99e",
+      "content_hash": "sha256:67ad2114d320691cf0d0b7fbd745ab44d145f0732772af1bd9f5755de7761b5a",
+      "size_bytes": 7290880,
+      "file_count": 31
+    },
+    "screenshot_url": null
+  },
+  "deployment": {
+    "id": "appgdep_6a9d9eb74564819196de1fce703b8be1",
+    "project_id": "appgprj_6a9bc53bba78819185f33b92719dd87c",
+    "title": "HistoryOut | Export browser history",
+    "version_id": "appgprj_6a9bc53bba78819185f33b92719dd87c~appgver_e41e8fe24300819197c9de371270c954",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://historyout.sauliusdev.chatgpt.site",
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6a9bc53bba78819185f33b92719dd87c",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-09-06T17:11:29.510519+00:00"
+  },
+  "domains": [
+    {
+      "id": "appgdom_6a9d9c8bba48819180c6bfda0ac585ab",
+      "project_id": "appgprj_6a9bc53bba78819185f33b92719dd87c",
+      "hostname": "exportchromehistory.app",
+      "worker_name": "site---6a9bc53bba78819185f33b92719dd87c",
+      "status": "active",
+      "provider_status": "active",
+      "ssl_status": "active",
+      "cname_target": "custom-domains.chatgpt.site.",
+      "apex_proxy_ipv4_targets": [
+        "162.159.143.30",
+        "172.66.3.26"
+      ],
+      "validation_records": [
+        {
+          "record_type": "TXT",
+          "name": "_openai-site-verification.exportchromehistory.app",
+          "value": "openai-site-verification=zJ7RNwW6k-XCWEOi90zO0VkAe1fnBqxZ1Bwc5NqDwGQ"
+        }
+      ],
+      "last_error": null,
+      "created_at": "2026-09-06T17:02:03.728014+00:00",
+      "updated_at": "2026-09-06T17:17:31.984786+00:00"
+    },
+    {
+      "id": "appgdom_6a9d9c92a4d88191ac9f198fced46456",
+      "project_id": "appgprj_6a9bc53bba78819185f33b92719dd87c",
+      "hostname": "www.exportchromehistory.app",
+      "worker_name": "site---6a9bc53bba78819185f33b92719dd87c",
+      "status": "active",
+      "provider_status": "active",
+      "ssl_status": "active",
+      "cname_target": "custom-domains.chatgpt.site.",
+      "apex_proxy_ipv4_targets": [
+        "162.159.143.30",
+        "172.66.3.26"
+      ],
+      "validation_records": [
+        {
+          "record_type": "TXT",
+          "name": "_openai-site-verification.www.exportchromehistory.app",
+          "value": "openai-site-verification=9QA5Kht5w_GH6sTqr29_GLomxJ0LjGLydmL51YlCddU"
+        }
+      ],
+      "last_error": null,
+      "created_at": "2026-09-06T17:02:10.644226+00:00",
+      "updated_at": "2026-09-06T17:15:56.341829+00:00"
+    }
+  ],
+  "preserved": "Nameservers, MX, SPF and old Lovable TXT records unchanged",
+  "runtimePackageChanged": false
+}

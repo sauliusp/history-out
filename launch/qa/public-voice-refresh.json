@@ -1,0 +1,53 @@
+{
+  "checked": "2026-09-06T03:44:33.779Z",
+  "status": "passed",
+  "origin": "https://historyout.sauliusdev.chatgpt.site",
+  "authentication": "Anonymous Node fetch without cookies or authorization headers",
+  "clientObservation": "A separate Python urllib request returned403. The anonymous Node client returned200 for all five paths.",
+  "sourceCommit": "af7573c36c86592e32c8a67d90baa709373e3623",
+  "siteVersion": 5,
+  "deploymentId": "appgdep_6a9ce14ceffc81918a67af74f2996c86",
+  "checks": [
+    {
+      "path": "/",
+      "status": 200,
+      "bytes": 17687,
+      "contentType": "text/html",
+      "currentVideoMetadata": true
+    },
+    {
+      "path": "/assets/historyout-export-demo.mp4",
+      "status": 200,
+      "bytes": 6082386,
+      "contentType": "video/mp4",
+      "sha256": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/historyout-export-demo-captions.vtt",
+      "status": 200,
+      "bytes": 840,
+      "contentType": "text/vtt",
+      "sha256": "7842e2afd5809c2e99107fc13e495223ed605a9554cb0a768da8a0c812779852",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/historyout-export-story-poster.png",
+      "status": 200,
+      "bytes": 573561,
+      "contentType": "image/png",
+      "sha256": "b8d4466e8e74d6991c5c40d0604243ede6fb389054e7de00368857d5989f6741",
+      "matchesLocal": true
+    },
+    {
+      "path": "/assets/historyout-export-hero.png",
+      "status": 200,
+      "bytes": 204629,
+      "contentType": "image/png",
+      "sha256": "9d3c3f92fb3905022f415b55c08c4aeeb7b3f4730012ad32d46c4cc4bfc9d75e",
+      "matchesLocal": true
+    }
+  ],
+  "checksPassed": 5,
+  "scope": "Current public video, captions, homepage metadata and preserved imagery. Unchanged routes retain previous evidence."
+}

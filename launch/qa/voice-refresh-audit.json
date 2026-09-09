@@ -1,0 +1,379 @@
+{
+  "checked": "2026-09-06T03:41:43.921Z",
+  "status": "passed",
+  "scope": "Independent source, PCM, encoded-media, transcript, layout and release-hash audit. No subjective listening or voice-similarity claim. Only this JSON is written by the audit.",
+  "baseline_revision": "b7cee1a",
+  "files_sha256": {
+    "launch/assets/video-v5/historyout-export-demo.mp4": "080b6e985604fd03fd3ab33fea1b5f033455c842bb9602b9325942a244ec2adb",
+    "launch/assets/video-v5/audio/voiceover-raw.wav": "64396165e43a2975e72560f663da6480e54098bce592deb253196003f9698efc",
+    "launch/assets/video-v5/audio/voiceover.wav": "0f8c5e70e13d51e81258a62093f7fdd38d2918eed993a22b46985d86ccf9c7c6",
+    "launch/assets/video-v5/audio/voiceover-review.wav": "cb47dced5f12638bafc5c1b90a227279c246f9b51fa5eed9573208c50ec21329",
+    "launch/assets/video-v5/audio/audio-mix.wav": "d710b3700d29953f42cfcad954367cf509d64ef24bec5d1a8d95d7e5885b84c3",
+    "launch/assets/video-v5/source/narration.json": "935286cbffe0dde272071cb7937c31ad648940028198b125d66398c66f29a8ef",
+    "launch/assets/video-v5/source/final-mix-transcript.json": "1a76f01be63a701d5b0297eb4ad2dff1f21ccb5eaee3d5e6a156989fc6e27080",
+    "launch/assets/video-v5/source/timed-captions.json": "c9dad14137c811cc62041d1f04d54acbc6d4ec4a5eb899f220368c2f1199e605",
+    "launch/assets/video-v5/source/interaction-trace.json": "388a2bdcf1b4876d3da8c39b8fc468f6f985185783d38e5e868c5177c5a62974",
+    "launch/assets/video-v5/source/scene-cuts.json": "1aa6545acce567f1410197ab31e59f9bab6dc81d3b6c994546d653882eff34eb",
+    "launch/assets/video-v5/historyout-captions.srt": "e336c79757ebf6b6c9d584ebc8aefd6f05a27c131cc83171761ddf4d00eac53f",
+    "launch/assets/video-v5/historyout-captions.vtt": "7842e2afd5809c2e99107fc13e495223ed605a9554cb0a768da8a0c812779852"
+  },
+  "check_count": 27,
+  "passed_check_count": 27,
+  "checks": [
+    {
+      "name": "expected_63_word_script",
+      "passed": true
+    },
+    {
+      "name": "script_unchanged_from_v4",
+      "passed": true
+    },
+    {
+      "name": "raw_asr_exact_normalized_words",
+      "passed": true
+    },
+    {
+      "name": "encoded_mix_asr_exact_normalized_words",
+      "passed": true
+    },
+    {
+      "name": "captions_exact_normalized_words",
+      "passed": true
+    },
+    {
+      "name": "raw_wav_exactly_matches_new_generated_float",
+      "passed": true
+    },
+    {
+      "name": "generated_float_not_clipped",
+      "passed": true
+    },
+    {
+      "name": "processed_pcm_exactly_single_gain_and_resample",
+      "passed": true
+    },
+    {
+      "name": "raw_and_processed_duration_identical",
+      "passed": true
+    },
+    {
+      "name": "mix_voice_preserves_complete_prepared_waveform",
+      "passed": true
+    },
+    {
+      "name": "video_duration_and_frame_count",
+      "passed": true
+    },
+    {
+      "name": "full_voice_plus_at_least_four_second_hold",
+      "passed": true
+    },
+    {
+      "name": "captions_valid_nonoverlapping_and_inside_video",
+      "passed": true
+    },
+    {
+      "name": "srt_and_vtt_complete",
+      "passed": true
+    },
+    {
+      "name": "all_14_caption_layouts_fit_1920x1080",
+      "passed": true,
+      "detail": "Separately rendered each cue with actual stage CSS in Chromium; maximum ordinary caption height 128.375 px, all on-screen and without overflow. Contact sheet and final frame also visually inspected."
+    },
+    {
+      "name": "encoded_true_peak_below_minus_one_dbtp",
+      "passed": true
+    },
+    {
+      "name": "no_raw_or_processed_clipped_samples",
+      "passed": true
+    },
+    {
+      "name": "no_encoded_clipping",
+      "passed": true
+    },
+    {
+      "name": "encoded_audio_silent_endpoint",
+      "passed": true
+    },
+    {
+      "name": "all_five_scenes_follow_voice_mapping",
+      "passed": true
+    },
+    {
+      "name": "all_thirteen_actions_monotonic_before_final_card",
+      "passed": true
+    },
+    {
+      "name": "actions_show_feature_during_matching_narration",
+      "passed": true
+    },
+    {
+      "name": "extension_source_metadata_and_permissions_unchanged",
+      "passed": true
+    },
+    {
+      "name": "all_runtime_and_brand_bytes_unchanged",
+      "passed": true
+    },
+    {
+      "name": "all_four_release_archives_unchanged",
+      "passed": true
+    },
+    {
+      "name": "video_hash_matches_stable_media_ready_signal",
+      "passed": true
+    },
+    {
+      "name": "artifact_inputs_unchanged_during_audit",
+      "passed": true
+    }
+  ],
+  "transcript": "Export your browser history as CSV, JSON, or HTML. With HistoryOut, turn your visits into a useful file you can open or share. Choose your own dates and columns, then search or filter to keep the pages you need. Remove repeat visits and URL parameters before exporting. Daily recaps and saved views help tomorrow, too. HistoryOut is free and local, with no account.",
+  "audio_lineage": {
+    "model": "mlx-community/chatterbox-multilingual-v3",
+    "raw_duration": 20.62,
+    "raw_rate": 24000,
+    "mix_rate": 48000,
+    "fixed_gain": 1.0262201879065287,
+    "waveform_retiming": false,
+    "internal_gap_cuts": false,
+    "inherited_v4_audio": false,
+    "raw_float_peak": 0.7601020336151123,
+    "raw_peak_dbfs": -2.3829,
+    "raw_quiet_tail_seconds_at_minus45dbfs": 0.378917,
+    "processed_pcm_sha256": "fce292611bd7d245ef99e3fb3096dfadcff55f500599c5702c09b6963ea50fee"
+  },
+  "encoded_media": {
+    "duration_seconds": 24.833333,
+    "video_frames": 745,
+    "fps": "30/1",
+    "width": 1920,
+    "height": 1080,
+    "audio_duration_seconds": 24.833,
+    "loudness_lufs": -19.44,
+    "true_peak_dbtp": -2.03,
+    "loudness_range_lu": 2.5,
+    "decoded_last10ms_peak_dbfs": -240.0,
+    "voice_minus_music_rms_db_during_speech": 23.3598,
+    "full_raw_voice_end": 20.82,
+    "tail_after_full_raw_voice_seconds": 4.013333,
+    "tail_after_last_aligned_word_seconds": 4.533333,
+    "actual_final_card_start": 18.062,
+    "fully_visible_final_card_start": 18.362000000000002,
+    "final_card_hold_seconds_after_transition": 6.471333
+  },
+  "visual_review": {
+    "files": [
+      "launch/assets/video-v5/review-contact-sheet.png",
+      "launch/assets/video-v5/historyout-ending.png"
+    ],
+    "all14_caption_geometry_checks_passed": true,
+    "normal_caption_max_height_px": 128.375,
+    "ending_caption_height_px": 70,
+    "no_text_cutoff_observed": true,
+    "actual_scene_timing": [
+      {
+        "step": "READY TO OPEN. READY TO KEEP.",
+        "expected": 4.275342,
+        "actual": 4.277,
+        "delay_ms": 1.66
+      },
+      {
+        "step": "MAKE THE FILE YOURS.",
+        "expected": 8.392436,
+        "actual": 8.393,
+        "delay_ms": 0.56
+      },
+      {
+        "step": "KEEP THE RELEVANT VISITS.",
+        "expected": 10.355588,
+        "actual": 10.357,
+        "delay_ms": 1.41
+      },
+      {
+        "step": "USEFUL AGAIN TOMORROW.",
+        "expected": 15.71427,
+        "actual": 15.715,
+        "delay_ms": 0.73
+      },
+      {
+        "step": "BRANDED FINAL CARD",
+        "expected": 18.060274,
+        "actual": 18.062,
+        "delay_ms": 1.73
+      }
+    ],
+    "matching_feature_actions": [
+      {
+        "label": "Choose custom dates",
+        "actual": 8.782,
+        "spoken_feature_window": [
+          8.3,
+          10.1
+        ],
+        "within_window": true
+      },
+      {
+        "label": "Choose export columns",
+        "actual": 9.23,
+        "spoken_feature_window": [
+          8.3,
+          10.1
+        ],
+        "within_window": true
+      },
+      {
+        "label": "Choose only title and URL columns",
+        "actual": 9.629,
+        "spoken_feature_window": [
+          8.3,
+          10.1
+        ],
+        "within_window": true
+      },
+      {
+        "label": "Search matching visits",
+        "actual": 10.743,
+        "spoken_feature_window": [
+          10.1,
+          12.7
+        ],
+        "within_window": true
+      },
+      {
+        "label": "Keep latest visit to each URL",
+        "actual": 12.78,
+        "spoken_feature_window": [
+          12.6,
+          13.8
+        ],
+        "within_window": true
+      },
+      {
+        "label": "Remove URL query strings and fragments",
+        "actual": 13.654,
+        "spoken_feature_window": [
+          13.5,
+          15.7
+        ],
+        "within_window": true
+      },
+      {
+        "label": "Export only matching pages",
+        "actual": 14.68,
+        "spoken_feature_window": [
+          13.5,
+          15.7
+        ],
+        "within_window": true
+      },
+      {
+        "label": "Save a reusable view",
+        "actual": 16.429,
+        "spoken_feature_window": [
+          15.6,
+          18.0
+        ],
+        "within_window": true
+      },
+      {
+        "label": "Save Website research",
+        "actual": 16.545,
+        "spoken_feature_window": [
+          15.6,
+          18.0
+        ],
+        "within_window": true
+      }
+    ],
+    "max_scene_start_error_ms": 1.73,
+    "no_accumulating_ui_backlog": true,
+    "last_recorded_click_at": 16.545
+  },
+  "runtime_hashes": [
+    {
+      "file": "assets/bmc-cup.svg",
+      "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "background.js",
+      "sha256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "bundle.js",
+      "sha256": "d5eb98f989b242344aefb0663bdfc5b5b54e80c290bb21e38393c52d3dbbdf38",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "bundle.js.LICENSE.txt",
+      "sha256": "4bb1304cdeadf5b3ead7664aa57b3eef4ecfd11fc8f5c7ae2adfd5ff544acbc8",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "icons/icon128.png",
+      "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "icons/icon16.png",
+      "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "icons/icon32.png",
+      "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "icons/icon48.png",
+      "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "manifest.json",
+      "sha256": "45ccd1ab876433da230d3964ffcb1dcf8475ed397de33546aaadb915fbaee49e",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "side-panel.html",
+      "sha256": "be8e62cf18c816b6a2272dd9e6210165e4b49e2ca6e75d46e93edd88a9c8f656",
+      "matches_b7cee1a": true
+    },
+    {
+      "file": "styles.css",
+      "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d",
+      "matches_b7cee1a": true
+    }
+  ],
+  "package_hashes": [
+    {
+      "target": "chrome",
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+      "matches_b7cee1a": true
+    },
+    {
+      "target": "edge",
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+      "matches_b7cee1a": true
+    },
+    {
+      "target": "brave",
+      "sha256": "1b994a82b1c10be6665aa757fd6717b4ee123825ff378522c69127ffb390f032",
+      "matches_b7cee1a": true
+    },
+    {
+      "target": "chromium",
+      "sha256": "f3cf8b98a0ff7ed39543c458492bac7c034115582d6073aa670cde30de5a9902",
+      "matches_b7cee1a": true
+    }
+  ],
+  "notes": [
+    "The take runs at 183.3 script words per minute including native pauses. This is measured pace, not a judgment of naturalness.",
+    "V5 mix is 5.67 LU quieter than v4 (-19.44 versus -13.77 LUFS); music remains below the voice and there is no measured clipping.",
+    "Transcript checks compare the producer-provided independent ASR outputs to the unchanged script; ASR was not rerun by this auditor."
+  ]
+}
