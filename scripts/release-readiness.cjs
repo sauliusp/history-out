@@ -6,6 +6,7 @@ const path = require('node:path');
 const {execFileSync, spawn} = require('node:child_process');
 const {pathToFileURL} = require('node:url');
 const {chromium, startServer, openFixture} = require('./qa-lib.cjs');
+const {payloadSha256} = require('./payload-evidence.cjs');
 
 const output = path.resolve(process.env.QA_OUTPUT_DIR || 'launch/qa');
 const extension = path.resolve('extension-unpacked');
@@ -14,6 +15,7 @@ const report = {
   platform: {system:process.platform,architecture:process.arch,node:process.version,os:execFileSync('sw_vers',{encoding:'utf8'}).trim()},
   extensionVersion: require('../extension-unpacked/manifest.json').version,
   bundleSha256: require('node:crypto').createHash('sha256').update(fss.readFileSync('extension-unpacked/bundle.js')).digest('hex'),
+  payloadSha256: payloadSha256(extension),
   privacy: 'All native history writes use freshly created disposable profiles. Ordinary user browser profiles are never opened or modified.',
   cases: [], browsers: [], limitations: [],
 };
@@ -264,6 +266,7 @@ async function nativeChecks(name,executablePath,keepForReview=false){
       const {profile,executable,url}=report.visibleReview;
       const child=spawn(executable,[`--user-data-dir=${profile}`,`--disable-extensions-except=${extension}`,`--load-extension=${extension}`,'--no-first-run','--no-default-browser-check',`--app=${url}`],{detached:true,stdio:'ignore'});child.unref();report.visibleReview.pid=child.pid;report.visibleReview.launched=true;
     }
+    assert.equal(payloadSha256(extension),report.payloadSha256,'Extension files changed during browser QA');
     report.status='passed';
   }catch(error){report.status='failed';report.error=error.stack;process.exitCode=1;console.error(error);}
   finally{report.completed=new Date().toISOString();await fs.writeFile(path.join(output,'release-readiness.json'),JSON.stringify(report,null,2)+'\n');}

@@ -47,7 +47,9 @@ const normalizeViews = (value: unknown): SavedView[] => {
   if (!Array.isArray(value)) return [];
   return value.filter((view) => view && typeof view === 'object' && typeof view.name === 'string' && typeof view.id === 'string').map((view) => ({
     id: view.id.slice(0, 80), name: view.name.slice(0, 40), config: normalizeOutputConfig(view.config),
-    query: typeof view.query === 'string' ? view.query.slice(0, 500) : '',
+    // Search input accepts full URLs. Restoring or changing another saved view
+    // must not shorten a valid query and silently broaden its matches.
+    query: typeof view.query === 'string' ? view.query : '',
     domain: typeof view.domain === 'string' ? view.domain.slice(0, 253) : '',
     uniqueUrls: view.uniqueUrls === true, stripQuery: view.stripQuery === true,
   }));
@@ -132,14 +134,14 @@ export const HistoryExporter: React.FC = () => {
   useEffect(() => {
     if (!hydrated) return;
     let active = true;
-    const timer = window.setTimeout(() => {
-      void storageService.set(StorageKey.OutputConfig, config).then(() => {
-        if (active) setSettingsSaveFailed(false);
-      }).catch(() => {
-        if (active) setSettingsSaveFailed(true);
-      });
-    }, 300);
-    return () => { active = false; window.clearTimeout(timer); };
+    // Start the write now: closing a side panel can destroy its document before
+    // a debounce timer fires. StorageService preserves the order of changes.
+    void storageService.set(StorageKey.OutputConfig, config).then(() => {
+      if (active) setSettingsSaveFailed(false);
+    }).catch(() => {
+      if (active) setSettingsSaveFailed(true);
+    });
+    return () => { active = false; };
   }, [config, hydrated, settingsSaveAttempt]);
 
   const filteredItems = useMemo(() => filterHistory(items ?? [], { query, domain, uniqueUrls, stripQuery }), [items, query, domain, uniqueUrls, stripQuery]);

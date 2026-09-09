@@ -10,7 +10,9 @@ const bundleHash=crypto.createHash('sha256').update(fs.readFileSync('extension-u
 const browser=read('launch/qa/release-readiness.json');
 const upgrade=read('launch/qa/native-update.json');
 const audit=read('launch/qa/package-audit.json');
+const visible=read('launch/qa/visible-review.json');
 require('./check-package-audit.cjs').checkPackageAudit(audit);
+require('./payload-evidence.cjs').checkPayloadEvidence({browser,upgrade,visible});
 if(browser.status!=='passed'||upgrade.status!=='passed'||audit.status!=='pass')throw new Error('A required QA record has not passed.');
 if(browser.extensionVersion!==candidateVersion||upgrade.currentVersion!==candidateVersion||audit.version!==candidateVersion)throw new Error('QA version does not match the current candidate. Run current browser, upgrade and package checks before generating a report.');
 if(browser.bundleSha256!==bundleHash||upgrade.candidateBundleSHA256!==bundleHash)throw new Error('Browser or upgrade QA is from a different bundle.');
@@ -23,7 +25,6 @@ const icons={};
 for(const size of [16,32,48,128]){
  const file=`extension-unpacked/icons/icon${size}.png`;const current=fs.readFileSync(file);const baseline=execFileSync('git',['show',`${baselineSource}:${file}`]);if(!current.equals(baseline))throw new Error('Original icon differs: '+file);icons[size]=crypto.createHash('sha256').update(current).digest('hex');
 }
-const visible=read('launch/qa/visible-review.json');
 if(visible.bundleSha256!==crypto.createHash('sha256').update(fs.readFileSync('extension-unpacked/bundle.js')).digest('hex'))throw new Error('Visible app inspection is from a different bundle.');
 const summary={checked:new Date().toISOString(),status:'passed',version:candidateVersion,previousVersion:upgrade.previousVersion,unitTests:{tests:count,failed:0},typecheck:'passed',browserCases:browser.cases.length,nativeUpgradeCases:upgrade.cases.length,packageChecks:audit.check_count,originalIcons:{baseline:baselineSource,sha256:icons},bundleBytes:fs.statSync('extension-unpacked/bundle.js').size};
 fs.writeFileSync('launch/qa/verification-summary.json',JSON.stringify(summary,null,2)+'\n');

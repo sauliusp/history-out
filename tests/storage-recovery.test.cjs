@@ -157,6 +157,30 @@ test('failed preference writes keep export enabled and Retry saving persists the
   assert.equal(h.button('Retry saving'), undefined);
 });
 
+test('closing the workspace immediately after a settings change preserves the latest choices', async () => {
+  const values = {[CONFIG]: clone(legacy), [VIEWS]: []};
+  const storage = {
+    get: async key => ({[key]: clone(values[key])}),
+    set: async updates => { Object.assign(values, clone(updates)); },
+  };
+  const h = mount(storage); await h.settle();
+  const settings = h.find(node => node.type === 'OutputSettings');
+  const fields = {...settings.props.config.fields, url: false, timestamp: true};
+  settings.props.onConfigChange({format: 'html', historyRange: 'month', fields});
+  h.render(); h.unmount();
+  // A browser write may settle after the document closes, but no debounce timer
+  // or further UI event should be needed to start it.
+  await new Promise(resolve => setImmediate(resolve));
+  const reopened = mount(storage);
+  try {
+    await reopened.settle();
+    const restored = reopened.find(node => node.type === 'OutputSettings').props.config;
+    assert.equal(restored.format, 'html');
+    assert.equal(restored.historyRange, 'month');
+    assert.deepEqual(restored.fields, fields);
+  } finally { reopened.unmount(); }
+});
+
 test('saved-view failures and overlapping clicks cannot announce success or discard an existing view', async t => {
   const existing = { id: '1', name: 'Existing', config: clone(legacy), query: '', domain: '', uniqueUrls: false, stripQuery: false };
   const values = { [CONFIG]: clone(legacy), [VIEWS]: [existing] }; const pending = []; const writes = [];
@@ -266,6 +290,41 @@ function nameView(h, name) {
 }
 function submitView(h) { h.find(node => node.props?.component === 'form').props.onSubmit({ preventDefault() {} }); }
 
+test('long saved searches keep their exact matches after reopening and unrelated view changes', async t => {
+  const prefix = `https://example.com/report?state=${'a'.repeat(520)}`;
+  const query = `${prefix}-chosen`;
+  const urls = [query, `${prefix}-different`];
+  const values = { [CONFIG]: clone(legacy), [VIEWS]: [] };
+  const storage = {
+    get: async key => ({ [key]: clone(values[key]) }),
+    set: async updates => { Object.assign(values, clone(updates)); },
+  };
+  const seedHistory = () => {
+    global.chrome.history = {
+      search: async () => urls.map((url, index) => ({id: String(index), url})),
+      getVisits: async ({url}) => [{visitId: url, visitTime: Date.now() - 60000, transition: 'link'}],
+    };
+  };
+  let h = mount(storage); t.after(() => h.unmount());
+  await h.settle(); seedHistory();
+  h.button('Preview').props.onClick(); await h.settle();
+  h.find(node => node.type === 'TextField' && node.props.placeholder === 'Search titles or URLs').props.onChange({target: {value: query}});
+  h.render();
+  assert.ok(h.find(node => node.props?.role === 'status' && h.text(node) === '1 visits ready'));
+  nameView(h, 'Exact URL'); submitView(h); await h.settle();
+  assert.equal(values[VIEWS][0].query, query);
+
+  h.unmount(); h = mount(storage); await h.settle(); seedHistory();
+  h.find(node => node.type === 'Chip' && node.props.label === 'Exact URL').props.onClick(); h.render();
+  h.button('Preview').props.onClick(); await h.settle();
+  assert.ok(h.find(node => node.props?.role === 'status' && h.text(node) === '1 visits ready'), 'restoring the search must not include the lookalike URL');
+  assert.equal(h.find(node => node.type === 'TextField' && node.props.placeholder === 'Search titles or URLs').props.value, query);
+  nameView(h, 'Another view'); submitView(h); await h.settle();
+  assert.equal(values[VIEWS].find(view => view.name === 'Exact URL').query, query);
+  h.find(node => node.type === 'Chip' && node.props.label === 'Another view').props.onDelete(); await h.settle();
+  assert.equal(values[VIEWS][0].query, query);
+});
+
 test('stale workspaces merge saved views and delete only the requested current record', async t => {
   const values = { [CONFIG]: clone(legacy), [VIEWS]: [makeView('original', 'Original')] };
   const storage = {
@@ -274,6 +333,7 @@ test('stale workspaces merge saved views and delete only the requested current r
   };
   const a = mount(storage), b = mount(storage); t.after(() => { b.unmount(); a.unmount(); });
   await a.settle(); await b.settle();
+  const preferencesBefore = clone(values[CONFIG]);
   nameView(a, 'Window A'); submitView(a); await a.settle();
   nameView(b, 'Window B'); submitView(b); await b.settle();
   assert.deepEqual(values[VIEWS].map(view => view.name).sort(), ['Original', 'Window A', 'Window B']);
@@ -283,7 +343,7 @@ test('stale workspaces merge saved views and delete only the requested current r
   // B still shows Original; saving from that stale snapshot must not resurrect it.
   nameView(b, 'Window C'); submitView(b); await b.settle();
   assert.deepEqual(values[VIEWS].map(view => view.name).sort(), ['Window A', 'Window B', 'Window C']);
-  assert.deepEqual(values[CONFIG], legacy, 'saved-view transactions must not write general preferences');
+  assert.deepEqual(values[CONFIG], preferencesBefore, 'saved-view transactions must not change hydrated preferences');
 });
 
 test('overlapping cross-workspace saves hold the shared lock through the storage write', async t => {
@@ -353,12 +413,13 @@ test('missing Web Locks rejects saved-view mutations without an unsynchronized f
     get: async key => { if (key === VIEWS) viewReads++; return { [key]: clone(values[key]) }; },
     set: async updates => { writes.push(clone(updates)); Object.assign(values, clone(updates)); },
   }, { locks: false }); t.after(() => h.unmount()); await h.settle();
+  const initialWrites = clone(writes);
   const readCount = viewReads;
   nameView(h, 'New view'); submitView(h); await h.settle();
   assert.ok(h.find(node => node.type === 'Alert' && h.text(node).includes('cannot safely change saved views across open windows')));
   h.find(node => node.type === 'Chip' && node.props.label === 'Original').props.onDelete(); await h.settle();
   assert.ok(h.find(node => node.type === 'Alert' && h.text(node).includes('cannot safely change saved views across open windows')));
-  assert.equal(viewReads, readCount); assert.deepEqual(writes, []);
+  assert.equal(viewReads, readCount); assert.deepEqual(writes, initialWrites);
   assert.deepEqual(values[VIEWS], [makeView('original', 'Original')]);
   assert.equal(h.button('Preview').props.disabled, false);
   assert.equal(h.find(node => node.type === 'Button' && h.text(node).startsWith('Export history')).props.disabled, false);
@@ -369,7 +430,7 @@ test('a mutation-time read failure performs no write and releases the lock so Re
   let fail = false;
   const h = mount({
     get: async key => { if (key === VIEWS && fail) throw new Error('read failed inside lock'); return { [key]: clone(values[key]) }; },
-    set: async updates => { writes.push(clone(updates)); Object.assign(values, clone(updates)); },
+    set: async updates => { if (VIEWS in updates) writes.push(clone(updates)); Object.assign(values, clone(updates)); },
   }); t.after(() => h.unmount()); await h.settle();
   nameView(h, 'New view'); fail = true; submitView(h); await h.settle();
   assert.deepEqual(writes, []);

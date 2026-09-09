@@ -6,6 +6,12 @@ Fixed: matching visits are no longer missed if you reopen a page while HistoryOu
 
 Fixed: website visit counts now match the visits included by the website filter.
 
+Fixed: saved views keep your full search text, including long URLs, so reopening them returns the same matches.
+
+Fixed: date ranges saved in older versions now show their exact start and end times in your local time, so it is clear which visits will be exported.
+
+Fixed: your latest date range, file format and column choices are saved even if you close HistoryOut straight after changing them.
+
 Updated: contact links now use sauliusthedev@gmail.com.
 
 Kept: CSV, JSON and HTML export, your preferences and saved views, the familiar blue icon, a completely free extension, and the same permissions.

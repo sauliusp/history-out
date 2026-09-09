@@ -6,6 +6,7 @@ const path = require('node:path');
 const {createHash} = require('node:crypto');
 const {checkPackageAudit} = require('../scripts/check-package-audit.cjs');
 const {files, targets} = require('../scripts/package-files.cjs');
+const {payloadSha256, checkPayloadEvidence} = require('../scripts/payload-evidence.cjs');
 
 function fixture(t) {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'historyout-package-evidence-'));
@@ -56,4 +57,21 @@ test('duplicate package targets cannot substitute for a missing target', t => {
   const {root, audit} = fixture(t);
   audit.packages[3] = {...audit.packages[0]};
   assert.throws(() => checkPackageAudit(audit, root), /package targets/);
+});
+
+for (const label of ['browser', 'upgrade', 'visible']) {
+  test(`${label} evidence becomes stale after a same-version onboarding edit`, t => {
+    const {root, write} = fixture(t);
+    const directory = path.join(root, 'extension-unpacked');
+    const original = {status: 'passed', payloadSha256: payloadSha256(directory)};
+    assert.doesNotThrow(() => checkPayloadEvidence({[label]: original}, directory));
+    write('extension-unpacked/onboarding.js', 'changed panel-opening behavior');
+    assert.throws(() => checkPayloadEvidence({[label]: original}, directory), new RegExp(`${label} evidence does not match`));
+  });
+}
+
+test('legacy bundle-only records cannot certify the complete extension payload', t => {
+  const {root} = fixture(t);
+  const directory = path.join(root, 'extension-unpacked');
+  assert.throws(() => checkPayloadEvidence({visible: {status: 'passed', bundleSha256: 'old-bundle-only-record'}}, directory), /visible evidence does not match/);
 });

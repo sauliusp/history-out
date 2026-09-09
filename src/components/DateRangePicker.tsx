@@ -1,6 +1,7 @@
 import React from 'react';
-import { Stack, TextField } from '@mui/material';
+import { Stack, TextField, Typography } from '@mui/material';
 import { DateRange } from '../types/DateRange';
+import { isValidDateRange } from '../utils/outputConfig';
 
 interface DateRangePickerProps {
   value: DateRange | null;
@@ -26,23 +27,38 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({ value, onChang
     });
   };
   const today = formatDate(Date.now());
+  // V1 saved UTC boundaries. Keep those exact times, but explain them when
+  // they are not whole days in the user's current time zone.
+  const partialDays = isValidDateRange(value) && (
+    new Date(value.startTime).setHours(0, 0, 0, 0) !== value.startTime ||
+    new Date(value.endTime).setHours(23, 59, 59, 999) !== value.endTime
+  );
+  const exactTime = (timestamp: number) => new Date(timestamp).toLocaleString(undefined, {
+    year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', second: '2-digit',
+  });
 
   return (
-    <Stack direction="row" spacing={1} role="group" aria-label="Custom date range, in your local time">
+    <Stack spacing={1} role="group" aria-label="Custom date range, in your local time">
+      {partialDays && <Typography id="exact-saved-range" variant="caption" color="text.secondary">
+        Exact saved times: {exactTime(value!.startTime)} to {exactTime(value!.endTime)} (your local time).
+        {' '}These are the times used for preview and export. Choose both dates again to use full calendar days.
+      </Typography>}
+      <Stack direction="row" spacing={1}>
       <TextField
         label="From" type="date" fullWidth disabled={disabled}
         value={value ? formatDate(value.startTime) : ''}
         onChange={(event) => updateDate(event.target.value, false)}
-        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, 'aria-label': 'Start date' } }}
+        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, 'aria-label': 'Start date', 'aria-describedby': partialDays ? 'exact-saved-range' : undefined } }}
         sx={{ minWidth: 0, '& input': { minWidth: 0, px: 1 } }}
       />
       <TextField
         label="Through" type="date" fullWidth disabled={disabled}
         value={value ? formatDate(value.endTime) : ''}
         onChange={(event) => updateDate(event.target.value, true)}
-        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, min: value ? formatDate(value.startTime) : undefined, 'aria-label': 'End date' } }}
+        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, min: value ? formatDate(value.startTime) : undefined, 'aria-label': 'End date', 'aria-describedby': partialDays ? 'exact-saved-range' : undefined } }}
         sx={{ minWidth: 0, '& input': { minWidth: 0, px: 1 } }}
       />
+      </Stack>
     </Stack>
   );
 };

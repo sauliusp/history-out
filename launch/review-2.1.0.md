@@ -28,14 +28,14 @@ The website keeps its existing welcome and changelog routes for older installed 
 
 The identical Chrome candidate is also in `launch/store-kit/chrome/historyout-2.1.0-chrome.zip`. Existing 2.0.0 artifacts and dated browser reports are historical evidence, not the candidate for this review. The older marketing ZIPs have not been regenerated and must not be used as the 2.1.0 extension payload.
 
-Chrome ZIP SHA-256: `d56633cb46b67eb3ca18ce3e88e5016a5d2b31a715a9e220047c665a71b5b1f4`.
+Chrome ZIP SHA-256: `ade07148e0b771e017892e30700663a1ac46554f67aeac5d18f018bbdd371979`.
 
 ## Verification
 
 | Area | Result |
 | --- | --- |
 | TypeScript and production build | Passed. Existing webpack bundle-size advisories remain. |
-| Extension test suite | 80 tests passed, including concurrent revisit and parent/subdomain count regressions. |
+| Extension test suite | 90 tests passed, including concurrent revisit and parent/subdomain count regressions. |
 | Lifecycle behavior | Tests cover fresh install, upgrades from 1.0.1 and 2.0.0, duplicate suppression, preserved preferences/saved views, storage/tab failures and recovery. |
 | Open action | Tests verify synchronous panel invocation during the click, targeting the page's stable tab ID, unsupported/rejected APIs, a not-yet-ready tab lookup, and standard modified-link behavior. |
 | Packaged assets/privacy | Both pages resolve packaged resources, use external script files compatible with MV3, contain no remote passive resources, and send no history/settings in feedback links. |
@@ -67,3 +67,9 @@ Validation after these fixes: 75 extension tests, four website suites, TypeScrip
 User-facing review fixes are included in both the packaged update page and the Store changelog: exports retain matching visits during concurrent browsing, and website counts agree with the website filter. Keep this copy current if later review rounds change user-visible behavior.
 
 The follow-up review found one additional release-check issue: an old package audit could still be accepted after non-bundle files changed within the same version. Release verification now compares every source file and every upload archive with the recorded audit hashes, using one shared payload list. Five new regression tests cover valid evidence, changed page content, an incomplete inventory, replaced archives and missing package targets. All 80 tests and 197 package checks pass.
+
+The complete review from main also identified long saved queries being shortened, unclear local-time display of retained v1 UTC date boundaries, browser/upgrade/visible evidence tied only to the bundle, incomplete Store-kit archive checks, and preference writes cancelled by a quick panel close. These are now fixed. Saved queries retain their accepted text; legacy ranges keep their exact interval while displaying the actual local start/end times; preferences are written without the 300 ms delay; behavioral evidence requires a complete payload fingerprint; and Store-kit copying checks the full audited payload before and after asset rendering.
+
+The Store changelog and update page explain all five user-facing fixes in plain language. Release-tooling details remain in these review notes. Validation now includes 90 extension tests, four website suites, TypeScript/build and 197 package checks. Tests reproduce the long-query and fast-close defects, cover legacy ranges in three time zones, and reject stale browser, upgrade and visible evidence after a non-bundle change.
+
+For the pending visible Chrome inspection, identify the exact unpacked extension directory used by the inspected profile. Run `node scripts/payload-evidence.cjs /path/to/that/extension` immediately before and after the inspection. Record the matching value as `payloadSha256` in the new `visible-review.json` only after the actual inspection passes, along with the existing method, profile and checked observations. A digest alone is not a passed inspection. Browser and native-upgrade scripts now record their own full-payload digest automatically. Existing 2.0.0 records must not be relabeled or supplemented to certify 2.1.0.

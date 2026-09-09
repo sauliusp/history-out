@@ -5,6 +5,7 @@ const os=require('node:os');
 const crypto=require('node:crypto');
 const {execFileSync}=require('node:child_process');
 const {chromium}=require('playwright');
+const {payloadSha256}=require('./payload-evidence.cjs');
 const output=path.resolve(process.env.QA_OUTPUT_DIR||'launch/qa');
 const candidateVersion=require('../extension-unpacked/manifest.json').version;
 const report={checked:new Date().toISOString(),scope:process.env.QA_BASELINE_ZIP?'Native unpacked MV3 upgrade using an explicitly supplied baseline payload. This exercises payload migration, not the signed automatic update transport.':'Native unpacked MV3 upgrade in an isolated profile. Baseline is rebuilt v1 source, not a signed store download.',cases:[]};
@@ -23,6 +24,7 @@ const waitFor=async(fn,message)=>{for(let attempt=0;attempt<100;attempt++){if(aw
   const config={format:'json',historyRange:'week',dateRange:null,fields:{order:true,id:false,date:true,time:true,title:true,url:true,visitCount:false,typedCount:false,transition:false}};
   await worker.evaluate(async value=>{await chrome.storage.local.set({HISTORY_OUTPUT_CONFIG:value});await chrome.history.addUrl({url:'https://native-upgrade.historyout-qa.invalid/retained'});},config);
   await fs.cp(path.resolve('extension-unpacked'),extension,{recursive:true});
+  report.payloadSha256=payloadSha256(extension);
   // Use Chrome's native unpacked installer so it processes the version transition.
   const debugging=await context.browser().newBrowserCDPSession();
   const replacement=context.waitForEvent('serviceworker',{timeout:10000});
@@ -38,6 +40,7 @@ const waitFor=async(fn,message)=>{for(let attempt=0;attempt<100;attempt++){if(aw
   const app=await context.newPage();await app.goto(`chrome-extension://${extensionId}/side-panel.html`);await app.getByRole('button',{name:'Preview',exact:true}).click();await app.getByRole('button',{name:'Refresh',exact:true}).waitFor();assert.equal(await app.getByRole('link',{name:'native-upgrade.historyout-qa.invalid',exact:true}).count(),1);
   await context.close();context=null;
   context=await chromium.launchPersistentContext(profile,options);worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');await new Promise(resolve=>setTimeout(resolve,400));tabs=context.pages().map(page=>({url:page.url()}));assert.ok(tabs.filter(tab=>tab.url?.startsWith(`chrome-extension://${extensionId}/updated.html`)).length<=1);report.cases.push({name:'Restart at the same version does not open a duplicate lifecycle page',status:'passed'});
+  assert.equal(payloadSha256(extension),report.payloadSha256,'Installed candidate files changed during upgrade QA');
   report.previousVersion=oldManifest.version;report.currentVersion=candidateVersion;report.status='passed';console.log(JSON.stringify(report,null,2));
  }catch(error){report.status='failed';report.error=error.stack;process.exitCode=1;console.error(error);if(context){const debug=await context.newPage();await debug.goto('chrome://extensions');report.extensionManager=await debug.locator('extensions-item').allTextContents();console.log(JSON.stringify(report.extensionManager));}}
  finally{if(context)await context.close();await fs.rm(temp,{recursive:true,force:true});await fs.mkdir(output,{recursive:true});await fs.writeFile(path.join(output,'native-update.json'),JSON.stringify(report,null,2)+'\n');}

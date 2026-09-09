@@ -9,6 +9,7 @@ try { sharp = require('sharp'); } catch {
   sharp = require(path.join(require('node:os').homedir(),'.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp'));
 }
 const { startServer } = require('./qa-lib.cjs');
+const {checkPackageAudit} = require('./check-package-audit.cjs');
 const ROOT = path.resolve('launch/store-kit');
 const ASSETS = path.resolve('launch/assets');
 const sha = data => crypto.createHash('sha256').update(data).digest('hex');
@@ -55,6 +56,8 @@ async function renderPromosOnly(){
 }
 async function main(){
   if(process.argv.includes('--promos-only')){await renderPromosOnly();return;}
+  // Reject stale archives before rendering or replacing any handoff files.
+  if(process.argv.includes('--package-extension'))checkPackageAudit(JSON.parse(await fs.readFile('launch/qa/package-audit.json','utf8')));
   for(const dir of ['brand','source','screenshots','promotional','youtube','chrome','edge','support'])await fs.mkdir(path.join(ROOT,dir),{recursive:true});
   // These are byte-identical originals, preserved at the user's request.
   const originalIcon=execFileSync('git',['show','0272441:extension-unpacked/icons/icon128.png']);
@@ -74,6 +77,8 @@ async function main(){
     try{await fs.access(background);await render(page,server.origin,'support-cover',html(`<main class="art bmc"><img class="background" src="../support/background.png" alt=""><div class="shade"></div>${brand}<h1>Small tools. Useful days.</h1><p>Free to use. Supported by you.</p></main>`),1600,400,'support/buy-me-a-coffee-cover-1600x400.png');}catch(error){if(error.code!=='ENOENT')throw error;}
   }finally{await browser.close();await server.close();}
   if(process.argv.includes('--assets-only')){for(const target of ['chrome','edge']){const dir=path.join(ROOT,target,'screenshots');await fs.mkdir(dir,{recursive:true});for(const name of await fs.readdir(dir))if(name.endsWith('.png'))await fs.rm(path.join(dir,name));for(const scene of scenes)await fs.copyFile(path.join(ROOT,'screenshots',scene.file),path.join(dir,scene.file));}await assetGallery();console.log('Marketing assets rendered without packaging:',ROOT);return;}
+  // Rendering may take time. Confirm the payload did not change before copying.
+  if(process.argv.includes('--package-extension'))checkPackageAudit(JSON.parse(await fs.readFile('launch/qa/package-audit.json','utf8')));
   const shared=[...scenes.map(s=>'screenshots/'+s.file),'promotional/small-promo-440x280.png','promotional/marquee-1400x560.png','brand/icon128.png'];
   for(const target of ['chrome','edge']){
     for(const name of await fs.readdir(path.join(ROOT,target,'screenshots')))if(name.endsWith('.png')&&!scenes.some(s=>s.file===name))await fs.rm(path.join(ROOT,target,'screenshots',name));
@@ -82,9 +87,6 @@ async function main(){
     if(process.argv.includes('--package-extension')){
       const version=JSON.parse(await fs.readFile('extension-unpacked/manifest.json')).version;
       const archive=path.resolve(`releases/historyout-${version}-${target}.zip`);
-      for(const file of ['bundle.js','background.js','icons/icon128.png']){
-        if(sha(execFileSync('unzip',['-p',archive,file]))!==sha(await fs.readFile(path.join('extension-unpacked',file))))throw new Error(`Stale ${target} package: ${file}. Run npm run pack again.`);
-      }
       await fs.copyFile(archive,path.join(ROOT,target,`historyout-${version}-${target}.zip`));
     }
   }
