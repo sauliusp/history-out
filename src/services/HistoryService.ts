@@ -53,7 +53,6 @@ export class HistoryService {
     const items = await withAbort(chrome.history.search({
       text: '',
       startTime: Math.max(0, range.startTime - 1),
-      endTime: Math.max(Date.now(), range.endTime) + 1,
       maxResults,
     }), options.signal);
     checkAborted(options.signal);

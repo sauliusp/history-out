@@ -2,20 +2,13 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const crypto = require('node:crypto');
 const path = require('node:path');
-const { execFileSync } = require('node:child_process');
+const {checkFooter} = require('./check-footer.cjs');
 const { chromium, startServer, installFixture } = require('./qa-lib.cjs');
 
 const hash = value => crypto.createHash('sha256').update(value).digest('hex');
-const sourceFile = 'src/components/HistoryExporter.tsx';
 const output = path.resolve(process.env.QA_OUTPUT_DIR || 'launch/qa');
-const footer = source => {
-  const start = source.indexOf('        <Stack component="footer"');
-  const end = source.indexOf('        </Stack>', start) + '        </Stack>'.length;
-  assert.ok(start >= 0 && end > start, 'Footer exists');
-  return source.slice(start, end);
-};
-
 (async () => {
+  const {current: currentFooter, fixture: footerFixture} = checkFooter();
   fs.mkdirSync(output, { recursive: true });
   const server = await startServer();
   const browser = await chromium.launch();
@@ -66,10 +59,7 @@ const footer = source => {
       results.push({ width, status: 'passed', ctaBounds: bounds, keyboardFocusable: true, localAssetLoaded: true, externalRequests: 0, previewWorks: true });
       await context.close();
     }
-    const baseline = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
-    const currentFooter = footer(fs.readFileSync(sourceFile, 'utf8'));
-    assert.equal(currentFooter, footer(execFileSync('git', ['show', `${baseline}:${sourceFile}`], { encoding: 'utf8' })), 'Existing footer unchanged');
-    const report = { checked: new Date().toISOString(), status: 'passed', command: 'node scripts/bmc-cta-qa.cjs', browser: { name: 'Chromium', version: browser.version() }, scope: 'Focused optional support UI delta; fictional HTTP API fixture, not native history APIs', bundleSha256: hash(fs.readFileSync('extension-unpacked/bundle.js')), footerUnchanged: true, footerComparisonRevision: baseline, footerSha256: hash(currentFooter), ctaLabel: 'Buy me a coffee', asset: 'extension-unpacked/assets/bmc-cup.svg', results };
+    const report = { checked: new Date().toISOString(), status: 'passed', command: 'node scripts/bmc-cta-qa.cjs', browser: { name: 'Chromium', version: browser.version() }, scope: 'Focused optional support UI delta; fictional HTTP API fixture, not native history APIs', bundleSha256: hash(fs.readFileSync('extension-unpacked/bundle.js')), footerMatchesFixture: true, footerFixture, footerSha256: hash(currentFooter), ctaLabel: 'Buy me a coffee', asset: 'extension-unpacked/assets/bmc-cup.svg', results };
     fs.writeFileSync(path.join(output, 'bmc-cta.json'), JSON.stringify(report, null, 2) + '\n');
     console.log(JSON.stringify(report, null, 2));
   } finally {

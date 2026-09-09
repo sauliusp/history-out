@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { pages } from './content/pages.mjs';
+import { execFileSync } from 'node:child_process';
 
 test('Every public page is prerendered with unique metadata and resolves its local links',async()=>{
   const titles=new Set();
@@ -48,4 +49,19 @@ test('Brand, support, onboarding and comparison navigation are present',async()=
   assert(schema['@graph'].some(x=>x['@type']==='FAQPage'));
   assert(home.includes('og:image'));
   await stat('dist/assets/social-card.png');
+});
+
+test('noindex previews advertise no sitemap routes and rebuilding restores public discovery', async () => {
+  try {
+    execFileSync(process.execPath, ['build.mjs'], {env:{...process.env,SITE_NOINDEX:'true'}, stdio:'pipe'});
+    const sitemap = await readFile('dist/sitemap.xml','utf8');
+    assert(!sitemap.includes('<loc>'));
+    assert(!(await readFile('dist/robots.txt','utf8')).includes('Sitemap:'));
+    for (const page of pages) {
+      assert((await readFile(path.join('dist',page.route,'index.html'),'utf8')).includes('noindex,follow'));
+    }
+  } finally {
+    execFileSync(process.execPath, ['build.mjs'], {env:{...process.env,SITE_NOINDEX:'false'}, stdio:'pipe'});
+  }
+  assert((await readFile('dist/sitemap.xml','utf8')).includes('<loc>https://exportchromehistory.app/</loc>'));
 });

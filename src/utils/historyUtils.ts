@@ -80,11 +80,21 @@ export function summarizeHistory(items: readonly OutputHistoryItem[]): HistorySu
     const domain = getDomain(item.url);
     if (domain) domainCounts.set(domain, (domainCounts.get(domain) || 0) + 1);
   });
+  // A selected website also includes its subdomains. Add descendant counts to
+  // existing parent entries so each button describes the filter it activates.
+  // Walk hostname suffixes instead of comparing every pair of hostnames.
+  const matchingCounts = new Map(domainCounts);
+  domainCounts.forEach((visits, hostname) => {
+    for (let dot = hostname.indexOf('.'); dot >= 0; dot = hostname.indexOf('.', dot + 1)) {
+      const parent = hostname.slice(dot + 1);
+      if (matchingCounts.has(parent)) matchingCounts.set(parent, matchingCounts.get(parent)! + visits);
+    }
+  });
   return {
     visits: items.length,
     uniquePages: pages.size,
     domains: domainCounts.size,
-    topDomains: Array.from(domainCounts, ([domain, visits]) => ({ domain, visits }))
+    topDomains: Array.from(matchingCounts, ([domain, visits]) => ({ domain, visits }))
       .sort((a, b) => b.visits - a.visits || compareText(a.domain, b.domain)),
   };
 }

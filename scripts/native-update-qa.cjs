@@ -12,7 +12,7 @@ const waitFor=async(fn,message)=>{for(let attempt=0;attempt<100;attempt++){if(aw
 (async()=>{
  const temp=await fs.mkdtemp(path.join(os.tmpdir(),'historyout-native-upgrade-'));const profile=path.join(temp,'profile');const extension=path.join(temp,'extension');let context;
  try{
-  await fs.mkdir(extension);const baseline=path.resolve(process.env.QA_BASELINE_ZIP||'releases/historyout-1.0.1-source-baseline.zip');report.baselineArchive=baseline;
+  await fs.mkdir(extension);const baseline=path.resolve(process.env.QA_BASELINE_ZIP||require('./build-source-baseline.cjs').ensureSourceBaseline());report.baselineArchive=baseline;
   report.baselineArchiveSHA256=crypto.createHash('sha256').update(await fs.readFile(baseline)).digest('hex');
   report.candidateBundleSHA256=crypto.createHash('sha256').update(await fs.readFile('extension-unpacked/bundle.js')).digest('hex');
   execFileSync('unzip',['-q',baseline,'-d',extension]);

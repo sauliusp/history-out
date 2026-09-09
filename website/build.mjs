@@ -64,7 +64,7 @@ export async function build() {
     await mkdir(target, {recursive:true}); await writeFile(path.join(target,'index.html'),html);
   }
   await writeFile(path.join(out,'robots.txt'), indexable ? `User-agent: *\nAllow: /\n\nUser-agent: OAI-SearchBot\nAllow: /\n\nSitemap: ${origin}/sitemap.xml\n` : 'User-agent: *\nDisallow: /\n');
-  await writeFile(path.join(out,'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.filter(p=>p.indexable!==false).map(p=>`<url><loc>${origin}${p.route}</loc><lastmod>${config.updated}</lastmod></url>`).join('')}</urlset>`);
+  await writeFile(path.join(out,'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${pages.filter(p=>indexable && p.indexable!==false).map(p=>`<url><loc>${origin}${p.route}</loc><lastmod>${config.updated}</lastmod></url>`).join('')}</urlset>`);
   await writeFile(path.join(out,'404.html'), '<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex"><title>Page not found | HistoryOut</title><link rel="stylesheet" href="/style.css"></head><body><main class="article"><h1>That page is not here.</h1><p><a href="/">Return to HistoryOut</a></p></main></body></html>');
   console.log(`Built ${pages.length} public pages. Search indexing: ${indexable}. Store release: ${released ? config.latestVersion : config.storeVersion}.`);
 }

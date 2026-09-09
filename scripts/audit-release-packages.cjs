@@ -1,4 +1,5 @@
-// Read-only release checks. Writes only launch/qa/package-audit.json.
+// Audits current packages and writes launch/qa/package-audit.json.
+// Rebuilds the historical source baseline if it is absent.
 // Run again after every rebuild: node scripts/audit-release-packages.cjs
 const fs = require('node:fs');
 const path = require('node:path');
@@ -57,7 +58,7 @@ check('source-permission-set-stays-at-three', equal(permissions(sourceManifest),
 
 try {
   const metadata = json('launch/qa/packages.json');
-  const baselinePath = 'releases/historyout-1.0.1-source-baseline.zip';
+  const baselinePath = path.relative(root, require('./build-source-baseline.cjs').ensureSourceBaseline());
   const baselineBytes = read(baselinePath);
   const baselineManifest = JSON.parse(run('unzip', ['-p', baselinePath, 'manifest.json']));
   const originalManifest = JSON.parse(run('git', ['show', `${metadata.baseline_source}:extension-unpacked/manifest.json`]));

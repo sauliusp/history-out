@@ -84,7 +84,7 @@ for (const [zone, calendar, expectedStart, expectedEnd, hours] of [
       const pages = urls.map((url, index) => ({ id: String(index), url, title: index === 3 ? 'Unrelated' : 'Research', lastVisitTime: range.endTime + 86400000, visitCount: 500, typedCount: 0 }));
       const times = [[range.startTime - 1, range.startTime, range.startTime + 3600000, range.endTime + 1], [range.endTime, range.endTime + 86400000], [range.endTime], [range.startTime]];
       global.chrome = { history: {
-        search: async query => pages.filter(page => page.lastVisitTime >= query.startTime && page.lastVisitTime <= query.endTime),
+        search: async query => pages.filter(page => page.lastVisitTime >= query.startTime && (query.endTime === undefined || page.lastVisitTime <= query.endTime)),
         getVisits: async ({ url }) => times[urls.indexOf(url)].map((visitTime, index) => ({ id: '1', visitId: String(index), visitTime, transition: 'link' })),
       } };
       const history = HistoryService.getInstance();

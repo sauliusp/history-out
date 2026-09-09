@@ -38,14 +38,40 @@ test.beforeEach(() => {
 test('past ranges include a URL revisited after the range and emit only in-range visits', async () => {
   const revisited = { id: '1', title: 'Revisited', url: 'https://example.com', lastVisitTime: 900, visitCount: 3 };
   chrome.history.search = async query => {
-    assert.ok(query.endTime > range.endTime, 'candidate search must include later revisits');
-    return revisited.lastVisitTime >= query.startTime && revisited.lastVisitTime <= query.endTime ? [revisited] : [];
+    assert.equal(query.endTime, undefined, 'candidate search must not exclude concurrent revisits');
+    return revisited.lastVisitTime >= query.startTime && (query.endTime === undefined || revisited.lastVisitTime <= query.endTime) ? [revisited] : [];
   };
   chrome.history.getVisits = async () => [visit(900), visit(200), visit(50)];
   const result = await history.prepareHistoryItems(await history.getHistory(range), range);
   assert.equal(result.length, 1);
   assert.equal(result[0].timestamp, 200);
   assert.equal(result[0].visitCount, 3, 'URL lifetime count is preserved, not relabelled as range count');
+});
+
+test('a concurrent revisit after the request is sent cannot hide older in-range visits', async () => {
+  const queuedAt = Date.now();
+  chrome.history.search = async query => {
+    await pause();
+    const latestVisit = queuedAt + 5000;
+    return query.endTime !== undefined && latestVisit > query.endTime
+      ? [] : [{id:'concurrent',url:'https://example.com/revisited',lastVisitTime:latestVisit}];
+  };
+  chrome.history.getVisits = async () => [visit(200), visit(queuedAt + 5000)];
+  const result = await history.prepareHistoryItems(await history.getHistory(range), range);
+  assert.deepEqual(result.map(item => item.timestamp), [200]);
+});
+
+test('every top-site count includes exactly the visits selected by its domain filter', () => {
+  const rows = ['example.com', 'docs.example.com', 'deep.docs.example.com', 'docs.example.com', 'notexample.com', 'example.com.evil.test']
+    .map((domain, index) => row({id:String(index), url:`https://${domain}/page/${index}`}));
+  const summary = summarizeHistory(rows);
+  assert.equal(summary.visits, 6);
+  assert.equal(summary.domains, 5);
+  for (const site of summary.topDomains) {
+    assert.equal(site.visits, filterHistory(rows, {domain:site.domain}).length, site.domain);
+  }
+  assert.equal(summary.topDomains.find(site => site.domain === 'example.com').visits, 4);
+  assert.equal(summary.topDomains.find(site => site.domain === 'docs.example.com').visits, 3);
 });
 
 test('visit boundaries are inclusive and unknown, NaN, and out-of-range visit times are excluded', async () => {
@@ -165,7 +191,7 @@ test('query cleanup precedes deduplication and retains the latest matching visit
 
 test('summary counts retained visit rows, distinct URLs, and hostnames, not lifetime metadata', () => {
   const summary = summarizeHistory([row(),row(),row({url:'https://docs.example.com/page'}),row({url:'file:///tmp/example'})]);
-  assert.deepEqual(summary, {visits:4,uniquePages:3,domains:2,topDomains:[{domain:'example.com',visits:2},{domain:'docs.example.com',visits:1}]});
+  assert.deepEqual(summary, {visits:4,uniquePages:3,domains:2,topDomains:[{domain:'example.com',visits:3},{domain:'docs.example.com',visits:1}]});
 });
 
 function parseCSV(csv) {

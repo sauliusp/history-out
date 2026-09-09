@@ -76,7 +76,7 @@ test('10,000 URLs and 30,000 visits preserve complete deterministic exports and 
   let calls = 0;
   let backwards = false;
   chrome.history.search = async query => {
-    assert.ok(query.endTime > range.endTime, 'later revisits remain candidate URLs');
+    assert.equal(query.endTime, undefined, 'later revisits remain candidate URLs');
     return [...(backwards ? [...pages].reverse() : pages), pages[0], { id: 'missing-url' }];
   };
   chrome.history.getVisits = async ({ url }) => {
@@ -115,7 +115,12 @@ test('10,000 URLs and 30,000 visits preserve complete deterministic exports and 
   assert.equal(summary.visits, 30000);
   assert.equal(summary.uniquePages, 10000);
   assert.equal(summary.domains, 40);
-  assert.equal(summary.topDomains.reduce((sum, domain) => sum + domain.visits, 0), 30000);
+  // Parent-site filters overlap their subdomain filters, so these counts are
+  // individually selectable totals, not disjoint slices of the overall total.
+  for (const site of summary.topDomains) {
+    const matchingVisits = first.filter(row => row.domain === site.domain || row.domain.endsWith(`.${site.domain}`));
+    assert.equal(site.visits, matchingVisits.length, site.domain);
+  }
 
   const filterStarted = performance.now();
   const latest = filterHistory(first, { stripQuery: true, uniqueUrls: true });
