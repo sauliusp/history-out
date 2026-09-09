@@ -20,6 +20,24 @@ chrome.action.onClicked.addListener(async () => {
   }
 });
 
+// The panel may close while an older write is pending. Receive every change
+// immediately and keep its ordered write queue in this longer-lived context.
+let preferenceWriteQueue = Promise.resolve();
+chrome.runtime.onMessage?.addListener((message, sender, sendResponse) => {
+  if (sender.id !== chrome.runtime.id || message?.type !== 'historyout:save-preferences') return false;
+  if (!message.value || typeof message.value !== 'object' || Array.isArray(message.value)) {
+    sendResponse({ok: false});
+    return false;
+  }
+  preferenceWriteQueue = preferenceWriteQueue.catch(() => {}).then(() =>
+    chrome.storage.local.set({HISTORY_OUTPUT_CONFIG: message.value}));
+  preferenceWriteQueue.then(
+    () => { try { sendResponse({ok: true}); } catch {} },
+    () => { try { sendResponse({ok: false}); } catch {} }
+  );
+  return true;
+});
+
 const OPENED_VERSION_KEY = 'historyoutOpenedVersion';
 let lifecycleQueue = Promise.resolve();
 

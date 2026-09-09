@@ -24,6 +24,15 @@ for (const zone of ['Europe/Vilnius', 'America/Los_Angeles', 'Asia/Kathmandu']) 
     assert.ok(text(note).includes(format(saved.startTime)) && text(note).includes(format(saved.endTime)));
     assert.deepEqual(value, saved, 'displaying a legacy range must preserve the exact exported interval');
     assert.equal(elements.find(node => node.props.label === 'From').props.slotProps.htmlInput['aria-describedby'], 'exact-saved-range');
+    const normalize = elements.find(node => text(node) === 'Use full local days');
+    assert.ok(normalize, 'unchanged displayed dates need an explicit action');
+    normalize.props.onClick();
+    assert.deepEqual(value, {
+      startTime: new Date(saved.startTime).setHours(0, 0, 0, 0),
+      endTime: new Date(saved.endTime).setHours(23, 59, 59, 999),
+    });
+    assert.equal(render().find(node => node.props.id === 'exact-saved-range'), undefined);
+    value = {...saved};
     elements.find(node => node.props.label === 'From').props.onChange({target: {value: '2026-09-01'}});
     render().find(node => node.props.label === 'Through').props.onChange({target: {value: '2026-09-01'}});
     assert.deepEqual(value, {startTime: new Date(2026, 8, 1).getTime(), endTime: new Date(2026, 8, 1, 23, 59, 59, 999).getTime()});

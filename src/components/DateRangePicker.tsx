@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stack, TextField, Typography } from '@mui/material';
+import { Button, Stack, TextField, Typography } from '@mui/material';
 import { DateRange } from '../types/DateRange';
 import { isValidDateRange } from '../utils/outputConfig';
 
@@ -41,8 +41,14 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({ value, onChang
     <Stack spacing={1} role="group" aria-label="Custom date range, in your local time">
       {partialDays && <Typography id="exact-saved-range" variant="caption" color="text.secondary">
         Exact saved times: {exactTime(value!.startTime)} to {exactTime(value!.endTime)} (your local time).
-        {' '}These are the times used for preview and export. Choose both dates again to use full calendar days.
+        {' '}These are the times used for preview and export. You can use full local days for the dates shown below.
       </Typography>}
+      {partialDays && <Button size="small" disabled={disabled} sx={{alignSelf: 'flex-start'}} onClick={() => {
+        if (isValidDateRange(value)) onChange({
+          startTime: new Date(value.startTime).setHours(0, 0, 0, 0),
+          endTime: new Date(value.endTime).setHours(23, 59, 59, 999),
+        });
+      }}>Use full local days</Button>}
       <Stack direction="row" spacing={1}>
       <TextField
         label="From" type="date" fullWidth disabled={disabled}

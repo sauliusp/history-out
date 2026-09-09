@@ -31,6 +31,12 @@ export class StorageService {
     }
   }
 
+  /** Dispatch before returning; the worker owns ordering after this panel closes. */
+  public async savePreferences(value: unknown): Promise<void> {
+    const result = await chrome.runtime.sendMessage({type: 'historyout:save-preferences', value});
+    if (result?.ok !== true) throw new Error('Preferences could not be saved.');
+  }
+
   /** Read and mutate shared state under one lock across extension workspaces. */
   public async update<T>(key: string, mutate: (current: unknown) => T): Promise<T> {
     if (typeof navigator === 'undefined' || typeof navigator.locks?.request !== 'function') {

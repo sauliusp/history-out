@@ -1,8 +1,8 @@
 {
-  "generated_at": "2026-09-09T08:27:44.748Z",
+  "generated_at": "2026-09-09T08:52:38.828Z",
   "command": "node scripts/audit-release-packages.cjs",
   "node_version": "v22.20.0",
-  "git_head": "fce8409d2dabe33b7e76222fe4d1ddd5c1063bde",
+  "git_head": "eef836fe9068d7507a5729aea4e314fb26f918a8",
   "version": "2.1.0",
   "status": "pass",
   "scope": "Local v2 archives and their staging directories compared with extension-unpacked. Does not certify a signed Chrome Web Store package or a store submission.",
@@ -51,12 +51,12 @@
         "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536"
       },
       "background.js": {
-        "bytes": 1855,
-        "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04"
+        "bytes": 2695,
+        "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744"
       },
       "bundle.js": {
-        "bytes": 482876,
-        "sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3"
+        "bytes": 483449,
+        "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7"
       },
       "bundle.js.LICENSE.txt": {
         "bytes": 1640,
@@ -151,19 +151,19 @@
         },
         {
           "file": "background.js",
-          "bytes": 1855,
-          "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
-          "source_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
-          "staging_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "bytes": 2695,
+          "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "source_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "staging_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 482876,
-          "sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
-          "source_sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
-          "staging_sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
+          "bytes": 483449,
+          "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "source_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "staging_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -276,8 +276,8 @@
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 172405,
-      "sha256": "ade07148e0b771e017892e30700663a1ac46554f67aeac5d18f018bbdd371979",
+      "bytes": 172865,
+      "sha256": "42fe92aba91edd04281de1d5f651763ec69d42c233e726b25be62124fc511754",
       "version": "2.1.0",
       "permissions": {
         "permissions": [
@@ -318,19 +318,19 @@
         },
         {
           "file": "background.js",
-          "bytes": 1855,
-          "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
-          "source_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
-          "staging_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "bytes": 2695,
+          "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "source_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "staging_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 482876,
-          "sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
-          "source_sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
-          "staging_sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
+          "bytes": 483449,
+          "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "source_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "staging_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -443,8 +443,8 @@
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 172405,
-      "sha256": "f0b5bffd6d341098247163a80b28327e644ff0266fef6d6da2c5a70a6fd210f7",
+      "bytes": 172865,
+      "sha256": "b3f6e2101dab5049ba210d80f88b6a92008a8f88188cbd6c8f0a3532f9face3b",
       "version": "2.1.0",
       "permissions": {
         "permissions": [
@@ -485,19 +485,19 @@
         },
         {
           "file": "background.js",
-          "bytes": 1855,
-          "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
-          "source_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
-          "staging_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "bytes": 2695,
+          "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "source_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "staging_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 482876,
-          "sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
-          "source_sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
-          "staging_sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
+          "bytes": 483449,
+          "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "source_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "staging_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -610,8 +610,8 @@
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 172405,
-      "sha256": "f0b5bffd6d341098247163a80b28327e644ff0266fef6d6da2c5a70a6fd210f7",
+      "bytes": 172865,
+      "sha256": "b3f6e2101dab5049ba210d80f88b6a92008a8f88188cbd6c8f0a3532f9face3b",
       "version": "2.1.0",
       "permissions": {
         "permissions": [
@@ -652,19 +652,19 @@
         },
         {
           "file": "background.js",
-          "bytes": 1855,
-          "sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
-          "source_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
-          "staging_sha256": "dc2bd20395f784c4896b8b064f54bb03c79b806785daf01d0cc7c80eeb7b6f04",
+          "bytes": 2695,
+          "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "source_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "staging_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 482876,
-          "sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
-          "source_sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
-          "staging_sha256": "e073d45ed3639b1d9e8989782a36b713267e5cc69f9f1f7f3795e460e38934f3",
+          "bytes": 483449,
+          "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "source_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "staging_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -777,8 +777,8 @@
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 172376,
-      "sha256": "f2cc26652a8907eac76cf17ac96b4329a69dc600989e562f0e5c9cc58017ccde",
+      "bytes": 172836,
+      "sha256": "54fe8e4e9042f8e3f730c6b3921ebe3eca48c626ee0870288df5ca25cc9a45c3",
       "version": "2.1.0",
       "permissions": {
         "permissions": [
@@ -797,7 +797,7 @@
     "command": "node --test --test-reporter=tap tests/release-stress.test.cjs",
     "file_sha256": "b56ebb6bf46e04af55d969493c3a3f1bbc475b9319e41f3abafa950f3bc613a3",
     "exit_code": 0,
-    "elapsed_ms": 766.2,
+    "elapsed_ms": 760.04,
     "tests": 3,
     "passed": 3,
     "failed": 0,
@@ -809,28 +809,28 @@
           "unique_clean_pages": 5000,
           "combined_filter_pages": 84
         },
-        "first_load_ms": 103.69,
-        "reordered_load_ms": 80.41,
-        "filter_validation_ms": 23.53,
+        "first_load_ms": 100.88,
+        "reordered_load_ms": 76.28,
+        "filter_validation_ms": 21.7,
         "peak_api_concurrency": 8,
         "serialization": {
           "json": {
-            "elapsed_ms": 14.91,
+            "elapsed_ms": 14.68,
             "bytes": 6415598,
             "sha256": "6fad890d7af72c5cf4517150e04b9e9660c3edb53c87e6bc7a8ccc1a331e7858"
           },
           "csv": {
-            "elapsed_ms": 20.04,
+            "elapsed_ms": 20.39,
             "bytes": 3865628,
             "sha256": "239174e21117210d95fc2be49510eea7a025c9b77730adda3231dbe8fb6f0496"
           },
           "html": {
-            "elapsed_ms": 36.8,
+            "elapsed_ms": 37.34,
             "bytes": 8756786,
             "sha256": "32fb531b3c5f5a3fac8b2d9e3ef184cfa49b2e6b2eece2a644bada83e3bc9308"
           }
         },
-        "total_test_ms": 579.7,
+        "total_test_ms": 574.95,
         "note": "Synthetic API-boundary timing on this machine, not a Chrome UI latency guarantee."
       },
       {
@@ -838,13 +838,13 @@
         "api_calls_before_cancel": 12,
         "late_api_responses_discarded": 8,
         "recovery_visits": 256,
-        "abort_ms": 0.26
+        "abort_ms": 0.25
       },
       {
         "failed_candidate_urls": 10000,
         "failed_load_api_calls": 8,
         "overlapping_success_visits": 768,
-        "rejection_ms": 0.15
+        "rejection_ms": 0.14
       }
     ]
   },
@@ -1897,7 +1897,7 @@
     }
   ],
   "issues": [],
-  "elapsed_ms": 935.91,
+  "elapsed_ms": 925.93,
   "check_count": 197,
   "passed_check_count": 197,
   "note": "Snapshot evidence. Re-run this audit after rebuilding or repacking; archive hashes are final only for the bytes recorded here."

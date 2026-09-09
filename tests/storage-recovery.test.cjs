@@ -40,6 +40,11 @@ function sharedLocks(storage) {
 // promises. This is a state/effect test, not a substitute for browser rendering.
 function mount(storage, options = {}) {
   global.chrome = { storage: { local: storage }, history: { search: async () => [], getVisits: async () => [] } };
+  global.chrome.runtime = {sendMessage: async ({type, value}) => {
+    assert.equal(type, 'historyout:save-preferences');
+    await storage.set({[CONFIG]: value});
+    return {ok: true};
+  }};
   const previousNavigator = Object.getOwnPropertyDescriptor(global, 'navigator');
   Object.defineProperty(global, 'navigator', { configurable: true, value: { locks: options.locks === false ? undefined : sharedLocks(storage) } });
   const hooks = []; let cursor = 0, dirty = true, tree, effects = [], timerId = 0;

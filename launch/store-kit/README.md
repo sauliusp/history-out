@@ -12,7 +12,7 @@ The original HistoryOut wordmark, extension icon and favicon are preserved. All 
 - `youtube/thumbnail-1280x720.png`: video thumbnail. Current public demo: https://youtu.be/cGybkRSkk2Y.
 - `brand/`: byte-identical original SVG wordmark, favicon and 128px extension icon; a high-resolution PNG render of the original vector wordmark.
 - `support/`: completed 1600 x 400 Buy Me a Coffee cover, published to the live profile, plus its publication record.
-- `manifest.json`: dimensions and SHA-256 checksums for the generated files.
+- `manifest.json`: SHA-256 checksums and available image dimensions for the current handoff files.
 - `archives.json`: SHA-256 checksums for the Chrome and Edge marketing ZIPs.
 - `distribution.md`: which browsers need separate store work.
 
@@ -20,19 +20,22 @@ The store ZIPs are handoff bundles, not installable extension archives. Their su
 
 ## Reproduce
 
-After the final product captures are ready under `launch/assets/raw/`, run:
+To render artwork after the final product captures are ready under `launch/assets/raw/`, run:
 
 ```sh
-node scripts/store-kit.cjs
+node scripts/store-kit.cjs --assets-only
 ```
 
 After the final tested extension packages have been rebuilt, include the correct release ZIP in each store bundle:
 
 ```sh
 npm run pack
-node scripts/store-kit.cjs --package-extension
+node scripts/audit-release-packages.cjs
+node scripts/package-store-kit.cjs
 ```
+
+The packaging command reuses the existing artwork and rebuilds both outer handoff ZIPs, their current 2.1.0 inner extension ZIPs, listing/changelog files and metadata. Each handoff contains exactly one extension version. Historical loose 2.0.0 candidates are excluded. To render artwork and assemble the current packages in one run, use `node scripts/store-kit.cjs --package-extension` after packing and auditing.
 
 The renderer uses Playwright Chromium and Sharp. Playwright is a project dependency; Sharp resolves from the installed Codex workspace runtime or a normal local installation. The optional contribution cover uses `support/background.png` as its newly generated background. No old marketing screenshot is copied.
 
-Do not market unpublished features as already available in the store. The copy is prepared for the user's 2.0.0 submission, and publication status remains separate from packaging.
+Do not market unpublished features as already available in the store. The copy is prepared for the user's 2.1.0 review, and publication status remains separate from packaging.

@@ -1,96 +1,14 @@
 {
-  "generated": "2026-09-07T06:18:25.954790+00:00",
-  "extensionVersion": "2.0.0",
-  "bundleSHA256": "d6e8107d9e268af0eeb1d79b63991bd3724f4b43906778757193567db52289bf",
-  "backgroundSHA256": "d94b7f35366dc9ebb597d5d3b434efdc6486a7dc808ec30608dfc0e3be0cf3cd",
+  "generated": "2026-09-09T08:52:39.839Z",
+  "extensionVersion": "2.1.0",
+  "command": "node scripts/package-store-kit.cjs",
+  "scope": "Current Chrome and Edge handoff files. Existing marketing artwork is reused; this command does not render or certify new browser captures.",
+  "bundleSHA256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+  "backgroundSHA256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+  "payloadSha256": "9644388ca243d8844a2c276ef845023c78c6bb55c02360a4650bc5f1bbe3e322",
   "originalIconGitRef": "0272441",
   "originalIconSHA256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
-  "screenshots": "Actual extension UI with fictional QA history. Original icon and wordmark preserved; all compositions are new.",
-  "inputCaptures": [
-    {
-      "file": "launch/assets/raw/export-controls-card.png",
-      "sha256": "7c16df2699d968890f887caf9725876f5bfb4e0a9fe205947e0fd3eaabe7c36b"
-    },
-    {
-      "file": "launch/assets/raw/custom-date-controls.png",
-      "sha256": "10cacd51cf18c4211fb11f2371ff19900de9ea5c7747156f5b4a3e726f1ae044"
-    },
-    {
-      "file": "launch/assets/raw/05-real-html-export.png",
-      "sha256": "c682cb0db450cd4de71abb39dc630036dd76c4635fc5bfeb52ff0e85687a8488"
-    },
-    {
-      "file": "launch/assets/raw/02-project-focus.png",
-      "sha256": "936d26d53acba910d5bff35f471bd16d5f9af0ddab3f878b8fce1158655a52f4"
-    },
-    {
-      "file": "launch/assets/raw/01-daily-focus.png",
-      "sha256": "38929fecc5dba9fc10904ddfcc11e09498ca6e191f81ba38c86369312cd90646"
-    },
-    {
-      "file": "launch/assets/raw/saved-view-strip.png",
-      "sha256": "53fc4b0edf6567baba3a937e3679c3005dc156f079a779145dc4e80b9403be31"
-    }
-  ],
   "files": [
-    {
-      "file": "README.md",
-      "bytes": 2386,
-      "sha256": "adf62c21f10bde77904dcaf97936fd04f2f0dda851853c1d22a41b7b67232a64"
-    },
-    {
-      "file": "brand/favicon.ico",
-      "bytes": 101477,
-      "sha256": "db4b5357e9e93ad1cc88acffeae60ca47c58349e4c87b678a9d88db976d4ac14"
-    },
-    {
-      "file": "brand/icon128.png",
-      "bytes": 2908,
-      "sha256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
-      "width": 128,
-      "height": 128,
-      "hasAlpha": true
-    },
-    {
-      "file": "brand/icon16.png",
-      "bytes": 364,
-      "sha256": "37678b26a226506aa4541211214b89e4cb2b5aab084bf4c62d60457705b2585f",
-      "width": 16,
-      "height": 16,
-      "hasAlpha": true
-    },
-    {
-      "file": "brand/icon32.png",
-      "bytes": 654,
-      "sha256": "779fcb0fe17c03396b162d9f27213edf5092a7d610c641e8c3e750a4366de23f",
-      "width": 32,
-      "height": 32,
-      "hasAlpha": true
-    },
-    {
-      "file": "brand/icon48.png",
-      "bytes": 1116,
-      "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1",
-      "width": 48,
-      "height": 48,
-      "hasAlpha": true
-    },
-    {
-      "file": "brand/logo.svg",
-      "bytes": 7525,
-      "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536",
-      "width": 144,
-      "height": 58,
-      "hasAlpha": true
-    },
-    {
-      "file": "brand/wordmark-861.png",
-      "bytes": 45525,
-      "sha256": "cbbf8e42e4dcb085c5339b9a601d5de073aaedeee3c6585e0744e7827301044e",
-      "width": 861,
-      "height": 348,
-      "hasAlpha": true
-    },
     {
       "file": "chrome/brand/icon128.png",
       "bytes": 2908,
@@ -100,19 +18,24 @@
       "hasAlpha": true
     },
     {
-      "file": "chrome/description.txt",
-      "bytes": 2381,
-      "sha256": "3425e589dabdb438dfdc003bc2aa894e12e11d816052039ea1d7805bbb178bbb"
+      "file": "chrome/changelog.txt",
+      "bytes": 1239,
+      "sha256": "c6c4fdb2c8cfca9a07976a4aa0c34591ea2083b3a651b0cce2db19f5648d2ab3"
     },
     {
-      "file": "chrome/historyout-2.0.0-chrome.zip",
-      "bytes": 158398,
-      "sha256": "718719358b9d9a9146e52fbc48f56c8b6c17886a47c7c9b37070bd8d1551c44f"
+      "file": "chrome/description.txt",
+      "bytes": 2810,
+      "sha256": "ca6299fda83c98f62f694fab4126227abfbe99d575cac02101b94188b5193126"
+    },
+    {
+      "file": "chrome/historyout-2.1.0-chrome.zip",
+      "bytes": 172865,
+      "sha256": "42fe92aba91edd04281de1d5f651763ec69d42c233e726b25be62124fc511754"
     },
     {
       "file": "chrome/listing.json",
-      "bytes": 3326,
-      "sha256": "2f0e292fba89e380a28cac3674138b8e375ff12dfd667e31c600e424e77eebe9"
+      "bytes": 5013,
+      "sha256": "c1c5ffac74089eef9b641074026d95c1494a1084db0b2a464f178e16dc4b3f42"
     },
     {
       "file": "chrome/promotional/marquee-1400x560.png",
@@ -172,13 +95,8 @@
     },
     {
       "file": "chrome/submission.md",
-      "bytes": 4038,
-      "sha256": "41a3f9fc3a6f3640c9ff50cfd3cd57c07dbfeaf72b2ad491262c4044b584fe6f"
-    },
-    {
-      "file": "distribution.md",
-      "bytes": 1858,
-      "sha256": "85530dbe07abe176076fa56cc8ede8ffb5a7d7071703d0a5af1bbb1008dd13eb"
+      "bytes": 4511,
+      "sha256": "3cd7352cb3b6434b6a8e59d6d01d6ccfc6266578a7836b5cb9ee2445d33f9fbb"
     },
     {
       "file": "edge/brand/icon128.png",
@@ -189,19 +107,24 @@
       "hasAlpha": true
     },
     {
-      "file": "edge/description.txt",
-      "bytes": 2381,
-      "sha256": "3425e589dabdb438dfdc003bc2aa894e12e11d816052039ea1d7805bbb178bbb"
+      "file": "edge/changelog.txt",
+      "bytes": 1239,
+      "sha256": "c6c4fdb2c8cfca9a07976a4aa0c34591ea2083b3a651b0cce2db19f5648d2ab3"
     },
     {
-      "file": "edge/historyout-2.0.0-edge.zip",
-      "bytes": 158398,
-      "sha256": "f820015a10ff574a531b18beb5945b6c46077be47822f32b2f3c5033417b00f7"
+      "file": "edge/description.txt",
+      "bytes": 2810,
+      "sha256": "ca6299fda83c98f62f694fab4126227abfbe99d575cac02101b94188b5193126"
+    },
+    {
+      "file": "edge/historyout-2.1.0-edge.zip",
+      "bytes": 172865,
+      "sha256": "b3f6e2101dab5049ba210d80f88b6a92008a8f88188cbd6c8f0a3532f9face3b"
     },
     {
       "file": "edge/listing.json",
-      "bytes": 3303,
-      "sha256": "6280de9c420ad0e90dde9eafe444c5948d4103b1c1af646ebf9c283f554d9bb3"
+      "bytes": 5135,
+      "sha256": "ad0ae5e030ce2af34a98472b56e3a9f02dd551090f191375fb98c0cf779a7619"
     },
     {
       "file": "edge/promotional/marquee-1400x560.png",
@@ -262,167 +185,7 @@
     {
       "file": "edge/submission.md",
       "bytes": 2157,
-      "sha256": "000f5d2e703065dade48c4531bd35f26b3630a8fa2a44a4f9d0888f9eb22607c"
-    },
-    {
-      "file": "promotional/marquee-1400x560.png",
-      "bytes": 52055,
-      "sha256": "1063ae5a041bb8ad09cee7b0e03f96becc53d0d6ae28088001aad54b348cfa83",
-      "width": 1400,
-      "height": 560,
-      "hasAlpha": false
-    },
-    {
-      "file": "promotional/small-promo-440x280.png",
-      "bytes": 14031,
-      "sha256": "ec13e681b4d82b1de901d79c33b2f6c141120cb5050e7e9ac8a4940a3dd17883",
-      "width": 440,
-      "height": 280,
-      "hasAlpha": false
-    },
-    {
-      "file": "screenshots/01-export-browser-history.png",
-      "bytes": 128317,
-      "sha256": "628743814b92d1a41493b3a12f5811118642cca94fc0f04b51c49dfc026fc4a4",
-      "width": 1280,
-      "height": 800,
-      "hasAlpha": false
-    },
-    {
-      "file": "screenshots/02-customize-your-export.png",
-      "bytes": 105650,
-      "sha256": "76069d406ecdb6e461045ab29fb3de6b9f5ecba28b3040a9aad201851b88b449",
-      "width": 1280,
-      "height": 800,
-      "hasAlpha": false
-    },
-    {
-      "file": "screenshots/03-readable-html-export.png",
-      "bytes": 140977,
-      "sha256": "31e277cb6b836d5bfab4346868e6a5852fe1cb8455b50e325c71bb52f28957e6",
-      "width": 1280,
-      "height": 800,
-      "hasAlpha": false
-    },
-    {
-      "file": "screenshots/04-filter-your-results.png",
-      "bytes": 134122,
-      "sha256": "5311d89b42c0af7c0c61ecc8216354451da09329be745cf9cf0e748d9368f451",
-      "width": 1280,
-      "height": 800,
-      "hasAlpha": false
-    },
-    {
-      "file": "screenshots/05-revisit-and-repeat.png",
-      "bytes": 122338,
-      "sha256": "1637d45d3a3113479526d3e3b36ebc892d5ee28af37eb5cb3155bd69b11dd3ac",
-      "width": 1280,
-      "height": 800,
-      "hasAlpha": false
-    },
-    {
-      "file": "specifications.json",
-      "bytes": 1426,
-      "sha256": "c6ba0e636fe492c7a1f7197591e3d2bb78f3e0ba62a0096f4ba07ba13f6e16f7"
-    },
-    {
-      "file": "support/background.png",
-      "bytes": 1493963,
-      "sha256": "5d3191284bc450e00f5588aa3d0259bdfc93af4b0304b2853c3602a66adc79f2",
-      "width": 1774,
-      "height": 887,
-      "hasAlpha": false
-    },
-    {
-      "file": "support/buy-me-a-coffee-cover-1600x400.png",
-      "bytes": 573611,
-      "sha256": "be0bc04730dd64d50619dddfea3871405bcf3cb9ec61ec5093f0af6525291acf",
-      "width": 1600,
-      "height": 400,
-      "hasAlpha": false
-    },
-    {
-      "file": "support/publication-status.json",
-      "bytes": 333,
-      "sha256": "d158968a1407e53e57860ca063d4c3be36d5eea5cec94c19bbb9e15eae57c26e"
-    },
-    {
-      "file": "youtube/archive/CqMeYRX0hWQ/README.md",
-      "bytes": 301,
-      "sha256": "b36d9ebf30c749f7f174ea120ff1ba0edcc70601ce4e2f3f7f136d904eacdbdb"
-    },
-    {
-      "file": "youtube/archive/CqMeYRX0hWQ/metadata.json",
-      "bytes": 2946,
-      "sha256": "d367dac4396581a7e29806da3f2c5d6c9229914a91be3ea77aeda0b84eda355a"
-    },
-    {
-      "file": "youtube/archive/CqMeYRX0hWQ/retired-status.json",
-      "bytes": 237,
-      "sha256": "3e9e85a79fe89cc0b569bdd1303ebe6a2dc0e3d32def573a39c409ce5ce110c7"
-    },
-    {
-      "file": "youtube/archive/CqMeYRX0hWQ/upload-status.json",
-      "bytes": 972,
-      "sha256": "954f527815d29e4126981db5ce21eaf9289f58b345ce4a90276cff28af96ce61"
-    },
-    {
-      "file": "youtube/archive/GT7aEfalP1E/README.md",
-      "bytes": 385,
-      "sha256": "f58100a12d405f31b3e00d7e4bcbaa256661314dd853fa86fc70d61cc2df6856"
-    },
-    {
-      "file": "youtube/archive/GT7aEfalP1E/metadata.json",
-      "bytes": 2536,
-      "sha256": "857a6520e93fe92eef6b533d8c7a0ef776a6baf6755d815104d11314b9b5e48a"
-    },
-    {
-      "file": "youtube/archive/GT7aEfalP1E/upload-status.json",
-      "bytes": 695,
-      "sha256": "3102e8834ef791384ef933302a41831adc2a17efbf61cc90c668cf701bbf05ae"
-    },
-    {
-      "file": "youtube/archive/duxsGpO5t8Y/README.md",
-      "bytes": 369,
-      "sha256": "8cdfa474179d82ba99314d476e9930bd40a4c5cf1c0b4ac429ab7081890887be"
-    },
-    {
-      "file": "youtube/archive/duxsGpO5t8Y/metadata.json",
-      "bytes": 2943,
-      "sha256": "827809b6c7b0f80c07f3b1d8516986fdebc8efe825d6a54e6ba4fae584ef428d"
-    },
-    {
-      "file": "youtube/archive/duxsGpO5t8Y/retired-status.json",
-      "bytes": 430,
-      "sha256": "2a00334c26af526e4c130621bf4ac05703e2c61a3505736cc2defd46da66e48c"
-    },
-    {
-      "file": "youtube/archive/duxsGpO5t8Y/upload-status.json",
-      "bytes": 1060,
-      "sha256": "b418aff1091709d7be89ffe42e59f69a33670026febf8f1c5068c6e8b9a1eb1a"
-    },
-    {
-      "file": "youtube/export-first-metadata.json",
-      "bytes": 3119,
-      "sha256": "76dd482c993575bd8c1a22f40a92c35b48528b472689de6a63825e1c9554016b"
-    },
-    {
-      "file": "youtube/metadata.json",
-      "bytes": 3119,
-      "sha256": "76dd482c993575bd8c1a22f40a92c35b48528b472689de6a63825e1c9554016b"
-    },
-    {
-      "file": "youtube/thumbnail-1280x720.png",
-      "bytes": 142655,
-      "sha256": "b009b1ecc5e3a9f59be19b6503d86994d085e192dced24c8fdfa7d23a2725c66",
-      "width": 1280,
-      "height": 720,
-      "hasAlpha": false
-    },
-    {
-      "file": "youtube/upload-status.json",
-      "bytes": 1782,
-      "sha256": "7990649524356a3219b4ea078534bb810eed63a87b20e91cdfdca21ac4091642"
+      "sha256": "ccd9dc26b3080f61404d3bba967ab66da999b268b64d7ac75dd846375915cdd7"
     }
   ]
 }

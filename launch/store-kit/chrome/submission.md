@@ -1,12 +1,12 @@
 # Chrome Web Store update
 
-Updated 9 September 2026. Save a draft on the existing item `idohnkdgejocejlkihihonhemndpiiei` to preserve its users, reviews and update path. The owner reviews and submits separately. The product remains **HistoryOut**; 2.0.0 is the technical release version.
+Updated 9 September 2026. Save a draft on the existing item `idohnkdgejocejlkihihonhemndpiiei` to preserve its users, reviews and update path. The owner reviews and submits separately. The product remains **HistoryOut**; 2.1.0 is the technical release version.
 
 Current preparation status: 2.1.0 is a local review candidate. No package upload, dashboard edit, review submission, or publication has been performed for this candidate. User approval is required before shipping.
 
 ## Upload fields
 
-Use `listing.json` for field values and `description.txt` for the complete public description. Use the freshly tested `historyout-2.1.0-chrome.zip` from this folder when the kit contains it, or the final matching file under `releases/`. Never upload this entire marketing kit as the extension package.
+Use `listing.json` for field values, `description.txt` for the public description, and `changelog.txt` for the plain-language update notes. Include those notes in the Store listing when preparing the approved submission. Use the freshly tested `historyout-2.1.0-chrome.zip` from this folder when the kit contains it, or the final matching file under `releases/`. Never upload this entire marketing kit as the extension package.
 
 1. Replace the package on the existing item.
 2. Set the public name and description from `listing.json`. The name must match the manifest.

@@ -134,9 +134,9 @@ export const HistoryExporter: React.FC = () => {
   useEffect(() => {
     if (!hydrated) return;
     let active = true;
-    // Start the write now: closing a side panel can destroy its document before
-    // a debounce timer fires. StorageService preserves the order of changes.
-    void storageService.set(StorageKey.OutputConfig, config).then(() => {
+    // Send every change now. The worker owns the write queue independently of
+    // this document, including when an earlier storage write is still pending.
+    void storageService.savePreferences(config).then(() => {
       if (active) setSettingsSaveFailed(false);
     }).catch(() => {
       if (active) setSettingsSaveFailed(true);
