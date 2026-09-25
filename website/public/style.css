@@ -18,3 +18,26 @@
 @media(max-width:700px){.hero{grid-template-columns:1fr;gap:32px;padding:30px 25px 38px}.hero h1{font-size:clamp(3.15rem,12.5vw,4.55rem)}.hero .eyebrow{font-size:.68rem}.hero-product{max-width:500px}.hero-formats{margin-top:22px}.hero-formats span{font-size:.8rem;padding:8px 13px}.hero-lead{max-width:450px}.export-product .product-label{font-size:.58rem}.daily-grid{grid-template-columns:1fr;gap:18px}.daily-grid article{padding:24px}}
 
 .feedback-section{border-top:1px solid var(--line);display:grid;grid-template-columns:1.2fr .8fr;gap:65px;align-items:center}.feedback-section p{max-width:490px}.feedback-section .text-link{font-size:1rem}.feedback-note{border-top:1px solid var(--line);margin-top:40px;padding-top:4px}.feedback-note h2{font-size:1.6rem}@media(max-width:700px){.feedback-section{grid-template-columns:1fr;gap:15px}.site-header nav{flex-wrap:wrap;justify-content:flex-end;gap:12px}.site-header{gap:18px}.site-header nav a{font-size:.8125rem}}
+
+/* MortalityStudio attribution: an intentionally blunt poster above the product. */
+.studio-banner { background: #141414; color: #f4f5ef; border-bottom: 5px solid #f26741; }
+.studio-banner__inner { width: min(calc(100% - 64px), 1240px); margin-inline: auto; padding-block: 25px 32px; display: grid; grid-template-columns: 1fr 1.12fr; gap: 25px 56px; align-items: center; }
+.studio-banner__credit { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 14px; }
+.studio-banner__credit > span { font: 500 .875rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; text-transform: uppercase; letter-spacing: .06em; }
+.studio-banner__credit a { color: #f4f5ef; font-size: 1.375rem; font-weight: 850; letter-spacing: -.045em; text-decoration: none; }
+.studio-banner__credit a:hover { text-decoration: underline; text-underline-offset: 4px; }
+.studio-banner__stamp { justify-self: end; margin: 0; padding: 7px 12px; background: #d6ff63; color: #141414; border: 2px solid #141414; box-shadow: 3px 3px 0 #f4f5ef; transform: rotate(-2deg); font: 750 .8125rem/1.5 ui-monospace, SFMono-Regular, Consolas, monospace; text-transform: uppercase; letter-spacing: .025em; }
+.studio-banner .studio-banner__title { margin: 0; color: #f4f5ef; font-family: Arial, Helvetica, sans-serif; font-size: clamp(2.5rem, 4.8vw, 4.5rem); line-height: .98; font-weight: 900; letter-spacing: -.055em; text-transform: uppercase; }
+.studio-banner__title > span { color: #f26741; }
+.studio-banner__pitch > p { max-width: 58ch; margin: 0 0 20px; color: #e3e3dd; font-size: 1rem; line-height: 1.55; }
+.studio-banner__links { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.studio-banner .studio-banner__link { display: flex; flex-direction: column; justify-content: center; gap: 5px; padding: 13px 15px; min-height: 78px; border: 1px solid #f4f5ef; border-radius: 0; text-decoration: none; transition: background .15s ease, color .15s ease; }
+.studio-banner__link strong { font-size: .9375rem; line-height: 1.35; font-weight: 800; }
+.studio-banner__link > span { font-size: .8125rem; line-height: 1.4; }
+.studio-banner .studio-banner__link--site { background: #f26741; border-color: #f26741; color: #141414; }
+.studio-banner .studio-banner__link--social { background: transparent; color: #f4f5ef; }
+.studio-banner .studio-banner__link:hover { background: #d6ff63; border-color: #d6ff63; color: #141414; }
+.studio-banner a:focus-visible { outline: 3px solid #d6ff63; outline-offset: 5px; border-radius: 0; }
+@media (max-width: 1000px) { .studio-banner__inner { gap: 24px 28px; grid-template-columns: .85fr 1.15fr; } .studio-banner__links { grid-template-columns: 1fr; gap: 10px; } .studio-banner .studio-banner__link { min-height: 62px; padding: 10px 14px; } }
+@media (max-width: 700px) { .studio-banner__inner { width: calc(100% - 40px); padding-block: 23px 28px; grid-template-columns: 1fr; gap: 22px; } .studio-banner__credit { gap: 6px 12px; } .studio-banner__credit a { font-size: 1.25rem; } .studio-banner__stamp { justify-self: start; font-size: .75rem; order: 4; margin-top: 2px; } .studio-banner .studio-banner__title { font-size: clamp(2.5rem, 11vw, 4rem); } .studio-banner__pitch > p { margin-bottom: 22px; } .studio-banner .studio-banner__link { min-height: 72px; } }
+@media (prefers-reduced-motion: reduce) { .studio-banner .studio-banner__link { transition: none; } }

@@ -1,9 +1,10 @@
 import { welcome, update } from './lifecycle.mjs';
+import { studioBanner } from './studio-banner.mjs';
 const article = (eyebrow,title,lead,body) => `<article class="article"><a class="back" href="/">← HistoryOut</a><p class="eyebrow">${eyebrow}</p><h1>${title}</h1><p class="lead">${lead}</p>${body}</article>`;
 export const pages = [{
 route:'/', title:'Export Chrome history to CSV, JSON or HTML | HistoryOut',
 description:'Export your browser history to CSV, JSON or HTML for free. Choose dates and columns, filter useful pages, and keep a local file. Built for Chrome, Edge and Brave.',
-body:`<section class="hero">
+body:`${studioBanner}<section class="hero">
   <div class="hero-copy">
     <p class="eyebrow"><span class="status-dot"></span> A free browser history exporter</p>
     <h1>Export your<br>browser <em>history.</em></h1>
