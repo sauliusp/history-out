@@ -4,7 +4,7 @@ const article = (eyebrow,title,lead,body) => `<article class="article"><a class=
 export const pages = [{
 route:'/', title:'Export Chrome history to CSV, JSON or HTML | HistoryOut',
 description:'Export your browser history to CSV, JSON or HTML for free. Choose dates and columns, filter useful pages, and keep a local file. Built for Chrome, Edge and Brave.',
-body:`${studioBanner}<section class="hero">
+body:`<section class="hero">
   <div class="hero-copy">
     <p class="eyebrow"><span class="status-dot"></span> A free browser history exporter</p>
     <h1>Export your<br>browser <em>history.</em></h1>
@@ -31,6 +31,7 @@ body:`${studioBanner}<section class="hero">
     <article><span class="step-number">HTML / CLICKABLE LINKS</span><h3>A page you can open again.</h3><p>Keep a readable file of useful links. Open the list later in your browser, without a spreadsheet or an account.</p><a class="text-link" href="/assets/sample-history.html">Open a sample HTML export →</a></article>
   </div>
 </section>
+${studioBanner}
 <section class="section demo-section" id="demo">
   <div><p class="eyebrow">Your export. Your way.</p><h2>From browsing<br>to a useful file.</h2><p>See CSV, JSON and HTML export in action, then make the file yours with dates, columns and filters. The demo uses fictional browsing data.</p></div>
   <video controls preload="metadata" playsinline poster="/assets/historyout-export-story-poster.png"><source src="/assets/historyout-export-demo.mp4" type="video/mp4"><track kind="captions" src="/assets/historyout-export-demo-captions.vtt" srclang="en" label="English"><a href="/assets/historyout-export-demo.mp4">Watch the HistoryOut demo</a></video>
