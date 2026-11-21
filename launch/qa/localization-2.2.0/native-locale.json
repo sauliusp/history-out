@@ -1,0 +1,27 @@
+{
+  "checked": "2026-11-21T08:39:33.213Z",
+  "requestedLocale": "zh-CN",
+  "scope": "Real unpacked extension, isolated Chromium profile; verifies native locale if the operating system accepts the per-process language override.",
+  "payloadSha256": "013d0f7ad374ca003c513227feb7cda293fe6e36f5508c5d9420a7324c141aed",
+  "browserVersion": "149.0.7827.55",
+  "extensionId": "idohnkdgejocejlkihihonhemndpiiei",
+  "native": {
+    "language": "en-GB",
+    "metadataName": "HistoryOut - Export Browser History",
+    "manifestName": "HistoryOut - Export Browser History",
+    "folder": "."
+  },
+  "localeOverrideAccepted": false,
+  "onboardingURL": "chrome-extension://idohnkdgejocejlkihihonhemndpiiei/welcome.html",
+  "document": {
+    "language": "zh-CN",
+    "chromeUILanguage": "zh-CN",
+    "metadataName": "HistoryOut - Export Browser History",
+    "browserLanguage": "zh-CN",
+    "regionalLocale": "zh-CN"
+  },
+  "rendererLocaleDiffersFromNative": true,
+  "directChineseOnboarding": "passed",
+  "status": "limited",
+  "limit": "Chromium on this host did not accept --lang=zh-CN for its native UI language. The observed native locale and identity passed; The renderer may use the Playwright-emulated Chinese locale independently. The packaged Chinese onboarding page, zh-CN fixture UI, and catalog/manifest contracts are verified separately; native Chinese metadata selection is not proven on this host."
+}

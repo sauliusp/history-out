@@ -1,0 +1,1 @@
+New in 2.2.0: use HistoryOut in Simplified Chinese, Spanish, German, Brazilian Portuguese, French or Japanese. The workspace, welcome and update pages, readable HTML exports, website and Store images are localized. English remains available. CSV headers, JSON field names, saved views, export settings and permissions remain compatible. The existing YouTube demo is unchanged.

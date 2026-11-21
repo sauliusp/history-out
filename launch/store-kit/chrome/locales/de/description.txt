@@ -1,0 +1,41 @@
+Exportiere deinen Browserverlauf als CSV, JSON oder lesbares HTML. Wähle Zeitraum und Spalten und speichere passende Seiten in einer nützlichen lokalen Datei.
+
+HistoryOut ist kostenlos. Ohne Konto, ohne Abo und ohne Upload deines Browserverlaufs.
+
+DREI NÜTZLICHE FORMATE
+CSV: Öffne und analysiere deinen Verlauf in Excel, Google Sheets oder einer anderen Tabellenkalkulation.
+JSON: Nutze strukturierte Einträge in Skripten und Arbeitsabläufen.
+HTML: Speichere eine lesbare Datei mit anklickbaren Links, die sich lokal im Browser öffnen lässt.
+
+DIE DATEI NACH DEINEN WÜNSCHEN
+Wähle einen voreingestellten oder eigenen Zeitraum. Suche nach Titeln und URLs, filtere nach Website und wähle deine Spalten. Optionale Felder sind Domain und Zeitstempel. Behalte jeden passenden Besuch oder eine Zeile pro URL mit dem letzten passenden Besuch jeder Seite.
+
+Die optionale URL-Bereinigung entfernt Abfrageparameter und Fragmente. Sie anonymisiert den Verlauf nicht: Titel und URL-Pfade können weiterhin persönliche Informationen enthalten.
+
+ERST VORSCHAU, DANN DOWNLOAD
+Die Vorschau zeigt bis zu 100 Zeilen. Die heruntergeladene Datei enthält alle Treffer aus dem geladenen Ergebnis. Aktualisiere, um neue Besuche einzulesen.
+
+KOSTENLOS UND LOKAL
+HistoryOut liest den verfügbaren Verlauf, wenn du Vorschau oder Export wählst. Es gibt keine Werbung, Analysefunktionen oder Kontopflicht. Der Verlauf wird weder auf einen Server hochgeladen noch aus dem Browser gelöscht. Die Berechtigungen bleiben history, storage und sidePanel.
+
+NÜTZLICHE EXTRAS INKLUSIVE
+Tagesübersichten und die zuletzt besuchten Seiten erleichtern die Rückkehr zu nützlichen Inhalten. Speichere benannte Ansichten, um Zeitraum, Filter und Exporteinstellungen erneut zu verwenden. Gespeicherte Ansichten merken sich Einstellungen auf diesem Gerät, kein dauerhaftes Verlaufsarchiv.
+
+HistoryOut arbeitet mit dem Verlauf des aktuellen Browserprofils. Gelöschter Verlauf lässt sich nicht wiederherstellen; ein Zugriff auf ältere Kontodaten wird nicht garantiert. Besuchszahlen zählen Navigationsereignisse, keine Nutzungsdauer oder Produktivität.
+
+JETZT IN SIEBEN SPRACHEN
+Englisch, vereinfachtes Chinesisch, Spanisch, Deutsch, brasilianisches Portugiesisch, Französisch und Japanisch. Die Oberfläche folgt der Browsersprache. CSV-Spaltennamen und JSON-Feldnamen bleiben mit bestehenden Abläufen kompatibel.
+
+FUNKTION VORSCHLAGEN
+Schlage Verbesserungen vor oder stimme für Ideen: https://historyout.featurebase.app/
+Das öffentliche Feedback-Board wird von Featurebase betrieben. Verlauf und Exporteinstellungen werden nicht angehängt. Zum Schreiben oder Kommentieren kann eine separate Featurebase-Anmeldung nötig sein. Private Hilfe: sauliusthedev@gmail.com.
+
+FREIWILLIGE UNTERSTÜTZUNG
+Ein freiwilliger Beitrag unterstützt die unabhängige Entwicklung: https://www.buymeacoffee.com/saulius.developer
+Alle Funktionen bleiben kostenlos, unabhängig von einer Spende. Mit der Weiterempfehlung kopierst du den Installationslink zum Teilen.
+
+Funktionen, Beispiele, Browseroptionen und Versionshinweise: https://exportchromehistory.app/de/
+
+NEU IN VERSION 2.2.0
+
+Neu in 2.2.0: HistoryOut auf vereinfachtem Chinesisch, Spanisch, Deutsch, brasilianischem Portugiesisch, Französisch und Japanisch. Arbeitsbereich, Willkommens- und Aktualisierungsseiten, HTML-Exporte, Website und Store-Bilder sind übersetzt. Englisch bleibt verfügbar. CSV-Spaltennamen, JSON-Feldnamen, gespeicherte Ansichten, Exporteinstellungen und Berechtigungen bleiben kompatibel. Das bisherige YouTube-Video bleibt unverändert.

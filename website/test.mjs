@@ -2,7 +2,8 @@ import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFile, stat } from 'node:fs/promises';
 import path from 'node:path';
-import { pages } from './content/pages.mjs';
+const siteConfig=JSON.parse(await readFile(new URL('./site.config.json',import.meta.url),'utf8'));
+import { allPages as pages, locales, localeRoute, englishUI } from './content/localized.mjs';
 import { execFileSync } from 'node:child_process';
 
 test('Every public page is prerendered with unique metadata and resolves its local links',async()=>{
@@ -64,4 +65,49 @@ test('noindex previews advertise no sitemap routes and rebuilding restores publi
     execFileSync(process.execPath, ['build.mjs'], {env:{...process.env,SITE_NOINDEX:'false'}, stdio:'pipe'});
   }
   assert((await readFile('dist/sitemap.xml','utf8')).includes('<loc>https://exportchromehistory.app/</loc>'));
+});
+
+
+test('Every locale has all thirteen routes, complete UI copy and reciprocal language links',async()=>{
+  assert.equal(pages.length,91);
+  for(const locale of locales){
+    const localized=pages.filter(p=>p.locale.code===locale.code);
+    assert.equal(localized.length,13);
+    if(locale.catalog){
+      assert.deepEqual(Object.keys(locale.catalog.ui).sort(),Object.keys(englishUI).sort());
+      for(const value of Object.values(locale.catalog.ui))assert.equal(typeof value,'string');
+      for(const key of ['welcome','update'])for(const field of ['title','eyebrow','heading','lead','body'])assert(locale.catalog.lifecycle[key][field]?.trim());
+      assert(locale.catalog.lifecycle.update.eyebrow.includes('2.2.0'));
+    }
+    for(const page of localized){
+      const html=await readFile(path.join('dist',page.route,'index.html'),'utf8');
+      assert(html.includes(`<html lang="${locale.code}">`));
+      assert(html.includes(`<link rel="canonical" href="https://exportchromehistory.app${page.route}">`));
+      for(const other of locales)assert(html.includes(`<link rel="alternate" hreflang="${other.code}" href="https://exportchromehistory.app${localeRoute(other,page.baseRoute)}">`));
+      assert(html.includes(`<link rel="alternate" hreflang="x-default" href="https://exportchromehistory.app${page.baseRoute}">`));
+      const graph=JSON.parse(html.match(/<script type="application\/ld\+json">(.*?)<\/script>/s)[1])['@graph'];
+      assert.equal(graph.find(n=>n['@type']==='WebPage').inLanguage,locale.code);
+      for(const item of graph.filter(n=>['WebSite','Article'].includes(n['@type'])))assert.equal(item.inLanguage,locale.code);
+      if(locale.code!=='en'){
+        assert(!html.includes('href="/assets/sample-history.html"'));
+        assert(!html.includes('Skip to content'));
+        assert(!html.includes('Suggest a feature'));
+      }
+      if(page.baseRoute==='/'){
+        assert.equal(html.includes('class="rollout-note"'),siteConfig.storeVersion!==siteConfig.latestVersion);
+        assert(html.includes('<meta name="google-site-verification" content="J9EsmoQ_afZAfv1vTpVgo5bu_xHrSMfvtdjN_fUqgrs">'));
+        assert(html.includes('<meta name="google-site-verification" content="hlwn87xUR2-EHONW0JGTG1KxwTAwF8AeoiSNcH6tqhg">'));
+        const app=graph.find(n=>n['@type']==='SoftwareApplication');
+        assert.equal(app.softwareVersion,siteConfig.storeVersion);
+        assert.deepEqual(app.inLanguage,siteConfig.storeVersion===siteConfig.latestVersion?locales.map(l=>l.code):['en']);
+        const video=graph.find(n=>n['@type']==='VideoObject');
+        assert.equal(video.inLanguage,'en');
+        assert.equal(video.sameAs,'https://www.youtube.com/watch?v=cGybkRSkk2Y');
+      }
+      if(page.baseRoute==='/changelog/')assert(html.includes('2.2.0'));
+      for(const link of [...html.matchAll(/href="(\/[^"?#]*)(?:[?#][^"]*)?"/g)].map(m=>m[1])){
+        if(locale.code!=='en'&&!link.startsWith('/assets/')&&!link.includes('.')&&!locales.some(l=>link===localeRoute(l,page.baseRoute)))assert(link.startsWith(`/${locale.path}/`),`Unexpected language escape ${link} from ${page.route}`);
+      }
+    }
+  }
 });

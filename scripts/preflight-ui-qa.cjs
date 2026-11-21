@@ -158,7 +158,7 @@ function installStorageControls(options) {
         await page.getByRole('button', { name: 'Preview', exact: true }).click();
         await page.getByRole('button', { name: 'Refresh', exact: true }).waitFor();
         const downloadPromise = page.waitForEvent('download');
-        await page.getByRole('button', { name: /^Export \d+ visits/ }).click();
+        await page.getByRole('button', { name: /^Export \d+ visits?/ }).click();
         const download = await downloadPromise;
         const filename = label === 'Custom dates' ? 'older-custom.json' : 'older-all.json';
         await download.saveAs(path.join(output, filename));

@@ -1,0 +1,95 @@
+{
+  "checked": "2026-11-21T08:38:10.929Z",
+  "scope": "Isolated plain HTML button and requestAnimationFrame controls. No HistoryOut code loaded.",
+  "cases": [
+    {
+      "name": "chromium-control",
+      "headless": true,
+      "extraArguments": [],
+      "version": "149.0.7827.55",
+      "commandLineInspection": "Browser requires --enable-automation for this diagnostic; launch mode left unchanged.",
+      "document": {
+        "visibility": "visible",
+        "focus": true,
+        "readyState": "complete"
+      },
+      "bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 40.453125,
+        "height": 21
+      },
+      "animationFrame": "fired",
+      "click": "Clicked"
+    },
+    {
+      "name": "edge-default",
+      "headless": true,
+      "extraArguments": [],
+      "version": "157.0.4341.60",
+      "commandLineInspection": "Browser requires --enable-automation for this diagnostic; launch mode left unchanged.",
+      "document": {
+        "visibility": "visible",
+        "focus": true,
+        "readyState": "complete"
+      },
+      "bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 40.453125,
+        "height": 21
+      },
+      "animationFrame": "fired",
+      "click": "Clicked"
+    },
+    {
+      "name": "edge-no-gpu",
+      "headless": true,
+      "extraArguments": [
+        "--disable-gpu"
+      ],
+      "version": "157.0.4341.60",
+      "commandLineInspection": "Browser requires --enable-automation for this diagnostic; launch mode left unchanged.",
+      "document": {
+        "visibility": "visible",
+        "focus": true,
+        "readyState": "complete"
+      },
+      "bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 40.453125,
+        "height": 21
+      },
+      "animationFrame": "fired",
+      "click": "Clicked"
+    },
+    {
+      "name": "edge-unthrottled",
+      "headless": true,
+      "extraArguments": [
+        "--disable-background-timer-throttling",
+        "--disable-backgrounding-occluded-windows",
+        "--disable-renderer-backgrounding",
+        "--disable-frame-rate-limit",
+        "--disable-gpu-vsync"
+      ],
+      "version": "157.0.4341.60",
+      "commandLineInspection": "Browser requires --enable-automation for this diagnostic; launch mode left unchanged.",
+      "document": {
+        "visibility": "visible",
+        "focus": true,
+        "readyState": "complete"
+      },
+      "bounds": {
+        "x": 8,
+        "y": 8,
+        "width": 40.453125,
+        "height": 21
+      },
+      "animationFrame": "fired",
+      "click": "Clicked"
+    }
+  ],
+  "conclusion": "See individual controls; one or more variants differ."
+}

@@ -1,11 +1,20 @@
 {
-  "generated": "2026-09-09T08:52:39.839Z",
-  "extensionVersion": "2.1.0",
+  "generated": "2026-11-21T08:38:30.187Z",
+  "extensionVersion": "2.2.0",
   "command": "node scripts/package-store-kit.cjs",
-  "scope": "Current Chrome and Edge handoff files. Existing marketing artwork is reused; this command does not render or certify new browser captures.",
-  "bundleSHA256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-  "backgroundSHA256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-  "payloadSha256": "9644388ca243d8844a2c276ef845023c78c6bb55c02360a4650bc5f1bbe3e322",
+  "scope": "Current Chrome and Edge handoff files, seven-language listing copy and all localized artwork. Chrome Web Store supports localized screenshots; promo tiles remain global. Localized promo variants are included for Edge and reuse. This packaging command does not render or certify browser captures.",
+  "locales": [
+    "en",
+    "zh_CN",
+    "es",
+    "de",
+    "pt_BR",
+    "fr",
+    "ja"
+  ],
+  "bundleSHA256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+  "backgroundSHA256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+  "payloadSha256": "013d0f7ad374ca003c513227feb7cda293fe6e36f5508c5d9420a7324c141aed",
   "originalIconGitRef": "0272441",
   "originalIconSHA256": "5fdadd7b1fd044e7bf3763c215ff63bea33fa2e1e94e5d49e30372393e3c9111",
   "files": [
@@ -19,23 +28,479 @@
     },
     {
       "file": "chrome/changelog.txt",
-      "bytes": 1239,
-      "sha256": "c6c4fdb2c8cfca9a07976a4aa0c34591ea2083b3a651b0cce2db19f5648d2ab3"
+      "bytes": 377,
+      "sha256": "49cd86ff3b49483d11062c3ae1dadc6cc7050482d18e31631884fc65b2144ddb"
     },
     {
       "file": "chrome/description.txt",
-      "bytes": 2810,
-      "sha256": "ca6299fda83c98f62f694fab4126227abfbe99d575cac02101b94188b5193126"
+      "bytes": 3049,
+      "sha256": "6381bbf8c6e559d5478386881aef65402a689eef06bec08d3edf761ce546c389"
     },
     {
-      "file": "chrome/historyout-2.1.0-chrome.zip",
-      "bytes": 172865,
-      "sha256": "42fe92aba91edd04281de1d5f651763ec69d42c233e726b25be62124fc511754"
+      "file": "chrome/historyout-2.2.0-chrome.zip",
+      "bytes": 230235,
+      "sha256": "9936c622a268c0d022e0ce789ff18988c798dbfc6d9e94af3502225b0914524d"
     },
     {
       "file": "chrome/listing.json",
-      "bytes": 5013,
-      "sha256": "c1c5ffac74089eef9b641074026d95c1494a1084db0b2a464f178e16dc4b3f42"
+      "bytes": 4345,
+      "sha256": "24d2d35c611ee77e3a89498c746fc72459ec8736a95f7fd59052b0091db395f6"
+    },
+    {
+      "file": "chrome/locales/de/asset-audit.json",
+      "bytes": 3663,
+      "sha256": "3c49521ec0f7ff4af7173a39c10fa6c1326e3fdc4edaae318fc3895adf7a7c7c"
+    },
+    {
+      "file": "chrome/locales/de/changelog.txt",
+      "bytes": 439,
+      "sha256": "54751eba591853ab2784d1c735342b7741554678517d438994ed36e38fd086ce"
+    },
+    {
+      "file": "chrome/locales/de/description.txt",
+      "bytes": 3588,
+      "sha256": "37aa9ff14eaf60d7a075f12150fcef624a8d451fa40dd017ed37c7eaea6f9025"
+    },
+    {
+      "file": "chrome/locales/de/listing.json",
+      "bytes": 4956,
+      "sha256": "52505b25b0508e8f79518638638f9cc8b05b3ce99fe305a6b6ed72433c5c208c"
+    },
+    {
+      "file": "chrome/locales/de/promotional/marquee-1400x560.png",
+      "bytes": 51839,
+      "sha256": "5c4e464a8263959fecd5ccec952b04efcceb986a4eeb7ed17ae2ded468fc1edd",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/de/promotional/small-promo-440x280.png",
+      "bytes": 14513,
+      "sha256": "97fae413d5d3fbde098ffb924d0dc2f66778c6fa0ef041a222a7e67609b1453f",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/de/screenshots/01-export-browser-history.png",
+      "bytes": 123100,
+      "sha256": "45cf12d38c6ad66afb37d8826f85f3607e45f60c8da477495dda0f07900808ea",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/de/screenshots/02-customize-your-export.png",
+      "bytes": 139880,
+      "sha256": "c65dc90532fa44fe3aa779ca2576774c3d5ae2510f6e778195387167e449dee7",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/de/screenshots/03-readable-html-export.png",
+      "bytes": 135766,
+      "sha256": "61a79cc4af4ab4dd0b3f785af5b262f6efae3e7f4578c0e4f2cc42e8db16354d",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/de/screenshots/04-filter-your-results.png",
+      "bytes": 138853,
+      "sha256": "08dc289da7c75dddff52bfd5997b78aa46146573c95cf1af455c6406dd62bbfd",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/de/screenshots/05-revisit-and-repeat.png",
+      "bytes": 134029,
+      "sha256": "955d848c805a9a0f78010974a3a6ef7afa2c5592d612bca5d97bae19827e2cec",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/es/asset-audit.json",
+      "bytes": 3660,
+      "sha256": "60f7b7e5c6a03478dc5b71bfc103fb76c89e87dadb70ff2028c90771cb9e94df"
+    },
+    {
+      "file": "chrome/locales/es/changelog.txt",
+      "bytes": 444,
+      "sha256": "91ad350c1522323c74bfd111ea6d5c6c4a729ab9a530ef257c3c403051b6912e"
+    },
+    {
+      "file": "chrome/locales/es/description.txt",
+      "bytes": 3404,
+      "sha256": "722f7b55f4c4e4c6c9c9e18c7f3e36d9b98c835791cf4180b6eb5cd0e70be806"
+    },
+    {
+      "file": "chrome/locales/es/listing.json",
+      "bytes": 4759,
+      "sha256": "6a6fb9945cdb6252466dd67b528bd6aa40154d6deeed5ef9cd3f54810b8151c4"
+    },
+    {
+      "file": "chrome/locales/es/promotional/marquee-1400x560.png",
+      "bytes": 48365,
+      "sha256": "17dacdd9a993194f4d52cdfc7b5577e822d75f5268dc3b63456296dacca7e3ff",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/es/promotional/small-promo-440x280.png",
+      "bytes": 13436,
+      "sha256": "a80273f0708fe45b221993e1b142f82f6063a91f5dbc650dff5672c6ba265bcb",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/es/screenshots/01-export-browser-history.png",
+      "bytes": 120313,
+      "sha256": "84b3c54cf23383bccd69bcbd0b152f7bda7c03268658e0e99bea45f5f29e0245",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/es/screenshots/02-customize-your-export.png",
+      "bytes": 136574,
+      "sha256": "977a32d4b1e1caee39bda76fd0d08d2a346bb2ca2f14f0fe0f4be6d679444575",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/es/screenshots/03-readable-html-export.png",
+      "bytes": 136241,
+      "sha256": "47a0f04287e592c673bc95b61e2bac783cdee10ad0011a9b59edf980b20f8b57",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/es/screenshots/04-filter-your-results.png",
+      "bytes": 139677,
+      "sha256": "67d6092410d86fe46887724bcc8a939660dcfedf52e435a78a552453fa5cc0dd",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/es/screenshots/05-revisit-and-repeat.png",
+      "bytes": 127541,
+      "sha256": "6a574bd87b00fa383140b50487a7dbfa08edc0bef6c90b41e26ed7ad62bdc5c1",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/fr/asset-audit.json",
+      "bytes": 3667,
+      "sha256": "c658aea386dbf32422b0c684f5bc0d31642f6f178183f2a2973bc2053972535d"
+    },
+    {
+      "file": "chrome/locales/fr/changelog.txt",
+      "bytes": 430,
+      "sha256": "cf47a44f23f442513fa8fd7de218aa8476a3568b53288acb96fcea463c0df0d1"
+    },
+    {
+      "file": "chrome/locales/fr/description.txt",
+      "bytes": 3776,
+      "sha256": "7308abb595e3ea0cd37fb4d92a7a1431ed2d2ec91eccd0ce9d54ad6ece97a849"
+    },
+    {
+      "file": "chrome/locales/fr/listing.json",
+      "bytes": 5133,
+      "sha256": "3da57dbb17cb29755f1a6e8c78ab3f76cb3167f1c4bc9b2e9b4ff155255800d3"
+    },
+    {
+      "file": "chrome/locales/fr/promotional/marquee-1400x560.png",
+      "bytes": 51688,
+      "sha256": "f434769a8e2af03a384d47a8750f8cb1f09d239760c6b9ca5e5c9ef98dd37ec0",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/fr/promotional/small-promo-440x280.png",
+      "bytes": 15134,
+      "sha256": "3adac75673ec6c2b0e237fc376aec10bd680ac3073d7c6c3c13bb691451bd72e",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/fr/screenshots/01-export-browser-history.png",
+      "bytes": 125211,
+      "sha256": "498dccfddbb62c7b8ec7c68cf0144b0545301b929dc2bdde37432db98117352c",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/fr/screenshots/02-customize-your-export.png",
+      "bytes": 146471,
+      "sha256": "fd0edfb4a9b73038d3b8ef785bd91b3ceb3718837ef6b4f4f57f0fdfe992b17e",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/fr/screenshots/03-readable-html-export.png",
+      "bytes": 139167,
+      "sha256": "46c5a143c441d08fe5c76c538014398bc1b11b800d0a00bcb4664db6476212d2",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/fr/screenshots/04-filter-your-results.png",
+      "bytes": 139690,
+      "sha256": "3505caa3f98474bf52fd4505eb971a4ed951c338202251e36e5f4d8753c37d0b",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/fr/screenshots/05-revisit-and-repeat.png",
+      "bytes": 133396,
+      "sha256": "2f8472c7e432ea616ecfff7e1db4e06b06d69c461897d2170d142d18468ad066",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/ja/asset-audit.json",
+      "bytes": 3665,
+      "sha256": "52bc261973691430536bd240c1f3134700e3c45c0e2e636ab257574b172a8ae3"
+    },
+    {
+      "file": "chrome/locales/ja/changelog.txt",
+      "bytes": 498,
+      "sha256": "df715acf51b6ec23a082c0aded5edbc8a96692cedfd6edf959144eb3a61a144d"
+    },
+    {
+      "file": "chrome/locales/ja/description.txt",
+      "bytes": 4243,
+      "sha256": "cc2387a16a9e2a4b61edacec0cd666025d9a3e9af09fbe5a9ec850843e4c2b90"
+    },
+    {
+      "file": "chrome/locales/ja/listing.json",
+      "bytes": 5711,
+      "sha256": "9c83cf24533fbb94c6bbc75b14386675acdb9de75c9e26903497a2f5e4cd3d0e"
+    },
+    {
+      "file": "chrome/locales/ja/promotional/marquee-1400x560.png",
+      "bytes": 57183,
+      "sha256": "19e47512a1a3e0fd5a67dfb213b14fe7589a0a8d93aea802dda9f6713e50098c",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/ja/promotional/small-promo-440x280.png",
+      "bytes": 16952,
+      "sha256": "f731e0ae6dac3c91566f4268605da54bf991e6974a540354d8bea20a595db74b",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/ja/screenshots/01-export-browser-history.png",
+      "bytes": 135697,
+      "sha256": "31ade66080338ea795ca57075dedac912c005bb034f7bd1207b85ae5e36eef12",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/ja/screenshots/02-customize-your-export.png",
+      "bytes": 145792,
+      "sha256": "1550ad287831db6f08103252d0598c16dc9933e370aaaccd6bf2ed3cb66c0bc6",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/ja/screenshots/03-readable-html-export.png",
+      "bytes": 150429,
+      "sha256": "37f22c56b46df88626ffd6f069ad5d7ce2ef93d1cb14923fd8629bfe9528498c",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/ja/screenshots/04-filter-your-results.png",
+      "bytes": 152655,
+      "sha256": "061dbbe6962b65971aafbd08c2e46b9602192eeaebad590acc1ec06b7f45d194",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/ja/screenshots/05-revisit-and-repeat.png",
+      "bytes": 138055,
+      "sha256": "0fc1fe2bcb61abe7000cf51a546a7a8de881dc2275f9e4b94b8ba00d80fbb663",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/pt_BR/asset-audit.json",
+      "bytes": 3694,
+      "sha256": "dfa8f70cb0b08aa299a1c0ad46869f3b827574f77342ad490af360dd9963a82d"
+    },
+    {
+      "file": "chrome/locales/pt_BR/changelog.txt",
+      "bytes": 434,
+      "sha256": "96b6479941f9d8ca9c712f6987e6f678cb9dbf4f009c9203f18bcb4c87769e2b"
+    },
+    {
+      "file": "chrome/locales/pt_BR/description.txt",
+      "bytes": 3462,
+      "sha256": "a7dad70900a282e16eefbfe51b8476a362e1914e99e9562bff9c25209ddb438c"
+    },
+    {
+      "file": "chrome/locales/pt_BR/listing.json",
+      "bytes": 4832,
+      "sha256": "83efb3d5b685dfcb620742c4ee6a3e979252c7671c470e8af7ed3ed239f76b00"
+    },
+    {
+      "file": "chrome/locales/pt_BR/promotional/marquee-1400x560.png",
+      "bytes": 49761,
+      "sha256": "bfa70cd7a90e8a539ff01791f3073647929796648c9703b13477d7899aa06af0",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/pt_BR/promotional/small-promo-440x280.png",
+      "bytes": 14338,
+      "sha256": "ead90e0cb2c9871ac9fa8054fd1bf7ceaf7c6f459f1d387fad1292762910b09d",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/pt_BR/screenshots/01-export-browser-history.png",
+      "bytes": 128359,
+      "sha256": "4773c0f658302967eba5bc960c58ac5a948d40cd271392cf03b9a1b9a5480c7d",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/pt_BR/screenshots/02-customize-your-export.png",
+      "bytes": 142893,
+      "sha256": "4ae440e6317639b8a98871847c01adb3f28ec0dea2f9da97877b229ba2a8ed72",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/pt_BR/screenshots/03-readable-html-export.png",
+      "bytes": 141867,
+      "sha256": "d1f7edcec8ebb106e5a48fe9d79f8de7cd187cfb1c9c04a02403d7c4c82443dd",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/pt_BR/screenshots/04-filter-your-results.png",
+      "bytes": 141757,
+      "sha256": "9bc9f676acc67ae4c17661984e9278404d41905b8e9174928f4a84637c0ec144",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/pt_BR/screenshots/05-revisit-and-repeat.png",
+      "bytes": 132831,
+      "sha256": "fcbb142943ae8378400f2f2d4cf5c767cff07b407206b41412ad5c73812f32b8",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/zh_CN/asset-audit.json",
+      "bytes": 3697,
+      "sha256": "5f1b28c1bf707ffe6393d147b6d34fcf590410cb2446ce01e8b34b1dd47f4d1a"
+    },
+    {
+      "file": "chrome/locales/zh_CN/changelog.txt",
+      "bytes": 342,
+      "sha256": "2da14706e52ba1034de80348b654d700d5e820fd4c02cbed2193f56b03b5b791"
+    },
+    {
+      "file": "chrome/locales/zh_CN/description.txt",
+      "bytes": 3051,
+      "sha256": "f6b0a8eebfcfbe75145aa178a2e936887432d4d5b47557337239e93efa264e21"
+    },
+    {
+      "file": "chrome/locales/zh_CN/listing.json",
+      "bytes": 4345,
+      "sha256": "88e8772ef895df818aead8bbc37c6d9bdfff74037fc3ec95dd264798e1797b3d"
+    },
+    {
+      "file": "chrome/locales/zh_CN/promotional/marquee-1400x560.png",
+      "bytes": 52048,
+      "sha256": "7692dbe134a7a3a00764be8e77927a5b763635db551a1b4b302ddb52eb613689",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/zh_CN/promotional/small-promo-440x280.png",
+      "bytes": 14567,
+      "sha256": "ea24601d798d8f20319251abf1a3b96062fca39997004882982698cf52953c8b",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/zh_CN/screenshots/01-export-browser-history.png",
+      "bytes": 119736,
+      "sha256": "99f8be42cd44edc98d746c25803f78d7d0e542a28bc8f16cfe23d85e48c6a368",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/zh_CN/screenshots/02-customize-your-export.png",
+      "bytes": 130562,
+      "sha256": "a5ead9c93478b6b035b0e1b61c6078853d576bc85a335b7bbcd700293522411b",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/zh_CN/screenshots/03-readable-html-export.png",
+      "bytes": 134651,
+      "sha256": "267b127d73403bd2f212975f2b2d5dd496e44dab81bd518bdc3b4500cd146241",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/zh_CN/screenshots/04-filter-your-results.png",
+      "bytes": 131165,
+      "sha256": "e2a45ac37c566948f95ed6ba8d3cd0b818ba369a56a6418e9992427df7f9e7c5",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "chrome/locales/zh_CN/screenshots/05-revisit-and-repeat.png",
+      "bytes": 125984,
+      "sha256": "5775e0ea0bad5373de341dfae1e6a2c8a8db082ea8a67d75061ef165a758b2b8",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
     },
     {
       "file": "chrome/promotional/marquee-1400x560.png",
@@ -55,48 +520,48 @@
     },
     {
       "file": "chrome/screenshots/01-export-browser-history.png",
-      "bytes": 128317,
-      "sha256": "628743814b92d1a41493b3a12f5811118642cca94fc0f04b51c49dfc026fc4a4",
+      "bytes": 120475,
+      "sha256": "9fe4af182d6bcad1f805ef60e305d39202b31b1419d029ec28c5132441261516",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "chrome/screenshots/02-customize-your-export.png",
-      "bytes": 105650,
-      "sha256": "76069d406ecdb6e461045ab29fb3de6b9f5ecba28b3040a9aad201851b88b449",
+      "bytes": 128886,
+      "sha256": "5907632a29f66f18a6e43170cbededba8dd00efa88cd9b68a2cfac15ca345d15",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "chrome/screenshots/03-readable-html-export.png",
-      "bytes": 140977,
-      "sha256": "31e277cb6b836d5bfab4346868e6a5852fe1cb8455b50e325c71bb52f28957e6",
+      "bytes": 138985,
+      "sha256": "5730a81d14e40993bb1ebbe5d169ac946ba99c4132edfe4a1fa4938cf1cd38bf",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "chrome/screenshots/04-filter-your-results.png",
-      "bytes": 134122,
-      "sha256": "5311d89b42c0af7c0c61ecc8216354451da09329be745cf9cf0e748d9368f451",
+      "bytes": 133388,
+      "sha256": "b3ed421aaf564837c89c28cc817f9342daad099008f868c221b60441e3391b61",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "chrome/screenshots/05-revisit-and-repeat.png",
-      "bytes": 122338,
-      "sha256": "1637d45d3a3113479526d3e3b36ebc892d5ee28af37eb5cb3155bd69b11dd3ac",
+      "bytes": 120874,
+      "sha256": "2a1ce1f5e40090addca1352ebc3b335f6a54ab9e54476de730c84006c19ffdb3",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "chrome/submission.md",
-      "bytes": 4511,
-      "sha256": "3cd7352cb3b6434b6a8e59d6d01d6ccfc6266578a7836b5cb9ee2445d33f9fbb"
+      "bytes": 4879,
+      "sha256": "7c9f3c96fb4144a0b312b1b426fb4e4c1bf048c15eba38efd5091b2a11a993d8"
     },
     {
       "file": "edge/brand/icon128.png",
@@ -108,23 +573,479 @@
     },
     {
       "file": "edge/changelog.txt",
-      "bytes": 1239,
-      "sha256": "c6c4fdb2c8cfca9a07976a4aa0c34591ea2083b3a651b0cce2db19f5648d2ab3"
+      "bytes": 377,
+      "sha256": "49cd86ff3b49483d11062c3ae1dadc6cc7050482d18e31631884fc65b2144ddb"
     },
     {
       "file": "edge/description.txt",
-      "bytes": 2810,
-      "sha256": "ca6299fda83c98f62f694fab4126227abfbe99d575cac02101b94188b5193126"
+      "bytes": 3049,
+      "sha256": "6381bbf8c6e559d5478386881aef65402a689eef06bec08d3edf761ce546c389"
     },
     {
-      "file": "edge/historyout-2.1.0-edge.zip",
-      "bytes": 172865,
-      "sha256": "b3f6e2101dab5049ba210d80f88b6a92008a8f88188cbd6c8f0a3532f9face3b"
+      "file": "edge/historyout-2.2.0-edge.zip",
+      "bytes": 230235,
+      "sha256": "14fd22737b500ab0b72a77b526a22ec3fc15a50d0fd62489cc1bc8ed56921bd6"
     },
     {
       "file": "edge/listing.json",
-      "bytes": 5135,
-      "sha256": "ad0ae5e030ce2af34a98472b56e3a9f02dd551090f191375fb98c0cf779a7619"
+      "bytes": 4345,
+      "sha256": "24d2d35c611ee77e3a89498c746fc72459ec8736a95f7fd59052b0091db395f6"
+    },
+    {
+      "file": "edge/locales/de/asset-audit.json",
+      "bytes": 3663,
+      "sha256": "3c49521ec0f7ff4af7173a39c10fa6c1326e3fdc4edaae318fc3895adf7a7c7c"
+    },
+    {
+      "file": "edge/locales/de/changelog.txt",
+      "bytes": 439,
+      "sha256": "54751eba591853ab2784d1c735342b7741554678517d438994ed36e38fd086ce"
+    },
+    {
+      "file": "edge/locales/de/description.txt",
+      "bytes": 3588,
+      "sha256": "37aa9ff14eaf60d7a075f12150fcef624a8d451fa40dd017ed37c7eaea6f9025"
+    },
+    {
+      "file": "edge/locales/de/listing.json",
+      "bytes": 4956,
+      "sha256": "52505b25b0508e8f79518638638f9cc8b05b3ce99fe305a6b6ed72433c5c208c"
+    },
+    {
+      "file": "edge/locales/de/promotional/marquee-1400x560.png",
+      "bytes": 51839,
+      "sha256": "5c4e464a8263959fecd5ccec952b04efcceb986a4eeb7ed17ae2ded468fc1edd",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/de/promotional/small-promo-440x280.png",
+      "bytes": 14513,
+      "sha256": "97fae413d5d3fbde098ffb924d0dc2f66778c6fa0ef041a222a7e67609b1453f",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/de/screenshots/01-export-browser-history.png",
+      "bytes": 123100,
+      "sha256": "45cf12d38c6ad66afb37d8826f85f3607e45f60c8da477495dda0f07900808ea",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/de/screenshots/02-customize-your-export.png",
+      "bytes": 139880,
+      "sha256": "c65dc90532fa44fe3aa779ca2576774c3d5ae2510f6e778195387167e449dee7",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/de/screenshots/03-readable-html-export.png",
+      "bytes": 135766,
+      "sha256": "61a79cc4af4ab4dd0b3f785af5b262f6efae3e7f4578c0e4f2cc42e8db16354d",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/de/screenshots/04-filter-your-results.png",
+      "bytes": 138853,
+      "sha256": "08dc289da7c75dddff52bfd5997b78aa46146573c95cf1af455c6406dd62bbfd",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/de/screenshots/05-revisit-and-repeat.png",
+      "bytes": 134029,
+      "sha256": "955d848c805a9a0f78010974a3a6ef7afa2c5592d612bca5d97bae19827e2cec",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/es/asset-audit.json",
+      "bytes": 3660,
+      "sha256": "60f7b7e5c6a03478dc5b71bfc103fb76c89e87dadb70ff2028c90771cb9e94df"
+    },
+    {
+      "file": "edge/locales/es/changelog.txt",
+      "bytes": 444,
+      "sha256": "91ad350c1522323c74bfd111ea6d5c6c4a729ab9a530ef257c3c403051b6912e"
+    },
+    {
+      "file": "edge/locales/es/description.txt",
+      "bytes": 3404,
+      "sha256": "722f7b55f4c4e4c6c9c9e18c7f3e36d9b98c835791cf4180b6eb5cd0e70be806"
+    },
+    {
+      "file": "edge/locales/es/listing.json",
+      "bytes": 4759,
+      "sha256": "6a6fb9945cdb6252466dd67b528bd6aa40154d6deeed5ef9cd3f54810b8151c4"
+    },
+    {
+      "file": "edge/locales/es/promotional/marquee-1400x560.png",
+      "bytes": 48365,
+      "sha256": "17dacdd9a993194f4d52cdfc7b5577e822d75f5268dc3b63456296dacca7e3ff",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/es/promotional/small-promo-440x280.png",
+      "bytes": 13436,
+      "sha256": "a80273f0708fe45b221993e1b142f82f6063a91f5dbc650dff5672c6ba265bcb",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/es/screenshots/01-export-browser-history.png",
+      "bytes": 120313,
+      "sha256": "84b3c54cf23383bccd69bcbd0b152f7bda7c03268658e0e99bea45f5f29e0245",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/es/screenshots/02-customize-your-export.png",
+      "bytes": 136574,
+      "sha256": "977a32d4b1e1caee39bda76fd0d08d2a346bb2ca2f14f0fe0f4be6d679444575",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/es/screenshots/03-readable-html-export.png",
+      "bytes": 136241,
+      "sha256": "47a0f04287e592c673bc95b61e2bac783cdee10ad0011a9b59edf980b20f8b57",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/es/screenshots/04-filter-your-results.png",
+      "bytes": 139677,
+      "sha256": "67d6092410d86fe46887724bcc8a939660dcfedf52e435a78a552453fa5cc0dd",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/es/screenshots/05-revisit-and-repeat.png",
+      "bytes": 127541,
+      "sha256": "6a574bd87b00fa383140b50487a7dbfa08edc0bef6c90b41e26ed7ad62bdc5c1",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/fr/asset-audit.json",
+      "bytes": 3667,
+      "sha256": "c658aea386dbf32422b0c684f5bc0d31642f6f178183f2a2973bc2053972535d"
+    },
+    {
+      "file": "edge/locales/fr/changelog.txt",
+      "bytes": 430,
+      "sha256": "cf47a44f23f442513fa8fd7de218aa8476a3568b53288acb96fcea463c0df0d1"
+    },
+    {
+      "file": "edge/locales/fr/description.txt",
+      "bytes": 3776,
+      "sha256": "7308abb595e3ea0cd37fb4d92a7a1431ed2d2ec91eccd0ce9d54ad6ece97a849"
+    },
+    {
+      "file": "edge/locales/fr/listing.json",
+      "bytes": 5133,
+      "sha256": "3da57dbb17cb29755f1a6e8c78ab3f76cb3167f1c4bc9b2e9b4ff155255800d3"
+    },
+    {
+      "file": "edge/locales/fr/promotional/marquee-1400x560.png",
+      "bytes": 51688,
+      "sha256": "f434769a8e2af03a384d47a8750f8cb1f09d239760c6b9ca5e5c9ef98dd37ec0",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/fr/promotional/small-promo-440x280.png",
+      "bytes": 15134,
+      "sha256": "3adac75673ec6c2b0e237fc376aec10bd680ac3073d7c6c3c13bb691451bd72e",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/fr/screenshots/01-export-browser-history.png",
+      "bytes": 125211,
+      "sha256": "498dccfddbb62c7b8ec7c68cf0144b0545301b929dc2bdde37432db98117352c",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/fr/screenshots/02-customize-your-export.png",
+      "bytes": 146471,
+      "sha256": "fd0edfb4a9b73038d3b8ef785bd91b3ceb3718837ef6b4f4f57f0fdfe992b17e",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/fr/screenshots/03-readable-html-export.png",
+      "bytes": 139167,
+      "sha256": "46c5a143c441d08fe5c76c538014398bc1b11b800d0a00bcb4664db6476212d2",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/fr/screenshots/04-filter-your-results.png",
+      "bytes": 139690,
+      "sha256": "3505caa3f98474bf52fd4505eb971a4ed951c338202251e36e5f4d8753c37d0b",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/fr/screenshots/05-revisit-and-repeat.png",
+      "bytes": 133396,
+      "sha256": "2f8472c7e432ea616ecfff7e1db4e06b06d69c461897d2170d142d18468ad066",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/ja/asset-audit.json",
+      "bytes": 3665,
+      "sha256": "52bc261973691430536bd240c1f3134700e3c45c0e2e636ab257574b172a8ae3"
+    },
+    {
+      "file": "edge/locales/ja/changelog.txt",
+      "bytes": 498,
+      "sha256": "df715acf51b6ec23a082c0aded5edbc8a96692cedfd6edf959144eb3a61a144d"
+    },
+    {
+      "file": "edge/locales/ja/description.txt",
+      "bytes": 4243,
+      "sha256": "cc2387a16a9e2a4b61edacec0cd666025d9a3e9af09fbe5a9ec850843e4c2b90"
+    },
+    {
+      "file": "edge/locales/ja/listing.json",
+      "bytes": 5711,
+      "sha256": "9c83cf24533fbb94c6bbc75b14386675acdb9de75c9e26903497a2f5e4cd3d0e"
+    },
+    {
+      "file": "edge/locales/ja/promotional/marquee-1400x560.png",
+      "bytes": 57183,
+      "sha256": "19e47512a1a3e0fd5a67dfb213b14fe7589a0a8d93aea802dda9f6713e50098c",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/ja/promotional/small-promo-440x280.png",
+      "bytes": 16952,
+      "sha256": "f731e0ae6dac3c91566f4268605da54bf991e6974a540354d8bea20a595db74b",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/ja/screenshots/01-export-browser-history.png",
+      "bytes": 135697,
+      "sha256": "31ade66080338ea795ca57075dedac912c005bb034f7bd1207b85ae5e36eef12",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/ja/screenshots/02-customize-your-export.png",
+      "bytes": 145792,
+      "sha256": "1550ad287831db6f08103252d0598c16dc9933e370aaaccd6bf2ed3cb66c0bc6",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/ja/screenshots/03-readable-html-export.png",
+      "bytes": 150429,
+      "sha256": "37f22c56b46df88626ffd6f069ad5d7ce2ef93d1cb14923fd8629bfe9528498c",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/ja/screenshots/04-filter-your-results.png",
+      "bytes": 152655,
+      "sha256": "061dbbe6962b65971aafbd08c2e46b9602192eeaebad590acc1ec06b7f45d194",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/ja/screenshots/05-revisit-and-repeat.png",
+      "bytes": 138055,
+      "sha256": "0fc1fe2bcb61abe7000cf51a546a7a8de881dc2275f9e4b94b8ba00d80fbb663",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/pt_BR/asset-audit.json",
+      "bytes": 3694,
+      "sha256": "dfa8f70cb0b08aa299a1c0ad46869f3b827574f77342ad490af360dd9963a82d"
+    },
+    {
+      "file": "edge/locales/pt_BR/changelog.txt",
+      "bytes": 434,
+      "sha256": "96b6479941f9d8ca9c712f6987e6f678cb9dbf4f009c9203f18bcb4c87769e2b"
+    },
+    {
+      "file": "edge/locales/pt_BR/description.txt",
+      "bytes": 3462,
+      "sha256": "a7dad70900a282e16eefbfe51b8476a362e1914e99e9562bff9c25209ddb438c"
+    },
+    {
+      "file": "edge/locales/pt_BR/listing.json",
+      "bytes": 4832,
+      "sha256": "83efb3d5b685dfcb620742c4ee6a3e979252c7671c470e8af7ed3ed239f76b00"
+    },
+    {
+      "file": "edge/locales/pt_BR/promotional/marquee-1400x560.png",
+      "bytes": 49761,
+      "sha256": "bfa70cd7a90e8a539ff01791f3073647929796648c9703b13477d7899aa06af0",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/pt_BR/promotional/small-promo-440x280.png",
+      "bytes": 14338,
+      "sha256": "ead90e0cb2c9871ac9fa8054fd1bf7ceaf7c6f459f1d387fad1292762910b09d",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/pt_BR/screenshots/01-export-browser-history.png",
+      "bytes": 128359,
+      "sha256": "4773c0f658302967eba5bc960c58ac5a948d40cd271392cf03b9a1b9a5480c7d",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/pt_BR/screenshots/02-customize-your-export.png",
+      "bytes": 142893,
+      "sha256": "4ae440e6317639b8a98871847c01adb3f28ec0dea2f9da97877b229ba2a8ed72",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/pt_BR/screenshots/03-readable-html-export.png",
+      "bytes": 141867,
+      "sha256": "d1f7edcec8ebb106e5a48fe9d79f8de7cd187cfb1c9c04a02403d7c4c82443dd",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/pt_BR/screenshots/04-filter-your-results.png",
+      "bytes": 141757,
+      "sha256": "9bc9f676acc67ae4c17661984e9278404d41905b8e9174928f4a84637c0ec144",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/pt_BR/screenshots/05-revisit-and-repeat.png",
+      "bytes": 132831,
+      "sha256": "fcbb142943ae8378400f2f2d4cf5c767cff07b407206b41412ad5c73812f32b8",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/zh_CN/asset-audit.json",
+      "bytes": 3697,
+      "sha256": "5f1b28c1bf707ffe6393d147b6d34fcf590410cb2446ce01e8b34b1dd47f4d1a"
+    },
+    {
+      "file": "edge/locales/zh_CN/changelog.txt",
+      "bytes": 342,
+      "sha256": "2da14706e52ba1034de80348b654d700d5e820fd4c02cbed2193f56b03b5b791"
+    },
+    {
+      "file": "edge/locales/zh_CN/description.txt",
+      "bytes": 3051,
+      "sha256": "f6b0a8eebfcfbe75145aa178a2e936887432d4d5b47557337239e93efa264e21"
+    },
+    {
+      "file": "edge/locales/zh_CN/listing.json",
+      "bytes": 4345,
+      "sha256": "88e8772ef895df818aead8bbc37c6d9bdfff74037fc3ec95dd264798e1797b3d"
+    },
+    {
+      "file": "edge/locales/zh_CN/promotional/marquee-1400x560.png",
+      "bytes": 52048,
+      "sha256": "7692dbe134a7a3a00764be8e77927a5b763635db551a1b4b302ddb52eb613689",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/zh_CN/promotional/small-promo-440x280.png",
+      "bytes": 14567,
+      "sha256": "ea24601d798d8f20319251abf1a3b96062fca39997004882982698cf52953c8b",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/zh_CN/screenshots/01-export-browser-history.png",
+      "bytes": 119736,
+      "sha256": "99f8be42cd44edc98d746c25803f78d7d0e542a28bc8f16cfe23d85e48c6a368",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/zh_CN/screenshots/02-customize-your-export.png",
+      "bytes": 130562,
+      "sha256": "a5ead9c93478b6b035b0e1b61c6078853d576bc85a335b7bbcd700293522411b",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/zh_CN/screenshots/03-readable-html-export.png",
+      "bytes": 134651,
+      "sha256": "267b127d73403bd2f212975f2b2d5dd496e44dab81bd518bdc3b4500cd146241",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/zh_CN/screenshots/04-filter-your-results.png",
+      "bytes": 131165,
+      "sha256": "e2a45ac37c566948f95ed6ba8d3cd0b818ba369a56a6418e9992427df7f9e7c5",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
+    },
+    {
+      "file": "edge/locales/zh_CN/screenshots/05-revisit-and-repeat.png",
+      "bytes": 125984,
+      "sha256": "5775e0ea0bad5373de341dfae1e6a2c8a8db082ea8a67d75061ef165a758b2b8",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false
     },
     {
       "file": "edge/promotional/marquee-1400x560.png",
@@ -144,48 +1065,48 @@
     },
     {
       "file": "edge/screenshots/01-export-browser-history.png",
-      "bytes": 128317,
-      "sha256": "628743814b92d1a41493b3a12f5811118642cca94fc0f04b51c49dfc026fc4a4",
+      "bytes": 120475,
+      "sha256": "9fe4af182d6bcad1f805ef60e305d39202b31b1419d029ec28c5132441261516",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "edge/screenshots/02-customize-your-export.png",
-      "bytes": 105650,
-      "sha256": "76069d406ecdb6e461045ab29fb3de6b9f5ecba28b3040a9aad201851b88b449",
+      "bytes": 128886,
+      "sha256": "5907632a29f66f18a6e43170cbededba8dd00efa88cd9b68a2cfac15ca345d15",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "edge/screenshots/03-readable-html-export.png",
-      "bytes": 140977,
-      "sha256": "31e277cb6b836d5bfab4346868e6a5852fe1cb8455b50e325c71bb52f28957e6",
+      "bytes": 138985,
+      "sha256": "5730a81d14e40993bb1ebbe5d169ac946ba99c4132edfe4a1fa4938cf1cd38bf",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "edge/screenshots/04-filter-your-results.png",
-      "bytes": 134122,
-      "sha256": "5311d89b42c0af7c0c61ecc8216354451da09329be745cf9cf0e748d9368f451",
+      "bytes": 133388,
+      "sha256": "b3ed421aaf564837c89c28cc817f9342daad099008f868c221b60441e3391b61",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "edge/screenshots/05-revisit-and-repeat.png",
-      "bytes": 122338,
-      "sha256": "1637d45d3a3113479526d3e3b36ebc892d5ee28af37eb5cb3155bd69b11dd3ac",
+      "bytes": 120874,
+      "sha256": "2a1ce1f5e40090addca1352ebc3b335f6a54ab9e54476de730c84006c19ffdb3",
       "width": 1280,
       "height": 800,
       "hasAlpha": false
     },
     {
       "file": "edge/submission.md",
-      "bytes": 2157,
-      "sha256": "ccd9dc26b3080f61404d3bba967ab66da999b268b64d7ac75dd846375915cdd7"
+      "bytes": 2251,
+      "sha256": "e55961f6c974bd26f56934c2290e94bbd4ba9ac84bedbe7dab9d0e669fb16c70"
     }
   ]
 }

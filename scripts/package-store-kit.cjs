@@ -6,6 +6,7 @@ const {createHash} = require('node:crypto');
 const {execFileSync} = require('node:child_process');
 const {checkPackageAudit} = require('./check-package-audit.cjs');
 const {payloadSha256} = require('./payload-evidence.cjs');
+const {localeKeys} = require('./localization/store-copy.cjs');
 const root = path.resolve(__dirname, '..');
 const kit = path.join(root, 'launch/store-kit');
 const read = file => fs.readFileSync(path.join(root, file));
@@ -34,9 +35,25 @@ function packageStoreKit() {
         fs.mkdirSync(path.dirname(path.join(directory, file)), {recursive: true});
         fs.copyFileSync(path.join(kit, file), path.join(directory, file));
       }
+      const localizedFiles = [];
+      for (const locale of localeKeys.filter(locale => locale !== 'en')) {
+        const sourceDirectory = path.join(kit, 'locales', locale);
+        const localized = JSON.parse(fs.readFileSync(path.join(sourceDirectory, 'listing.json'), 'utf8'));
+        if (localized.technicalVersion !== version) throw new Error(`${locale} listing version does not match the candidate`);
+        for (const field of ['description', 'changelog']) {
+          if (localized[field]?.trim() !== fs.readFileSync(path.join(sourceDirectory, `${field}.txt`), 'utf8').trim()) throw new Error(`${locale} ${field} is out of sync`);
+        }
+        const localeAssets = assets.filter(file => !file.startsWith('brand/'));
+        for (const file of ['listing.json', 'description.txt', 'changelog.txt', 'asset-audit.json', ...localeAssets]) {
+          const relative = `locales/${locale}/${file}`;
+          fs.mkdirSync(path.dirname(path.join(directory, relative)), {recursive: true});
+          fs.copyFileSync(path.join(sourceDirectory, file), path.join(directory, relative));
+          localizedFiles.push(relative);
+        }
+      }
       // Only the current extension payload goes into the outer bundle. Older
       // loose candidates remain available as history, never as upload choices.
-      const included = [candidate, 'listing.json', 'description.txt', 'changelog.txt', 'submission.md', ...assets].sort();
+      const included = [candidate, 'listing.json', 'description.txt', 'changelog.txt', 'submission.md', ...assets, ...localizedFiles].sort();
       for (const file of included) {
         const relative = `${target}/${file}`;
         const source = path.join(kit, relative), staged = path.join(temporary, relative);
@@ -44,6 +61,10 @@ function packageStoreKit() {
         fs.copyFileSync(source, staged);
         const data = fs.readFileSync(source);
         const record = {file: relative, bytes: data.length, sha256: sha(data)};
+        if (file.endsWith('.png') && data.subarray(1, 4).toString() === 'PNG') {
+          record.width = data.readUInt32BE(16); record.height = data.readUInt32BE(20);
+          record.hasAlpha = [4, 6].includes(data[25]);
+        }
         const old = previousFiles.get(relative);
         if (old?.sha256 === record.sha256) for (const field of ['width', 'height', 'hasAlpha']) {
           if (old[field] !== undefined) record[field] = old[field];
@@ -65,7 +86,8 @@ function packageStoreKit() {
     fs.writeFileSync(path.join(kit, 'manifest.json'), JSON.stringify({
       generated: new Date().toISOString(), extensionVersion: version,
       command: 'node scripts/package-store-kit.cjs',
-      scope: 'Current Chrome and Edge handoff files. Existing marketing artwork is reused; this command does not render or certify new browser captures.',
+      scope: 'Current Chrome and Edge handoff files, seven-language listing copy and all localized artwork. Chrome Web Store supports localized screenshots; promo tiles remain global. Localized promo variants are included for Edge and reuse. This packaging command does not render or certify browser captures.',
+      locales: localeKeys,
       bundleSHA256: sha(read('extension-unpacked/bundle.js')),
       backgroundSHA256: sha(read('extension-unpacked/background.js')),
       payloadSha256: payloadSha256(),

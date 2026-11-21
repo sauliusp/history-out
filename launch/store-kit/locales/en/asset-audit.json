@@ -1,0 +1,138 @@
+{
+  "locale": "en",
+  "actualLocalizedUI": true,
+  "allFiveScreenshots": true,
+  "chromePromoTiles": "Global only in Chrome Web Store. These localized variants are for Edge and reuse, not per-locale CWS upload.",
+  "youtubeVideo": "https://youtu.be/cGybkRSkk2Y",
+  "videoUnchanged": true,
+  "files": [
+    {
+      "file": "locales/en/screenshots/01-export-browser-history.png",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false,
+      "sha256": "9fe4af182d6bcad1f805ef60e305d39202b31b1419d029ec28c5132441261516",
+      "textFit": [
+        {
+          "fontSize": 58,
+          "overflow": false,
+          "bottom": 502.1875,
+          "maxBottom": 675
+        }
+      ]
+    },
+    {
+      "file": "locales/en/screenshots/02-customize-your-export.png",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false,
+      "sha256": "5907632a29f66f18a6e43170cbededba8dd00efa88cd9b68a2cfac15ca345d15",
+      "textFit": [
+        {
+          "fontSize": 58,
+          "overflow": false,
+          "bottom": 502.1875,
+          "maxBottom": 675
+        }
+      ]
+    },
+    {
+      "file": "locales/en/screenshots/03-readable-html-export.png",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false,
+      "sha256": "5730a81d14e40993bb1ebbe5d169ac946ba99c4132edfe4a1fa4938cf1cd38bf",
+      "textFit": [
+        {
+          "fontSize": 53,
+          "overflow": false,
+          "bottom": 523.734375,
+          "maxBottom": 675
+        }
+      ]
+    },
+    {
+      "file": "locales/en/screenshots/04-filter-your-results.png",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false,
+      "sha256": "b3ed421aaf564837c89c28cc817f9342daad099008f868c221b60441e3391b61",
+      "textFit": [
+        {
+          "fontSize": 58,
+          "overflow": false,
+          "bottom": 502.1875,
+          "maxBottom": 675
+        }
+      ]
+    },
+    {
+      "file": "locales/en/screenshots/05-revisit-and-repeat.png",
+      "width": 1280,
+      "height": 800,
+      "hasAlpha": false,
+      "sha256": "2a1ce1f5e40090addca1352ebc3b335f6a54ab9e54476de730c84006c19ffdb3",
+      "textFit": [
+        {
+          "fontSize": 58,
+          "overflow": false,
+          "bottom": 502.1875,
+          "maxBottom": 675
+        }
+      ]
+    },
+    {
+      "file": "locales/en/promotional/small-promo-440x280.png",
+      "width": 440,
+      "height": 280,
+      "hasAlpha": false,
+      "sha256": "0b9efa239f8971f7e6aee5128893b0b4272ff21093e4f3d9a734cb4ac3fbd1a4",
+      "textFit": [
+        {
+          "fontSize": 32,
+          "overflow": false,
+          "bottom": 158.375,
+          "maxBottom": 179
+        }
+      ]
+    },
+    {
+      "file": "locales/en/promotional/marquee-1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "hasAlpha": false,
+      "sha256": "c4c4b3cb613639034463f96bee92575d02084926b2d9d66643eb15a5f34f6d7b",
+      "textFit": [
+        {
+          "fontSize": 62,
+          "overflow": false,
+          "bottom": 301.375,
+          "maxBottom": 340
+        }
+      ]
+    },
+    {
+      "file": "../assets/localized/en/website-export-hero.png",
+      "width": 1600,
+      "height": 1350,
+      "hasAlpha": false,
+      "sha256": "4b66b77f8960b6f44c34540e4b80ae20ff7fa30a9a28fd48a69b3707dac91a00",
+      "textFit": []
+    },
+    {
+      "file": "../assets/localized/en/social-card.png",
+      "width": 1280,
+      "height": 720,
+      "hasAlpha": false,
+      "sha256": "70ffa942ea130055e99b59cf367240993e2a770b1c69677f1b743aa731f2161d",
+      "textFit": [
+        {
+          "fontSize": 57,
+          "overflow": false,
+          "bottom": 490.078125,
+          "maxBottom": 575
+        }
+      ]
+    }
+  ]
+}

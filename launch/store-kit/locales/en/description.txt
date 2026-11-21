@@ -1,0 +1,41 @@
+Export your browser history as CSV, JSON or readable HTML. Choose your dates, select your columns, and keep matching pages in a useful local file.
+
+HistoryOut is free. No account, no subscription, and no uploads of your browsing history.
+
+THREE USEFUL FORMATS
+CSV: open and analyze your history in Excel, Google Sheets or another spreadsheet tool.
+JSON: use structured records in scripts and workflows.
+HTML: keep a readable file with clickable links, ready to open locally in a browser.
+
+MAKE THE FILE YOURS
+Choose a preset or custom date range. Search titles and URLs, filter by website, and select your columns. Optional fields include Domain and Timestamp. Keep every matching visit, or one row per URL for the latest matching visit to each page.
+
+Optional URL cleanup removes query strings and fragments. It does not anonymize your history: titles and URL paths can still contain personal information.
+
+PREVIEW, THEN DOWNLOAD
+The preview shows up to 100 rows. Your downloaded file includes every match from the loaded result. Refresh to read new visits.
+
+FREE AND LOCAL
+HistoryOut reads available browser history when you choose Preview or export. It has no advertising, analytics or account requirement. It does not upload history to a server or delete browser history. Permissions stay history, storage and sidePanel.
+
+USEFUL EXTRAS, INCLUDED
+Daily recaps and a recent trail help you revisit useful pages. Save a named view to reuse dates, filters and export settings. Saved views remember settings on this device, not a permanent history archive.
+
+HistoryOut works with history available to your current browser profile. It cannot recover deleted history or guarantee access to older account history. Visit counts describe navigation events, not time spent or productivity.
+
+NOW IN SEVEN LANGUAGES
+English, Simplified Chinese, Spanish, German, Brazilian Portuguese, French and Japanese. The interface follows your browser language. CSV headers and JSON field names stay compatible with existing workflows.
+
+SUGGEST A FEATURE
+Suggest an improvement or vote for an idea: https://historyout.featurebase.app/
+The board is public and hosted by Featurebase. No browsing history or export settings are attached. Posting or commenting may require a separate Featurebase sign-in. Private help: sauliusthedev@gmail.com.
+
+OPTIONAL SUPPORT
+An optional contribution supports independent development: https://www.buymeacoffee.com/saulius.developer
+Every feature stays free whether you contribute or not. Tell a friend copies the installation link for you to share.
+
+Features, examples, browser options and release notes: https://exportchromehistory.app/
+
+WHAT’S NEW IN 2.2.0
+
+New in 2.2.0: use HistoryOut in Simplified Chinese, Spanish, German, Brazilian Portuguese, French or Japanese. The workspace, welcome and update pages, readable HTML exports, website and Store images are localized. English remains available. CSV headers, JSON field names, saved views, export settings and permissions remain compatible. The existing YouTube demo is unchanged.

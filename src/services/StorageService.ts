@@ -1,3 +1,4 @@
+import { t } from '../i18n';
 export class StorageService {
   private static instance: StorageService;
   private pendingWrites = new Map<string, Promise<void>>();
@@ -34,13 +35,13 @@ export class StorageService {
   /** Dispatch before returning; the worker owns ordering after this panel closes. */
   public async savePreferences(value: unknown): Promise<void> {
     const result = await chrome.runtime.sendMessage({type: 'historyout:save-preferences', value});
-    if (result?.ok !== true) throw new Error('Preferences could not be saved.');
+    if (result?.ok !== true) throw new Error(t("Preferences could not be saved."));
   }
 
   /** Read and mutate shared state under one lock across extension workspaces. */
   public async update<T>(key: string, mutate: (current: unknown) => T): Promise<T> {
     if (typeof navigator === 'undefined' || typeof navigator.locks?.request !== 'function') {
-      const error = new Error('This browser cannot safely change saved views across open windows. Update your browser and try again.');
+      const error = new Error(t("This browser cannot safely change saved views across open windows. Update your browser and try again."));
       error.name = 'StorageLockUnavailableError';
       throw error;
     }

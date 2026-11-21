@@ -80,7 +80,7 @@ for (const target of targets) {
     const archiveFiles = archiveEntries.filter(file => !file.endsWith('/')).sort();
     check(`${target}:exact-file-allowlist`, equal(archiveFiles, files), archiveFiles);
     check(`${target}:no-duplicate-or-unsafe-entries`, new Set(archiveEntries).size === archiveEntries.length &&
-      archiveEntries.every(file => ['icons/', 'assets/'].includes(file) || files.includes(file)), archiveEntries);
+      archiveEntries.every(file => files.includes(file) || (file.endsWith('/') && files.some(allowed => allowed.startsWith(file)))), archiveEntries);
     check(`${target}:no-maps-fixtures-test-or-nested-archives`, !archiveEntries.some(file => /(?:\.map$|fixture|test|\.zip$|\.crx$|node_modules|__MACOSX|\.DS_Store)/i.test(file)));
     const manifestBytes = run('unzip', ['-p', relativePath, 'manifest.json']);
     const manifest = JSON.parse(manifestBytes);

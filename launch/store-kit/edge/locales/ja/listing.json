@@ -1,0 +1,19 @@
+{
+  "name": "HistoryOut - 閲覧履歴をエクスポート",
+  "shortDescription": "閲覧履歴をCSV、JSON、HTMLでエクスポート。日付、列、ページを選択。無料、ローカル処理、アカウント不要。",
+  "description": "閲覧履歴を CSV、JSON、読みやすい HTML でエクスポート。日付と列を選び、条件に合うページを便利なファイルとして端末に保存できます。\n\nHistoryOut は無料です。アカウントやサブスクリプションは不要で、閲覧履歴をアップロードしません。\n\n3 つの便利な形式\nCSV：Excel、Google スプレッドシートなどで開いて分析できます。\nJSON：構造化された記録をスクリプトやワークフローで利用できます。\nHTML：クリックできるリンク付きの読みやすいファイルを、ブラウザでローカルに開けます。\n\n必要な内容だけを保存\n用意された期間や任意の日付を選択。タイトルや URL を検索し、サイトで絞り込んで、必要な列を選べます。ドメインやタイムスタンプも追加できます。一致する訪問をすべて残すか、URL ごとに 1 行として各ページの最後の一致する訪問だけを保存できます。\n\n任意の URL クリーンアップ機能はクエリ文字列とフラグメントを削除します。履歴を匿名化する機能ではありません。タイトルや URL パスには個人情報が残る場合があります。\n\nプレビューしてからダウンロード\nプレビューには最大 100 行を表示します。ダウンロードするファイルには、読み込み済みの結果のうち条件に一致するすべての行を含めます。新しい訪問を読み込むには更新してください。\n\n無料、端末内で処理\nプレビューまたはエクスポートを選んだときに、利用可能な履歴を読み込みます。広告、分析トラッキング、アカウント登録はありません。履歴をサーバーに送信したり、ブラウザから削除したりしません。権限は history、storage、sidePanel のままです。\n\n便利な機能も標準搭載\n日ごとの概要と最近の閲覧履歴で、役立つページに戻りやすくなります。名前付きビューを保存すると、期間、フィルター、出力設定を再利用できます。保存済みビューはこの端末に設定を記憶する機能で、履歴の永久アーカイブではありません。\n\n現在のブラウザプロファイルで利用できる履歴を扱います。削除した履歴は復元できず、アカウントの古い履歴へのアクセスも保証しません。訪問数はナビゲーションの回数であり、滞在時間や生産性を示すものではありません。\n\n7 言語に対応\n英語、簡体字中国語、スペイン語、ドイツ語、ブラジルポルトガル語、フランス語、日本語に対応。画面はブラウザの言語に合わせて表示されます。CSV の列名と JSON のフィールド名は既存のワークフローとの互換性を維持しています。\n\n機能の提案\n改善案の投稿や投票はこちら：https://historyout.featurebase.app/\n公開のフィードバックボードは Featurebase が運営しています。閲覧履歴や出力設定は添付しません。投稿やコメントには別途 Featurebase へのログインが必要な場合があります。個別のお問い合わせ：sauliusthedev@gmail.com。\n\n任意の支援\n独立した開発への寄付はこちら：https://www.buymeacoffee.com/saulius.developer\n支援の有無にかかわらず、すべての機能を無料で利用できます。友達への紹介ではインストールリンクをコピーして共有できます。\n\n機能、使用例、対応ブラウザ、更新情報：https://exportchromehistory.app/ja/\n\n2.2.0 の更新内容\n\n2.2.0 の新機能：簡体字中国語、スペイン語、ドイツ語、ブラジルポルトガル語、フランス語、日本語に対応しました。操作画面、初回・更新時の案内、HTML 出力、ウェブサイト、ストア画像を翻訳しました。英語も引き続き利用できます。CSV の列名、JSON のフィールド名、保存済みビュー、設定、権限の互換性を維持しています。既存の YouTube 動画は変更していません。",
+  "website": "https://exportchromehistory.app/ja/",
+  "privacyPolicy": "https://exportchromehistory.app/ja/privacy/",
+  "support": "https://historyout.featurebase.app/",
+  "optionalContribution": "https://www.buymeacoffee.com/saulius.developer",
+  "price": "Free",
+  "language": "日本語",
+  "locale": "ja",
+  "technicalVersion": "2.2.0",
+  "storePublication": "Prepared localization candidate; not uploaded or submitted by this generation command.",
+  "existingItemId": "idohnkdgejocejlkihihonhemndpiiei",
+  "youtubeVideo": "https://youtu.be/cGybkRSkk2Y",
+  "contactEmail": "sauliusthedev@gmail.com",
+  "feedback": "https://historyout.featurebase.app/",
+  "changelog": "2.2.0 の新機能：簡体字中国語、スペイン語、ドイツ語、ブラジルポルトガル語、フランス語、日本語に対応しました。操作画面、初回・更新時の案内、HTML 出力、ウェブサイト、ストア画像を翻訳しました。英語も引き続き利用できます。CSV の列名、JSON のフィールド名、保存済みビュー、設定、権限の互換性を維持しています。既存の YouTube 動画は変更していません。"
+}

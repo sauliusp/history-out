@@ -2,7 +2,7 @@
 
 **Export your browser history as CSV, JSON or HTML.** Choose dates, columns and matching pages, then keep a useful local file. Daily recaps and saved views help you return to useful pages between exports. Free, with no account.
 
-This checkout prepares **2.1.0** on `codex/internal-pages-feedback` for owner review. It includes packaged install/update pages, Featurebase links and the corrected contact email. No 2.1.0 Store upload, submission or public website deployment has been performed. See `launch/review-2.1.0.md` for the current preparation and verification status.
+This checkout prepares **2.2.0** on `codex/historyout-language-support`. Chrome Web Store 2.1.0 was confirmed public on 21 November 2026. The new release adds Simplified Chinese for mainland China, Spanish, German, Brazilian Portuguese, French and Japanese across the extension, website and listing screenshots. It must pass regression testing and a Codex review of the pull request into `main` before publication. See `launch/review-2.2.0.md` for release status.
 
 ## What v2 adds
 
@@ -48,16 +48,17 @@ For development, `npm run dev` watches source changes. Load `extension-unpacked/
 ```sh
 npx playwright install chromium
 npm run test:browser
+npm run test:localization
 npm run pack
 ```
 
-Release QA uses Playwright with isolated Chromium and installed Microsoft Edge profiles, native history and storage, and CSV/JSON/HTML downloads. Synthetic fixtures cover faults, clipboard denial and a 30,000-visit UI workload. The native installer script can check an older unpacked package against the current candidate and verify its local update page, preferences and retained history. Existing browser reports describe 2.0.0; they do not certify 2.1.0. Run `node scripts/release-readiness.cjs`, `node scripts/native-update-qa.cjs` and `node scripts/audit-release-packages.cjs`; see the [release readiness report](./launch/qa/release-readiness.md) for exact versions, results and remaining store-signed/Brave limits.
+Release QA uses Playwright with isolated Chromium and installed Microsoft Edge profiles, native history and storage, and CSV/JSON/HTML downloads. Synthetic fixtures cover faults, clipboard denial and a 30,000-visit UI workload. The localization suite repeats export, saved-view, error, cancellation and responsive checks in every supported language. The native installer script checks an older unpacked package against the current candidate and verifies its local update page, preferences, saved views and retained history. Run `node scripts/release-readiness.cjs`, `QA_BASELINE_ZIP=releases/historyout-2.1.0-chrome.zip node scripts/native-update-qa.cjs` and `node scripts/audit-release-packages.cjs`; see the [current release evidence](./launch/qa/localization-2.2.0/README.md) for exact versions, results and remaining store-signed/Brave limits.
 
-`npm run pack` builds and creates four root-manifest ZIPs under `releases/`: `historyout-2.1.0-chrome.zip`, `historyout-2.1.0-edge.zip`, `historyout-2.1.0-brave.zip` and `historyout-2.1.0-chromium.zip`. It excludes source maps and demo/fixture files. Current hashes and archive-to-source comparisons are recorded in [package-audit.json](./launch/qa/package-audit.json). If the historical source baseline is missing, the audit and native-upgrade scripts rebuild it from the revision recorded in `launch/qa/packages.json`, using its own lockfile in a temporary directory. It can also be generated explicitly with `node scripts/build-source-baseline.cjs`. Release artifacts are ignored by Git; regenerate them from the reviewed source and refresh hashes after changes.
+`npm run pack` builds and creates four root-manifest ZIPs under `releases/`: `historyout-2.2.0-chrome.zip`, `historyout-2.2.0-edge.zip`, `historyout-2.2.0-brave.zip` and `historyout-2.2.0-chromium.zip`. It includes all locale catalogs and packaged onboarding pages, while excluding source maps and demo/fixture files. Current hashes and archive-to-source comparisons are recorded in [package-audit.json](./launch/qa/package-audit.json). If the historical source baseline is missing, the audit and native-upgrade scripts rebuild it from the revision recorded in `launch/qa/packages.json`, using its own lockfile in a temporary directory. It can also be generated explicitly with `node scripts/build-source-baseline.cjs`. Release artifacts are ignored by Git; regenerate them from the reviewed source and refresh hashes after changes.
 
 ## Website
 
-`website/` contains a static Node build with 13 prerendered pages and Sites configuration in `website/.openai/hosting.json`.
+`website/` contains a static Node build with 13 pages in each of seven languages (91 prerendered pages) and Sites configuration in `website/.openai/hosting.json`. English routes stay at the root. Localized routes use `/zh-cn/`, `/es/`, `/de/`, `/pt-br/`, `/fr/` and `/ja/`, with page-preserving language links and matching canonical and hreflang metadata.
 
 ```sh
 npm --prefix website run build
@@ -65,7 +66,7 @@ npm --prefix website test
 npm --prefix website run dev
 ```
 
-The local preview runs at [127.0.0.1:8766](http://127.0.0.1:8766). Default builds allow public search indexing. `website/site.config.json` records the canonical origin, current store version and media metadata. Set `SITE_NOINDEX=true` for a non-indexable preview. After verifying the 2.1.0 release is publicly available, set `storeVersion` to `2.1.0` to remove preparation notes; `RELEASE_V2=true` is a temporary build override and does not prove release. Set `SITE_ORIGIN` only to a verified connected domain. Build flags do not deploy or change DNS. Follow the [website migration handoff](./launch/migration/website.md).
+The local preview runs at [127.0.0.1:8766](http://127.0.0.1:8766). Default builds allow public search indexing. `website/site.config.json` records the canonical origin, verified public store version and media metadata. Set `SITE_NOINDEX=true` for a non-indexable preview. Only after verifying the 2.2.0 release is publicly available, set `storeVersion` to `2.2.0` to remove preparation notes; `RELEASE_V2=true` is a temporary build override and does not prove release. Set `SITE_ORIGIN` only to a verified connected domain. Build flags do not deploy or change DNS. Follow the [website migration handoff](./launch/migration/website.md).
 
 ## Repository guide
 

@@ -1,0 +1,1360 @@
+{
+  "pages": 14,
+  "widths": [
+    320,
+    400,
+    1440
+  ],
+  "checks": 42,
+  "errors": [],
+  "reports": [
+    {
+      "route": "/welcome.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "Open HistoryOut →",
+        "x": 22,
+        "y": 370.25,
+        "width": 194.6875,
+        "height": 50,
+        "right": 216.6875
+      },
+      "full": {
+        "label": "Open in a full tab",
+        "x": 22,
+        "y": 440.25,
+        "width": 109.640625,
+        "height": 17,
+        "right": 131.640625
+      },
+      "feedback": {
+        "label": "Suggest a feature ↗",
+        "x": 170.5,
+        "y": 46,
+        "width": 124.5,
+        "height": 16,
+        "right": 295
+      },
+      "brokenImages": [],
+      "lang": "en"
+    },
+    {
+      "route": "/updated.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "Open HistoryOut →",
+        "x": 22,
+        "y": 428.03125,
+        "width": 194.6875,
+        "height": 50,
+        "right": 216.6875
+      },
+      "full": {
+        "label": "Open in a full tab",
+        "x": 22,
+        "y": 498.03125,
+        "width": 109.640625,
+        "height": 17,
+        "right": 131.640625
+      },
+      "feedback": {
+        "label": "Suggest a feature ↗",
+        "x": 170.5,
+        "y": 46,
+        "width": 124.5,
+        "height": 16,
+        "right": 295
+      },
+      "brokenImages": [],
+      "lang": "en"
+    },
+    {
+      "route": "/locales/zh_CN/welcome.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "打开 HistoryOut →",
+        "x": 22,
+        "y": 350.953125,
+        "width": 186.328125,
+        "height": 54,
+        "right": 208.328125
+      },
+      "full": {
+        "label": "在完整标签页中打开",
+        "x": 22,
+        "y": 424.953125,
+        "width": 126,
+        "height": 20,
+        "right": 148
+      },
+      "feedback": {
+        "label": "建议新功能 ↗",
+        "x": 216.484375,
+        "y": 48,
+        "width": 78.515625,
+        "height": 18,
+        "right": 295
+      },
+      "brokenImages": [],
+      "lang": "zh-CN"
+    },
+    {
+      "route": "/locales/zh_CN/updated.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "打开 HistoryOut →",
+        "x": 22,
+        "y": 408.734375,
+        "width": 186.328125,
+        "height": 54,
+        "right": 208.328125
+      },
+      "full": {
+        "label": "在完整标签页中打开",
+        "x": 22,
+        "y": 482.734375,
+        "width": 126,
+        "height": 20,
+        "right": 148
+      },
+      "feedback": {
+        "label": "建议新功能 ↗",
+        "x": 216.484375,
+        "y": 48,
+        "width": 78.515625,
+        "height": 18,
+        "right": 295
+      },
+      "brokenImages": [],
+      "lang": "zh-CN"
+    },
+    {
+      "route": "/locales/es/welcome.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 22,
+        "y": 424.25,
+        "width": 191.8125,
+        "height": 50,
+        "right": 213.8125
+      },
+      "full": {
+        "label": "Abrir en una pestaña completa",
+        "x": 22,
+        "y": 494.25,
+        "width": 197.46875,
+        "height": 17,
+        "right": 219.46875
+      },
+      "feedback": {
+        "label": "Sugerir una función ↗",
+        "x": 25,
+        "y": 108,
+        "width": 135.90625,
+        "height": 16,
+        "right": 160.90625
+      },
+      "brokenImages": [],
+      "lang": "es"
+    },
+    {
+      "route": "/locales/es/updated.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 22,
+        "y": 510.921875,
+        "width": 191.8125,
+        "height": 50,
+        "right": 213.8125
+      },
+      "full": {
+        "label": "Abrir en una pestaña completa",
+        "x": 22,
+        "y": 580.921875,
+        "width": 197.46875,
+        "height": 17,
+        "right": 219.46875
+      },
+      "feedback": {
+        "label": "Sugerir una función ↗",
+        "x": 25,
+        "y": 108,
+        "width": 135.90625,
+        "height": 16,
+        "right": 160.90625
+      },
+      "brokenImages": [],
+      "lang": "es"
+    },
+    {
+      "route": "/locales/de/welcome.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "HistoryOut öffnen →",
+        "x": 22,
+        "y": 457.84375,
+        "width": 203.25,
+        "height": 50,
+        "right": 225.25
+      },
+      "full": {
+        "label": "In einem vollständigen Tab öffnen",
+        "x": 22,
+        "y": 527.84375,
+        "width": 216.671875,
+        "height": 17,
+        "right": 238.671875
+      },
+      "feedback": {
+        "label": "Funktion vorschlagen ↗",
+        "x": 25,
+        "y": 108,
+        "width": 147.65625,
+        "height": 16,
+        "right": 172.65625
+      },
+      "brokenImages": [],
+      "lang": "de"
+    },
+    {
+      "route": "/locales/de/updated.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "HistoryOut öffnen →",
+        "x": 22,
+        "y": 539.8125,
+        "width": 203.25,
+        "height": 50,
+        "right": 225.25
+      },
+      "full": {
+        "label": "In einem vollständigen Tab öffnen",
+        "x": 22,
+        "y": 609.8125,
+        "width": 216.671875,
+        "height": 17,
+        "right": 238.671875
+      },
+      "feedback": {
+        "label": "Funktion vorschlagen ↗",
+        "x": 25,
+        "y": 108,
+        "width": 147.65625,
+        "height": 16,
+        "right": 172.65625
+      },
+      "brokenImages": [],
+      "lang": "de"
+    },
+    {
+      "route": "/locales/pt_BR/welcome.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 22,
+        "y": 457.84375,
+        "width": 191.8125,
+        "height": 50,
+        "right": 213.8125
+      },
+      "full": {
+        "label": "Abrir em uma aba completa",
+        "x": 22,
+        "y": 527.84375,
+        "width": 177.640625,
+        "height": 17,
+        "right": 199.640625
+      },
+      "feedback": {
+        "label": "Sugerir uma função ↗",
+        "x": 25,
+        "y": 108,
+        "width": 135.90625,
+        "height": 16,
+        "right": 160.90625
+      },
+      "brokenImages": [],
+      "lang": "pt-BR"
+    },
+    {
+      "route": "/locales/pt_BR/updated.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 22,
+        "y": 510.921875,
+        "width": 191.8125,
+        "height": 50,
+        "right": 213.8125
+      },
+      "full": {
+        "label": "Abrir em uma aba completa",
+        "x": 22,
+        "y": 580.921875,
+        "width": 177.640625,
+        "height": 17,
+        "right": 199.640625
+      },
+      "feedback": {
+        "label": "Sugerir uma função ↗",
+        "x": 25,
+        "y": 108,
+        "width": 135.90625,
+        "height": 16,
+        "right": 160.90625
+      },
+      "brokenImages": [],
+      "lang": "pt-BR"
+    },
+    {
+      "route": "/locales/fr/welcome.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "Ouvrir HistoryOut →",
+        "x": 22,
+        "y": 457.84375,
+        "width": 200.96875,
+        "height": 50,
+        "right": 222.96875
+      },
+      "full": {
+        "label": "Ouvrir dans un onglet complet",
+        "x": 22,
+        "y": 527.84375,
+        "width": 195.296875,
+        "height": 17,
+        "right": 217.296875
+      },
+      "feedback": {
+        "label": "Proposer une fonctionnalité ↗",
+        "x": 25,
+        "y": 108,
+        "width": 186.59375,
+        "height": 16,
+        "right": 211.59375
+      },
+      "brokenImages": [],
+      "lang": "fr"
+    },
+    {
+      "route": "/locales/fr/updated.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "Ouvrir HistoryOut →",
+        "x": 22,
+        "y": 482.03125,
+        "width": 200.96875,
+        "height": 50,
+        "right": 222.96875
+      },
+      "full": {
+        "label": "Ouvrir dans un onglet complet",
+        "x": 22,
+        "y": 552.03125,
+        "width": 195.296875,
+        "height": 17,
+        "right": 217.296875
+      },
+      "feedback": {
+        "label": "Proposer une fonctionnalité ↗",
+        "x": 25,
+        "y": 108,
+        "width": 186.59375,
+        "height": 16,
+        "right": 211.59375
+      },
+      "brokenImages": [],
+      "lang": "fr"
+    },
+    {
+      "route": "/locales/ja/welcome.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "HistoryOutを開く →",
+        "x": 22,
+        "y": 350.953125,
+        "width": 198.453125,
+        "height": 56,
+        "right": 220.453125
+      },
+      "full": {
+        "label": "タブ全体で開く",
+        "x": 22,
+        "y": 426.953125,
+        "width": 98,
+        "height": 21,
+        "right": 120
+      },
+      "feedback": {
+        "label": "機能を提案 ↗",
+        "x": 216.484375,
+        "y": 50,
+        "width": 78.515625,
+        "height": 20,
+        "right": 295
+      },
+      "brokenImages": [],
+      "lang": "ja"
+    },
+    {
+      "route": "/locales/ja/updated.html",
+      "width": 320,
+      "status": 200,
+      "scroll": 320,
+      "open": {
+        "label": "HistoryOutを開く →",
+        "x": 22,
+        "y": 437.625,
+        "width": 198.453125,
+        "height": 56,
+        "right": 220.453125
+      },
+      "full": {
+        "label": "タブ全体で開く",
+        "x": 22,
+        "y": 513.625,
+        "width": 98,
+        "height": 21,
+        "right": 120
+      },
+      "feedback": {
+        "label": "機能を提案 ↗",
+        "x": 216.484375,
+        "y": 50,
+        "width": 78.515625,
+        "height": 20,
+        "right": 295
+      },
+      "brokenImages": [],
+      "lang": "ja"
+    },
+    {
+      "route": "/welcome.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "Open HistoryOut →",
+        "x": 22,
+        "y": 349.765625,
+        "width": 194.6875,
+        "height": 50,
+        "right": 216.6875
+      },
+      "full": {
+        "label": "Open in a full tab",
+        "x": 236.6875,
+        "y": 366.265625,
+        "width": 109.640625,
+        "height": 17,
+        "right": 346.328125
+      },
+      "feedback": {
+        "label": "Suggest a feature ↗",
+        "x": 250.5,
+        "y": 46,
+        "width": 124.5,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "en"
+    },
+    {
+      "route": "/updated.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "Open HistoryOut →",
+        "x": 22,
+        "y": 407.546875,
+        "width": 194.6875,
+        "height": 50,
+        "right": 216.6875
+      },
+      "full": {
+        "label": "Open in a full tab",
+        "x": 236.6875,
+        "y": 424.046875,
+        "width": 109.640625,
+        "height": 17,
+        "right": 346.328125
+      },
+      "feedback": {
+        "label": "Suggest a feature ↗",
+        "x": 250.5,
+        "y": 46,
+        "width": 124.5,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "en"
+    },
+    {
+      "route": "/locales/zh_CN/welcome.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "打开 HistoryOut →",
+        "x": 22,
+        "y": 360.546875,
+        "width": 186.328125,
+        "height": 54,
+        "right": 208.328125
+      },
+      "full": {
+        "label": "在完整标签页中打开",
+        "x": 228.328125,
+        "y": 377.546875,
+        "width": 126,
+        "height": 20,
+        "right": 354.328125
+      },
+      "feedback": {
+        "label": "建议新功能 ↗",
+        "x": 296.484375,
+        "y": 48,
+        "width": 78.515625,
+        "height": 18,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "zh-CN"
+    },
+    {
+      "route": "/locales/zh_CN/updated.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "打开 HistoryOut →",
+        "x": 22,
+        "y": 389.4375,
+        "width": 186.328125,
+        "height": 54,
+        "right": 208.328125
+      },
+      "full": {
+        "label": "在完整标签页中打开",
+        "x": 228.328125,
+        "y": 406.4375,
+        "width": 126,
+        "height": 20,
+        "right": 354.328125
+      },
+      "feedback": {
+        "label": "建议新功能 ↗",
+        "x": 296.484375,
+        "y": 48,
+        "width": 78.515625,
+        "height": 18,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "zh-CN"
+    },
+    {
+      "route": "/locales/es/welcome.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 22,
+        "y": 349.765625,
+        "width": 191.8125,
+        "height": 50,
+        "right": 213.8125
+      },
+      "full": {
+        "label": "Abrir en una pestaña completa",
+        "x": 22,
+        "y": 419.765625,
+        "width": 197.46875,
+        "height": 17,
+        "right": 219.46875
+      },
+      "feedback": {
+        "label": "Sugerir una función ↗",
+        "x": 239.09375,
+        "y": 46,
+        "width": 135.90625,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "es"
+    },
+    {
+      "route": "/locales/es/updated.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 22,
+        "y": 407.546875,
+        "width": 191.8125,
+        "height": 50,
+        "right": 213.8125
+      },
+      "full": {
+        "label": "Abrir en una pestaña completa",
+        "x": 22,
+        "y": 477.546875,
+        "width": 197.46875,
+        "height": 17,
+        "right": 219.46875
+      },
+      "feedback": {
+        "label": "Sugerir una función ↗",
+        "x": 239.09375,
+        "y": 46,
+        "width": 135.90625,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "es"
+    },
+    {
+      "route": "/locales/de/welcome.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "HistoryOut öffnen →",
+        "x": 22,
+        "y": 416.453125,
+        "width": 203.25,
+        "height": 50,
+        "right": 225.25
+      },
+      "full": {
+        "label": "In einem vollständigen Tab öffnen",
+        "x": 22,
+        "y": 486.453125,
+        "width": 216.671875,
+        "height": 17,
+        "right": 238.671875
+      },
+      "feedback": {
+        "label": "Funktion vorschlagen ↗",
+        "x": 227.34375,
+        "y": 46,
+        "width": 147.65625,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "de"
+    },
+    {
+      "route": "/locales/de/updated.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "HistoryOut öffnen →",
+        "x": 22,
+        "y": 436.4375,
+        "width": 203.25,
+        "height": 50,
+        "right": 225.25
+      },
+      "full": {
+        "label": "In einem vollständigen Tab öffnen",
+        "x": 22,
+        "y": 506.4375,
+        "width": 216.671875,
+        "height": 17,
+        "right": 238.671875
+      },
+      "feedback": {
+        "label": "Funktion vorschlagen ↗",
+        "x": 227.34375,
+        "y": 46,
+        "width": 147.65625,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "de"
+    },
+    {
+      "route": "/locales/pt_BR/welcome.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 22,
+        "y": 349.765625,
+        "width": 191.8125,
+        "height": 50,
+        "right": 213.8125
+      },
+      "full": {
+        "label": "Abrir em uma aba completa",
+        "x": 22,
+        "y": 419.765625,
+        "width": 177.640625,
+        "height": 17,
+        "right": 199.640625
+      },
+      "feedback": {
+        "label": "Sugerir uma função ↗",
+        "x": 239.09375,
+        "y": 46,
+        "width": 135.90625,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "pt-BR"
+    },
+    {
+      "route": "/locales/pt_BR/updated.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 22,
+        "y": 407.546875,
+        "width": 191.8125,
+        "height": 50,
+        "right": 213.8125
+      },
+      "full": {
+        "label": "Abrir em uma aba completa",
+        "x": 22,
+        "y": 477.546875,
+        "width": 177.640625,
+        "height": 17,
+        "right": 199.640625
+      },
+      "feedback": {
+        "label": "Sugerir uma função ↗",
+        "x": 239.09375,
+        "y": 46,
+        "width": 135.90625,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "pt-BR"
+    },
+    {
+      "route": "/locales/fr/welcome.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "Ouvrir HistoryOut →",
+        "x": 22,
+        "y": 416.453125,
+        "width": 200.96875,
+        "height": 50,
+        "right": 222.96875
+      },
+      "full": {
+        "label": "Ouvrir dans un onglet complet",
+        "x": 22,
+        "y": 486.453125,
+        "width": 195.296875,
+        "height": 17,
+        "right": 217.296875
+      },
+      "feedback": {
+        "label": "Proposer une fonctionnalité ↗",
+        "x": 188.40625,
+        "y": 46,
+        "width": 186.59375,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "fr"
+    },
+    {
+      "route": "/locales/fr/updated.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "Ouvrir HistoryOut →",
+        "x": 22,
+        "y": 407.546875,
+        "width": 200.96875,
+        "height": 50,
+        "right": 222.96875
+      },
+      "full": {
+        "label": "Ouvrir dans un onglet complet",
+        "x": 22,
+        "y": 477.546875,
+        "width": 195.296875,
+        "height": 17,
+        "right": 217.296875
+      },
+      "feedback": {
+        "label": "Proposer une fonctionnalité ↗",
+        "x": 188.40625,
+        "y": 46,
+        "width": 186.59375,
+        "height": 16,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "fr"
+    },
+    {
+      "route": "/locales/ja/welcome.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "HistoryOutを開く →",
+        "x": 22,
+        "y": 360.546875,
+        "width": 198.453125,
+        "height": 56,
+        "right": 220.453125
+      },
+      "full": {
+        "label": "タブ全体で開く",
+        "x": 240.453125,
+        "y": 378.046875,
+        "width": 98,
+        "height": 21,
+        "right": 338.453125
+      },
+      "feedback": {
+        "label": "機能を提案 ↗",
+        "x": 296.484375,
+        "y": 50,
+        "width": 78.515625,
+        "height": 20,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "ja"
+    },
+    {
+      "route": "/locales/ja/updated.html",
+      "width": 400,
+      "status": 200,
+      "scroll": 400,
+      "open": {
+        "label": "HistoryOutを開く →",
+        "x": 22,
+        "y": 418.328125,
+        "width": 198.453125,
+        "height": 56,
+        "right": 220.453125
+      },
+      "full": {
+        "label": "タブ全体で開く",
+        "x": 240.453125,
+        "y": 435.828125,
+        "width": 98,
+        "height": 21,
+        "right": 338.453125
+      },
+      "feedback": {
+        "label": "機能を提案 ↗",
+        "x": 296.484375,
+        "y": 50,
+        "width": 78.515625,
+        "height": 20,
+        "right": 375
+      },
+      "brokenImages": [],
+      "lang": "ja"
+    },
+    {
+      "route": "/welcome.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "Open HistoryOut →",
+        "x": 330,
+        "y": 391.40625,
+        "width": 208.6875,
+        "height": 50,
+        "right": 538.6875
+      },
+      "full": {
+        "label": "Open in a full tab",
+        "x": 558.6875,
+        "y": 407.90625,
+        "width": 109.640625,
+        "height": 17,
+        "right": 668.328125
+      },
+      "feedback": {
+        "label": "Suggest a feature ↗",
+        "x": 1167.21875,
+        "y": 32.5,
+        "width": 132.78125,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "en"
+    },
+    {
+      "route": "/updated.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "Open HistoryOut →",
+        "x": 330,
+        "y": 424.046875,
+        "width": 208.6875,
+        "height": 50,
+        "right": 538.6875
+      },
+      "full": {
+        "label": "Open in a full tab",
+        "x": 558.6875,
+        "y": 440.546875,
+        "width": 109.640625,
+        "height": 17,
+        "right": 668.328125
+      },
+      "feedback": {
+        "label": "Suggest a feature ↗",
+        "x": 1167.21875,
+        "y": 32.5,
+        "width": 132.78125,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "en"
+    },
+    {
+      "route": "/locales/zh_CN/welcome.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "打开 HistoryOut →",
+        "x": 330,
+        "y": 410.625,
+        "width": 200.328125,
+        "height": 54,
+        "right": 530.328125
+      },
+      "full": {
+        "label": "在完整标签页中打开",
+        "x": 550.328125,
+        "y": 427.625,
+        "width": 126,
+        "height": 20,
+        "right": 676.328125
+      },
+      "feedback": {
+        "label": "建议新功能 ↗",
+        "x": 1215.59375,
+        "y": 31,
+        "width": 84.40625,
+        "height": 20,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "zh-CN"
+    },
+    {
+      "route": "/locales/zh_CN/updated.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "打开 HistoryOut →",
+        "x": 330,
+        "y": 443.265625,
+        "width": 200.328125,
+        "height": 54,
+        "right": 530.328125
+      },
+      "full": {
+        "label": "在完整标签页中打开",
+        "x": 550.328125,
+        "y": 460.265625,
+        "width": 126,
+        "height": 20,
+        "right": 676.328125
+      },
+      "feedback": {
+        "label": "建议新功能 ↗",
+        "x": 1215.59375,
+        "y": 31,
+        "width": 84.40625,
+        "height": 20,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "zh-CN"
+    },
+    {
+      "route": "/locales/es/welcome.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 330,
+        "y": 391.40625,
+        "width": 205.8125,
+        "height": 50,
+        "right": 535.8125
+      },
+      "full": {
+        "label": "Abrir en una pestaña completa",
+        "x": 555.8125,
+        "y": 407.90625,
+        "width": 197.46875,
+        "height": 17,
+        "right": 753.28125
+      },
+      "feedback": {
+        "label": "Sugerir una función ↗",
+        "x": 1155.078125,
+        "y": 32.5,
+        "width": 144.921875,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "es"
+    },
+    {
+      "route": "/locales/es/updated.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 330,
+        "y": 424.046875,
+        "width": 205.8125,
+        "height": 50,
+        "right": 535.8125
+      },
+      "full": {
+        "label": "Abrir en una pestaña completa",
+        "x": 555.8125,
+        "y": 440.546875,
+        "width": 197.46875,
+        "height": 17,
+        "right": 753.28125
+      },
+      "feedback": {
+        "label": "Sugerir una función ↗",
+        "x": 1155.078125,
+        "y": 32.5,
+        "width": 144.921875,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "es"
+    },
+    {
+      "route": "/locales/de/welcome.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "HistoryOut öffnen →",
+        "x": 330,
+        "y": 491.234375,
+        "width": 217.25,
+        "height": 50,
+        "right": 547.25
+      },
+      "full": {
+        "label": "In einem vollständigen Tab öffnen",
+        "x": 567.25,
+        "y": 507.734375,
+        "width": 216.671875,
+        "height": 17,
+        "right": 783.921875
+      },
+      "feedback": {
+        "label": "Funktion vorschlagen ↗",
+        "x": 1142.5,
+        "y": 32.5,
+        "width": 157.5,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "de"
+    },
+    {
+      "route": "/locales/de/updated.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "HistoryOut öffnen →",
+        "x": 330,
+        "y": 456.6875,
+        "width": 217.25,
+        "height": 50,
+        "right": 547.25
+      },
+      "full": {
+        "label": "In einem vollständigen Tab öffnen",
+        "x": 567.25,
+        "y": 473.1875,
+        "width": 216.671875,
+        "height": 17,
+        "right": 783.921875
+      },
+      "feedback": {
+        "label": "Funktion vorschlagen ↗",
+        "x": 1142.5,
+        "y": 32.5,
+        "width": 157.5,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "de"
+    },
+    {
+      "route": "/locales/pt_BR/welcome.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 330,
+        "y": 391.40625,
+        "width": 205.8125,
+        "height": 50,
+        "right": 535.8125
+      },
+      "full": {
+        "label": "Abrir em uma aba completa",
+        "x": 555.8125,
+        "y": 407.90625,
+        "width": 177.640625,
+        "height": 17,
+        "right": 733.453125
+      },
+      "feedback": {
+        "label": "Sugerir uma função ↗",
+        "x": 1155,
+        "y": 32.5,
+        "width": 145,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "pt-BR"
+    },
+    {
+      "route": "/locales/pt_BR/updated.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "Abrir HistoryOut →",
+        "x": 330,
+        "y": 424.046875,
+        "width": 205.8125,
+        "height": 50,
+        "right": 535.8125
+      },
+      "full": {
+        "label": "Abrir em uma aba completa",
+        "x": 555.8125,
+        "y": 440.546875,
+        "width": 177.640625,
+        "height": 17,
+        "right": 733.453125
+      },
+      "feedback": {
+        "label": "Sugerir uma função ↗",
+        "x": 1155,
+        "y": 32.5,
+        "width": 145,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "pt-BR"
+    },
+    {
+      "route": "/locales/fr/welcome.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "Ouvrir HistoryOut →",
+        "x": 330,
+        "y": 424.046875,
+        "width": 214.96875,
+        "height": 50,
+        "right": 544.96875
+      },
+      "full": {
+        "label": "Ouvrir dans un onglet complet",
+        "x": 564.96875,
+        "y": 440.546875,
+        "width": 195.296875,
+        "height": 17,
+        "right": 760.265625
+      },
+      "feedback": {
+        "label": "Proposer une fonctionnalité ↗",
+        "x": 1101.03125,
+        "y": 32.5,
+        "width": 198.96875,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "fr"
+    },
+    {
+      "route": "/locales/fr/updated.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "Ouvrir HistoryOut →",
+        "x": 330,
+        "y": 424.046875,
+        "width": 214.96875,
+        "height": 50,
+        "right": 544.96875
+      },
+      "full": {
+        "label": "Ouvrir dans un onglet complet",
+        "x": 564.96875,
+        "y": 440.546875,
+        "width": 195.296875,
+        "height": 17,
+        "right": 760.265625
+      },
+      "feedback": {
+        "label": "Proposer une fonctionnalité ↗",
+        "x": 1101.03125,
+        "y": 32.5,
+        "width": 198.96875,
+        "height": 17,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "fr"
+    },
+    {
+      "route": "/locales/ja/welcome.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "HistoryOutを開く →",
+        "x": 330,
+        "y": 410.625,
+        "width": 212.453125,
+        "height": 56,
+        "right": 542.453125
+      },
+      "full": {
+        "label": "タブ全体で開く",
+        "x": 562.453125,
+        "y": 428.125,
+        "width": 98,
+        "height": 21,
+        "right": 660.453125
+      },
+      "feedback": {
+        "label": "機能を提案 ↗",
+        "x": 1215.59375,
+        "y": 30.5,
+        "width": 84.40625,
+        "height": 21,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "ja"
+    },
+    {
+      "route": "/locales/ja/updated.html",
+      "width": 1440,
+      "status": 200,
+      "scroll": 1440,
+      "open": {
+        "label": "HistoryOutを開く →",
+        "x": 330,
+        "y": 443.265625,
+        "width": 212.453125,
+        "height": 56,
+        "right": 542.453125
+      },
+      "full": {
+        "label": "タブ全体で開く",
+        "x": 562.453125,
+        "y": 460.765625,
+        "width": 98,
+        "height": 21,
+        "right": 660.453125
+      },
+      "feedback": {
+        "label": "機能を提案 ↗",
+        "x": 1215.59375,
+        "y": 30.5,
+        "width": 84.40625,
+        "height": 21,
+        "right": 1300
+      },
+      "brokenImages": [],
+      "lang": "ja"
+    }
+  ],
+  "checkedAt": "2026-11-21T08:38:49.759Z",
+  "payloadSha256": "013d0f7ad374ca003c513227feb7cda293fe6e36f5508c5d9420a7324c141aed",
+  "versionEyebrowChecks": 14,
+  "method": "Actual packaged HTML/CSS served on a private local server in isolated Playwright Chromium. Minimal manifest and current-tab fixture enables extension-only script initialization. Read-only layout checks; native action and upgrade logic are verified separately."
+}

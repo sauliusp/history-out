@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "HistoryOut - Export Browser History",
+  "name": "__MSG_extensionName__",
   "short_name": "HistoryOut",
-  "version": "2.1.0",
-  "description": "Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account.",
+  "version": "2.2.0",
+  "description": "__MSG_extensionDescription__",
   "permissions": [
     "history",
     "storage",
@@ -16,7 +16,7 @@
     "default_path": "side-panel.html"
   },
   "action": {
-    "default_title": "Click to open HistoryOut",
+    "default_title": "__MSG_actionTitle__",
     "default_icon": {
       "16": "icons/icon16.png",
       "32": "icons/icon32.png",
@@ -30,5 +30,7 @@
     "48": "icons/icon48.png",
     "128": "icons/icon128.png"
   },
-  "minimum_chrome_version": "114.0.0"
+  "minimum_chrome_version": "114.0.0",
+  "default_locale": "en",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA703uYkPbmxtY2lRmAAmy7OiY2s6FaYcqHeeYgqNi9rA7D0gY7dPd2lkegI3gNFOLmW5wAWmxYSuJN0gG8jVD5U+ThbneJwhLUTIdtPiB5OR5PBukQ2y7HdgmyYN/jpIkjqn185xooQT2U0mBHwNvjTox8OoEje1Wt/Vq3vxcpWCkBIGtUQBgGfqrer8ndA/hAPiLGPyrLq0dbU1+qcGTZPuINpH9u4kJ6Y6SwsFbS+GK1oLRrkjlmSKjFYfngwvK16H+5FWpdM/QtcOx9QBWRRsGEXmJ6cXcEjL2umLjVNt4esectPpHgrrVhyRBVFAg71Dx6yuMl9US2lX9gwZ0CQIDAQAB"
 }

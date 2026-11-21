@@ -22,7 +22,7 @@ for (const link of document.querySelectorAll('[data-open-historyout]')) {
     const status = document.getElementById('open-status');
     try {
       await chrome.sidePanel.open({ tabId: pageTabId });
-      status.textContent = 'HistoryOut is open beside this page. Choose Today, then Preview to get started.';
+      status.textContent = status.dataset?.openSuccess || 'HistoryOut is open beside this page. Choose Today, then Preview to get started.';
     } catch {
       // Some Chromium browsers expose the API but cannot open a side panel.
       window.location.assign(link.href);

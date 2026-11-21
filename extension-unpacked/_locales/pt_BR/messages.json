@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "HistoryOut - Exportar histórico"
+  },
+  "extensionDescription": {
+    "message": "Exporte o histórico como CSV, JSON ou HTML. Escolha datas, colunas e páginas. Grátis, local e sem conta."
+  },
+  "actionTitle": {
+    "message": "Clique para abrir o HistoryOut"
+  },
+  "onboardingFolder": {
+    "message": "locales/pt_BR"
+  }
+}

@@ -315,14 +315,14 @@ test('long saved searches keep their exact matches after reopening and unrelated
   h.button('Preview').props.onClick(); await h.settle();
   h.find(node => node.type === 'TextField' && node.props.placeholder === 'Search titles or URLs').props.onChange({target: {value: query}});
   h.render();
-  assert.ok(h.find(node => node.props?.role === 'status' && h.text(node) === '1 visits ready'));
+  assert.ok(h.find(node => node.props?.role === 'status' && h.text(node) === '1 visit ready'));
   nameView(h, 'Exact URL'); submitView(h); await h.settle();
   assert.equal(values[VIEWS][0].query, query);
 
   h.unmount(); h = mount(storage); await h.settle(); seedHistory();
   h.find(node => node.type === 'Chip' && node.props.label === 'Exact URL').props.onClick(); h.render();
   h.button('Preview').props.onClick(); await h.settle();
-  assert.ok(h.find(node => node.props?.role === 'status' && h.text(node) === '1 visits ready'), 'restoring the search must not include the lookalike URL');
+  assert.ok(h.find(node => node.props?.role === 'status' && h.text(node) === '1 visit ready'), 'restoring the search must not include the lookalike URL');
   assert.equal(h.find(node => node.type === 'TextField' && node.props.placeholder === 'Search titles or URLs').props.value, query);
   nameView(h, 'Another view'); submitView(h); await h.settle();
   assert.equal(values[VIEWS].find(view => view.name === 'Exact URL').query, query);

@@ -15,7 +15,7 @@ const matrix = [];
 const cases = [];
 let output, server, browser;
 const track = (control, evidence, scope='new option suite') => matrix.push({ control, evidence, scope });
-const action = page => page.getByRole('button',{name:/^Export (history|[\d,]+ (visits|pages))/});
+const action = page => page.getByRole('button',{name:/^Export (history|[\d,]+ (visits?|pages?))/});
 const preview = page => page.getByRole('list',{name:'History preview'});
 const urls = page => preview(page).locator('li a').evaluateAll(links=>links.map(link=>link.href));
 const copy = value => JSON.parse(JSON.stringify(value));

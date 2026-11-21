@@ -1,0 +1,17 @@
+{
+  "checked": "2026-11-21T08:39:51.988Z",
+  "version": "2.2.0",
+  "payloadSha256": "013d0f7ad374ca003c513227feb7cda293fe6e36f5508c5d9420a7324c141aed",
+  "results": [
+    "No history read on opening the workspace",
+    "CSV matches search, latest URL mode and query cleanup",
+    "Saved view restores preferences without silently reading history",
+    "No-match state disables empty export",
+    "Incomplete custom dates cannot run",
+    "Cancel discards pending history reads",
+    "API failure is visible and retryable",
+    "No horizontal overflow at 320, 380, 760 and 1200 pixels",
+    "No runtime errors or extension network requests",
+    "Real Manifest V3 Chromium install, history API, saved v1 settings and JSON download"
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "checked": "2026-11-21T08:39:30.546Z",
+  "scope": "Native unpacked MV3 upgrade using an explicitly supplied baseline payload. This exercises payload migration, not the signed automatic update transport.",
+  "cases": [
+    {
+      "name": "Native upgrade opens one internal update page and no welcome",
+      "status": "passed"
+    },
+    {
+      "name": "Update preserves saved view names, filters and settings exactly",
+      "status": "passed"
+    },
+    {
+      "name": "Real update preserves exact prior preferences and original native history",
+      "status": "passed"
+    },
+    {
+      "name": "Restart at the same version does not open a duplicate lifecycle page",
+      "status": "passed"
+    }
+  ],
+  "baselineArchive": "/Users/spetreikis/Desktop/apps/HistoryOut/releases/historyout-2.1.0-chrome.zip",
+  "baselineArchiveSHA256": "ae646e4a745a158583dab8442c35fb24e275ab748ed14ee11d0a96b30f2cd9ba",
+  "candidateBundleSHA256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+  "baselineIdentity": "Published public key added to the unpacked source baseline; code unchanged",
+  "browserVersion": "149.0.7827.55",
+  "payloadSha256": "013d0f7ad374ca003c513227feb7cda293fe6e36f5508c5d9420a7324c141aed",
+  "manifestAfterReload": "2.2.0",
+  "lifecycleTabs": [
+    {
+      "url": "about:blank"
+    },
+    {
+      "url": "chrome-extension://idohnkdgejocejlkihihonhemndpiiei/updated.html"
+    }
+  ],
+  "previousVersion": "2.1.0",
+  "currentVersion": "2.2.0",
+  "status": "passed"
+}

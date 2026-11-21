@@ -1,3 +1,4 @@
+import { t, currentLocale, localeTags, formatNumber } from '../i18n';
 import { ExportFormat } from '../types/ExportFormat';
 import { OutputHistoryItem } from '../types/OutputHistoryItem';
 import { OutputConfig } from '../types/OutputConfig';
@@ -30,19 +31,19 @@ function isLinkableURL(value: unknown): boolean {
 
 export class ExportService {
   private static instance: ExportService;
-  readonly columnLabelMap: Record<keyof OutputHistoryItem, ColumnLabel> = {
-    order: { label: 'Order' },
-    id: { label: 'Id' },
-    date: { label: 'Date', secondaryLabel: 'Visit date in your local time zone' },
-    time: { label: 'Time', secondaryLabel: 'Visit time in your local time zone' },
-    title: { label: 'Title' },
-    url: { label: 'Url' },
-    visitCount: { label: 'Visit Count', secondaryLabel: 'Browser lifetime total for this URL, not the selected range' },
-    typedCount: { label: 'Typed Count', secondaryLabel: 'Browser lifetime address-bar typing total for this URL' },
-    transition: { label: 'Transition', secondaryLabel: 'How this page visit was initiated' },
-    timestamp: { label: 'Timestamp', secondaryLabel: 'Visit time in Unix milliseconds, independent of time zone' },
-    domain: { label: 'Domain', secondaryLabel: 'The URL hostname, including any subdomain' },
-  };
+  get columnLabelMap(): Record<keyof OutputHistoryItem, ColumnLabel> { return {
+    order: { label: t("Order") },
+    id: { label: t("Id") },
+    date: { label: t("Date"), secondaryLabel: t("Visit date in your local time zone") },
+    time: { label: t("Time"), secondaryLabel: t("Visit time in your local time zone") },
+    title: { label: t("Title") },
+    url: { label: t("Url") },
+    visitCount: { label: t("Visit Count"), secondaryLabel: t("Browser lifetime total for this URL, not the selected range") },
+    typedCount: { label: t("Typed Count"), secondaryLabel: t("Browser lifetime address-bar typing total for this URL") },
+    transition: { label: t("Transition"), secondaryLabel: t("How this page visit was initiated") },
+    timestamp: { label: t("Timestamp"), secondaryLabel: t("Visit time in Unix milliseconds, independent of time zone") },
+    domain: { label: t("Domain"), secondaryLabel: t("The URL hostname, including any subdomain") },
+  }; }
   readonly columnOrder = OUTPUT_COLUMNS;
   private constructor() {}
 
@@ -58,7 +59,7 @@ export class ExportService {
     fields: OutputConfig['fields']
   ): string {
     const keys = this.columnOrder.filter((key) => fields[key] === true);
-    if (!keys.length) throw new Error('Select at least one export field.');
+    if (!keys.length) throw new Error(t("Select at least one export field."));
     if (format === 'json') {
       return JSON.stringify(items.map((item) => {
         const result: Record<string, string | number> = {};
@@ -69,7 +70,7 @@ export class ExportService {
     if (format === 'csv') {
       return [keys.join(','), ...items.map((item) => keys.map((key) => csvCell(item[key])).join(','))].join('\r\n');
     }
-    if (format !== 'html') throw new Error('Unsupported format');
+    if (format !== 'html') throw new Error(t("Unsupported format"));
     const headers = keys.map((key) => {
       const { label, secondaryLabel } = this.columnLabelMap[key];
       return `<th scope="col"${secondaryLabel ? ` title="${escapeHTML(secondaryLabel)}"` : ''}>${escapeHTML(label)}</th>`;
@@ -81,13 +82,13 @@ export class ExportService {
         ? `<a target="_blank" rel="noopener noreferrer" href="${escaped}">${escaped}</a>` : escaped}</td>`;
     }).join('')}</tr>`).join('\n');
     return `<!DOCTYPE html>
-<html lang="en">
+<html lang="${localeTags[currentLocale()]}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="referrer" content="no-referrer">
 <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'">
-<title>Browsing History | HistoryOut</title>
+<title>${escapeHTML(t('Browsing History'))} | HistoryOut</title>
 <style>
 *{box-sizing:border-box}body{font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f5f7fb;color:#122c48;line-height:1.55}
 main{max-width:1480px;margin:0 auto;padding:36px 28px}header{padding:32px;border:1px solid #dce3f0;border-radius:18px;background:#fff;margin-bottom:24px}
@@ -99,13 +100,13 @@ h1{font-size:36px;line-height:1.15;letter-spacing:-.045em;margin:0 0 12px}.descr
 <body>
 <main>
 <header>
-<p class="brand">HistoryOut <span class="badge">LOCAL EXPORT</span></p>
-<h1>Your browsing history.</h1>
-<p class="description">A useful record of the pages you chose to keep. Open a page to pick up where you left off.</p>
-<div class="summary"><div><strong>${items.length.toLocaleString()}</strong>exported rows</div><div><strong>${keys.length}</strong>selected columns</div></div>
+<p class="brand">HistoryOut <span class="badge">${escapeHTML(t('LOCAL EXPORT'))}</span></p>
+<h1>${escapeHTML(t('Your browsing history.'))}</h1>
+<p class="description">${escapeHTML(t('A useful record of the pages you chose to keep. Open a page to pick up where you left off.'))}</p>
+<div class="summary"><div><strong>${formatNumber(items.length)}</strong>${escapeHTML(t(new Intl.PluralRules(localeTags[currentLocale()]).select(items.length) === 'one' ? 'exported row' : 'exported rows'))}</div><div><strong>${keys.length}</strong>${escapeHTML(t(new Intl.PluralRules(localeTags[currentLocale()]).select(keys.length) === 'one' ? 'selected column' : 'selected columns'))}</div></div>
 </header>
-<div class="table-wrap"><table><caption>Browsing History</caption><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>
-<footer>Created on your device. HistoryOut does not upload your browsing data. Share this file only with people you choose.</footer>
+<div class="table-wrap"><table><caption>${escapeHTML(t('Browsing History'))}</caption><thead><tr>${headers}</tr></thead><tbody>${rows}</tbody></table></div>
+<footer>${escapeHTML(t('Created on your device. HistoryOut does not upload your browsing data. Share this file only with people you choose.'))}</footer>
 </main>
 </body>
 </html>`;

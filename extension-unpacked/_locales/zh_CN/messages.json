@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "HistoryOut - 导出浏览历史"
+  },
+  "extensionDescription": {
+    "message": "将浏览历史导出为 CSV、JSON 或 HTML。选择日期、列和匹配的页面。免费、本地处理，无需账户。"
+  },
+  "actionTitle": {
+    "message": "点击打开 HistoryOut"
+  },
+  "onboardingFolder": {
+    "message": "locales/zh_CN"
+  }
+}

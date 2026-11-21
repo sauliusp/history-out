@@ -1,18 +1,18 @@
 {
-  "generated_at": "2026-09-09T08:52:38.828Z",
+  "generated_at": "2026-11-21T08:38:28.459Z",
   "command": "node scripts/audit-release-packages.cjs",
   "node_version": "v22.20.0",
-  "git_head": "eef836fe9068d7507a5729aea4e314fb26f918a8",
-  "version": "2.1.0",
+  "git_head": "cd2b1a7ba91eb011508da7dd32192f62fcd32439",
+  "version": "2.2.0",
   "status": "pass",
   "scope": "Local v2 archives and their staging directories compared with extension-unpacked. Does not certify a signed Chrome Web Store package or a store submission.",
   "source": {
     "manifest": {
       "manifest_version": 3,
-      "name": "HistoryOut - Export Browser History",
+      "name": "__MSG_extensionName__",
       "short_name": "HistoryOut",
-      "version": "2.1.0",
-      "description": "Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account.",
+      "version": "2.2.0",
+      "description": "__MSG_extensionDescription__",
       "permissions": [
         "history",
         "storage",
@@ -25,7 +25,7 @@
         "default_path": "side-panel.html"
       },
       "action": {
-        "default_title": "Click to open HistoryOut",
+        "default_title": "__MSG_actionTitle__",
         "default_icon": {
           "16": "icons/icon16.png",
           "32": "icons/icon32.png",
@@ -39,9 +39,39 @@
         "48": "icons/icon48.png",
         "128": "icons/icon128.png"
       },
-      "minimum_chrome_version": "114.0.0"
+      "minimum_chrome_version": "114.0.0",
+      "default_locale": "en",
+      "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA703uYkPbmxtY2lRmAAmy7OiY2s6FaYcqHeeYgqNi9rA7D0gY7dPd2lkegI3gNFOLmW5wAWmxYSuJN0gG8jVD5U+ThbneJwhLUTIdtPiB5OR5PBukQ2y7HdgmyYN/jpIkjqn185xooQT2U0mBHwNvjTox8OoEje1Wt/Vq3vxcpWCkBIGtUQBgGfqrer8ndA/hAPiLGPyrLq0dbU1+qcGTZPuINpH9u4kJ6Y6SwsFbS+GK1oLRrkjlmSKjFYfngwvK16H+5FWpdM/QtcOx9QBWRRsGEXmJ6cXcEjL2umLjVNt4esectPpHgrrVhyRBVFAg71Dx6yuMl9US2lX9gwZ0CQIDAQAB"
     },
     "files": {
+      "_locales/de/messages.json": {
+        "bytes": 383,
+        "sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f"
+      },
+      "_locales/en/messages.json": {
+        "bytes": 361,
+        "sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae"
+      },
+      "_locales/es/messages.json": {
+        "bytes": 361,
+        "sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee"
+      },
+      "_locales/fr/messages.json": {
+        "bytes": 376,
+        "sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17"
+      },
+      "_locales/ja/messages.json": {
+        "bytes": 426,
+        "sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332"
+      },
+      "_locales/pt_BR/messages.json": {
+        "bytes": 369,
+        "sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8"
+      },
+      "_locales/zh_CN/messages.json": {
+        "bytes": 379,
+        "sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168"
+      },
       "assets/bmc-cup.svg": {
         "bytes": 8178,
         "sha256": "94c3b0f6e002f33ee9dc742cd48d5e767eef84ca876fac27573519e40e3b7bba"
@@ -51,12 +81,12 @@
         "sha256": "501e57483d2a1c071c90a26ed038743af93dfb0246f4031c9944e5d87277d536"
       },
       "background.js": {
-        "bytes": 2695,
-        "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744"
+        "bytes": 2807,
+        "sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1"
       },
       "bundle.js": {
-        "bytes": 483449,
-        "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7"
+        "bytes": 582530,
+        "sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132"
       },
       "bundle.js.LICENSE.txt": {
         "bytes": 1640,
@@ -78,17 +108,65 @@
         "bytes": 1116,
         "sha256": "386a2aa829a5ac9ba96d3aebd37b5d97d0ac7c4fb99e16d6041bc9220fe1ddb1"
       },
+      "locales/de/updated.html": {
+        "bytes": 5332,
+        "sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d"
+      },
+      "locales/de/welcome.html": {
+        "bytes": 3668,
+        "sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c"
+      },
+      "locales/es/updated.html": {
+        "bytes": 5030,
+        "sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a"
+      },
+      "locales/es/welcome.html": {
+        "bytes": 3459,
+        "sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922"
+      },
+      "locales/fr/updated.html": {
+        "bytes": 5040,
+        "sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431"
+      },
+      "locales/fr/welcome.html": {
+        "bytes": 3599,
+        "sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f"
+      },
+      "locales/ja/updated.html": {
+        "bytes": 5117,
+        "sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4"
+      },
+      "locales/ja/welcome.html": {
+        "bytes": 3730,
+        "sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2"
+      },
+      "locales/pt_BR/updated.html": {
+        "bytes": 4902,
+        "sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd"
+      },
+      "locales/pt_BR/welcome.html": {
+        "bytes": 3466,
+        "sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0"
+      },
+      "locales/zh_CN/updated.html": {
+        "bytes": 4720,
+        "sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111"
+      },
+      "locales/zh_CN/welcome.html": {
+        "bytes": 3409,
+        "sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159"
+      },
       "manifest.json": {
-        "bytes": 859,
-        "sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a"
+        "bytes": 1185,
+        "sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb"
       },
       "onboarding.css": {
-        "bytes": 16596,
-        "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61"
+        "bytes": 22319,
+        "sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b"
       },
       "onboarding.js": {
-        "bytes": 1459,
-        "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8"
+        "bytes": 1490,
+        "sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675"
       },
       "side-panel.html": {
         "bytes": 405,
@@ -99,12 +177,12 @@
         "sha256": "605679c950028abbe090f016a2d205658964ed2a559b52e0a385b63e3cf1240d"
       },
       "updated.html": {
-        "bytes": 8225,
-        "sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee"
+        "bytes": 9668,
+        "sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf"
       },
       "welcome.html": {
-        "bytes": 4038,
-        "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88"
+        "bytes": 4138,
+        "sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950"
       }
     }
   },
@@ -129,8 +207,71 @@
   "packages": [
     {
       "target": "chrome",
-      "file": "releases/historyout-2.1.0-chrome.zip",
+      "file": "releases/historyout-2.2.0-chrome.zip",
       "files": [
+        {
+          "file": "_locales/de/messages.json",
+          "bytes": 383,
+          "sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "source_sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "staging_sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/en/messages.json",
+          "bytes": 361,
+          "sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "source_sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "staging_sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/es/messages.json",
+          "bytes": 361,
+          "sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "source_sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "staging_sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/fr/messages.json",
+          "bytes": 376,
+          "sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "source_sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "staging_sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/ja/messages.json",
+          "bytes": 426,
+          "sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "source_sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "staging_sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/pt_BR/messages.json",
+          "bytes": 369,
+          "sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "source_sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "staging_sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/zh_CN/messages.json",
+          "bytes": 379,
+          "sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "source_sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "staging_sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
         {
           "file": "assets/bmc-cup.svg",
           "bytes": 8178,
@@ -151,19 +292,19 @@
         },
         {
           "file": "background.js",
-          "bytes": 2695,
-          "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-          "source_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-          "staging_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "bytes": 2807,
+          "sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+          "source_sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+          "staging_sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 483449,
-          "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-          "source_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-          "staging_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "bytes": 582530,
+          "sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+          "source_sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+          "staging_sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -213,29 +354,137 @@
           "source_comparison": "exact bytes"
         },
         {
+          "file": "locales/de/updated.html",
+          "bytes": 5332,
+          "sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "source_sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "staging_sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/de/welcome.html",
+          "bytes": 3668,
+          "sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "source_sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "staging_sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/es/updated.html",
+          "bytes": 5030,
+          "sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "source_sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "staging_sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/es/welcome.html",
+          "bytes": 3459,
+          "sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "source_sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "staging_sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/fr/updated.html",
+          "bytes": 5040,
+          "sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "source_sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "staging_sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/fr/welcome.html",
+          "bytes": 3599,
+          "sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "source_sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "staging_sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/ja/updated.html",
+          "bytes": 5117,
+          "sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "source_sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "staging_sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/ja/welcome.html",
+          "bytes": 3730,
+          "sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "source_sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "staging_sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/pt_BR/updated.html",
+          "bytes": 4902,
+          "sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "source_sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "staging_sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/pt_BR/welcome.html",
+          "bytes": 3466,
+          "sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "source_sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "staging_sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/zh_CN/updated.html",
+          "bytes": 4720,
+          "sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "source_sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "staging_sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/zh_CN/welcome.html",
+          "bytes": 3409,
+          "sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "source_sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "staging_sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
           "file": "manifest.json",
-          "bytes": 859,
-          "sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
-          "source_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
-          "staging_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "bytes": 1185,
+          "sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
+          "source_sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
+          "staging_sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
         },
         {
           "file": "onboarding.css",
-          "bytes": 16596,
-          "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
-          "source_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
-          "staging_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "bytes": 22319,
+          "sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
+          "source_sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
+          "staging_sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "onboarding.js",
-          "bytes": 1459,
-          "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
-          "source_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
-          "staging_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "bytes": 1490,
+          "sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
+          "source_sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
+          "staging_sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -259,26 +508,26 @@
         },
         {
           "file": "updated.html",
-          "bytes": 8225,
-          "sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
-          "source_sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
-          "staging_sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
+          "bytes": 9668,
+          "sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
+          "source_sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
+          "staging_sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "welcome.html",
-          "bytes": 4038,
-          "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
-          "source_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
-          "staging_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "bytes": 4138,
+          "sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
+          "source_sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
+          "staging_sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
           "matches_source": true,
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 172865,
-      "sha256": "42fe92aba91edd04281de1d5f651763ec69d42c233e726b25be62124fc511754",
-      "version": "2.1.0",
+      "bytes": 230235,
+      "sha256": "9936c622a268c0d022e0ce789ff18988c798dbfc6d9e94af3502225b0914524d",
+      "version": "2.2.0",
       "permissions": {
         "permissions": [
           "history",
@@ -296,8 +545,71 @@
     },
     {
       "target": "edge",
-      "file": "releases/historyout-2.1.0-edge.zip",
+      "file": "releases/historyout-2.2.0-edge.zip",
       "files": [
+        {
+          "file": "_locales/de/messages.json",
+          "bytes": 383,
+          "sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "source_sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "staging_sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/en/messages.json",
+          "bytes": 361,
+          "sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "source_sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "staging_sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/es/messages.json",
+          "bytes": 361,
+          "sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "source_sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "staging_sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/fr/messages.json",
+          "bytes": 376,
+          "sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "source_sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "staging_sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/ja/messages.json",
+          "bytes": 426,
+          "sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "source_sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "staging_sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/pt_BR/messages.json",
+          "bytes": 369,
+          "sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "source_sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "staging_sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/zh_CN/messages.json",
+          "bytes": 379,
+          "sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "source_sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "staging_sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
         {
           "file": "assets/bmc-cup.svg",
           "bytes": 8178,
@@ -318,19 +630,19 @@
         },
         {
           "file": "background.js",
-          "bytes": 2695,
-          "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-          "source_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-          "staging_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "bytes": 2807,
+          "sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+          "source_sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+          "staging_sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 483449,
-          "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-          "source_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-          "staging_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "bytes": 582530,
+          "sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+          "source_sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+          "staging_sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -380,29 +692,137 @@
           "source_comparison": "exact bytes"
         },
         {
+          "file": "locales/de/updated.html",
+          "bytes": 5332,
+          "sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "source_sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "staging_sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/de/welcome.html",
+          "bytes": 3668,
+          "sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "source_sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "staging_sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/es/updated.html",
+          "bytes": 5030,
+          "sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "source_sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "staging_sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/es/welcome.html",
+          "bytes": 3459,
+          "sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "source_sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "staging_sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/fr/updated.html",
+          "bytes": 5040,
+          "sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "source_sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "staging_sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/fr/welcome.html",
+          "bytes": 3599,
+          "sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "source_sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "staging_sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/ja/updated.html",
+          "bytes": 5117,
+          "sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "source_sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "staging_sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/ja/welcome.html",
+          "bytes": 3730,
+          "sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "source_sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "staging_sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/pt_BR/updated.html",
+          "bytes": 4902,
+          "sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "source_sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "staging_sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/pt_BR/welcome.html",
+          "bytes": 3466,
+          "sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "source_sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "staging_sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/zh_CN/updated.html",
+          "bytes": 4720,
+          "sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "source_sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "staging_sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/zh_CN/welcome.html",
+          "bytes": 3409,
+          "sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "source_sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "staging_sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
           "file": "manifest.json",
-          "bytes": 859,
-          "sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
-          "source_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
-          "staging_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "bytes": 1185,
+          "sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
+          "source_sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
+          "staging_sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
         },
         {
           "file": "onboarding.css",
-          "bytes": 16596,
-          "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
-          "source_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
-          "staging_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "bytes": 22319,
+          "sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
+          "source_sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
+          "staging_sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "onboarding.js",
-          "bytes": 1459,
-          "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
-          "source_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
-          "staging_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "bytes": 1490,
+          "sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
+          "source_sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
+          "staging_sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -426,26 +846,26 @@
         },
         {
           "file": "updated.html",
-          "bytes": 8225,
-          "sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
-          "source_sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
-          "staging_sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
+          "bytes": 9668,
+          "sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
+          "source_sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
+          "staging_sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "welcome.html",
-          "bytes": 4038,
-          "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
-          "source_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
-          "staging_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "bytes": 4138,
+          "sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
+          "source_sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
+          "staging_sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
           "matches_source": true,
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 172865,
-      "sha256": "b3f6e2101dab5049ba210d80f88b6a92008a8f88188cbd6c8f0a3532f9face3b",
-      "version": "2.1.0",
+      "bytes": 230235,
+      "sha256": "14fd22737b500ab0b72a77b526a22ec3fc15a50d0fd62489cc1bc8ed56921bd6",
+      "version": "2.2.0",
       "permissions": {
         "permissions": [
           "history",
@@ -463,8 +883,71 @@
     },
     {
       "target": "brave",
-      "file": "releases/historyout-2.1.0-brave.zip",
+      "file": "releases/historyout-2.2.0-brave.zip",
       "files": [
+        {
+          "file": "_locales/de/messages.json",
+          "bytes": 383,
+          "sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "source_sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "staging_sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/en/messages.json",
+          "bytes": 361,
+          "sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "source_sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "staging_sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/es/messages.json",
+          "bytes": 361,
+          "sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "source_sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "staging_sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/fr/messages.json",
+          "bytes": 376,
+          "sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "source_sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "staging_sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/ja/messages.json",
+          "bytes": 426,
+          "sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "source_sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "staging_sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/pt_BR/messages.json",
+          "bytes": 369,
+          "sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "source_sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "staging_sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/zh_CN/messages.json",
+          "bytes": 379,
+          "sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "source_sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "staging_sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
         {
           "file": "assets/bmc-cup.svg",
           "bytes": 8178,
@@ -485,19 +968,19 @@
         },
         {
           "file": "background.js",
-          "bytes": 2695,
-          "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-          "source_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-          "staging_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "bytes": 2807,
+          "sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+          "source_sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+          "staging_sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 483449,
-          "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-          "source_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-          "staging_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "bytes": 582530,
+          "sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+          "source_sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+          "staging_sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -547,29 +1030,137 @@
           "source_comparison": "exact bytes"
         },
         {
+          "file": "locales/de/updated.html",
+          "bytes": 5332,
+          "sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "source_sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "staging_sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/de/welcome.html",
+          "bytes": 3668,
+          "sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "source_sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "staging_sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/es/updated.html",
+          "bytes": 5030,
+          "sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "source_sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "staging_sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/es/welcome.html",
+          "bytes": 3459,
+          "sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "source_sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "staging_sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/fr/updated.html",
+          "bytes": 5040,
+          "sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "source_sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "staging_sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/fr/welcome.html",
+          "bytes": 3599,
+          "sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "source_sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "staging_sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/ja/updated.html",
+          "bytes": 5117,
+          "sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "source_sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "staging_sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/ja/welcome.html",
+          "bytes": 3730,
+          "sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "source_sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "staging_sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/pt_BR/updated.html",
+          "bytes": 4902,
+          "sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "source_sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "staging_sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/pt_BR/welcome.html",
+          "bytes": 3466,
+          "sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "source_sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "staging_sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/zh_CN/updated.html",
+          "bytes": 4720,
+          "sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "source_sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "staging_sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/zh_CN/welcome.html",
+          "bytes": 3409,
+          "sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "source_sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "staging_sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
           "file": "manifest.json",
-          "bytes": 859,
-          "sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
-          "source_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
-          "staging_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
+          "bytes": 1185,
+          "sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
+          "source_sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
+          "staging_sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
         },
         {
           "file": "onboarding.css",
-          "bytes": 16596,
-          "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
-          "source_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
-          "staging_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "bytes": 22319,
+          "sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
+          "source_sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
+          "staging_sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "onboarding.js",
-          "bytes": 1459,
-          "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
-          "source_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
-          "staging_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "bytes": 1490,
+          "sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
+          "source_sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
+          "staging_sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -593,26 +1184,26 @@
         },
         {
           "file": "updated.html",
-          "bytes": 8225,
-          "sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
-          "source_sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
-          "staging_sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
+          "bytes": 9668,
+          "sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
+          "source_sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
+          "staging_sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "welcome.html",
-          "bytes": 4038,
-          "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
-          "source_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
-          "staging_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "bytes": 4138,
+          "sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
+          "source_sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
+          "staging_sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
           "matches_source": true,
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 172865,
-      "sha256": "b3f6e2101dab5049ba210d80f88b6a92008a8f88188cbd6c8f0a3532f9face3b",
-      "version": "2.1.0",
+      "bytes": 230235,
+      "sha256": "14fd22737b500ab0b72a77b526a22ec3fc15a50d0fd62489cc1bc8ed56921bd6",
+      "version": "2.2.0",
       "permissions": {
         "permissions": [
           "history",
@@ -630,8 +1221,71 @@
     },
     {
       "target": "chromium",
-      "file": "releases/historyout-2.1.0-chromium.zip",
+      "file": "releases/historyout-2.2.0-chromium.zip",
       "files": [
+        {
+          "file": "_locales/de/messages.json",
+          "bytes": 383,
+          "sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "source_sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "staging_sha256": "6a8c43e6a4334a7ebe5d07776a60639b048d9441d9ea3cd9df0e36a64f4cbf2f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/en/messages.json",
+          "bytes": 361,
+          "sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "source_sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "staging_sha256": "3a07d9223eb56f7b890eb3fd0d1bbfad6e50ab2d9bb955813f92a1230f863fae",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/es/messages.json",
+          "bytes": 361,
+          "sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "source_sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "staging_sha256": "20a7db155a10f503338d8740845221fc85a3db635c9b9760b5afbee8e63a20ee",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/fr/messages.json",
+          "bytes": 376,
+          "sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "source_sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "staging_sha256": "5bcdc7f0b5c01881378dc8abed1b7d1b9e128f7f5d845987ae287acc37b69e17",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/ja/messages.json",
+          "bytes": 426,
+          "sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "source_sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "staging_sha256": "d2086bc90f4dae4f169c5cd0c69cbba6228954947060596ec49e1d9fa4aff332",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/pt_BR/messages.json",
+          "bytes": 369,
+          "sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "source_sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "staging_sha256": "1505e0edeaea80170456453fc0948fd1453e4fa16d400c6ee2eff434d1ab3aa8",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "_locales/zh_CN/messages.json",
+          "bytes": 379,
+          "sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "source_sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "staging_sha256": "0c694dae737aa82671380bce7ab7cfa938428c2bded7ae8e1fbd830563ab3168",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
         {
           "file": "assets/bmc-cup.svg",
           "bytes": 8178,
@@ -652,19 +1306,19 @@
         },
         {
           "file": "background.js",
-          "bytes": 2695,
-          "sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-          "source_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
-          "staging_sha256": "98a7f06010b1cad8d789096724651face1878cdacc59ece7442b5b69758ad744",
+          "bytes": 2807,
+          "sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+          "source_sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
+          "staging_sha256": "000c2467c4274b22c7b598f19db40f2ba58882550ed90b63b0af549547a1d1e1",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "bundle.js",
-          "bytes": 483449,
-          "sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-          "source_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
-          "staging_sha256": "231cf8474d53ac4cab502ebe2fe9410d7891ad2cc2f0a7db637615f62ba858e7",
+          "bytes": 582530,
+          "sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+          "source_sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+          "staging_sha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -714,29 +1368,137 @@
           "source_comparison": "exact bytes"
         },
         {
+          "file": "locales/de/updated.html",
+          "bytes": 5332,
+          "sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "source_sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "staging_sha256": "a73d26a912848126520e991ac6cb2cf14a6e44520dd6000b6fba14011bdbda7d",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/de/welcome.html",
+          "bytes": 3668,
+          "sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "source_sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "staging_sha256": "15b4c1137a68fd1b5d2efb2b567c4112f248d8193220de72cb6abfaac28bc84c",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/es/updated.html",
+          "bytes": 5030,
+          "sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "source_sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "staging_sha256": "1dbde8d12d61b842c7c76125c27bd5613256fd2d2c337be58565757b16c8211a",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/es/welcome.html",
+          "bytes": 3459,
+          "sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "source_sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "staging_sha256": "08a9bbd4326db0d289da56530ac8b94f2cfc22f39af40cf218342117a03c1922",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/fr/updated.html",
+          "bytes": 5040,
+          "sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "source_sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "staging_sha256": "cee86fc6d7841b96d06b1b3a47450b0dc33a823e08e7ff68e7e9a0ba82d97431",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/fr/welcome.html",
+          "bytes": 3599,
+          "sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "source_sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "staging_sha256": "45c99ff4e37267d720475479c013677dcfba6821d8945bdbbbcef5e8db013a6f",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/ja/updated.html",
+          "bytes": 5117,
+          "sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "source_sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "staging_sha256": "8d9c851066afa106301c2c3afdd5509915a8d01db29b83bcee98260fb73902f4",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/ja/welcome.html",
+          "bytes": 3730,
+          "sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "source_sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "staging_sha256": "d76fd26969278cccc2c6c214cb12ba4474572e7473bd31912389cfd2e7f7ddc2",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/pt_BR/updated.html",
+          "bytes": 4902,
+          "sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "source_sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "staging_sha256": "4d167aa8d0d768bd029bdb76a6678308bbf46ed47e9488aa3e82f7f830b7a7bd",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/pt_BR/welcome.html",
+          "bytes": 3466,
+          "sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "source_sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "staging_sha256": "8b7c848b8dbb767b96a31108bf2b43a48cff7702ab41928d63f48aba2d1974a0",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/zh_CN/updated.html",
+          "bytes": 4720,
+          "sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "source_sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "staging_sha256": "738b9f710a9d0af9a63407f042d0605af9c4a50ad561dab59735af0a6e09b111",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
+          "file": "locales/zh_CN/welcome.html",
+          "bytes": 3409,
+          "sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "source_sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "staging_sha256": "7aa75fd8d5ca7d4ee257d062ca6f1af14f81370968dfff518a7f986fc245b159",
+          "matches_source": true,
+          "source_comparison": "exact bytes"
+        },
+        {
           "file": "manifest.json",
-          "bytes": 781,
-          "sha256": "cf2812611d2393ad825450e5d85e7661f52500aaf202b87477f08aee8396c0fb",
-          "source_sha256": "26755dae806bd4efcb7fc585fb5e43ea70f88b24526dfbbbfbf4b69ab6a5474a",
-          "staging_sha256": "cf2812611d2393ad825450e5d85e7661f52500aaf202b87477f08aee8396c0fb",
+          "bytes": 1107,
+          "sha256": "5079f1f87ebb8413063dcdd6a7f5a029b6381620d47c0206e4868e3def78a214",
+          "source_sha256": "5569b97c10ee487b9f98c2ce6087874ec4e7c3cc4ddfe1045629976fad788afb",
+          "staging_sha256": "5079f1f87ebb8413063dcdd6a7f5a029b6381620d47c0206e4868e3def78a214",
           "matches_source": true,
           "source_comparison": "semantic JSON with target-specific sidePanel removal only"
         },
         {
           "file": "onboarding.css",
-          "bytes": 16596,
-          "sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
-          "source_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
-          "staging_sha256": "b09931c2e42a2c3630448a3e645de4c97697eed6c3d48a5625214525253c7d61",
+          "bytes": 22319,
+          "sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
+          "source_sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
+          "staging_sha256": "c582b273d4bf52d7899b79bd684ca5fff0c48be7023b032a928e86822b29e88b",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "onboarding.js",
-          "bytes": 1459,
-          "sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
-          "source_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
-          "staging_sha256": "c9b06b5b4666969b421016162db12f8d36c55b36e6252826fd3cd7d2a2c44fa8",
+          "bytes": 1490,
+          "sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
+          "source_sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
+          "staging_sha256": "8c1ba571e91c0c148d2cde75994f30162d582ef773bdabf220850dbfdbb37675",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
@@ -760,26 +1522,26 @@
         },
         {
           "file": "updated.html",
-          "bytes": 8225,
-          "sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
-          "source_sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
-          "staging_sha256": "cff7a6a139f519e2098437e3d5a1b4527c27731cc35bfc83bf0cc0da304f18ee",
+          "bytes": 9668,
+          "sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
+          "source_sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
+          "staging_sha256": "41c19335bf48ffc9ef6b65466fda7fb38c48cbc8481491193d8d86bd2a8a14bf",
           "matches_source": true,
           "source_comparison": "exact bytes"
         },
         {
           "file": "welcome.html",
-          "bytes": 4038,
-          "sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
-          "source_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
-          "staging_sha256": "321db6d84fd84340716c7229dc7cbf31bfbf4c45377be212d9b91ccf270f6e88",
+          "bytes": 4138,
+          "sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
+          "source_sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
+          "staging_sha256": "cb5dc82605e7560df93d2a9aba7c26b66972ad2b83ff07061544adc00e013950",
           "matches_source": true,
           "source_comparison": "exact bytes"
         }
       ],
-      "bytes": 172836,
-      "sha256": "54fe8e4e9042f8e3f730c6b3921ebe3eca48c626ee0870288df5ca25cc9a45c3",
-      "version": "2.1.0",
+      "bytes": 230208,
+      "sha256": "93eebc638ac4bc087c8c3fc8a05918dcd2eb23d18ca83d5b900e23e3162020b1",
+      "version": "2.2.0",
       "permissions": {
         "permissions": [
           "history",
@@ -797,7 +1559,7 @@
     "command": "node --test --test-reporter=tap tests/release-stress.test.cjs",
     "file_sha256": "b56ebb6bf46e04af55d969493c3a3f1bbc475b9319e41f3abafa950f3bc613a3",
     "exit_code": 0,
-    "elapsed_ms": 760.04,
+    "elapsed_ms": 935.56,
     "tests": 3,
     "passed": 3,
     "failed": 0,
@@ -809,28 +1571,28 @@
           "unique_clean_pages": 5000,
           "combined_filter_pages": 84
         },
-        "first_load_ms": 100.88,
-        "reordered_load_ms": 76.28,
-        "filter_validation_ms": 21.7,
+        "first_load_ms": 118.15,
+        "reordered_load_ms": 90.15,
+        "filter_validation_ms": 26.55,
         "peak_api_concurrency": 8,
         "serialization": {
           "json": {
-            "elapsed_ms": 14.68,
+            "elapsed_ms": 22.24,
             "bytes": 6415598,
             "sha256": "6fad890d7af72c5cf4517150e04b9e9660c3edb53c87e6bc7a8ccc1a331e7858"
           },
           "csv": {
-            "elapsed_ms": 20.39,
+            "elapsed_ms": 31.97,
             "bytes": 3865628,
             "sha256": "239174e21117210d95fc2be49510eea7a025c9b77730adda3231dbe8fb6f0496"
           },
           "html": {
-            "elapsed_ms": 37.34,
+            "elapsed_ms": 43.93,
             "bytes": 8756786,
             "sha256": "32fb531b3c5f5a3fac8b2d9e3ef184cfa49b2e6b2eece2a644bada83e3bc9308"
           }
         },
-        "total_test_ms": 574.95,
+        "total_test_ms": 692.45,
         "note": "Synthetic API-boundary timing on this machine, not a Chrome UI latency guarantee."
       },
       {
@@ -838,13 +1600,13 @@
         "api_calls_before_cancel": 12,
         "late_api_responses_discarded": 8,
         "recovery_visits": 256,
-        "abort_ms": 0.25
+        "abort_ms": 0.44
       },
       {
         "failed_candidate_urls": 10000,
         "failed_load_api_calls": 8,
         "overlapping_success_visits": 768,
-        "rejection_ms": 0.14
+        "rejection_ms": 0.18
       }
     ]
   },
@@ -853,10 +1615,10 @@
       "name": "package-lock-and-manifest-versions-match",
       "passed": true,
       "detail": {
-        "package_json": "2.1.0",
-        "package_lock": "2.1.0",
-        "package_lock_root": "2.1.0",
-        "manifest": "2.1.0"
+        "package_json": "2.2.0",
+        "package_lock": "2.2.0",
+        "package_lock_root": "2.2.0",
+        "manifest": "2.2.0"
       }
     },
     {
@@ -885,6 +1647,13 @@
       "name": "chrome:exact-file-allowlist",
       "passed": true,
       "detail": [
+        "_locales/de/messages.json",
+        "_locales/en/messages.json",
+        "_locales/es/messages.json",
+        "_locales/fr/messages.json",
+        "_locales/ja/messages.json",
+        "_locales/pt_BR/messages.json",
+        "_locales/zh_CN/messages.json",
         "assets/bmc-cup.svg",
         "assets/logo.svg",
         "background.js",
@@ -894,6 +1663,18 @@
         "icons/icon16.png",
         "icons/icon32.png",
         "icons/icon48.png",
+        "locales/de/updated.html",
+        "locales/de/welcome.html",
+        "locales/es/updated.html",
+        "locales/es/welcome.html",
+        "locales/fr/updated.html",
+        "locales/fr/welcome.html",
+        "locales/ja/updated.html",
+        "locales/ja/welcome.html",
+        "locales/pt_BR/updated.html",
+        "locales/pt_BR/welcome.html",
+        "locales/zh_CN/updated.html",
+        "locales/zh_CN/welcome.html",
         "manifest.json",
         "onboarding.css",
         "onboarding.js",
@@ -909,6 +1690,25 @@
       "detail": [
         "onboarding.js",
         "side-panel.html",
+        "locales/",
+        "locales/pt_BR/",
+        "locales/pt_BR/updated.html",
+        "locales/pt_BR/welcome.html",
+        "locales/ja/",
+        "locales/ja/updated.html",
+        "locales/ja/welcome.html",
+        "locales/zh_CN/",
+        "locales/zh_CN/updated.html",
+        "locales/zh_CN/welcome.html",
+        "locales/de/",
+        "locales/de/updated.html",
+        "locales/de/welcome.html",
+        "locales/fr/",
+        "locales/fr/updated.html",
+        "locales/fr/welcome.html",
+        "locales/es/",
+        "locales/es/updated.html",
+        "locales/es/welcome.html",
         "styles.css",
         "background.js",
         "bundle.js",
@@ -921,6 +1721,21 @@
         "welcome.html",
         "manifest.json",
         "bundle.js.LICENSE.txt",
+        "_locales/",
+        "_locales/pt_BR/",
+        "_locales/pt_BR/messages.json",
+        "_locales/ja/",
+        "_locales/ja/messages.json",
+        "_locales/zh_CN/",
+        "_locales/zh_CN/messages.json",
+        "_locales/de/",
+        "_locales/de/messages.json",
+        "_locales/fr/",
+        "_locales/fr/messages.json",
+        "_locales/es/",
+        "_locales/es/messages.json",
+        "_locales/en/",
+        "_locales/en/messages.json",
         "onboarding.css",
         "assets/",
         "assets/bmc-cup.svg",
@@ -965,6 +1780,62 @@
         },
         "change": "unchanged"
       }
+    },
+    {
+      "name": "chrome:_locales/de/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/de/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/en/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/en/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/es/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/es/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/fr/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/fr/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/ja/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/ja/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/pt_BR/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/pt_BR/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/zh_CN/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:_locales/zh_CN/messages.json:matches-staging",
+      "passed": true
     },
     {
       "name": "chrome:assets/bmc-cup.svg:matches-current-unpacked",
@@ -1055,6 +1926,150 @@
       "passed": true
     },
     {
+      "name": "chrome:locales/de/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/de/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/de/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/de/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/de/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/de/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/es/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/es/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/es/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/es/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/es/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/es/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/fr/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/fr/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/fr/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/fr/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/fr/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/fr/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/ja/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/ja/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/ja/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/ja/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/ja/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/ja/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/pt_BR/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/pt_BR/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/pt_BR/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/pt_BR/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/pt_BR/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/pt_BR/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/zh_CN/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/zh_CN/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/zh_CN/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/zh_CN/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/zh_CN/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chrome:locales/zh_CN/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "chrome:manifest.json:matches-current-unpacked",
       "passed": true
     },
@@ -1138,6 +2153,13 @@
       "name": "edge:exact-file-allowlist",
       "passed": true,
       "detail": [
+        "_locales/de/messages.json",
+        "_locales/en/messages.json",
+        "_locales/es/messages.json",
+        "_locales/fr/messages.json",
+        "_locales/ja/messages.json",
+        "_locales/pt_BR/messages.json",
+        "_locales/zh_CN/messages.json",
         "assets/bmc-cup.svg",
         "assets/logo.svg",
         "background.js",
@@ -1147,6 +2169,18 @@
         "icons/icon16.png",
         "icons/icon32.png",
         "icons/icon48.png",
+        "locales/de/updated.html",
+        "locales/de/welcome.html",
+        "locales/es/updated.html",
+        "locales/es/welcome.html",
+        "locales/fr/updated.html",
+        "locales/fr/welcome.html",
+        "locales/ja/updated.html",
+        "locales/ja/welcome.html",
+        "locales/pt_BR/updated.html",
+        "locales/pt_BR/welcome.html",
+        "locales/zh_CN/updated.html",
+        "locales/zh_CN/welcome.html",
         "manifest.json",
         "onboarding.css",
         "onboarding.js",
@@ -1162,6 +2196,25 @@
       "detail": [
         "onboarding.js",
         "side-panel.html",
+        "locales/",
+        "locales/pt_BR/",
+        "locales/pt_BR/updated.html",
+        "locales/pt_BR/welcome.html",
+        "locales/ja/",
+        "locales/ja/updated.html",
+        "locales/ja/welcome.html",
+        "locales/zh_CN/",
+        "locales/zh_CN/updated.html",
+        "locales/zh_CN/welcome.html",
+        "locales/de/",
+        "locales/de/updated.html",
+        "locales/de/welcome.html",
+        "locales/fr/",
+        "locales/fr/updated.html",
+        "locales/fr/welcome.html",
+        "locales/es/",
+        "locales/es/updated.html",
+        "locales/es/welcome.html",
         "styles.css",
         "background.js",
         "bundle.js",
@@ -1174,6 +2227,21 @@
         "welcome.html",
         "manifest.json",
         "bundle.js.LICENSE.txt",
+        "_locales/",
+        "_locales/pt_BR/",
+        "_locales/pt_BR/messages.json",
+        "_locales/ja/",
+        "_locales/ja/messages.json",
+        "_locales/zh_CN/",
+        "_locales/zh_CN/messages.json",
+        "_locales/de/",
+        "_locales/de/messages.json",
+        "_locales/fr/",
+        "_locales/fr/messages.json",
+        "_locales/es/",
+        "_locales/es/messages.json",
+        "_locales/en/",
+        "_locales/en/messages.json",
         "onboarding.css",
         "assets/",
         "assets/bmc-cup.svg",
@@ -1218,6 +2286,62 @@
         },
         "change": "unchanged"
       }
+    },
+    {
+      "name": "edge:_locales/de/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/de/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/en/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/en/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/es/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/es/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/fr/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/fr/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/ja/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/ja/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/pt_BR/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/pt_BR/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/zh_CN/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:_locales/zh_CN/messages.json:matches-staging",
+      "passed": true
     },
     {
       "name": "edge:assets/bmc-cup.svg:matches-current-unpacked",
@@ -1308,6 +2432,150 @@
       "passed": true
     },
     {
+      "name": "edge:locales/de/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/de/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/de/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/de/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/de/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/de/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/es/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/es/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/es/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/es/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/es/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/es/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/fr/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/fr/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/fr/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/fr/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/fr/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/fr/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/ja/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/ja/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/ja/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/ja/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/ja/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/ja/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/pt_BR/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/pt_BR/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/pt_BR/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/pt_BR/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/pt_BR/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/pt_BR/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/zh_CN/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/zh_CN/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/zh_CN/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/zh_CN/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/zh_CN/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "edge:locales/zh_CN/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "edge:manifest.json:matches-current-unpacked",
       "passed": true
     },
@@ -1391,6 +2659,13 @@
       "name": "brave:exact-file-allowlist",
       "passed": true,
       "detail": [
+        "_locales/de/messages.json",
+        "_locales/en/messages.json",
+        "_locales/es/messages.json",
+        "_locales/fr/messages.json",
+        "_locales/ja/messages.json",
+        "_locales/pt_BR/messages.json",
+        "_locales/zh_CN/messages.json",
         "assets/bmc-cup.svg",
         "assets/logo.svg",
         "background.js",
@@ -1400,6 +2675,18 @@
         "icons/icon16.png",
         "icons/icon32.png",
         "icons/icon48.png",
+        "locales/de/updated.html",
+        "locales/de/welcome.html",
+        "locales/es/updated.html",
+        "locales/es/welcome.html",
+        "locales/fr/updated.html",
+        "locales/fr/welcome.html",
+        "locales/ja/updated.html",
+        "locales/ja/welcome.html",
+        "locales/pt_BR/updated.html",
+        "locales/pt_BR/welcome.html",
+        "locales/zh_CN/updated.html",
+        "locales/zh_CN/welcome.html",
         "manifest.json",
         "onboarding.css",
         "onboarding.js",
@@ -1415,6 +2702,25 @@
       "detail": [
         "onboarding.js",
         "side-panel.html",
+        "locales/",
+        "locales/pt_BR/",
+        "locales/pt_BR/updated.html",
+        "locales/pt_BR/welcome.html",
+        "locales/ja/",
+        "locales/ja/updated.html",
+        "locales/ja/welcome.html",
+        "locales/zh_CN/",
+        "locales/zh_CN/updated.html",
+        "locales/zh_CN/welcome.html",
+        "locales/de/",
+        "locales/de/updated.html",
+        "locales/de/welcome.html",
+        "locales/fr/",
+        "locales/fr/updated.html",
+        "locales/fr/welcome.html",
+        "locales/es/",
+        "locales/es/updated.html",
+        "locales/es/welcome.html",
         "styles.css",
         "background.js",
         "bundle.js",
@@ -1427,6 +2733,21 @@
         "welcome.html",
         "manifest.json",
         "bundle.js.LICENSE.txt",
+        "_locales/",
+        "_locales/pt_BR/",
+        "_locales/pt_BR/messages.json",
+        "_locales/ja/",
+        "_locales/ja/messages.json",
+        "_locales/zh_CN/",
+        "_locales/zh_CN/messages.json",
+        "_locales/de/",
+        "_locales/de/messages.json",
+        "_locales/fr/",
+        "_locales/fr/messages.json",
+        "_locales/es/",
+        "_locales/es/messages.json",
+        "_locales/en/",
+        "_locales/en/messages.json",
         "onboarding.css",
         "assets/",
         "assets/bmc-cup.svg",
@@ -1471,6 +2792,62 @@
         },
         "change": "unchanged"
       }
+    },
+    {
+      "name": "brave:_locales/de/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/de/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/en/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/en/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/es/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/es/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/fr/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/fr/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/ja/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/ja/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/pt_BR/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/pt_BR/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/zh_CN/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:_locales/zh_CN/messages.json:matches-staging",
+      "passed": true
     },
     {
       "name": "brave:assets/bmc-cup.svg:matches-current-unpacked",
@@ -1561,6 +2938,150 @@
       "passed": true
     },
     {
+      "name": "brave:locales/de/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/de/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/de/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/de/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/de/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/de/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/es/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/es/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/es/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/es/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/es/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/es/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/fr/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/fr/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/fr/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/fr/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/fr/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/fr/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/ja/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/ja/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/ja/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/ja/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/ja/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/ja/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/pt_BR/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/pt_BR/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/pt_BR/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/pt_BR/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/pt_BR/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/pt_BR/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/zh_CN/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/zh_CN/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/zh_CN/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/zh_CN/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/zh_CN/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "brave:locales/zh_CN/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "brave:manifest.json:matches-current-unpacked",
       "passed": true
     },
@@ -1644,6 +3165,13 @@
       "name": "chromium:exact-file-allowlist",
       "passed": true,
       "detail": [
+        "_locales/de/messages.json",
+        "_locales/en/messages.json",
+        "_locales/es/messages.json",
+        "_locales/fr/messages.json",
+        "_locales/ja/messages.json",
+        "_locales/pt_BR/messages.json",
+        "_locales/zh_CN/messages.json",
         "assets/bmc-cup.svg",
         "assets/logo.svg",
         "background.js",
@@ -1653,6 +3181,18 @@
         "icons/icon16.png",
         "icons/icon32.png",
         "icons/icon48.png",
+        "locales/de/updated.html",
+        "locales/de/welcome.html",
+        "locales/es/updated.html",
+        "locales/es/welcome.html",
+        "locales/fr/updated.html",
+        "locales/fr/welcome.html",
+        "locales/ja/updated.html",
+        "locales/ja/welcome.html",
+        "locales/pt_BR/updated.html",
+        "locales/pt_BR/welcome.html",
+        "locales/zh_CN/updated.html",
+        "locales/zh_CN/welcome.html",
         "manifest.json",
         "onboarding.css",
         "onboarding.js",
@@ -1668,6 +3208,25 @@
       "detail": [
         "onboarding.js",
         "side-panel.html",
+        "locales/",
+        "locales/pt_BR/",
+        "locales/pt_BR/updated.html",
+        "locales/pt_BR/welcome.html",
+        "locales/ja/",
+        "locales/ja/updated.html",
+        "locales/ja/welcome.html",
+        "locales/zh_CN/",
+        "locales/zh_CN/updated.html",
+        "locales/zh_CN/welcome.html",
+        "locales/de/",
+        "locales/de/updated.html",
+        "locales/de/welcome.html",
+        "locales/fr/",
+        "locales/fr/updated.html",
+        "locales/fr/welcome.html",
+        "locales/es/",
+        "locales/es/updated.html",
+        "locales/es/welcome.html",
         "styles.css",
         "background.js",
         "bundle.js",
@@ -1680,6 +3239,21 @@
         "welcome.html",
         "manifest.json",
         "bundle.js.LICENSE.txt",
+        "_locales/",
+        "_locales/pt_BR/",
+        "_locales/pt_BR/messages.json",
+        "_locales/ja/",
+        "_locales/ja/messages.json",
+        "_locales/zh_CN/",
+        "_locales/zh_CN/messages.json",
+        "_locales/de/",
+        "_locales/de/messages.json",
+        "_locales/fr/",
+        "_locales/fr/messages.json",
+        "_locales/es/",
+        "_locales/es/messages.json",
+        "_locales/en/",
+        "_locales/en/messages.json",
         "onboarding.css",
         "assets/",
         "assets/bmc-cup.svg",
@@ -1722,6 +3296,62 @@
         },
         "change": "sidePanel removed; no permissions added"
       }
+    },
+    {
+      "name": "chromium:_locales/de/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/de/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/en/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/en/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/es/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/es/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/fr/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/fr/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/ja/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/ja/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/pt_BR/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/pt_BR/messages.json:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/zh_CN/messages.json:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:_locales/zh_CN/messages.json:matches-staging",
+      "passed": true
     },
     {
       "name": "chromium:assets/bmc-cup.svg:matches-current-unpacked",
@@ -1812,6 +3442,150 @@
       "passed": true
     },
     {
+      "name": "chromium:locales/de/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/de/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/de/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/de/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/de/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/de/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/es/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/es/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/es/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/es/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/es/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/es/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/fr/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/fr/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/fr/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/fr/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/fr/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/fr/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/ja/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/ja/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/ja/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/ja/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/ja/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/ja/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/pt_BR/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/pt_BR/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/pt_BR/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/pt_BR/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/pt_BR/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/pt_BR/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/zh_CN/updated.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/zh_CN/updated.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/zh_CN/updated.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/zh_CN/welcome.html:matches-current-unpacked",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/zh_CN/welcome.html:matches-staging",
+      "passed": true
+    },
+    {
+      "name": "chromium:locales/zh_CN/welcome.html:no-source-map-or-qa-fixture",
+      "passed": true
+    },
+    {
       "name": "chromium:manifest.json:matches-current-unpacked",
       "passed": true
     },
@@ -1897,8 +3671,8 @@
     }
   ],
   "issues": [],
-  "elapsed_ms": 925.93,
-  "check_count": 197,
-  "passed_check_count": 197,
+  "elapsed_ms": 1288.25,
+  "check_count": 397,
+  "passed_check_count": 397,
   "note": "Snapshot evidence. Re-run this audit after rebuilding or repacking; archive hashes are final only for the bytes recorded here."
 }

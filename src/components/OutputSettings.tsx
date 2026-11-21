@@ -1,3 +1,4 @@
+import { t, countText } from '../i18n';
 import React from 'react';
 import {
   Checkbox, FormControl, FormHelperText, InputLabel, ListItemText,
@@ -20,40 +21,40 @@ interface OutputSettingsProps {
 export const OutputSettings: React.FC<OutputSettingsProps> = ({ config, onConfigChange, disabled }) => {
   const selectedFields = columnOrder.filter((field) => config.fields[field]);
   return (
-    <Stack spacing={1.2} role="group" aria-label="Export file settings">
+    <Stack spacing={1.2} role="group" aria-label={t("Export file settings")}>
       <Stack direction="row" alignItems="center" justifyContent="space-between">
-        <Typography component="h2" variant="h2">Your export</Typography>
-        <Typography variant="caption" color="text.secondary">Choose what goes in your file</Typography>
+        <Typography component="h2" variant="h2">{t("Your export")}</Typography>
+        <Typography variant="caption" color="text.secondary">{t("Choose what goes in your file")}</Typography>
       </Stack>
       <Stack direction="row" spacing={1} alignItems="flex-start">
         <ToggleButtonGroup
           value={config.format} exclusive disabled={disabled} size="small"
-          aria-label="Export format"
+          aria-label={t("Export format")}
           onChange={(_, format: ExportFormat | null) => format && onConfigChange({ format })}
           sx={{ flex: '1 1 54%', '& button': { flex: 1, height: 40, px: 1 } }}
         >
-          <ToggleButton value="csv" aria-label="CSV, for spreadsheets">CSV</ToggleButton>
-          <ToggleButton value="json" aria-label="JSON, structured data">JSON</ToggleButton>
-          <ToggleButton value="html" aria-label="HTML, readable in a browser">HTML</ToggleButton>
+          <ToggleButton value="csv" aria-label={t("CSV, for spreadsheets")}>CSV</ToggleButton>
+          <ToggleButton value="json" aria-label={t("JSON, structured data")}>JSON</ToggleButton>
+          <ToggleButton value="html" aria-label={t("HTML, readable in a browser")}>HTML</ToggleButton>
         </ToggleButtonGroup>
         <FormControl sx={{ flex: '1 1 46%', minWidth: 0 }} error={!selectedFields.length} disabled={disabled}>
-          <InputLabel id="include-fields-label">Include</InputLabel>
+          <InputLabel id="include-fields-label">{t("Include")}</InputLabel>
           <Select
             labelId="include-fields-label" id="include-fields-select" multiple
-            value={selectedFields} label="Include"
+            value={selectedFields} label={t("Include")}
             onChange={(event) => {
               const selected = event.target.value as string[];
               const fields = { ...config.fields };
               columnOrder.forEach((field) => { fields[field] = selected.includes(field); });
               onConfigChange({ fields });
             }}
-            renderValue={(selected) => `${selected.length} columns`}
+            renderValue={(selected) => countText('columns', selected.length)}
             MenuProps={{ PaperProps: { sx: { maxHeight: 380, maxWidth: 350 } } }}
             aria-describedby={!selectedFields.length ? 'fields-error' : undefined}
           >
             {columnOrder.map((field) => (
               <MenuItem key={field} value={field} sx={{ py: 0.5 }}>
-                <Checkbox checked={!!config.fields[field]} aria-label={`Include ${columnLabels[field].label}`} tabIndex={-1} />
+                <Checkbox checked={!!config.fields[field]} aria-label={t('Include {column}', { column: columnLabels[field].label })} tabIndex={-1} />
                 <ListItemText
                   primary={columnLabels[field].label}
                   secondary={columnLabels[field].secondaryLabel}
@@ -62,11 +63,11 @@ export const OutputSettings: React.FC<OutputSettingsProps> = ({ config, onConfig
               </MenuItem>
             ))}
           </Select>
-          {!selectedFields.length && <FormHelperText id="fields-error">Choose at least one column.</FormHelperText>}
+          {!selectedFields.length && <FormHelperText id="fields-error">{t("Choose at least one column.")}</FormHelperText>}
         </FormControl>
       </Stack>
       <Typography variant="caption" color="text.secondary">
-        {config.format === 'csv' ? 'CSV opens in Excel, Google Sheets and other spreadsheets.' : config.format === 'json' ? 'JSON keeps your selected fields as structured data.' : 'HTML gives you a readable file with clickable page links.'}
+        {config.format === 'csv' ? t("CSV opens in Excel, Google Sheets and other spreadsheets.") : config.format === 'json' ? t("JSON keeps your selected fields as structured data.") : t("HTML gives you a readable file with clickable page links.")}
       </Typography>
     </Stack>
   );
