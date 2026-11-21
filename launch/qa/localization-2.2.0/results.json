@@ -1,0 +1,128 @@
+{
+  "checked": "2026-11-21T08:33:13.907Z",
+  "scope": "Isolated fictional-history browser UI contexts. Native Chrome APIs and upgrades are covered separately.",
+  "cases": [
+    {
+      "locale": "en",
+      "status": "passed",
+      "checks": [
+        "no automatic history read",
+        "locale and accessible controls",
+        "CSV/JSON schema unchanged",
+        "localized HTML export",
+        "search, latest URL and cleanup",
+        "saved views retained after reload",
+        "empty export disabled",
+        "custom date validation",
+        "cancel and error recovery",
+        "no network calls",
+        "320/400/760/1280 width checks"
+      ]
+    },
+    {
+      "locale": "zh_CN",
+      "status": "passed",
+      "checks": [
+        "no automatic history read",
+        "locale and accessible controls",
+        "CSV/JSON schema unchanged",
+        "localized HTML export",
+        "search, latest URL and cleanup",
+        "saved views retained after reload",
+        "empty export disabled",
+        "custom date validation",
+        "cancel and error recovery",
+        "no network calls",
+        "320/400/760/1280 width checks"
+      ]
+    },
+    {
+      "locale": "es",
+      "status": "passed",
+      "checks": [
+        "no automatic history read",
+        "locale and accessible controls",
+        "CSV/JSON schema unchanged",
+        "localized HTML export",
+        "search, latest URL and cleanup",
+        "saved views retained after reload",
+        "empty export disabled",
+        "custom date validation",
+        "cancel and error recovery",
+        "no network calls",
+        "320/400/760/1280 width checks"
+      ]
+    },
+    {
+      "locale": "de",
+      "status": "passed",
+      "checks": [
+        "no automatic history read",
+        "locale and accessible controls",
+        "CSV/JSON schema unchanged",
+        "localized HTML export",
+        "search, latest URL and cleanup",
+        "saved views retained after reload",
+        "empty export disabled",
+        "custom date validation",
+        "cancel and error recovery",
+        "no network calls",
+        "320/400/760/1280 width checks"
+      ]
+    },
+    {
+      "locale": "pt_BR",
+      "status": "passed",
+      "checks": [
+        "no automatic history read",
+        "locale and accessible controls",
+        "CSV/JSON schema unchanged",
+        "localized HTML export",
+        "search, latest URL and cleanup",
+        "saved views retained after reload",
+        "empty export disabled",
+        "custom date validation",
+        "cancel and error recovery",
+        "no network calls",
+        "320/400/760/1280 width checks"
+      ]
+    },
+    {
+      "locale": "fr",
+      "status": "passed",
+      "checks": [
+        "no automatic history read",
+        "locale and accessible controls",
+        "CSV/JSON schema unchanged",
+        "localized HTML export",
+        "search, latest URL and cleanup",
+        "saved views retained after reload",
+        "empty export disabled",
+        "custom date validation",
+        "cancel and error recovery",
+        "no network calls",
+        "320/400/760/1280 width checks"
+      ]
+    },
+    {
+      "locale": "ja",
+      "status": "passed",
+      "checks": [
+        "no automatic history read",
+        "locale and accessible controls",
+        "CSV/JSON schema unchanged",
+        "localized HTML export",
+        "search, latest URL and cleanup",
+        "saved views retained after reload",
+        "empty export disabled",
+        "custom date validation",
+        "cancel and error recovery",
+        "no network calls",
+        "320/400/760/1280 width checks"
+      ]
+    }
+  ],
+  "browserVersion": "149.0.7827.55",
+  "bundleSha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+  "status": "passed"
+}

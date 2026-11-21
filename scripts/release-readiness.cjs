@@ -25,7 +25,7 @@ const allFields = {order:true,id:true,date:true,time:true,title:true,url:true,vi
 const exactFields = {...Object.fromEntries(Object.keys(allFields).map(key=>[key,false])),title:true,url:true,timestamp:true,domain:true};
 const selectRange = async (page,name) => {await page.getByRole('combobox',{name:'History range'}).click();await page.getByRole('option',{name,exact:true}).click();};
 const awaitLoaded = async page => {await page.getByRole('button',{name:'Refresh',exact:true}).waitFor();await page.getByRole('button',{name:'Refresh',exact:true}).waitFor({state:'visible'});await page.getByRole('list',{name:'History preview'}).waitFor();};
-const exportButton = page => page.getByRole('button',{name:/^Export [\d,]+ (visits|pages)/});
+const exportButton = page => page.getByRole('button',{name:/^Export [\d,]+ (visits?|pages?)/});
 const getPreviewURLs = page => page.getByRole('list',{name:'History preview'}).locator('li a').evaluateAll(links=>links.map(link=>link.getAttribute('href')));
 
 function parseCSV(csv) {
@@ -95,7 +95,7 @@ async function fixtureChecks(){
     });
     await check('Fixture: API failure preserves previous snapshot and retry succeeds',async()=>{
       await page.evaluate(()=>{__fixture.delay=0;__fixture.fail=true;});const before=await getPreviewURLs(page);
-      await page.getByRole('button',{name:'Refresh',exact:true}).click();await page.getByText('History is temporarily unavailable. Try again.').waitFor();assert.deepEqual(await getPreviewURLs(page),before);
+      await page.getByRole('button',{name:'Refresh',exact:true}).click();await page.getByText('History could not be loaded. Please try again.').waitFor();assert.deepEqual(await getPreviewURLs(page),before);
       await page.evaluate(()=>{__fixture.fail=false;});await page.getByRole('button',{name:'Refresh',exact:true}).click();await awaitLoaded(page);assert.deepEqual(await getPreviewURLs(page),before);
     });
     await check('Fixture: no-match and empty history states never download empty data',async()=>{

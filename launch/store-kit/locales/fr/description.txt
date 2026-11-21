@@ -1,0 +1,41 @@
+Exportez votre historique de navigation en CSV, JSON ou HTML lisible. Choisissez vos dates et vos colonnes, puis conservez les pages correspondantes dans un fichier local utile.
+
+HistoryOut est gratuit. Sans compte, sans abonnement et sans transfert de votre historique vers un serveur.
+
+TROIS FORMATS UTILES
+CSV : ouvrez et analysez votre historique dans Excel, Google Sheets ou un autre tableur.
+JSON : utilisez des données structurées dans vos scripts et vos outils.
+HTML : gardez un fichier lisible avec des liens cliquables, à ouvrir localement dans un navigateur.
+
+LE FICHIER À VOTRE MESURE
+Choisissez une période prédéfinie ou des dates personnalisées. Recherchez des titres et des URL, filtrez par site et sélectionnez les colonnes. Les champs facultatifs comprennent le domaine et l’horodatage. Gardez toutes les visites correspondantes ou une ligne par URL avec la dernière visite correspondante de chaque page.
+
+Le nettoyage facultatif des URL supprime les paramètres de requête et les fragments. Il n’anonymise pas votre historique : les titres et les chemins des URL peuvent encore contenir des informations personnelles.
+
+APERÇU, PUIS TÉLÉCHARGEMENT
+L’aperçu affiche jusqu’à 100 lignes. Le fichier téléchargé contient toutes les correspondances des résultats chargés. Actualisez pour lire les nouvelles visites.
+
+GRATUIT ET LOCAL
+HistoryOut lit l’historique disponible lorsque vous choisissez l’aperçu ou l’export. Il ne contient ni publicité ni outil d’analyse et ne demande aucun compte. Il ne transfère pas votre historique à un serveur et ne l’efface pas du navigateur. Les autorisations restent history, storage et sidePanel.
+
+DES FONCTIONS UTILES INCLUSES
+Les récapitulatifs quotidiens et les pages récemment visitées vous aident à retrouver des contenus utiles. Enregistrez une vue nommée pour réutiliser dates, filtres et réglages d’export. Les vues enregistrées mémorisent des réglages sur cet appareil, pas une archive permanente de l’historique.
+
+HistoryOut utilise l’historique disponible dans le profil actuel du navigateur. Il ne récupère pas les visites effacées et ne garantit pas l’accès aux anciens enregistrements d’un compte. Les compteurs représentent des événements de navigation, pas le temps passé ni la productivité.
+
+DÉSORMAIS EN SEPT LANGUES
+Anglais, chinois simplifié, espagnol, allemand, portugais du Brésil, français et japonais. L’interface suit la langue du navigateur. Les en-têtes CSV et les noms de champs JSON restent compatibles avec vos outils existants.
+
+SUGGÉREZ UNE FONCTION
+Proposez une amélioration ou votez pour une idée : https://historyout.featurebase.app/
+Le tableau est public et hébergé par Featurebase. Aucun historique ni réglage d’export n’est joint. Publier ou commenter peut nécessiter une connexion distincte à Featurebase. Aide privée : sauliusthedev@gmail.com.
+
+SOUTIEN FACULTATIF
+Une contribution volontaire soutient le développement indépendant : https://www.buymeacoffee.com/saulius.developer
+Toutes les fonctions restent gratuites, que vous contribuiez ou non. Recommander à un ami copie le lien d’installation pour vous permettre de le partager.
+
+Fonctions, exemples, navigateurs et notes de version : https://exportchromehistory.app/fr/
+
+NOUVEAUTÉS DE LA VERSION 2.2.0
+
+Nouveau dans la version 2.2.0 : utilisez HistoryOut en chinois simplifié, espagnol, allemand, portugais du Brésil, français ou japonais. L’interface, les pages d’accueil et de mise à jour, les exports HTML, le site et les images de la boutique sont traduits. L’anglais reste disponible. Les en-têtes CSV, champs JSON, vues enregistrées, réglages et autorisations restent compatibles. La vidéo YouTube ne change pas.

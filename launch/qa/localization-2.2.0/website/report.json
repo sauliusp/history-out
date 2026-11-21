@@ -1,0 +1,2198 @@
+{
+  "pages": 91,
+  "viewports": [
+    320,
+    390,
+    768,
+    1440
+  ],
+  "checks": 364,
+  "languageSwitches": 49,
+  "errors": [],
+  "reports": [
+    {
+      "route": "/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/export-chrome-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/history-trends-unlimited/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/better-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/export-chrome-history-to-excel/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/filter-browser-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/browser-history-limits/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/browsers/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/privacy/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/changelog/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/welcome/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/export-browser-history-to-html/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/export-chrome-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/history-trends-unlimited/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/better-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/export-chrome-history-to-excel/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/filter-browser-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/browser-history-limits/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/browsers/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/privacy/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/export-browser-history-to-html/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/welcome/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/changelog/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/export-chrome-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/history-trends-unlimited/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/better-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/export-chrome-history-to-excel/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/filter-browser-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/browser-history-limits/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/browsers/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/privacy/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/export-browser-history-to-html/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/welcome/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/changelog/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/export-chrome-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/history-trends-unlimited/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/better-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/export-chrome-history-to-excel/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/filter-browser-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/browser-history-limits/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/browsers/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/privacy/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/export-browser-history-to-html/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/welcome/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/changelog/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/export-chrome-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/history-trends-unlimited/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/better-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/export-chrome-history-to-excel/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/filter-browser-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/browser-history-limits/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/browsers/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/privacy/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/export-browser-history-to-html/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/welcome/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/changelog/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/export-chrome-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/history-trends-unlimited/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/better-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/export-chrome-history-to-excel/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/filter-browser-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/browser-history-limits/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/browsers/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/privacy/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/export-browser-history-to-html/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/welcome/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/changelog/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/export-chrome-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/history-trends-unlimited/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/better-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/export-chrome-history-to-excel/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/filter-browser-history/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/browser-history-limits/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/browsers/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/privacy/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/export-browser-history-to-html/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/welcome/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/changelog/",
+      "width": 320,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/export-chrome-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/history-trends-unlimited/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/better-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/export-chrome-history-to-excel/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/filter-browser-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/browser-history-limits/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/browsers/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/privacy/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/changelog/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/welcome/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/export-browser-history-to-html/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/export-chrome-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/history-trends-unlimited/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/better-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/export-chrome-history-to-excel/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/filter-browser-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/browser-history-limits/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/browsers/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/privacy/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/export-browser-history-to-html/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/welcome/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/changelog/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/export-chrome-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/history-trends-unlimited/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/better-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/export-chrome-history-to-excel/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/filter-browser-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/browser-history-limits/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/browsers/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/privacy/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/export-browser-history-to-html/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/welcome/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/changelog/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/export-chrome-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/history-trends-unlimited/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/better-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/export-chrome-history-to-excel/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/filter-browser-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/browser-history-limits/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/browsers/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/privacy/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/export-browser-history-to-html/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/welcome/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/changelog/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/export-chrome-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/history-trends-unlimited/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/better-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/export-chrome-history-to-excel/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/filter-browser-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/browser-history-limits/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/browsers/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/privacy/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/export-browser-history-to-html/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/welcome/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/changelog/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/export-chrome-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/history-trends-unlimited/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/better-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/export-chrome-history-to-excel/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/filter-browser-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/browser-history-limits/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/browsers/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/privacy/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/export-browser-history-to-html/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/welcome/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/changelog/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/export-chrome-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/history-trends-unlimited/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/better-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/export-chrome-history-to-excel/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/filter-browser-history/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/browser-history-limits/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/browsers/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/privacy/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/export-browser-history-to-html/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/welcome/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/changelog/",
+      "width": 390,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/export-chrome-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/history-trends-unlimited/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/better-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/export-chrome-history-to-excel/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/filter-browser-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/browser-history-limits/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/browsers/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/privacy/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/changelog/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/welcome/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/export-browser-history-to-html/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/export-chrome-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/history-trends-unlimited/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/better-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/export-chrome-history-to-excel/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/filter-browser-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/browser-history-limits/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/browsers/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/privacy/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/export-browser-history-to-html/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/welcome/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/changelog/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/export-chrome-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/history-trends-unlimited/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/better-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/export-chrome-history-to-excel/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/filter-browser-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/browser-history-limits/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/browsers/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/privacy/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/export-browser-history-to-html/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/welcome/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/changelog/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/export-chrome-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/history-trends-unlimited/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/better-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/export-chrome-history-to-excel/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/filter-browser-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/browser-history-limits/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/browsers/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/privacy/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/export-browser-history-to-html/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/welcome/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/changelog/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/export-chrome-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/history-trends-unlimited/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/better-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/export-chrome-history-to-excel/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/filter-browser-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/browser-history-limits/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/browsers/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/privacy/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/export-browser-history-to-html/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/welcome/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/changelog/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/export-chrome-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/history-trends-unlimited/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/better-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/export-chrome-history-to-excel/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/filter-browser-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/browser-history-limits/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/browsers/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/privacy/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/export-browser-history-to-html/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/welcome/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/changelog/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/export-chrome-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/history-trends-unlimited/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/better-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/export-chrome-history-to-excel/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/filter-browser-history/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/browser-history-limits/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/browsers/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/privacy/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/export-browser-history-to-html/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/welcome/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/changelog/",
+      "width": 768,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/export-chrome-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/history-trends-unlimited/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/better-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/alternatives/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/export-chrome-history-to-excel/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/filter-browser-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/browser-history-limits/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/browsers/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/privacy/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/changelog/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/welcome/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/guides/export-browser-history-to-html/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/export-chrome-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/history-trends-unlimited/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/better-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/alternatives/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/export-chrome-history-to-excel/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/filter-browser-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/browser-history-limits/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/browsers/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/privacy/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/guides/export-browser-history-to-html/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/welcome/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/zh-cn/changelog/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/export-chrome-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/history-trends-unlimited/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/better-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/alternatives/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/export-chrome-history-to-excel/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/filter-browser-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/browser-history-limits/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/browsers/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/privacy/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/guides/export-browser-history-to-html/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/welcome/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/es/changelog/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/export-chrome-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/history-trends-unlimited/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/better-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/alternatives/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/export-chrome-history-to-excel/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/filter-browser-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/browser-history-limits/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/browsers/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/privacy/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/guides/export-browser-history-to-html/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/welcome/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/de/changelog/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/export-chrome-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/history-trends-unlimited/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/better-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/alternatives/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/export-chrome-history-to-excel/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/filter-browser-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/browser-history-limits/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/browsers/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/privacy/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/guides/export-browser-history-to-html/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/welcome/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/pt-br/changelog/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/export-chrome-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/history-trends-unlimited/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/better-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/alternatives/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/export-chrome-history-to-excel/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/filter-browser-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/browser-history-limits/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/browsers/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/privacy/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/guides/export-browser-history-to-html/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/welcome/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/fr/changelog/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/export-chrome-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/history-trends-unlimited/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/better-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/alternatives/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/export-chrome-history-to-excel/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/filter-browser-history/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/browser-history-limits/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/browsers/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/privacy/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/guides/export-browser-history-to-html/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/welcome/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    },
+    {
+      "route": "/ja/changelog/",
+      "width": 1440,
+      "status": 200,
+      "overflow": 0
+    }
+  ]
+}

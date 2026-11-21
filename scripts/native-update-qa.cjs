@@ -19,10 +19,19 @@ const waitFor=async(fn,message)=>{for(let attempt=0;attempt<100;attempt++){if(aw
   execFileSync('unzip',['-q',baseline,'-d',extension]);
   // The source-baseline archive stores files at its root; assert instead of guessing.
   const oldManifest=JSON.parse(await fs.readFile(path.join(extension,'manifest.json'),'utf8'));assert.notEqual(oldManifest.version,candidateVersion);
+  const candidateManifest=JSON.parse(await fs.readFile('extension-unpacked/manifest.json','utf8'));
+  // Store signing supplied this identity to older packages even when their
+  // source manifest omitted it. Give the unpacked baseline that same public
+  // identity so this test exercises an update of the existing extension.
+  if(candidateManifest.key){
+    if(oldManifest.key)assert.equal(oldManifest.key,candidateManifest.key,'Existing public key changed');
+    else{oldManifest.key=candidateManifest.key;await fs.writeFile(path.join(extension,'manifest.json'),JSON.stringify(oldManifest,null,2));report.baselineIdentity='Published public key added to the unpacked source baseline; code unchanged';}
+  }
   const options={channel:'chromium',headless:true,args:[`--disable-extensions-except=${extension}`,`--load-extension=${extension}`]};
   context=await chromium.launchPersistentContext(profile,options);let worker=context.serviceWorkers()[0]||await context.waitForEvent('serviceworker');const extensionId=new URL(worker.url()).host;report.browserVersion=context.browser().version();
   const config={format:'json',historyRange:'week',dateRange:null,fields:{order:true,id:false,date:true,time:true,title:true,url:true,visitCount:false,typedCount:false,transition:false}};
-  await worker.evaluate(async value=>{await chrome.storage.local.set({HISTORY_OUTPUT_CONFIG:value});await chrome.history.addUrl({url:'https://native-upgrade.historyout-qa.invalid/retained'});},config);
+  const savedViews=[{id:'upgrade-preserved-view',name:'研究 / Recherche / Pesquisa',query:'retained',domain:'native-upgrade.historyout-qa.invalid',uniqueUrls:true,stripQuery:true,config}];
+  await worker.evaluate(async ({config,savedViews})=>{await chrome.storage.local.set({HISTORY_OUTPUT_CONFIG:config,historyoutSavedViews:savedViews});await chrome.history.addUrl({url:'https://native-upgrade.historyout-qa.invalid/retained'});},{config,savedViews});
   await fs.cp(path.resolve('extension-unpacked'),extension,{recursive:true});
   report.payloadSha256=payloadSha256(extension);
   // Use Chrome's native unpacked installer so it processes the version transition.
@@ -36,6 +45,8 @@ const waitFor=async(fn,message)=>{for(let attempt=0;attempt<100;attempt++){if(aw
   let tabs=context.pages().map(page=>({url:page.url()}));report.lifecycleTabs=tabs;const changes=tabs.filter(tab=>tab.url?.startsWith(`chrome-extension://${extensionId}/updated.html`));
   assert.equal(changes.length,1);assert.equal(tabs.filter(tab=>tab.url?.endsWith('/welcome.html')).length,0);report.cases.push({name:'Native upgrade opens one internal update page and no welcome',status:'passed'});
   const saved=await worker.evaluate(async()=>(await chrome.storage.local.get('HISTORY_OUTPUT_CONFIG')).HISTORY_OUTPUT_CONFIG);assert.deepEqual(saved,config);
+  assert.deepEqual(await worker.evaluate(async()=>(await chrome.storage.local.get('historyoutSavedViews')).historyoutSavedViews),savedViews);
+  report.cases.push({name:'Update preserves saved view names, filters and settings exactly',status:'passed'});
   const history=await worker.evaluate(()=>chrome.history.search({text:'native-upgrade.historyout-qa.invalid',startTime:0}));assert.equal(history.length,1);report.cases.push({name:'Real update preserves exact prior preferences and original native history',status:'passed'});
   const app=await context.newPage();await app.goto(`chrome-extension://${extensionId}/side-panel.html`);await app.getByRole('button',{name:'Preview',exact:true}).click();await app.getByRole('button',{name:'Refresh',exact:true}).waitFor();assert.equal(await app.getByRole('link',{name:'native-upgrade.historyout-qa.invalid',exact:true}).count(),1);
   await context.close();context=null;

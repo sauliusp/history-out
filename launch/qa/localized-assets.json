@@ -1,0 +1,515 @@
+{
+  "generatedAt": "2026-11-21T08:34:29.689Z",
+  "version": "2.2.0",
+  "bundleSha256": "c32111fe12202b03ff6e60edc2fcf06003ca6265872453de41d98caf15832132",
+  "passed": true,
+  "locales": [
+    "en",
+    "zh_CN",
+    "es",
+    "de",
+    "pt_BR",
+    "fr",
+    "ja"
+  ],
+  "images": 63,
+  "storeScreenshots": 35,
+  "promotionalVariants": 14,
+  "websiteImages": 14,
+  "chromeGlobalPromosUnchanged": true,
+  "youtubeVideoUnchanged": true,
+  "listings": [
+    {
+      "locale": "en",
+      "language": "English",
+      "titleLength": 35,
+      "summaryLength": 114,
+      "descriptionLength": 3046
+    },
+    {
+      "locale": "zh_CN",
+      "language": "中文（简体）",
+      "titleLength": 19,
+      "summaryLength": 51,
+      "descriptionLength": 1254
+    },
+    {
+      "locale": "es",
+      "language": "Español",
+      "titleLength": 31,
+      "summaryLength": 102,
+      "descriptionLength": 3356
+    },
+    {
+      "locale": "de",
+      "language": "Deutsch",
+      "titleLength": 39,
+      "summaryLength": 113,
+      "descriptionLength": 3545
+    },
+    {
+      "locale": "pt_BR",
+      "language": "Português (Brasil)",
+      "titleLength": 31,
+      "summaryLength": 104,
+      "descriptionLength": 3342
+    },
+    {
+      "locale": "fr",
+      "language": "Français",
+      "titleLength": 34,
+      "summaryLength": 111,
+      "descriptionLength": 3662
+    },
+    {
+      "locale": "ja",
+      "language": "日本語",
+      "titleLength": 24,
+      "summaryLength": 56,
+      "descriptionLength": 1650
+    }
+  ],
+  "files": [
+    {
+      "locale": "en",
+      "file": "launch/store-kit/locales/en/screenshots/01-export-browser-history.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "9fe4af182d6bcad1f805ef60e305d39202b31b1419d029ec28c5132441261516"
+    },
+    {
+      "locale": "en",
+      "file": "launch/store-kit/locales/en/screenshots/02-customize-your-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "5907632a29f66f18a6e43170cbededba8dd00efa88cd9b68a2cfac15ca345d15"
+    },
+    {
+      "locale": "en",
+      "file": "launch/store-kit/locales/en/screenshots/03-readable-html-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "5730a81d14e40993bb1ebbe5d169ac946ba99c4132edfe4a1fa4938cf1cd38bf"
+    },
+    {
+      "locale": "en",
+      "file": "launch/store-kit/locales/en/screenshots/04-filter-your-results.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "b3ed421aaf564837c89c28cc817f9342daad099008f868c221b60441e3391b61"
+    },
+    {
+      "locale": "en",
+      "file": "launch/store-kit/locales/en/screenshots/05-revisit-and-repeat.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "2a1ce1f5e40090addca1352ebc3b335f6a54ab9e54476de730c84006c19ffdb3"
+    },
+    {
+      "locale": "en",
+      "file": "launch/store-kit/locales/en/promotional/small-promo-440x280.png",
+      "width": 440,
+      "height": 280,
+      "sha256": "0b9efa239f8971f7e6aee5128893b0b4272ff21093e4f3d9a734cb4ac3fbd1a4"
+    },
+    {
+      "locale": "en",
+      "file": "launch/store-kit/locales/en/promotional/marquee-1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "sha256": "c4c4b3cb613639034463f96bee92575d02084926b2d9d66643eb15a5f34f6d7b"
+    },
+    {
+      "locale": "en",
+      "file": "launch/assets/localized/en/website-export-hero.png",
+      "width": 1600,
+      "height": 1350,
+      "sha256": "4b66b77f8960b6f44c34540e4b80ae20ff7fa30a9a28fd48a69b3707dac91a00"
+    },
+    {
+      "locale": "en",
+      "file": "launch/assets/localized/en/social-card.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "70ffa942ea130055e99b59cf367240993e2a770b1c69677f1b743aa731f2161d"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/store-kit/locales/zh_CN/screenshots/01-export-browser-history.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "99f8be42cd44edc98d746c25803f78d7d0e542a28bc8f16cfe23d85e48c6a368"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/store-kit/locales/zh_CN/screenshots/02-customize-your-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "a5ead9c93478b6b035b0e1b61c6078853d576bc85a335b7bbcd700293522411b"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/store-kit/locales/zh_CN/screenshots/03-readable-html-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "267b127d73403bd2f212975f2b2d5dd496e44dab81bd518bdc3b4500cd146241"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/store-kit/locales/zh_CN/screenshots/04-filter-your-results.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "e2a45ac37c566948f95ed6ba8d3cd0b818ba369a56a6418e9992427df7f9e7c5"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/store-kit/locales/zh_CN/screenshots/05-revisit-and-repeat.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "5775e0ea0bad5373de341dfae1e6a2c8a8db082ea8a67d75061ef165a758b2b8"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/store-kit/locales/zh_CN/promotional/small-promo-440x280.png",
+      "width": 440,
+      "height": 280,
+      "sha256": "ea24601d798d8f20319251abf1a3b96062fca39997004882982698cf52953c8b"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/store-kit/locales/zh_CN/promotional/marquee-1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "sha256": "7692dbe134a7a3a00764be8e77927a5b763635db551a1b4b302ddb52eb613689"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/assets/localized/zh_CN/website-export-hero.png",
+      "width": 1600,
+      "height": 1350,
+      "sha256": "cb0c8bd327db91f7f0f60e5749080dcb9cdc6e8c619014ae4c5a7312b14f54a0"
+    },
+    {
+      "locale": "zh_CN",
+      "file": "launch/assets/localized/zh_CN/social-card.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "b49a1b43e0da7e2a61dc1b185c818d8a89c36b3150f717cf0cf143a3e3a3a88c"
+    },
+    {
+      "locale": "es",
+      "file": "launch/store-kit/locales/es/screenshots/01-export-browser-history.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "84b3c54cf23383bccd69bcbd0b152f7bda7c03268658e0e99bea45f5f29e0245"
+    },
+    {
+      "locale": "es",
+      "file": "launch/store-kit/locales/es/screenshots/02-customize-your-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "977a32d4b1e1caee39bda76fd0d08d2a346bb2ca2f14f0fe0f4be6d679444575"
+    },
+    {
+      "locale": "es",
+      "file": "launch/store-kit/locales/es/screenshots/03-readable-html-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "47a0f04287e592c673bc95b61e2bac783cdee10ad0011a9b59edf980b20f8b57"
+    },
+    {
+      "locale": "es",
+      "file": "launch/store-kit/locales/es/screenshots/04-filter-your-results.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "67d6092410d86fe46887724bcc8a939660dcfedf52e435a78a552453fa5cc0dd"
+    },
+    {
+      "locale": "es",
+      "file": "launch/store-kit/locales/es/screenshots/05-revisit-and-repeat.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "6a574bd87b00fa383140b50487a7dbfa08edc0bef6c90b41e26ed7ad62bdc5c1"
+    },
+    {
+      "locale": "es",
+      "file": "launch/store-kit/locales/es/promotional/small-promo-440x280.png",
+      "width": 440,
+      "height": 280,
+      "sha256": "a80273f0708fe45b221993e1b142f82f6063a91f5dbc650dff5672c6ba265bcb"
+    },
+    {
+      "locale": "es",
+      "file": "launch/store-kit/locales/es/promotional/marquee-1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "sha256": "17dacdd9a993194f4d52cdfc7b5577e822d75f5268dc3b63456296dacca7e3ff"
+    },
+    {
+      "locale": "es",
+      "file": "launch/assets/localized/es/website-export-hero.png",
+      "width": 1600,
+      "height": 1350,
+      "sha256": "a51fab2b2ad2834f7657c9d5dd4dc129ccf0daafaaf381273a14a9b84ecfa364"
+    },
+    {
+      "locale": "es",
+      "file": "launch/assets/localized/es/social-card.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "cba15ab5e0b17ae588f0da82d91c5c3d5baee34c3f26ece6c7854c03417f66d5"
+    },
+    {
+      "locale": "de",
+      "file": "launch/store-kit/locales/de/screenshots/01-export-browser-history.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "45cf12d38c6ad66afb37d8826f85f3607e45f60c8da477495dda0f07900808ea"
+    },
+    {
+      "locale": "de",
+      "file": "launch/store-kit/locales/de/screenshots/02-customize-your-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "c65dc90532fa44fe3aa779ca2576774c3d5ae2510f6e778195387167e449dee7"
+    },
+    {
+      "locale": "de",
+      "file": "launch/store-kit/locales/de/screenshots/03-readable-html-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "61a79cc4af4ab4dd0b3f785af5b262f6efae3e7f4578c0e4f2cc42e8db16354d"
+    },
+    {
+      "locale": "de",
+      "file": "launch/store-kit/locales/de/screenshots/04-filter-your-results.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "08dc289da7c75dddff52bfd5997b78aa46146573c95cf1af455c6406dd62bbfd"
+    },
+    {
+      "locale": "de",
+      "file": "launch/store-kit/locales/de/screenshots/05-revisit-and-repeat.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "955d848c805a9a0f78010974a3a6ef7afa2c5592d612bca5d97bae19827e2cec"
+    },
+    {
+      "locale": "de",
+      "file": "launch/store-kit/locales/de/promotional/small-promo-440x280.png",
+      "width": 440,
+      "height": 280,
+      "sha256": "97fae413d5d3fbde098ffb924d0dc2f66778c6fa0ef041a222a7e67609b1453f"
+    },
+    {
+      "locale": "de",
+      "file": "launch/store-kit/locales/de/promotional/marquee-1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "sha256": "5c4e464a8263959fecd5ccec952b04efcceb986a4eeb7ed17ae2ded468fc1edd"
+    },
+    {
+      "locale": "de",
+      "file": "launch/assets/localized/de/website-export-hero.png",
+      "width": 1600,
+      "height": 1350,
+      "sha256": "50cb89bb05a0b0731eeca39cf0585fc6fac5953dbaa7601e3eab214ed81b2b6d"
+    },
+    {
+      "locale": "de",
+      "file": "launch/assets/localized/de/social-card.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "add963caddee715b0c0aaf0f2411248263e7e335683a3710671540c078abfd39"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/store-kit/locales/pt_BR/screenshots/01-export-browser-history.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "4773c0f658302967eba5bc960c58ac5a948d40cd271392cf03b9a1b9a5480c7d"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/store-kit/locales/pt_BR/screenshots/02-customize-your-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "4ae440e6317639b8a98871847c01adb3f28ec0dea2f9da97877b229ba2a8ed72"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/store-kit/locales/pt_BR/screenshots/03-readable-html-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "d1f7edcec8ebb106e5a48fe9d79f8de7cd187cfb1c9c04a02403d7c4c82443dd"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/store-kit/locales/pt_BR/screenshots/04-filter-your-results.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "9bc9f676acc67ae4c17661984e9278404d41905b8e9174928f4a84637c0ec144"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/store-kit/locales/pt_BR/screenshots/05-revisit-and-repeat.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "fcbb142943ae8378400f2f2d4cf5c767cff07b407206b41412ad5c73812f32b8"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/store-kit/locales/pt_BR/promotional/small-promo-440x280.png",
+      "width": 440,
+      "height": 280,
+      "sha256": "ead90e0cb2c9871ac9fa8054fd1bf7ceaf7c6f459f1d387fad1292762910b09d"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/store-kit/locales/pt_BR/promotional/marquee-1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "sha256": "bfa70cd7a90e8a539ff01791f3073647929796648c9703b13477d7899aa06af0"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/assets/localized/pt_BR/website-export-hero.png",
+      "width": 1600,
+      "height": 1350,
+      "sha256": "778d82c1777f314f2979d282cfe0b09d4a5c71f1860f7ffad994b91cebd5ec29"
+    },
+    {
+      "locale": "pt_BR",
+      "file": "launch/assets/localized/pt_BR/social-card.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "28d9c0482f8374245dd125450cbef9513bc44dbae4ff47c546c8e5110bfbd1ce"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/store-kit/locales/fr/screenshots/01-export-browser-history.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "498dccfddbb62c7b8ec7c68cf0144b0545301b929dc2bdde37432db98117352c"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/store-kit/locales/fr/screenshots/02-customize-your-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "fd0edfb4a9b73038d3b8ef785bd91b3ceb3718837ef6b4f4f57f0fdfe992b17e"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/store-kit/locales/fr/screenshots/03-readable-html-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "46c5a143c441d08fe5c76c538014398bc1b11b800d0a00bcb4664db6476212d2"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/store-kit/locales/fr/screenshots/04-filter-your-results.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "3505caa3f98474bf52fd4505eb971a4ed951c338202251e36e5f4d8753c37d0b"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/store-kit/locales/fr/screenshots/05-revisit-and-repeat.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "2f8472c7e432ea616ecfff7e1db4e06b06d69c461897d2170d142d18468ad066"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/store-kit/locales/fr/promotional/small-promo-440x280.png",
+      "width": 440,
+      "height": 280,
+      "sha256": "3adac75673ec6c2b0e237fc376aec10bd680ac3073d7c6c3c13bb691451bd72e"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/store-kit/locales/fr/promotional/marquee-1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "sha256": "f434769a8e2af03a384d47a8750f8cb1f09d239760c6b9ca5e5c9ef98dd37ec0"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/assets/localized/fr/website-export-hero.png",
+      "width": 1600,
+      "height": 1350,
+      "sha256": "c1b05aa6c417e383eccd5abce507a44da70e64ec825a6c86860eef986f2ee0b5"
+    },
+    {
+      "locale": "fr",
+      "file": "launch/assets/localized/fr/social-card.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "620fe11e833c23d61ad0d582f36e57ccb6bfa6326044527e07a0956fc955dc50"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/store-kit/locales/ja/screenshots/01-export-browser-history.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "31ade66080338ea795ca57075dedac912c005bb034f7bd1207b85ae5e36eef12"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/store-kit/locales/ja/screenshots/02-customize-your-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "1550ad287831db6f08103252d0598c16dc9933e370aaaccd6bf2ed3cb66c0bc6"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/store-kit/locales/ja/screenshots/03-readable-html-export.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "37f22c56b46df88626ffd6f069ad5d7ce2ef93d1cb14923fd8629bfe9528498c"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/store-kit/locales/ja/screenshots/04-filter-your-results.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "061dbbe6962b65971aafbd08c2e46b9602192eeaebad590acc1ec06b7f45d194"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/store-kit/locales/ja/screenshots/05-revisit-and-repeat.png",
+      "width": 1280,
+      "height": 800,
+      "sha256": "0fc1fe2bcb61abe7000cf51a546a7a8de881dc2275f9e4b94b8ba00d80fbb663"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/store-kit/locales/ja/promotional/small-promo-440x280.png",
+      "width": 440,
+      "height": 280,
+      "sha256": "f731e0ae6dac3c91566f4268605da54bf991e6974a540354d8bea20a595db74b"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/store-kit/locales/ja/promotional/marquee-1400x560.png",
+      "width": 1400,
+      "height": 560,
+      "sha256": "19e47512a1a3e0fd5a67dfb213b14fe7589a0a8d93aea802dda9f6713e50098c"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/assets/localized/ja/website-export-hero.png",
+      "width": 1600,
+      "height": 1350,
+      "sha256": "8e2a7334cb8ec38eb986310cc737ed58457d851b084a6b9804c043dc524a5ede"
+    },
+    {
+      "locale": "ja",
+      "file": "launch/assets/localized/ja/social-card.png",
+      "width": 1280,
+      "height": 720,
+      "sha256": "023b07e70626b23253da6c265b9ecba09302f4c133f7dc819acc1a87eb4c6847"
+    }
+  ]
+}

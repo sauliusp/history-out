@@ -1,3 +1,4 @@
+import { t, formatLocale } from '../i18n';
 import React from 'react';
 import { Button, Stack, TextField, Typography } from '@mui/material';
 import { DateRange } from '../types/DateRange';
@@ -33,35 +34,34 @@ export const DateRangePicker: React.FC<DateRangePickerProps> = ({ value, onChang
     new Date(value.startTime).setHours(0, 0, 0, 0) !== value.startTime ||
     new Date(value.endTime).setHours(23, 59, 59, 999) !== value.endTime
   );
-  const exactTime = (timestamp: number) => new Date(timestamp).toLocaleString(undefined, {
+  const exactTime = (timestamp: number) => new Date(timestamp).toLocaleString(formatLocale(), {
     year: 'numeric', month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', second: '2-digit',
   });
 
   return (
-    <Stack spacing={1} role="group" aria-label="Custom date range, in your local time">
+    <Stack spacing={1} role="group" aria-label={t("Custom date range, in your local time")}>
       {partialDays && <Typography id="exact-saved-range" variant="caption" color="text.secondary">
-        Exact saved times: {exactTime(value!.startTime)} to {exactTime(value!.endTime)} (your local time).
-        {' '}These are the times used for preview and export. You can use full local days for the dates shown below.
+        {t('Exact saved times: {start} to {end} (your local time). These are the times used for preview and export. You can use full local days for the dates shown below.', { start: exactTime(value!.startTime), end: exactTime(value!.endTime) })}
       </Typography>}
       {partialDays && <Button size="small" disabled={disabled} sx={{alignSelf: 'flex-start'}} onClick={() => {
         if (isValidDateRange(value)) onChange({
           startTime: new Date(value.startTime).setHours(0, 0, 0, 0),
           endTime: new Date(value.endTime).setHours(23, 59, 59, 999),
         });
-      }}>Use full local days</Button>}
+      }}>{t("Use full local days")}</Button>}
       <Stack direction="row" spacing={1}>
       <TextField
-        label="From" type="date" fullWidth disabled={disabled}
+        label={t("From")} type="date" fullWidth disabled={disabled}
         value={value ? formatDate(value.startTime) : ''}
         onChange={(event) => updateDate(event.target.value, false)}
-        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, 'aria-label': 'Start date', 'aria-describedby': partialDays ? 'exact-saved-range' : undefined } }}
+        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, 'aria-label': t("Start date"), 'aria-describedby': partialDays ? 'exact-saved-range' : undefined } }}
         sx={{ minWidth: 0, '& input': { minWidth: 0, px: 1 } }}
       />
       <TextField
-        label="Through" type="date" fullWidth disabled={disabled}
+        label={t("Through")} type="date" fullWidth disabled={disabled}
         value={value ? formatDate(value.endTime) : ''}
         onChange={(event) => updateDate(event.target.value, true)}
-        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, min: value ? formatDate(value.startTime) : undefined, 'aria-label': 'End date', 'aria-describedby': partialDays ? 'exact-saved-range' : undefined } }}
+        slotProps={{ inputLabel: { shrink: true }, htmlInput: { max: today, min: value ? formatDate(value.startTime) : undefined, 'aria-label': t("End date"), 'aria-describedby': partialDays ? 'exact-saved-range' : undefined } }}
         sx={{ minWidth: 0, '& input': { minWidth: 0, px: 1 } }}
       />
       </Stack>

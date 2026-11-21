@@ -1,0 +1,19 @@
+{
+  "name": "HistoryOut - 导出浏览历史",
+  "shortDescription": "将浏览历史导出为 CSV、JSON 或 HTML。选择日期、列和匹配的页面。免费、本地处理，无需账户。",
+  "description": "将浏览记录导出为 CSV、JSON 或易读的 HTML 文件。选择日期和导出列，将匹配的网页保存在实用的本地文件中。\n\nHistoryOut 完全免费。无需账号，无需订阅，也不会上传你的浏览记录。\n\n三种实用格式\nCSV：在 Excel、Google 表格或其他电子表格工具中打开并分析记录。\nJSON：在脚本和工作流程中使用结构化记录。\nHTML：保存清晰易读、带有可点击链接的文件，直接在浏览器中本地打开。\n\n按需导出\n使用预设日期范围或自定义日期。搜索网页标题和网址，按网站筛选，并选择需要的导出列。可选字段包括域名和时间戳。保留所有匹配的访问记录，或选择每个网址一行，仅保留每个网页最近一次匹配的访问。\n\n可选的网址清理功能会移除查询参数和片段。这不会使浏览记录匿名化：网页标题和网址路径仍可能包含个人信息。\n\n先预览，再下载\n预览最多显示 100 行。下载文件包含已加载结果中所有匹配项。点击刷新可读取新的访问记录。\n\n免费且在本地运行\n只有选择预览或导出时，HistoryOut 才会读取可用的浏览记录。没有广告、分析追踪或账号要求。不会将记录上传到服务器，也不会删除浏览记录。权限仍为 history、storage 和 sidePanel。\n\n实用功能，全部包含\n每日概览和最近浏览轨迹帮助你重访有用的网页。保存命名视图，以便下次重复使用日期、筛选条件和导出设置。已保存视图仅在此设备上记住设置，不会建立永久的浏览记录存档。\n\nHistoryOut 只能处理当前浏览器个人资料中可用的记录。无法恢复已删除的记录，也不保证能够访问账号中更早的历史记录。访问次数表示导航事件，不代表浏览时长或工作效率。\n\n现已支持七种语言\n英语、简体中文、西班牙语、德语、巴西葡萄牙语、法语和日语。界面跟随浏览器语言。CSV 列名和 JSON 字段名保持兼容，方便继续使用现有工作流程。\n\n建议新功能\n提出改进建议或为想法投票：https://historyout.featurebase.app/\n该反馈看板由 Featurebase 托管并公开显示，不会附带浏览记录或导出设置。发布或评论可能需要单独登录 Featurebase。私人帮助请联系 sauliusthedev@gmail.com。\n\n自愿支持\n你可以自愿捐助独立开发：https://www.buymeacoffee.com/saulius.developer\n无论是否捐助，所有功能均免费。“推荐给朋友”可复制安装链接，供你自行分享。\n\n功能、示例、浏览器选项和更新说明：https://exportchromehistory.app/zh-cn/\n\n2.2.0 更新内容\n\n2.2.0 新增：支持简体中文、西班牙语、德语、巴西葡萄牙语、法语和日语。工作区、欢迎页、更新页、HTML 导出文件、网站和商店图片均已本地化，英语仍然可用。CSV 列名、JSON 字段名、已保存视图、导出设置和权限保持兼容。现有 YouTube 演示视频保持不变。",
+  "website": "https://exportchromehistory.app/zh-cn/",
+  "privacyPolicy": "https://exportchromehistory.app/zh-cn/privacy/",
+  "support": "https://historyout.featurebase.app/",
+  "optionalContribution": "https://www.buymeacoffee.com/saulius.developer",
+  "price": "Free",
+  "language": "中文（简体）",
+  "locale": "zh_CN",
+  "technicalVersion": "2.2.0",
+  "storePublication": "Prepared localization candidate; not uploaded or submitted by this generation command.",
+  "existingItemId": "idohnkdgejocejlkihihonhemndpiiei",
+  "youtubeVideo": "https://youtu.be/cGybkRSkk2Y",
+  "contactEmail": "sauliusthedev@gmail.com",
+  "feedback": "https://historyout.featurebase.app/",
+  "changelog": "2.2.0 新增：支持简体中文、西班牙语、德语、巴西葡萄牙语、法语和日语。工作区、欢迎页、更新页、HTML 导出文件、网站和商店图片均已本地化，英语仍然可用。CSV 列名、JSON 字段名、已保存视图、导出设置和权限保持兼容。现有 YouTube 演示视频保持不变。"
+}

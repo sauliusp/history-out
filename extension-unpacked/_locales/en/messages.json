@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "HistoryOut - Export Browser History"
+  },
+  "extensionDescription": {
+    "message": "Export browser history as CSV, JSON or HTML. Choose dates, columns and matching pages. Free, local and no account."
+  },
+  "actionTitle": {
+    "message": "Click to open HistoryOut"
+  },
+  "onboardingFolder": {
+    "message": "."
+  }
+}

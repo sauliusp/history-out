@@ -1,3 +1,4 @@
+import { formatLocale, localizedError } from '../i18n';
 import { DateRange } from '../types/DateRange';
 import { TransitionType } from '../types/TransitionType';
 import { OutputHistoryItem } from '../types/OutputHistoryItem';
@@ -31,7 +32,7 @@ function withAbort<T>(promise: Promise<T>, signal?: AbortSignal): Promise<T> {
 }
 
 function validateRange(range: DateRange): void {
-  if (!isValidDateRange(range)) throw new Error('Choose a valid start and end date.');
+  if (!isValidDateRange(range)) throw localizedError("Choose a valid start and end date.");
 }
 
 export class HistoryService {
@@ -57,7 +58,7 @@ export class HistoryService {
     }), options.signal);
     checkAborted(options.signal);
     if (items.length >= maxResults) {
-      throw new Error('Your browser returned too many pages to safely export. Choose a more recent start date.');
+      throw localizedError("Your browser returned too many pages to safely export. Choose a more recent start date.");
     }
     return items;
   }
@@ -77,8 +78,8 @@ export class HistoryService {
   ): Promise<OutputHistoryItem[]> {
     validateRange(dateRange);
     checkAborted(options.signal);
-    const dateFormatter = new Intl.DateTimeFormat(undefined, { year: 'numeric', month: 'numeric', day: 'numeric' });
-    const timeFormatter = new Intl.DateTimeFormat(undefined, { hour: 'numeric', minute: 'numeric', second: 'numeric' });
+    const dateFormatter = new Intl.DateTimeFormat(formatLocale(), { year: 'numeric', month: 'numeric', day: 'numeric' });
+    const timeFormatter = new Intl.DateTimeFormat(formatLocale(), { hour: 'numeric', minute: 'numeric', second: 'numeric' });
     // Chrome normally returns one row per URL. Defend against duplicate/empty URLs.
     const seenUrls = new Set<string>();
     const candidates = items.filter((item) => {

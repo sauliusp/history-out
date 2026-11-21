@@ -1,21 +1,22 @@
-# Chrome Web Store update
+# Chrome Web Store localization update
 
-Updated 9 September 2026. Save a draft on the existing item `idohnkdgejocejlkihihonhemndpiiei` to preserve its users, reviews and update path. The owner reviews and submits separately. The product remains **HistoryOut**; 2.1.0 is the technical release version.
+Prepared 21 November 2026. Update the existing item `idohnkdgejocejlkihihonhemndpiiei` to preserve users, reviews and the update path. Version 2.1.0 was confirmed published in the signed-in developer dashboard. Version 2.2.0 is the localization candidate.
 
-Current preparation status: 2.1.0 is a local review candidate. No package upload, dashboard edit, review submission, or publication has been performed for this candidate. User approval is required before shipping.
+The user requires a separate branch, thorough regression tests and a Codex review of the PR into `main` before live publication. Building this kit does not upload, submit or publish anything. Track the actual review and release state in `launch/review-2.2.0.md`.
 
 ## Upload fields
 
-Use `listing.json` for field values, `description.txt` for the public description, and `changelog.txt` for the plain-language update notes. Include those notes in the Store listing when preparing the approved submission. Use the freshly tested `historyout-2.1.0-chrome.zip` from this folder when the kit contains it, or the final matching file under `releases/`. Never upload this entire marketing kit as the extension package.
+Use the root `listing.json`, `description.txt` and `changelog.txt` for English. Each directory in `locales/` contains the corresponding complete fields and five ordered screenshots for `zh_CN`, `es`, `de`, `pt_BR`, `fr` and `ja`.
 
-1. Replace the package on the existing item.
-2. Set the public name and description from `listing.json`. The name must match the manifest.
-3. Upload `brand/icon128.png`, the five ordered files under `screenshots/`, and both files under `promotional/`.
-4. Add the new public YouTube demo: https://youtu.be/cGybkRSkk2Y. Do not use the old silent draft.
-5. Use the public website and privacy URLs from `listing.json`. Check both anonymously before saving the draft.
-6. Complete the privacy fields below, review the final listing preview, and save the draft only. The owner reviews and submits separately; do not submit or publish during draft preparation.
+1. Upload only the final tested `historyout-2.2.0-chrome.zip` to the existing item. Never upload the outer marketing kit as an extension package.
+2. The package supplies localized names and summaries. Check each against the matching locale metadata.
+3. Use the five files in `screenshots/` for English and `locales/<locale>/screenshots/` for that language. Each is 1280 × 800, opaque PNG and captures the actual localized interface with fictional data.
+4. Preserve the original icon and the existing global YouTube video: https://youtu.be/cGybkRSkk2Y. The video and thumbnail are unchanged.
+5. Chrome Web Store does not support localized small or marquee promo tiles. Keep the existing approved global tiles. The complete localized tile variants in the kit are for reuse and the Edge handoff, not repeated CWS global-tile replacement.
+6. Use the matching localized website and privacy URLs. Verify each anonymously after website deployment.
+7. After the required PR review, resolve findings, complete tests, merge the reviewed change and follow the authorized publication sequence. Verify saved draft, review submission and public availability as separate states.
 
-The 128px PNG is the byte-identical original extension icon. The five screenshots are 1280 x 800, the required small promo is 440 x 280, and the optional marquee is 1400 x 560. Chrome permits up to five screenshots. [Official image requirements](https://developer.chrome.com/docs/webstore/images/)
+The icon is the byte-identical original. Screenshots are 1280 × 800; small tiles are 440 × 280 and marquees are 1400 × 560. See [Chrome listing localization](https://developer.chrome.com/docs/webstore/cws-dashboard-listing) and [image requirements](https://developer.chrome.com/docs/webstore/images/).
 
 ## Privacy field text
 
@@ -42,7 +43,7 @@ Use the dashboard's current definitions when answering its data-collection check
 - No extension tracking, no history upload, no paid feature or account requirement.
 - Share confirmation follows a real clipboard success, with a fallback if unavailable.
 - Contribution is optional and never blocks preview or export.
-- Record the approved store version and public listing check after the user publishes it.
+- Record the approved store version and public listing check after publication.
 
 ## Feedback and contact
 
@@ -50,4 +51,4 @@ Feedback/support URL: https://historyout.featurebase.app/
 
 Contact email: sauliusthedev@gmail.com
 
-Use the current detailed description in description.txt. After approval, verify the Store contact email and support URL, upload the 2.1.0 package, and review the dashboard fields before submitting.
+Use the current detailed description in description.txt. After approval, verify the Store contact email and support URL, upload the 2.2.0 package, and review the dashboard fields before submitting.

@@ -51,7 +51,8 @@ chrome.runtime.onInstalled.addListener((details) => {
     const saved = await chrome.storage.local.get(OPENED_VERSION_KEY);
     if (saved[OPENED_VERSION_KEY] === version) return;
     const page = details.reason === 'install' ? 'welcome.html' : 'updated.html';
-    await chrome.tabs.create({ url: chrome.runtime.getURL(page) });
+    const folder = chrome.i18n?.getMessage?.('onboardingFolder') || '.';
+    await chrome.tabs.create({ url: chrome.runtime.getURL(folder === '.' ? page : `${folder}/${page}`) });
     await chrome.storage.local.set({ [OPENED_VERSION_KEY]: version });
   }).catch(() => {
     // An unavailable tab or storage service must never prevent normal exporting.

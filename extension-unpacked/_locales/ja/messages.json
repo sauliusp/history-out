@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "HistoryOut - 閲覧履歴をエクスポート"
+  },
+  "extensionDescription": {
+    "message": "閲覧履歴をCSV、JSON、HTMLでエクスポート。日付、列、ページを選択。無料、ローカル処理、アカウント不要。"
+  },
+  "actionTitle": {
+    "message": "クリックしてHistoryOutを開く"
+  },
+  "onboardingFolder": {
+    "message": "locales/ja"
+  }
+}

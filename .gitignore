@@ -26,3 +26,6 @@ releases/
 .test-build/
 playwright-report/
 test-results/
+
+# Downloaded fictional data remains local; retain compact QA reports instead.
+launch/qa/**/downloads/

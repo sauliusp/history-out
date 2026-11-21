@@ -1,3 +1,7 @@
+if (process.argv.includes('--localized')) {
+  require('node:child_process').execFileSync(process.execPath, [require('node:path').join(__dirname, 'localized-store-kit.cjs'), '--render-only', ...process.argv.slice(2).filter(arg => arg.startsWith('--locales='))], {stdio: 'inherit'});
+  process.exit(0);
+}
 /* Fresh store compositions built around actual product captures and the original brand. */
 const fs = require('node:fs/promises');
 const path = require('node:path');

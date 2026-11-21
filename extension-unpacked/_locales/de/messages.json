@@ -1,0 +1,14 @@
+{
+  "extensionName": {
+    "message": "HistoryOut - Browserverlauf exportieren"
+  },
+  "extensionDescription": {
+    "message": "Exportiere den Verlauf als CSV, JSON oder HTML. Wähle Daten, Spalten und Seiten. Kostenlos, lokal und ohne Konto."
+  },
+  "actionTitle": {
+    "message": "Klicken, um HistoryOut zu öffnen"
+  },
+  "onboardingFolder": {
+    "message": "locales/de"
+  }
+}

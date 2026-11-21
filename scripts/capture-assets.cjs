@@ -1,3 +1,7 @@
+if (process.argv.includes('--localized')) {
+  require('node:child_process').execFileSync(process.execPath, [require('node:path').join(__dirname, 'localized-store-kit.cjs'), '--capture-only', ...process.argv.slice(2).filter(arg => arg.startsWith('--locales='))], {stdio: 'inherit'});
+  process.exit(0);
+}
 /* Reproducible HistoryOut v2 assets. UI is real; qa-lib supplies fictional history only. */
 const fs = require('node:fs/promises');
 const path = require('node:path');
